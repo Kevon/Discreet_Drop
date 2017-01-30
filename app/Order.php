@@ -11,4 +11,16 @@ class Order extends Model
     protected $guarded = ['*'];
     
     protected $hidden = ['deleted_at'];
+    
+    public function Incoming_Package(){
+    	return $this->hasOne(Incoming_Package::class, 'incoming_package_ID');
+    }
+    
+    public function Shipment(){
+    	return $this->hasOne(Shipment::class, 'shipment_ID');
+    }
+    
+    public function User(){
+    	return $this->belongsTo(User::class, 'user_ID');
+    }
 }
