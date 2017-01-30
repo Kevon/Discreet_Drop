@@ -25,4 +25,12 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token', 'deleted_at',
     ];
+    
+    public function Orders(){
+    	return $this->hasMany(Order::class, 'user_ID');
+    }
+    
+    public function Incoming_Packages(){
+    	return $this->hasMany(Incoming_Package::class, 'dd_code', 'dd_code');
+    }
 }
