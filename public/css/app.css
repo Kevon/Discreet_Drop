@@ -1,6 +1,9 @@
 body {
-    padding-top: 100px;
     height: 100%;
+}
+
+.content{
+    padding-bottom: 250px;
 }
 
 .footer {
@@ -13,10 +16,21 @@ body {
     background-repeat: no-repeat;
 }
 
+.jumbotron.top {
+    background-image: url('/images/pattern.svg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 100%;
+    padding-top: 150px;
+    margin-bottom: 50px;
+}
+
 html {
     position: relative;
     min-height: 100%;
 }
+
+
 
 
 
@@ -26,26 +40,40 @@ html {
     padding-bottom:0px !important;
 }
 .navbar{
-
-    padding-top: 20px;
-	padding-bottom: 20px;
+    padding-top: 15px;
+	padding-bottom: 15px;
 	transition:all ease .3s;
     background-color: transparent;
+    border: 0;
 }
 
 .shrink-nav {
-	padding-top: 2px !important; /*changeable*/
-	padding-bottom: 2px !important; /*changeable*/
+	padding-top: 0px !important;
+	padding-bottom: 0px !important;
     transition:all ease .3s;
     background-color: white;
 }
 .logo img{
-    margin-top:-15px; 
-    width:200px !important;/*changeable*/ 
-    transition:width ease-in-out .3s;
+    margin-top:-10px; 
+    width:175px !important;
+    transition:all ease .3s;
 }
 .shrink-logo img {
     margin-top:5px; 
-    transition:width ease-in-out .3s;
-	width:100px !important;/*changeable*/ 
+    width:100px !important;
+    transition:all ease .3s;
+}
+
+
+@media (max-width: 768px) {
+    .navbar-collapse{
+        border: 0;
+    }
+    .navbar-header{
+        border: 0;
+    }
+    .navbar-right {
+        text-align: center;
+        background-color: white;
+    }
 }

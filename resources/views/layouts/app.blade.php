@@ -59,6 +59,9 @@
 
                 <!-- Right Side Of Navbar -->
                 <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#}">Learn More</a></li>
+                    <li><a href="#}">About</a></li>
+                    <li role="separator" class="divider"></li>
                     <!-- Authentication Links -->
                     @if (Auth::guest())
                         <li><a href="{{ url('/login') }}">Login</a></li>
@@ -82,11 +85,9 @@
         </div>
     </nav>
     
-    
 
-    <div class='container'>
-        @yield('content')
-    </div>
+    @yield('content')
+
 
     <footer class="footer">
         <!-- Latest compiled and minified JavaScript -->
