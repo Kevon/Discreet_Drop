@@ -61,7 +61,7 @@
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="#">Learn More</a></li>
                     <li><a href="#">About</a></li>
-                    <li role="separator" class="divider"></li>
+                    <p class="navbar-text divider">+</p>
                     <!-- Authentication Links -->
                     @if (Auth::guest())
                         <li><a href="{{ url('/login') }}">Login</a></li>

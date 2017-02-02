@@ -63,8 +63,7 @@ h1,h2,h3,h4,h5,h6{
     color: #1a1a1a !important;
 }
 .nav > li > a:hover{
-    border-bottom: solid 4px;
-    color: #107ecc !important;
+    color: #3fa9f5 !important;
 }
 
 .shrink-nav {
@@ -88,6 +87,9 @@ h1,h2,h3,h4,h5,h6{
     background-color: white;
 }
 
+.divider{
+    color: lightgrey !important;
+}
 
 .navbar-toggle {
     border: none;
