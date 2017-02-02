@@ -1,9 +1,13 @@
 body {
     height: 100%;
+    font-family: "Gotham Rounded", "Gotham", "Helvetica Neue", "Helvetica", sans-serif;
+    font-weight: bold;
+    color: #1a1a1a;
 }
 
 .content{
-    padding-bottom: 250px;
+    padding-top: 150px;
+    padding-bottom: 300px;
 }
 
 .footer {
@@ -22,7 +26,7 @@ body {
     background-repeat: no-repeat;
     width: 100%;
     padding-top: 150px;
-    margin-bottom: 50px;
+    margin-bottom: -100px;
 }
 
 html {
@@ -30,8 +34,15 @@ html {
     min-height: 100%;
 }
 
+h1,h2,h3,h4,h5,h6{
+    letter-spacing: 1px;
+	text-transform: uppercase;
+}
 
-
+.btn{
+    letter-spacing: 1px;
+	text-transform: uppercase;
+}
 
 
 
@@ -45,6 +56,15 @@ html {
 	transition:all ease .3s;
     background-color: transparent;
     border: 0;
+    letter-spacing: 1px;
+	text-transform: uppercase;
+}
+.nav > li > a{
+    color: #1a1a1a !important;
+}
+.nav > li > a:hover{
+    border-bottom: solid 4px;
+    color: #107ecc !important;
 }
 
 .shrink-nav {
@@ -64,13 +84,34 @@ html {
     transition:all ease .3s;
 }
 
+.white{
+    background-color: white;
+}
+
+
+.navbar-toggle {
+    border: none;
+    background-color: transparent !important;
+}
+.icon-bar{
+    background-color: #1a1a1a !important;
+}
+
+.navbar-toggle.focus {
+    border: none;
+    background-color: #1a1a1a !important;
+}
+.icon-bar.focus{
+    background-color: white !important;
+}
+
 
 @media (max-width: 768px) {
-    .navbar-collapse{
-        border: 0;
+    .navbar * {
+        border: 0px;
     }
-    .navbar-header{
-        border: 0;
+    .navbar-nav {
+        border: 0px;
     }
     .navbar-right {
         text-align: center;

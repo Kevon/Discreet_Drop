@@ -40,7 +40,7 @@
             <div class="navbar-header">
 
                 <!-- Collapsed Hamburger -->
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" onclick="toggle();" data-target="#app-navbar-collapse">
                     <span class="sr-only">Toggle Navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
@@ -59,8 +59,8 @@
 
                 <!-- Right Side Of Navbar -->
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#}">Learn More</a></li>
-                    <li><a href="#}">About</a></li>
+                    <li><a href="#">Learn More</a></li>
+                    <li><a href="#">About</a></li>
                     <li role="separator" class="divider"></li>
                     <!-- Authentication Links -->
                     @if (Auth::guest())

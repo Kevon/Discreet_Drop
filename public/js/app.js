@@ -9,3 +9,9 @@ $(window).scroll(function(){
       $(".logo").removeClass("shrink-logo");
     }
   });
+
+function toggle(){
+    $("#mainNav").toggleClass("white");
+    $(".navbar-toggle").toggleClass("focus");
+    $(".icon-bar").toggleClass("focus");
+};
