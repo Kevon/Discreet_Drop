@@ -94,11 +94,57 @@
         <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc=" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
         <div class="container" >
+            <div class = "row">
+                <div class="col-sm-12"><h4 class="text-center">Connect with us!</h4></div>
+            </div>
+            <div class = "row">
+                <div class="col-sm-3 col-sm-offset-3">
+                    <a href=""><button class="btn btn-primary btn-block btn-lg">Twitter</button></a>
+                </div>
+                <div class="col-sm-3">
+                    <a href=""><button class="btn btn-primary btn-block btn-lg">Facebook</button></a>
+                </div>
+            </div>
+            
+            <div class = "row">
+                <div class="col-sm-3">
+                    <h4>Discover</h4>
+                    <a href="" class="dark-link">Home</a> <br>
+                    <a href="" class="dark-link">Dashboard</a> <br>
+                    <a href="" class="dark-link">How It Works</a> <br>
+                    @if (Auth::guest())
+                        <a href="" class="dark-link">Sign Up</a> <br>
+                        <a href="" class="dark-link">Log In</a> <br>
+                    @endif
+                    <a href="" class="dark-link">Pricing</a> <br>
+                    <a href="" class="dark-link">FAQ</a>
+                </div>
+                <div class="col-sm-3">
+                    <h4>Company</h4>
+                    <a href="" class="dark-link">About</a> <br>
+                    <a href="" class="dark-link">Contact Us</a> <br>
+                    <a href="" class="dark-link">Style Guide</a> 
+                </div>
+                <div class="col-sm-3">
+                    <h4>Resources</h4>
+                    <a href="" class="dark-link">Privacy Policy</a> <br>
+                    <a href="" class="dark-link">Trust &amp; Safety</a> <br>
+                    <a href="" class="dark-link">Legal</a> <br>
+                    <a href="" class="dark-link">USPS Website</a> <br>
+                    <a href="" class="dark-link">Stripe Website</a>
+                </div>
+                <div class="col-sm-3">
+                    <h4>Social</h4>
+                    <a href="" class="dark-link">Twitter</a> <br>
+                    <a href="" class="dark-link">Facebook</a>
+                </div>
+            </div>
 
             <div class = "row">
-                <div class="col-sm-4"><p>&copy; Discreet Drop <?php echo date("Y"); ?></p></div>
-                <div class="col-sm-4"><p class="text-center">Made with &#x2764; in Buffalo, NY.</p></div>
-                <div class="col-sm-4"><a href="/about" class="pull-right">About This Application</a></div>
+                <div class="col-sm-4 col-sm-offset-4"><p class="text-center">Made with &#x2764; in Buffalo, NY.</p></div>
+            </div>
+            <div class = "row">
+                <div class="col-sm-4 col-sm-offset-4"><p class="text-center">&copy; Discreet Drop <?php echo date("Y"); ?></p></div>
             </div>
             
         </div>
