@@ -28,7 +28,7 @@
 
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    
+    <link rel="stylesheet" href="https://opensource.keycdn.com/fontawesome/4.7.0/font-awesome.min.css" integrity="sha384-dNpIIXE8U05kAbPhy3G1cz+yZmTzA6CY8Vg/u2L9xRnHjJiAK76m2BIEaSEV+/aU" crossorigin="anonymous">
         <!-- Styles -->
     <link rel="stylesheet" href="/css/app.css">
     
@@ -41,10 +41,12 @@
 
                 <!-- Collapsed Hamburger -->
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" onclick="toggle();" data-target="#app-navbar-collapse">
-                    <span class="sr-only">Toggle Navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
+                    <div class="hamburger">
+                        <span class="sr-only">Toggle Navigation</span>
+                        <span class="icon-bar top-bar"></span>
+                        <span class="icon-bar middle-bar"></span>
+                        <span class="icon-bar bottom-bar"></span>
+                    </div>
                 </button>
 
                 <!-- Branding Image -->
@@ -61,7 +63,7 @@
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="#">Learn More</a></li>
                     <li><a href="#">About</a></li>
-                    <p class="navbar-text divider">+</p>
+                    <p class="navbar-text divider noselect">+</p>
                     <!-- Authentication Links -->
                     @if (Auth::guest())
                         <li><a href="{{ url('/login') }}">Login</a></li>
@@ -99,44 +101,55 @@
             </div>
             <div class = "row">
                 <div class="col-sm-3 col-sm-offset-3">
-                    <a href=""><button class="btn btn-primary btn-block btn-lg">Twitter</button></a>
+                    <div class="btn-toolbar">
+                        <a href="https://twitter.com/discreetdrop" target="_blank"><button class="btn btn-primary btn-block btn-lg btn-twitter"><i class="fa fa-fw fa-twitter" aria-hidden="true"></i>Twitter</button></a>
+                    </div>
                 </div>
                 <div class="col-sm-3">
-                    <a href=""><button class="btn btn-primary btn-block btn-lg">Facebook</button></a>
+                    <div class="btn-toolbar">
+                        <a href="https://www.facebook.com/DiscreetDrop/" target="_blank"><button class="btn btn-primary btn-block btn-lg btn-facebook"><i class="fa fa-fw fa-facebook" aria-hidden="true"></i>Facebook</button></a>
+                    </div>
                 </div>
             </div>
             
+            <hr>
+            
             <div class = "row">
-                <div class="col-sm-3">
-                    <h4>Discover</h4>
-                    <a href="" class="dark-link">Home</a> <br>
-                    <a href="" class="dark-link">Dashboard</a> <br>
-                    <a href="" class="dark-link">How It Works</a> <br>
-                    @if (Auth::guest())
-                        <a href="" class="dark-link">Sign Up</a> <br>
-                        <a href="" class="dark-link">Log In</a> <br>
-                    @endif
-                    <a href="" class="dark-link">Pricing</a> <br>
-                    <a href="" class="dark-link">FAQ</a>
+                <div class="col-sm-6">
+                    <div class="col-xs-6">
+                        <h4>Discover</h4>
+                        <a href="" class="dark-link">Home</a> <br>
+                        <a href="" class="dark-link">Dashboard</a> <br>
+                        <a href="" class="dark-link">How It Works</a> <br>
+                        @if (Auth::guest())
+                            <a href="" class="dark-link">Sign Up</a> <br>
+                            <a href="" class="dark-link">Log In</a> <br>
+                        @endif
+                        <a href="" class="dark-link">Pricing</a> <br>
+                        <a href="" class="dark-link">FAQ</a>
+                    </div>
+                    <div class="col-xs-6">
+                        <h4>Company</h4>
+                        <a href="" class="dark-link">About</a> <br>
+                        <a href="" class="dark-link">Contact Us</a> <br>
+                        <a href="" class="dark-link">Trust &amp; Safety</a> <br>
+                        <a href="" class="dark-link">Style Guide</a> 
+                    </div>
                 </div>
-                <div class="col-sm-3">
-                    <h4>Company</h4>
-                    <a href="" class="dark-link">About</a> <br>
-                    <a href="" class="dark-link">Contact Us</a> <br>
-                    <a href="" class="dark-link">Style Guide</a> 
-                </div>
-                <div class="col-sm-3">
-                    <h4>Resources</h4>
-                    <a href="" class="dark-link">Privacy Policy</a> <br>
-                    <a href="" class="dark-link">Trust &amp; Safety</a> <br>
-                    <a href="" class="dark-link">Legal</a> <br>
-                    <a href="" class="dark-link">USPS Website</a> <br>
-                    <a href="" class="dark-link">Stripe Website</a>
-                </div>
-                <div class="col-sm-3">
-                    <h4>Social</h4>
-                    <a href="" class="dark-link">Twitter</a> <br>
-                    <a href="" class="dark-link">Facebook</a>
+                <div class="clearfix visible-xs"></div>
+                <div class="col-sm-6">
+                    <div class="col-xs-6">
+                        <h4>Resources</h4>
+                        <a href="" class="dark-link">Privacy Policy</a> <br>
+                        <a href="" class="dark-link">Legal</a> <br>
+                        <a href="https://www.usps.com/" class="dark-link" target="_blank">USPS Website</a> <br>
+                        <a href="https://stripe.com/" class="dark-link" target="_blank">Stripe Website</a>
+                    </div>
+                    <div class="col-xs-6">
+                        <h4>Social</h4>
+                        <a href="https://twitter.com/discreetdrop" class="dark-link" target="_blank">Twitter</a> <br>
+                        <a href="https://www.facebook.com/DiscreetDrop/" class="dark-link" target="_blank">Facebook</a>
+                    </div>
                 </div>
             </div>
 
