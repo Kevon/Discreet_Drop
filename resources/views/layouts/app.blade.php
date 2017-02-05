@@ -61,22 +61,23 @@
 
                 <!-- Right Side Of Navbar -->
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#">Learn More</a></li>
-                    <li><a href="#">About</a></li>
-                    <p class="navbar-text divider noselect">+</p>
+                    <li><a href="#">How It Works</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Pricing Calculator</a></li>
+                    <li class="disabled" disabled><a href="#">+</a></li>
                     <!-- Authentication Links -->
                     @if (Auth::guest())
-                        <li><a href="{{ url('/login') }}">Login</a></li>
+                        <li><a href="{{ url('/login') }}"><i class="fa fa-sign-in" aria-hidden="true"></i>Login</a></li>
                         <a href="{{ url('/register') }}"><button class="btn btn-primary navbar-btn" href="{{ url('/register') }}">Sign Up For Free</button></a>
                     @else
+                        <a href="{{ url('/register') }}"><button class="btn btn-primary navbar-btn" href="{{ url('/dashboard') }}"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>Dashboard</button></a>
+                      
                         <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                {{ Auth::user()->name }} <span class="caret"></span>
-                            </a>
-
-                            <ul class="dropdown-menu" role="menu">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-user" aria-hidden="true"></i>{{ Auth::user()->email }}</a>
+                            <ul class="dropdown-menu arrow" role="menu">
+                                <li><a href="{{ url('/login') }}"><i class="fa fa-cogs" aria-hidden="true"></i>Edit Profile</a></li>
                                 <li>
-                                    <a href="{{ url('/logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
+                                    <a href="{{ url('/logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i class="fa fa-sign-out" aria-hidden="true"></i>Logout</a>
                                     <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">{{ csrf_field() }}</form>
                                 </li>
                             </ul>
@@ -102,12 +103,12 @@
             <div class = "row">
                 <div class="col-sm-3 col-sm-offset-3">
                     <div class="btn-toolbar">
-                        <a href="https://twitter.com/discreetdrop" target="_blank"><button class="btn btn-primary btn-block btn-lg btn-twitter"><i class="fa fa-fw fa-twitter" aria-hidden="true"></i>Twitter</button></a>
+                        <button class="btn btn-primary btn-block btn-lg btn-twitter" onclick="window.open('https://twitter.com/discreetdrop');"><i class="fa fa-fw fa-twitter" aria-hidden="true"></i>Twitter</button>
                     </div>
                 </div>
                 <div class="col-sm-3">
                     <div class="btn-toolbar">
-                        <a href="https://www.facebook.com/DiscreetDrop/" target="_blank"><button class="btn btn-primary btn-block btn-lg btn-facebook"><i class="fa fa-fw fa-facebook" aria-hidden="true"></i>Facebook</button></a>
+                        <button class="btn btn-primary btn-block btn-lg btn-facebook" onclick="window.open('https://www.facebook.com/DiscreetDrop/');"><i class="fa fa-fw fa-facebook" aria-hidden="true"></i>Facebook</button>
                     </div>
                 </div>
             </div>
@@ -119,13 +120,16 @@
                     <div class="col-xs-6">
                         <h4>Discover</h4>
                         <a href="" class="dark-link">Home</a> <br>
-                        <a href="" class="dark-link">Dashboard</a> <br>
                         <a href="" class="dark-link">How It Works</a> <br>
                         @if (Auth::guest())
                             <a href="" class="dark-link">Sign Up</a> <br>
                             <a href="" class="dark-link">Log In</a> <br>
+                        @else
+                            <a href="" class="dark-link">Dashboard</a> <br>
+                            <a href="" class="dark-link">Edit Profile</a> <br>
+                            <a href="" class="dark-link">Log Out</a> <br>
                         @endif
-                        <a href="" class="dark-link">Pricing</a> <br>
+                        <a href="" class="dark-link">Pricing Calculator</a> <br>
                         <a href="" class="dark-link">FAQ</a>
                     </div>
                     <div class="col-xs-6">

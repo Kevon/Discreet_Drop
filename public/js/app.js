@@ -9,7 +9,9 @@ $(window).scroll(function(){
         $(".logo").removeClass("shrink-logo");
     }
     if(wscroll == 0){
-        $("#mainNav").removeClass("white");
+        if(!$(".navbar-toggle").hasClass("focus")){
+            $("#mainNav").removeClass("white");
+        }
     }
 });
 
@@ -23,4 +25,16 @@ $("div.content").css("margin-bottom",$(".footer").outerHeight()+100);
 
 $(window).resize(function() {
     $("div.content").css("margin-bottom",$(".footer").outerHeight()+100);
+});
+
+$("input").focusout(function() {
+    $(this).parent("div").parent("form").children("div").children("label").each(function(){
+         $(this).removeClass("faded");
+     });
+});
+
+$("input").focusin(function() {
+    $(this).parent("div").parent("form").children("div").children("label").not($(this).parent("div").children("label")).each(function(){
+         $(this).addClass("faded");
+     });
 });
