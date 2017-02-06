@@ -11,10 +11,18 @@
 |
 */
 
-Route::get('/', function () {
-    return view('landing');
-});
-
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
+
+Route::get('/', 'Controller@index');
+
+Route::get('/dashboard', 'Controller@dashboard');
+
+Route::get('/tutorial', 'Controller@tutorial');
+
+Route::get('/profile', 'Controller@profile');
+
+Route::post('/profile/update', 'Controller@updateProfile');
+
+Route::post('/dashboard/addOrder', 'Controller@addOrder');

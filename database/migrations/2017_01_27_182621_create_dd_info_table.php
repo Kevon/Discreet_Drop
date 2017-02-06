@@ -22,6 +22,7 @@ class CreateDDInfoTable extends Migration
             $table->string('state');
             $table->string('zip_code');
             $table->string('phone');
+            $table->string('email');
             $table->string('dd_rate');
             $table->string('active');
             $table->timestamps();

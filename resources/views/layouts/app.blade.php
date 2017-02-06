@@ -70,13 +70,13 @@
                         <li><a href="{{ url('/login') }}"><i class="fa fa-sign-in" aria-hidden="true"></i>Login</a></li>
                         <a href="{{ url('/register') }}"><button class="btn btn-primary navbar-btn" href="{{ url('/register') }}">Sign Up For Free</button></a>
                     @else
-                        <a href="{{ url('/register') }}"><button class="btn btn-primary navbar-btn" href="{{ url('/dashboard') }}"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>Dashboard</button></a>
+                        <a href="{{ url('/dashboard') }}"><button class="btn btn-primary navbar-btn" href="{{ url('/dashboard') }}"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>Dashboard</button></a>
                       
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-user" aria-hidden="true"></i>{{ Auth::user()->email }}</a>
                             <ul class="dropdown-menu arrow" role="menu">
-                                <li><a href="{{ url('/login') }}"><i class="fa fa-cogs" aria-hidden="true"></i>Edit Profile</a></li>
-                                <li><a href="{{ url('/login') }}"><i class="fa fa-question" aria-hidden="true"></i>How-To Tutorial</a></li>
+                                <li><a href="{{ url('/profile') }}"><i class="fa fa-cogs" aria-hidden="true"></i>Edit Profile</a></li>
+                                <li><a href="{{ url('/tutorial') }}"><i class="fa fa-question" aria-hidden="true"></i>How-To Tutorial</a></li>
                                 <li>
                                     <a href="{{ url('/logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i class="fa fa-sign-out" aria-hidden="true"></i>Logout</a>
                                     <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">{{ csrf_field() }}</form>
@@ -126,9 +126,9 @@
                             <a href="" class="dark-link">Sign Up</a> <br>
                             <a href="" class="dark-link">Log In</a> <br>
                         @else
-                            <a href="" class="dark-link">Dashboard</a> <br>
-                            <a href="" class="dark-link">Edit Profile</a> <br>
-                            <a href="" class="dark-link">How-To Tutorial</a> <br>
+                            <a href="/dashboard" class="dark-link">Dashboard</a> <br>
+                            <a href="/profile" class="dark-link">Edit Profile</a> <br>
+                            <a href="/tutorial" class="dark-link">How-To Tutorial</a> <br>
                             <a href="{{ url('/logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" class="dark-link">Logout</a><form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">{{ csrf_field() }}</form> <br>
                         @endif
                         <a href="" class="dark-link">Pricing Calculator</a> <br>
