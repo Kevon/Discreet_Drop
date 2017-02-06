@@ -87,16 +87,16 @@
             </div>
         </div>
     </nav>
-    
 
     @yield('content')
-
+    
+    @include('partials.alerts')
 
     <footer class="footer">
         <!-- Latest compiled and minified JavaScript -->
-        <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc=" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-        <div class="container" >
+        <div class="container">
             <div class = "row">
                 <div class="col-sm-12"><h4 class="text-center">Connect with us!</h4></div>
             </div>
@@ -119,7 +119,7 @@
                 <div class="col-sm-6">
                     <div class="col-xs-6">
                         <h4>Discover</h4>
-                        <a href="" class="dark-link">Home</a> <br>
+                        <a href="/" class="dark-link">Home</a> <br>
                         <a href="" class="dark-link">How It Works</a> <br>
                         @if (Auth::guest())
                             <a href="" class="dark-link">Sign Up</a> <br>
@@ -127,7 +127,7 @@
                         @else
                             <a href="" class="dark-link">Dashboard</a> <br>
                             <a href="" class="dark-link">Edit Profile</a> <br>
-                            <a href="" class="dark-link">Log Out</a> <br>
+                            <a href="{{ url('/logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" class="dark-link">Logout</a><form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">{{ csrf_field() }}</form> <br>
                         @endif
                         <a href="" class="dark-link">Pricing Calculator</a> <br>
                         <a href="" class="dark-link">FAQ</a>

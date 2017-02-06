@@ -34,7 +34,17 @@ $("input").focusout(function() {
 });
 
 $("input").focusin(function() {
+    if(!$(this).is(':checkbox')){
     $(this).parent("div").parent("form").children("div").children("label").not($(this).parent("div").children("label")).each(function(){
          $(this).addClass("faded");
      });
+    }
 });
+
+$(".alerts").animate({bottom:'50px'},2000);
+
+window.setTimeout(function() {
+    $(".alert").fadeTo(1000, 0).slideUp(1000, function(){
+        $(this).remove(); 
+    });
+}, 5000);
