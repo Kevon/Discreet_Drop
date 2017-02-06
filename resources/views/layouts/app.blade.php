@@ -76,6 +76,7 @@
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-user" aria-hidden="true"></i>{{ Auth::user()->email }}</a>
                             <ul class="dropdown-menu arrow" role="menu">
                                 <li><a href="{{ url('/login') }}"><i class="fa fa-cogs" aria-hidden="true"></i>Edit Profile</a></li>
+                                <li><a href="{{ url('/login') }}"><i class="fa fa-question" aria-hidden="true"></i>How-To Tutorial</a></li>
                                 <li>
                                     <a href="{{ url('/logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i class="fa fa-sign-out" aria-hidden="true"></i>Logout</a>
                                     <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">{{ csrf_field() }}</form>
@@ -127,6 +128,7 @@
                         @else
                             <a href="" class="dark-link">Dashboard</a> <br>
                             <a href="" class="dark-link">Edit Profile</a> <br>
+                            <a href="" class="dark-link">How-To Tutorial</a> <br>
                             <a href="{{ url('/logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" class="dark-link">Logout</a><form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">{{ csrf_field() }}</form> <br>
                         @endif
                         <a href="" class="dark-link">Pricing Calculator</a> <br>

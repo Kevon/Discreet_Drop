@@ -506,6 +506,7 @@ ul.order-progress li div.node {
     display:inline-block;
     background-color: lightgrey;
     transition: all 1000ms ease;
+    float:left;
 }
 
 ul.order-progress li div.divider {
@@ -519,19 +520,22 @@ ul.order-progress li div.divider {
 }
 
 ul.order-progress li p {
+    vertical-align:top;
     display:inline-block;
     margin:0; padding:0;
-    margin-left: 25px;
+    margin-left: 10px;
+    width: 80%;
     font-weight: bold;
     font-size:100%;
     position: relative;
-    top:-5px;
+    overflow-y: visible;
+    max-height: 20px;
 }
 
 ul.order-progress li {
     margin:0; padding:0;
     list-style: none;
-    line-height: 0px;
+    overflow-y: visible;
 }
 
 ul.order-progress li div.in-progress{
