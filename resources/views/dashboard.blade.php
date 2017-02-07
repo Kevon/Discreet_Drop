@@ -14,20 +14,28 @@
     <div class="row">
         <div class="col-sm-3">
             <button class="btn btn-primary btn-block" onclick="location.href='/register'">Create a New Order</button>
-            <button class="btn btn-default btn-block" onclick="location.href='/profile'">Manage Account Info</button>
+            <button class="btn btn-default btn-block" onclick="location.href='/login_info'">Edit Login Info</button>
+            <button class="btn btn-default btn-block" onclick="location.href='/profile_info'">Update Shipping Profile</button>
             <button class="btn btn-default btn-block" onclick="location.href='/tutorial'">How-To Tutorial</button>
             
-            <hr>
+            <br>
             
-            <h4 class="center">Your Discreet Drop address is:</h4>
-            <p>
-                {{$dd_info->name}} <br>
-                {{$dd_info->address_1}} <br>
-                {{$dd_info->address_2}} - {{$user->dd_code}} <br>
-                {{$dd_info->city}} {{$dd_info->state}}, {{$dd_info->zip_code}}
-            </p>
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <h4 class="center">Your Discreet Drop address is:</h4>
+                            <p>
+                                {{$dd_info->name}} <br>
+                                {{$dd_info->address_1}} <br>
+                                {{$dd_info->address_2}} - {{$user->dd_code}} <br>
+                                {{$dd_info->city}} {{$dd_info->state}}, {{$dd_info->zip_code}}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
             
-            <hr>
             
             <h5>Ship your packages to that address, and we'll take care of hiding all identifying information and logos.</h5>
             <p>Once we receive your package, we'll automatically box, charge, and ship your item out to you completely discreet via USPS at the lowest possible rate.</p>
@@ -48,16 +56,23 @@
                                 <div class="col-md-8">
                                     <h2>Order Status: Pending</h2>
                                     
+                                    <hr>
+                                    
                                     <h4>Incoming Package Details</h4>
                                     <P><strong>Received on: </strong>Pending</P>
-                                    <P><strong>Shipped by: </strong>Pending</P>
+                                    <P><strong>Sender: </strong>Pending</P>
+                                    <P><strong>Carrier: </strong>Pending</P>
                                     <P><strong>Tracking Number: </strong>Pending</P>
 
+                                    <hr>
+                                    
                                     <h4>Credit Card Charge Details</h4>
                                     <P><strong>Charge Status: </strong>Pending</P>
                                     <P><strong>Charged on: </strong>Pending</P>
-                                    <P><strong>Charged amount: </strong>Pending</P>
+                                    <P><strong>Shipping amount charged: </strong>Pending</P>
                                     <P><strong>Last 4: </strong>Pending</P>
+                                    
+                                    <hr>
                                     
                                     <h4>Outgoing Shipment Details</h4>
                                     <P><strong>Carrier: </strong>Pending</P>

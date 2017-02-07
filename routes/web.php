@@ -21,8 +21,12 @@ Route::get('/dashboard', 'Controller@dashboard');
 
 Route::get('/tutorial', 'Controller@tutorial');
 
-Route::get('/profile', 'Controller@profile');
+Route::get('/profile_info', 'Controller@profile_info');
 
-Route::post('/profile/update', 'Controller@updateProfile');
+Route::post('/profile_info/update', 'Controller@updateProfile');
+
+Route::get('/login_info', 'Controller@login_info');
+
+Route::post('/login_info/update', 'Controller@updateInfo');
 
 Route::post('/dashboard/addOrder', 'Controller@addOrder');

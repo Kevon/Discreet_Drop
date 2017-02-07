@@ -28,12 +28,21 @@ class Controller extends BaseController
     	return view('tutorial');
     }
     
-    public function profile(){
+    public function profile_info(){
         $user = Auth::user();
-    	return view('profile', compact('user'));
+    	return view('profile_info', compact('user'));
+    }
+    
+    public function login_info(){
+        $user = Auth::user();
+    	return view('login_info', compact('user'));
     }
     
     public function updateProfile(){
+        $user = Auth::user();
+    }
+    
+    public function updateInfo(){
         $user = Auth::user();
     }
     

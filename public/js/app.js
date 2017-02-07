@@ -28,14 +28,14 @@ $(window).resize(function() {
 });
 
 $("input").focusout(function() {
-    $(this).parent("div").parent("form").children("div").children("label").each(function(){
+    $(this).parents("form").find("label").each(function(){
          $(this).removeClass("faded");
      });
 });
 
 $("input").focusin(function() {
     if(!$(this).is(':checkbox')){
-    $(this).parent("div").parent("form").children("div").children("label").not($(this).parent("div").children("label")).each(function(){
+    $(this).parents("form").find("label").not($(this).parent("div").find("label")).each(function(){
          $(this).addClass("faded");
      });
     }
