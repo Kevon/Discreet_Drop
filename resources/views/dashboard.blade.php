@@ -59,7 +59,7 @@
                                     <hr>
                                     
                                     <h4>Incoming Package Details</h4>
-                                    <P><strong>Received on: </strong>Pending</P>
+                                    <P><strong>Received On: </strong>Pending</P>
                                     <P><strong>Sender: </strong>Pending</P>
                                     <P><strong>Carrier: </strong>Pending</P>
                                     <P><strong>Tracking Number: </strong>Pending</P>
@@ -68,14 +68,15 @@
                                     
                                     <h4>Credit Card Charge Details</h4>
                                     <P><strong>Charge Status: </strong>Pending</P>
-                                    <P><strong>Charged on: </strong>Pending</P>
-                                    <P><strong>Shipping amount charged: </strong>Pending</P>
+                                    <P><strong>Charged On: </strong>Pending</P>
+                                    <P><strong>Shipping Amount Charged: </strong>Pending</P>
                                     <P><strong>Last 4: </strong>Pending</P>
                                     
                                     <hr>
                                     
                                     <h4>Outgoing Shipment Details</h4>
                                     <P><strong>Carrier: </strong>Pending</P>
+                                    <P><strong>Sent On: </strong>Pending</P>
                                     <P><strong>Tracking Number: </strong>Pending</P>
                                     <P><strong>Estimated Shipping Time: </strong>Pending</P>
                                 </div>

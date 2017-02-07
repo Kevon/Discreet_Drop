@@ -27,6 +27,8 @@ $(window).resize(function() {
     $("div.content").css("margin-bottom",$(".footer").outerHeight()+100);
 });
 
+$("input").blur();
+
 $("input").focusout(function() {
     $(this).parents("form").find("label").each(function(){
          $(this).removeClass("faded");
@@ -48,3 +50,15 @@ window.setTimeout(function() {
         $(this).remove(); 
     });
 }, 5000);
+
+
+function changeMethod() {
+    if(confirm("Are you sure you want to delete this item?")){
+        $('[name="_method"]').val("DELETE");
+        $("form").submit();
+    }
+}
+
+function back() {
+     window.location = '/';
+}

@@ -482,6 +482,10 @@ input[type="radio"]{
     text-decoration: none;
 }
 
+.panel.panel-warning{
+    background-color: #f0ad4e !important;
+}
+
 .center{
     text-align: center;
 }
