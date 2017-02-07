@@ -1,4 +1,12 @@
 @extends('layouts.app')
+@section('subtitle', 'Edit Login Info')
+@section('description', 'Hide logos, return labels, invoices, holes, and all other identifying information on any package from any seller so your item arrives as discreet as possible.')
+
+
+@section('header')
+
+@endsection
+
 
 @section('content')
 <div class="container content">
@@ -9,14 +17,13 @@
                 <div class="panel-body">
                     <div class="row">
                         <div class="col-sm-12">
-                            <form role="form" method="POST" action="{{ url('/login') }}">
+                            <form role="form" method="POST" action="{{ url('/login_info/update') }}">
                                 {{ csrf_field() }}
+                                {{ method_field('PATCH') }}
                                 
-                                <h4>Basic Account Information</h4>
-
                                 <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
                                     <label for="email">E-Mail Address</label>
-                                    <input id="email" type="email" class="form-control input-lg" name="email" value="{{ old('email') }}" required autofocus>
+                                    <input id="email" type="email" class="form-control input-lg" name="email" value="{{ old('email', isset($user->email) ? $user->email : '') }}" required>
 
                                     @if ($errors->has('email'))
                                         <span class="help-block">
@@ -60,4 +67,10 @@
         </div>
     </div>
 </div>
+@endsection
+
+@section('footer')
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.payment/3.0.0/jquery.payment.min.js" integrity="sha256-bEuhxmK0QLOu/l5RR+ot9y+A5RDkl5xlSFp7D/+JTjc=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.9/jquery.mask.min.js" integrity="sha256-j9bZfF4eKVp8Zrzq/zna8WWo5lroqN1yKEQ8qvBfK1A=" crossorigin="anonymous"></script>
+<script src="/js/profile.js"></script>
 @endsection

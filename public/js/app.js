@@ -27,15 +27,15 @@ $(window).resize(function() {
     $("div.content").css("margin-bottom",$(".footer").outerHeight()+100);
 });
 
-$("input").blur();
+$("input, select").blur();
 
-$("input").focusout(function() {
+$("input, select").focusout(function() {
     $(this).parents("form").find("label").each(function(){
          $(this).removeClass("faded");
      });
 });
 
-$("input").focusin(function() {
+$("input, select").focusin(function() {
     if(!$(this).is(':checkbox')){
     $(this).parents("form").find("label").not($(this).parent("div").find("label")).each(function(){
          $(this).addClass("faded");
@@ -43,22 +43,10 @@ $("input").focusin(function() {
     }
 });
 
-$(".alerts").animate({bottom:'50px'},2000);
+$(".alerts").animate({bottom:'100px'},500);
 
 window.setTimeout(function() {
     $(".alert").fadeTo(1000, 0).slideUp(1000, function(){
         $(this).remove(); 
     });
 }, 5000);
-
-
-function changeMethod() {
-    if(confirm("Are you sure you want to delete this item?")){
-        $('[name="_method"]').val("DELETE");
-        $("form").submit();
-    }
-}
-
-function back() {
-     window.location = '/';
-}

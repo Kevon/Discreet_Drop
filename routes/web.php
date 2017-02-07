@@ -23,10 +23,11 @@ Route::get('/tutorial', 'Controller@tutorial');
 
 Route::get('/profile_info', 'Controller@profile_info');
 
-Route::post('/profile_info/update', 'Controller@updateProfile');
+Route::patch('/profile_info/update', 'Controller@updateProfile');
 
 Route::get('/login_info', 'Controller@login_info');
 
-Route::post('/login_info/update', 'Controller@updateInfo');
+Route::patch('/login_info/update', 'Controller@updateInfo');
+Route::delete('/login_info/update', 'Controller@deleteUser');
 
 Route::post('/dashboard/addOrder', 'Controller@addOrder');
