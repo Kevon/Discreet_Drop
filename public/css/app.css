@@ -554,6 +554,18 @@ input[type="radio"]{
 }
 
 
+.has-error input {
+    border-width: 2px;
+}
+
+.error-color{
+    color: #a94442;
+}
+
+.error-background{
+    background-color: #a94442;
+}
+
 
 
 

@@ -234,9 +234,7 @@
 
 @section('footer')
 <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
-<script type="text/javascript">
-  Stripe.setPublishableKey("{{config('services.stripe.key')}}");
-</script>
+<script type="text/javascript">Stripe.setPublishableKey("{{config('services.stripe.key')}}");</script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.payment/3.0.0/jquery.payment.min.js" integrity="sha256-bEuhxmK0QLOu/l5RR+ot9y+A5RDkl5xlSFp7D/+JTjc=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.9/jquery.mask.min.js" integrity="sha256-j9bZfF4eKVp8Zrzq/zna8WWo5lroqN1yKEQ8qvBfK1A=" crossorigin="anonymous"></script>
 <script src="/js/user.js"></script>

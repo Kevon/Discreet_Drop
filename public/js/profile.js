@@ -6,6 +6,9 @@ function updateCard() {
 $('input.cc-number').payment('formatCardNumber');
 $('input.cc-exp').payment('formatCardExpiry');
 $('input.cc-cvc').payment('formatCardCVC');
+$('input#zip_code').mask('00000-ZZZZ', {translation:  {'Z': {pattern: /[0-9]/, optional: true}}});
+$('input#billing_ip_address').mask('00000-ZZZZ', {translation:  {'Z': {pattern: /[0-9]/, optional: true}}});
+$('input#phone').mask('(000) 000-0000');
 
 $.fn.toggleInputError = function(erred) {
     this.parent('.form-group').toggleClass('has-error', erred);

@@ -37,8 +37,18 @@ class Controller extends BaseController
     }
     
     public function updateProfile(Request $request){
-        dd($request);
         $user = Auth::user();
+        
+        \Stripe\Stripe::setApiKey(config('services.stripe.secret'));
+
+        // Create a Customer:
+        $customer = \Stripe\Customer::create(array(
+            "email" => $user->email,
+            "source" => $request->stripeToken,
+        ));
+
+        $customer->id;
+
     }
     
     public function login_info(){
