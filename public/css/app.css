@@ -556,14 +556,15 @@ input[type="radio"]{
 
 .has-error input {
     border-width: 2px;
+    border-color: #d9534f !important;
 }
 
-.error-color{
-    color: #a94442;
+.has-error span.help-block{
+    color: #d9534f !important;
 }
 
-.error-background{
-    background-color: #a94442;
+.has-error-background{
+    background-color: #d9534f !important;
 }
 
 

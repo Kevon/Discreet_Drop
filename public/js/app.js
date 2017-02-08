@@ -43,7 +43,7 @@ $("input, select").focusin(function() {
     }
 });
 
-$(".alerts").animate({bottom:'100px'},500);
+$(".alerts").animate({bottom:'150px'},500);
 
 window.setTimeout(function() {
     $(".alert").fadeTo(1000, 0).slideUp(1000, function(){

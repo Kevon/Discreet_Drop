@@ -11,6 +11,7 @@ use Session;
 use App\User;
 use App\DD_Info;
 use Illuminate\Http\Request;
+use Carbon\Carbon;
 
 class Controller extends BaseController
 {
@@ -37,18 +38,50 @@ class Controller extends BaseController
     }
     
     public function updateProfile(Request $request){
+        $this->validate($request, ['phone' => 'required']);
+        
         $user = Auth::user();
         
-        \Stripe\Stripe::setApiKey(config('services.stripe.secret'));
+        $user->first_name = $request->first_name; 
+        $user->last_name = $request->last_name; 
+        $user->address_1 = $request->address_1; 
+        $user->address_2 = $request->address_2; 
+        $user->city = $request->city; 
+        $user->state = $request->state; 
+        $user->zip_code = $request->zip_code; 
+        $user->phone = $request->phone; 
+        
+        if(!empty($request->stripeToken)){
+            \Stripe\Stripe::setApiKey(config('services.stripe.secret'));
+            $customer = \Stripe\Customer::create(array(
+                "email" => $user->email,
+                "source" => $request->stripeToken,
+            ));
+            
+            $customer = collect($customer);
+            $source = collect($customer["sources"]);
+            $data = collect($source["data"])[0];
 
-        // Create a Customer:
-        $customer = \Stripe\Customer::create(array(
-            "email" => $user->email,
-            "source" => $request->stripeToken,
-        ));
-
-        $customer->id;
-
+            $user->stripe_id = $customer["id"];
+            $user->stripe_default_source = $customer["default_source"];
+            $user->stripe_brand = $data["brand"];
+            $user->stripe_last4 = $data["last4"];
+            $user->stripe_exp_month = $data["exp_month"];
+            $user->stripe_exp_year = $data["exp_year"];
+        }
+        if(empty($user->substantiated_at)){
+            $user->substantiated_at = Carbon::now();
+        }
+        if(empty($user->dd_code)){
+            $dd_code = rand(100000, 999999);
+            $existing_codes = Auth::user()->pluck('id')->toArray();
+            while(in_array($dd_code, $existing_codes)){
+                $dd_code = rand(100000, 999999);
+            }
+            $user->dd_code = $dd_code;
+        }
+        $user->save();
+        return redirect()->to('/dashboard');
     }
     
     public function login_info(){

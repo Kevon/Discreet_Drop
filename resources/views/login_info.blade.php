@@ -23,7 +23,7 @@
                                 
                                 <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
                                     <label for="email">E-Mail Address</label>
-                                    <input id="email" type="email" class="form-control input-lg" name="email" value="{{ old('email', isset($user->email) ? $user->email : '') }}" required>
+                                    <input id="email" type="email" class="form-control input-lg" autocomplete="email" name="email" value="{{ old('email', isset($user->email) ? $user->email : '') }}" required>
 
                                     @if ($errors->has('email'))
                                         <span class="help-block">

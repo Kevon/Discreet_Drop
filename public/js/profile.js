@@ -7,11 +7,12 @@ $('input.cc-number').payment('formatCardNumber');
 $('input.cc-exp').payment('formatCardExpiry');
 $('input.cc-cvc').payment('formatCardCVC');
 $('input#zip_code').mask('00000-ZZZZ', {translation:  {'Z': {pattern: /[0-9]/, optional: true}}});
-$('input#billing_ip_address').mask('00000-ZZZZ', {translation:  {'Z': {pattern: /[0-9]/, optional: true}}});
+$('input#billing_zip_code').mask('00000-ZZZZ', {translation:  {'Z': {pattern: /[0-9]/, optional: true}}});
 $('input#phone').mask('(000) 000-0000');
 
 $.fn.toggleInputError = function(erred) {
     this.parent('.form-group').toggleClass('has-error', erred);
+    this.parent('.form-group').children('span.help-block').html('<strong>Please correct this information and try again.</strong>');
     return this;
 };
 
@@ -24,21 +25,18 @@ $('form#profile-form').submit(function(e) {
     $('.cc-cvc').toggleInputError(!$.payment.validateCardCVC($('.cc-cvc').val(), cardType));
 
     var $form = $('#profile-form');
-    $form.submit(function(event) {
-        // Disable the submit button to prevent repeated clicks:
-        $form.find('.submit').prop('disabled', true);
+    // Disable the submit button to prevent repeated clicks:
+    $form.find('.submit').prop('disabled', true);
+    // Request a token from Stripe:
+    Stripe.card.createToken({
+        number: $('.cc-number').val(),
+        cvc: $('.cc-cvc').val(),
+        exp: $('.cc-exp').val(),
+        address_zip: $('.billing-zip-code').val()
+        }, stripeResponseHandler);
 
-        // Request a token from Stripe:
-        Stripe.card.createToken({
-            number: $('.cc-number').val(),
-            cvc: $('.cc-cvc').val(),
-            exp: $('.cc-exp').val(),
-            address_zip: $('.billing-zip-code').val()
-            }, stripeResponseHandler);
-
-        // Prevent the form from being submitted:
-        return false;
-    });
+    // Prevent the form from being submitted:
+    return false;
 });
 
 function stripeResponseHandler(status, response) {
