@@ -22,12 +22,11 @@ Route::get('/dashboard', 'Controller@dashboard');
 Route::get('/tutorial', 'Controller@tutorial');
 
 Route::get('/profile_info', 'Controller@profile_info');
-
 Route::patch('/profile_info/update', 'Controller@updateProfile');
 
 Route::get('/login_info', 'Controller@login_info');
-
 Route::patch('/login_info/update', 'Controller@updateInfo');
 Route::delete('/login_info/update', 'Controller@deleteUser');
 
 Route::post('/dashboard/addOrder', 'Controller@addOrder');
+Route::delete('/dashboard/deleteOrder/{order}', 'Controller@deleteOrder');

@@ -36,13 +36,14 @@ class Controller extends BaseController
     	return view('profile_info', compact('user'));
     }
     
+    public function updateProfile(Request $request){
+        dd($request);
+        $user = Auth::user();
+    }
+    
     public function login_info(){
         $user = Auth::user();
     	return view('login_info', compact('user'));
-    }
-    
-    public function updateProfile(){
-        $user = Auth::user();
     }
     
     public function updateInfo(Request $request){
@@ -68,6 +69,10 @@ class Controller extends BaseController
     }
     
     public function addOrder(){
+        $user = Auth::user();
+    }
+    
+    public function deleteOrder(){
         $user = Auth::user();
     }
 }

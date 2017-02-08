@@ -25,153 +25,102 @@
                 <div class="panel-body">
                     <div class="row">
                         <div class="col-sm-12">
-                            <form role="form" method="POST" action="{{ url('/login') }}" autocomplete="on">
+                            <form role="form" method="POST" action="{{ url('/profile_info/update') }}" autocomplete="on" id="profile-form">
                                 {{ csrf_field() }}
                                 {{ method_field('PATCH') }}
                                 
                                 <h4>Your Shipping Address</h4>
                                 
                                 <div class="row">
-                                    <div class="col-sm-6 form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-                                        <label for="password">First Name</label>
-                                        <input id="password" type="text" class="form-control input-lg" name="password" required>
+                                    <div class="col-sm-6 form-group{{ $errors->has('first_name') ? ' has-error' : '' }}">
+                                        <label for="first_name">First Name</label>
+                                        <input id="first_name" type="text" class="form-control input-lg" name="first_name" value="{{ old('first_name', isset($user->first_name) ? $user->first_name : '') }}" required>
 
-                                        @if ($errors->has('password'))
+                                        @if ($errors->has('first_name'))
                                             <span class="help-block">
-                                                <strong>{{ $errors->first('password') }}</strong>
+                                                <strong>{{ $errors->first('first_name') }}</strong>
                                             </span>
                                         @endif
                                     </div>
 
-                                    <div class="col-sm-6 form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-                                        <label for="password">Last Name</label>
-                                        <input id="password" type="text" class="form-control input-lg" name="password" required>
+                                    <div class="col-sm-6 form-group{{ $errors->has('last_name') ? ' has-error' : '' }}">
+                                        <label for="last_name">Last Name</label>
+                                        <input id="last_name" type="text" class="form-control input-lg" name="last_name" value="{{ old('last_name', isset($user->last_name) ? $user->last_name : '') }}"required>
 
-                                        @if ($errors->has('password'))
+                                        @if ($errors->has('last_name'))
                                             <span class="help-block">
-                                                <strong>{{ $errors->first('password') }}</strong>
+                                                <strong>{{ $errors->first('last_name') }}</strong>
                                             </span>
                                         @endif
                                     </div>
                                 </div>
                                 
-                                <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-                                    <label for="password">Address Line 1</label>
-                                    <input id="password" type="text" class="form-control input-lg" name="password" required>
+                                <div class="form-group{{ $errors->has('address_1') ? ' has-error' : '' }}">
+                                    <label for="address_1">Address Line 1</label>
+                                    <input id="address_1" type="text" class="form-control input-lg" name="address_1" value="{{ old('address_1', isset($user->address_1) ? $user->address_1 : '') }}" required>
 
-                                    @if ($errors->has('password'))
+                                    @if ($errors->has('address_1'))
                                         <span class="help-block">
-                                            <strong>{{ $errors->first('password') }}</strong>
+                                            <strong>{{ $errors->first('address_1') }}</strong>
                                         </span>
                                     @endif
                                 </div>
                                 
-                                <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-                                    <label for="password">Address Line 2 - Optional</label>
-                                    <input id="password" type="text" class="form-control input-lg" name="password">
+                                <div class="form-group{{ $errors->has('address_2') ? ' has-error' : '' }}">
+                                    <label for="address_2">Address Line 2 - Optional</label>
+                                    <input id="address_2" type="text" class="form-control input-lg" name="address_2" value="{{ old('address_2', isset($user->address_2) ? $user->address_2 : '') }}">
 
-                                    @if ($errors->has('password'))
+                                    @if ($errors->has('address_2'))
                                         <span class="help-block">
-                                            <strong>{{ $errors->first('password') }}</strong>
+                                            <strong>{{ $errors->first('address_2') }}</strong>
                                         </span>
                                     @endif
                                 </div>
                                 
                                 <div class="row">
-                                    <div class="col-sm-5 form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-                                        <label for="password">City</label>
-                                        <input id="password" type="text" class="form-control input-lg" name="password"  required>
+                                    <div class="col-sm-5 form-group{{ $errors->has('city') ? ' has-error' : '' }}">
+                                        <label for="city">City</label>
+                                        <input id="city" type="text" class="form-control input-lg" name="city" value="{{ old('city', isset($user->city) ? $user->city : '') }}" required>
 
-                                        @if ($errors->has('password'))
+                                        @if ($errors->has('city'))
                                             <span class="help-block">
-                                                <strong>{{ $errors->first('password') }}</strong>
+                                                <strong>{{ $errors->first('city') }}</strong>
                                             </span>
                                         @endif
                                     </div>
 
-                                    <div class="col-sm-3 form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-                                        <label for="password">State</label>
-                                        <select id="password" class="form-control input-lg" name="password"  required>
-                                                @if(empty($user->substantiated_at))<option selected disabled hidden class="hidden"></option>@endif
-                                                <option value="AL">AL</option>
-                                                <option value="AK">AK</option>
-                                                <option value="AZ">AZ</option>
-                                                <option value="AR">AR</option>
-                                                <option value="CA">CA</option>
-                                                <option value="CO">CO</option>
-                                                <option value="CT">CT</option>
-                                                <option value="DE">DE</option>
-                                                <option value="DC">DC</option>
-                                                <option value="FL">FL</option>
-                                                <option value="GA">GA</option>
-                                                <option value="HI">HI</option>
-                                                <option value="ID">ID</option>
-                                                <option value="IL">IL</option>
-                                                <option value="IN">IN</option>
-                                                <option value="IA">IA</option>
-                                                <option value="KS">KS</option>
-                                                <option value="KY">KY</option>
-                                                <option value="LA">LA</option>
-                                                <option value="ME">ME</option>
-                                                <option value="MD">MD</option>
-                                                <option value="MA">MA</option>
-                                                <option value="MI">MI</option>
-                                                <option value="MN">MN</option>
-                                                <option value="MS">MS</option>
-                                                <option value="MO">MO</option>
-                                                <option value="MT">MT</option>
-                                                <option value="NE">NE</option>
-                                                <option value="NV">NV</option>
-                                                <option value="NH">NH</option>
-                                                <option value="NJ">NJ</option>
-                                                <option value="NM">NM</option>
-                                                <option value="NY">NY</option>
-                                                <option value="NC">NC</option>
-                                                <option value="ND">ND</option>
-                                                <option value="OH">OH</option>
-                                                <option value="OK">OK</option>
-                                                <option value="OR">OR</option>
-                                                <option value="PA">PA</option>
-                                                <option value="RI">RI</option>
-                                                <option value="SC">SC</option>
-                                                <option value="SD">SD</option>
-                                                <option value="TN">TN</option>
-                                                <option value="TX">TX</option>
-                                                <option value="UT">UT</option>
-                                                <option value="VT">VT</option>
-                                                <option value="VA">VA</option>
-                                                <option value="WA">WA</option>
-                                                <option value="WV">WV</option>
-                                                <option value="WI">WI</option>
-                                                <option value="WY">WY</option>
+                                    <div class="col-sm-3 form-group{{ $errors->has('state') ? ' has-error' : '' }}">
+                                        <label for="state">State</label>
+                                        <select id="state" class="form-control input-lg" name="state" required>
+                                                @include('partials.state_list')
                                         </select>
 
-                                        @if ($errors->has('password'))
+                                        @if ($errors->has('state'))
                                             <span class="help-block">
-                                                <strong>{{ $errors->first('password') }}</strong>
+                                                <strong>{{ $errors->first('state') }}</strong>
                                             </span>
                                         @endif
                                     </div>
 
-                                    <div class="col-sm-4 form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-                                        <label for="password">Zip Code</label>
-                                        <input id="password" type="tel" class="form-control input-lg" name="password" maxlength="10"  required>
+                                    <div class="col-sm-4 form-group{{ $errors->has('zip_code') ? ' has-error' : '' }}">
+                                        <label for="zip_code">Zip Code</label>
+                                        <input id="zip_code" type="tel" class="form-control input-lg" name="zip_code" maxlength="10" value="{{ old('zip_code', isset($user->zip_code) ? $user->zip_code : '') }}" required>
 
-                                        @if ($errors->has('password'))
+                                        @if ($errors->has('zip_code'))
                                             <span class="help-block">
-                                                <strong>{{ $errors->first('password') }}</strong>
+                                                <strong>{{ $errors->first('zip_code') }}</strong>
                                             </span>
                                         @endif
                                     </div>
                                 </div>
                                 
-                                <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-                                    <label for="password">Phone Number - Optional</label>
-                                    <input id="password" type="tel" class="form-control input-lg" name="password">
+                                <div class="form-group{{ $errors->has('phone') ? ' has-error' : '' }}">
+                                    <label for="phone">Phone Number - Optional</label>
+                                    <input id="phone" type="tel" class="form-control input-lg" name="phone" value="{{ old('phone', isset($user->phone) ? $user->phone : '') }}">
 
-                                    @if ($errors->has('password'))
+                                    @if ($errors->has('phone'))
                                         <span class="help-block">
-                                            <strong>{{ $errors->first('password') }}</strong>
+                                            <strong>{{ $errors->first('phone') }}</strong>
                                         </span>
                                     @endif
                                 </div>
@@ -182,59 +131,59 @@
                                 <div class="new-card @if(!empty($user->substantiated_at)) hidden @endif")> 
                                     <h4>Credit Card Information</h4>
 
-                                    <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-                                        <label for="password">Name on Card</label>
-                                        <input id="password" type="text" class="form-control input-lg" name="password">
+                                    <div class="form-group{{ $errors->has('name_on_card') ? ' has-error' : '' }}">
+                                        <label for="name_on_card">Name on Card</label>
+                                        <input id="name_on_card" type="text" class="form-control input-lg" data-stripe="name">
 
-                                        @if ($errors->has('password'))
+                                        @if ($errors->has('name_on_card'))
                                             <span class="help-block">
-                                                <strong>{{ $errors->first('password') }}</strong>
+                                                <strong>{{ $errors->first('name_on_card') }}</strong>
                                             </span>
                                         @endif
                                     </div>
 
-                                    <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-                                        <label for="password">Card Number</label>
-                                        <input id="password" type="tel" autocomplete="cc-number" class="form-control input-lg cc-number" name="password" maxlength="16">
+                                    <div class="form-group{{ $errors->has('cc_number') ? ' has-error' : '' }}">
+                                        <label for="cc_number">Card Number</label>
+                                        <input id="cc_number" type="tel" autocomplete="cc-number" class="form-control input-lg cc-number" data-stripe="number" maxlength="19">
 
-                                        @if ($errors->has('password'))
+                                        @if ($errors->has('cc_number'))
                                             <span class="help-block">
-                                                <strong>{{ $errors->first('password') }}</strong>
+                                                <strong>{{ $errors->first('cc_number') }}</strong>
                                             </span>
                                         @endif
                                     </div>
 
                                     <div class="row">
 
-                                        <div class="col-sm-4 form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-                                            <label for="password">Exp</label>
-                                            <input id="password" type="tel" autocomplete="cc-exp" class="form-control input-lg cc-exp" name="password" placeholder="MM/YY">
+                                        <div class="col-sm-4 form-group{{ $errors->has('cc_exp') ? ' has-error' : '' }}">
+                                            <label for="cc_exp">Exp</label>
+                                            <input id="cc_exp" type="tel" autocomplete="cc-exp" class="form-control input-lg cc-exp" placeholder="MM/YY" data-stripe="exp" maxlength="7">
 
-                                            @if ($errors->has('password'))
+                                            @if ($errors->has('cc_exp'))
                                                 <span class="help-block">
-                                                    <strong>{{ $errors->first('password') }}</strong>
+                                                    <strong>{{ $errors->first('cc_exp') }}</strong>
                                                 </span>
                                             @endif
                                         </div>
                                         
-                                        <div class="col-sm-4 form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-                                            <label for="password">CVC</label>
-                                            <input id="password" type="tel" class="form-control input-lg cc-cvc" name="password" autocomplete="off" maxlength="4">
+                                        <div class="col-sm-4 form-group{{ $errors->has('cc_cvc') ? ' has-error' : '' }}">
+                                            <label for="cc_cvc">CVC/CVV Code</label>
+                                            <input id="cc_cvc" type="tel" class="form-control input-lg cc-cvc" autocomplete="off" data-stripe="cvc" maxlength="4">
 
-                                            @if ($errors->has('password'))
+                                            @if ($errors->has('cc_cvc'))
                                                 <span class="help-block">
-                                                    <strong>{{ $errors->first('password') }}</strong>
+                                                    <strong>{{ $errors->first('cc_cvc') }}</strong>
                                                 </span>
                                             @endif
                                         </div>
 
-                                        <div class="col-sm-4 form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-                                            <label for="password">Billing Zip Code</label>
-                                            <input id="password" type="tel" class="form-control input-lg" name="password" maxlength="10">
+                                        <div class="col-sm-4 form-group{{ $errors->has('billing_zip_code') ? ' has-error' : '' }}">
+                                            <label for="billing_zip_code">Billing Zip Code</label>
+                                            <input id="billing_zip_code" type="tel" class="form-control input-lg billing-zip-code" data-stripe="address_zip" maxlength="10">
 
-                                            @if ($errors->has('password'))
+                                            @if ($errors->has('billing_zip_code'))
                                                 <span class="help-block">
-                                                    <strong>{{ $errors->first('password') }}</strong>
+                                                    <strong>{{ $errors->first('billing_zip_code') }}</strong>
                                                 </span>
                                             @endif
                                         </div>
@@ -284,9 +233,12 @@
 
 
 @section('footer')
+<script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+<script type="text/javascript">
+  Stripe.setPublishableKey("{{config('services.stripe.key')}}");
+</script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.payment/3.0.0/jquery.payment.min.js" integrity="sha256-bEuhxmK0QLOu/l5RR+ot9y+A5RDkl5xlSFp7D/+JTjc=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.9/jquery.mask.min.js" integrity="sha256-j9bZfF4eKVp8Zrzq/zna8WWo5lroqN1yKEQ8qvBfK1A=" crossorigin="anonymous"></script>
+<script src="/js/user.js"></script>
 <script src="/js/profile.js"></script>
 @endsection
-
-
