@@ -32,7 +32,7 @@ class User extends Authenticatable
     ];
     
     public function Orders(){
-    	return $this->hasMany(Order::class, 'user_ID');
+    	return $this->hasMany(Order::class, 'user_id');
     }
     
     public function Incoming_Packages(){

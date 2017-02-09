@@ -11,9 +11,14 @@
 @section('content')
 
 <div class="container content">
+    <h1 class="center">Dashboard</h1>
     <div class="row">
         <div class="col-sm-3">
-            <button class="btn btn-primary btn-block" onclick="location.href='/register'">Create a New Order</button>
+            
+            <form role="form" method="POST" action="/dashboard/addOrder" id="add-order" class="btn-form">
+                {{ csrf_field() }}
+                <button class="btn btn-primary btn-block" type="submit">Create a New Order</button>
+            </form>
             <button class="btn btn-default btn-block" onclick="location.href='/login_info'">Edit Login Info</button>
             <button class="btn btn-default btn-block" onclick="location.href='/profile_info'">Update Shipping Profile</button>
             <button class="btn btn-default btn-block" onclick="location.href='/tutorial'">How-To Tutorial</button>
@@ -28,11 +33,10 @@
                         <div class="row">
                             <div class="col-sm-12">
                                 <h4 class="center">Your Discreet Drop address is:</h4>
-                                <p>
-                                    {{$dd_info->name}} <br>
-                                    {{$dd_info->address_1}} <br>
-                                    {{$dd_info->address_2}} - {{$user->dd_code}} <br>
-                                    {{$dd_info->city}} {{$dd_info->state}}, {{$dd_info->zip_code}}
+                                <p>{{$dd_info->name}} <br>
+                                {{$dd_info->address_1}} <br>
+                                {{$dd_info->address_2}} - {{$user->dd_code}} <br>
+                                {{$dd_info->city}}, {{$dd_info->state}} {{$dd_info->zip_code}}
                                 </p>
                             </div>
                         </div>
@@ -45,7 +49,6 @@
         </div>
         
         <div class="col-sm-9">
-            
             @include('partials.order_accordion')
             
         </div> 
@@ -58,5 +61,5 @@
 
 
 @section('footer')
-
+<script src="/js/user.js"></script>
 @endsection

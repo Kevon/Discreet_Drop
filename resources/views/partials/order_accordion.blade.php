@@ -1,5 +1,5 @@
 <div class="panel-group" id="accordion">
-                
-    @include('partials.order_panel')
-
+    @foreach($orders as $order)        
+        @include('partials.order_panel')
+    @endforeach
 </div>

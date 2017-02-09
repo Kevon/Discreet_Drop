@@ -10,6 +10,7 @@ use Auth;
 use Session;
 use App\User;
 use App\DD_Info;
+use App\Order;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
 
@@ -23,9 +24,14 @@ class Controller extends BaseController
     
     public function dashboard(){
         $user = Auth::user();
-        $orders = $user->Orders();
-        $dd_info = DD_Info::where('active', 'YES')->first(); 
-    	return view('dashboard', compact('user', 'orders', 'dd_info'));
+        $dd_info = DD_Info::where('active', 'YES')->first();
+        $orders = $user->Orders;
+        if(empty($user->substantiated_at) or count($orders)==0){
+            $placeholder = new Order;
+            $placeholder->id = 0;
+            $orders = collect([$placeholder]);
+        }
+        return view('dashboard', compact('user', 'orders', 'dd_info'));
     }
     
     public function tutorial(){
@@ -119,9 +125,25 @@ class Controller extends BaseController
     
     public function addOrder(){
         $user = Auth::user();
+        $order = new Order;
+        $order->user_id = $user->id;
+        $order->created_by = $user->id;
+        $order->save();
+        Session::flash('message', 'Order successfully created!');
+        return back();
     }
     
-    public function deleteOrder(){
+    public function deleteOrder(Request $request, Order $order){
         $user = Auth::user();
+        $order = Order::find($order->id);
+        if($order->user_id == $user->id){
+            $order->delete();
+            Session::flash('message', 'Order successfully deleted.');
+            return redirect()->to('/dashboard');
+        }
+        else{
+            Session::flash('error', 'Could not delete order. Please try again.');
+            return back();
+        }
     }
 }

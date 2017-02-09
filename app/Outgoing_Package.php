@@ -10,14 +10,14 @@ class Outgoing_Package extends Model
     protected $guarded = ['*'];
     
     public function Shipment(){
-    	return $this->belongsTo(Shipment::class, 'shipment_ID');
+    	return $this->belongsTo(Shipment::class, 'shipment_id');
     }
     
     public function DD_Info(){
-    	return $this->hasOne(DD_Info::class, 'dd_info_ID');
+    	return $this->hasOne(DD_Info::class, 'dd_info_id');
     }
     
     public function Box(){
-    	return $this->hasOne(Box::class, 'box_ID');
+    	return $this->hasOne(Box::class, 'box_id');
     }
 }

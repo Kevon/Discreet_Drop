@@ -10,14 +10,14 @@ class Shipment extends Model
     protected $guarded = ['*'];
     
     public function Order(){
-    	return $this->belongsTo(Order::class, 'shipment_ID');
+    	return $this->belongsTo(Order::class, 'shipment_id');
     }
     
     public function Charges(){
-    	return $this->hasMany(Charge::class, 'shipment_ID');
+    	return $this->hasMany(Charge::class, 'shipment_id');
     }
     
     public function Outgoing_Packages(){
-    	return $this->hasMany(Outgoing_Package::class, 'shipment_ID');
+    	return $this->hasMany(Outgoing_Package::class, 'shipment_id');
     }
 }

@@ -14,14 +14,14 @@ class Order extends Model
     protected $hidden = ['deleted_at'];
     
     public function Incoming_Package(){
-    	return $this->hasOne(Incoming_Package::class, 'incoming_package_ID');
+    	return $this->hasOne(Incoming_Package::class, 'incoming_package_id');
     }
     
     public function Shipment(){
-    	return $this->hasOne(Shipment::class, 'shipment_ID');
+    	return $this->hasOne(Shipment::class, 'shipment_id');
     }
     
     public function User(){
-    	return $this->belongsTo(User::class, 'user_ID');
+    	return $this->belongsTo(User::class, 'user_id');
     }
 }

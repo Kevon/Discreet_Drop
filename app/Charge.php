@@ -10,6 +10,6 @@ class Charge extends Model
     protected $guarded = ['*'];
     
     public function Shipment(){
-    	return $this->belongsTo(Shipment::class, 'shipment_ID');
+    	return $this->belongsTo(Shipment::class, 'shipment_id');
     }
 }

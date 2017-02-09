@@ -1,7 +1,7 @@
 function changeMethod() {
     if(confirm("Are you sure you want to delete this?")){
         $('[name="_method"]').val("DELETE");
-        $("form").submit();
+        $(event.target).parents("form").submit();
     }
 }
 
