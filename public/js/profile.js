@@ -12,31 +12,42 @@ $('input#phone').mask('(000) 000-0000');
 
 $.fn.toggleInputError = function(erred) {
     this.parent('.form-group').toggleClass('has-error', erred);
-    this.parent('.form-group').children('span.help-block').html('<strong>Please correct this information and try again.</strong>');
+    if(erred){
+        this.parent('.form-group').children('span.help-block').html('<strong>Please correct this information and try again.</strong>');
+    }
     return this;
 };
 
 $('form#profile-form').submit(function(e) {
     e.preventDefault();
+    if($.trim($('input.cc-number').val()).length){
+        var cardType = $.payment.cardType($('.cc-number').val());
+        $('.cc-number').toggleInputError(!$.payment.validateCardNumber($('.cc-number').val()));
+        $('.cc-exp').toggleInputError(!$.payment.validateCardExpiry($('.cc-exp').payment('cardExpiryVal')));
+        $('.cc-cvc').toggleInputError(!$.payment.validateCardCVC($('.cc-cvc').val(), cardType));
+        $('.billing-zip-code').parent('.form-group').removeClass('has-error');
+        if(!/^\d{5}(-\d{4})?$/.test($('.billing-zip-code').val())){
+            $('.billing-zip-code').parent('.form-group').addClass('has-error');
+            $('.billing-zip-code').parent('.form-group').children('span.help-block').html('<strong>Please correct this information and try again.</strong>');
+        }
 
-    var cardType = $.payment.cardType($('.cc-number').val());
-    $('.cc-number').toggleInputError(!$.payment.validateCardNumber($('.cc-number').val()));
-    $('.cc-exp').toggleInputError(!$.payment.validateCardExpiry($('.cc-exp').payment('cardExpiryVal')));
-    $('.cc-cvc').toggleInputError(!$.payment.validateCardCVC($('.cc-cvc').val(), cardType));
+        var $form = $('#profile-form');
+        // Disable the submit button to prevent repeated clicks:
+        $form.find('.submit').prop('disabled', true);
+        // Request a token from Stripe:
+        Stripe.card.createToken({
+            number: $('.cc-number').val(),
+            cvc: $('.cc-cvc').val(),
+            exp: $('.cc-exp').val(),
+            address_zip: $('.billing-zip-code').val()
+            }, stripeResponseHandler);
 
-    var $form = $('#profile-form');
-    // Disable the submit button to prevent repeated clicks:
-    $form.find('.submit').prop('disabled', true);
-    // Request a token from Stripe:
-    Stripe.card.createToken({
-        number: $('.cc-number').val(),
-        cvc: $('.cc-cvc').val(),
-        exp: $('.cc-exp').val(),
-        address_zip: $('.billing-zip-code').val()
-        }, stripeResponseHandler);
-
-    // Prevent the form from being submitted:
-    return false;
+        // Prevent the form from being submitted:
+        return false;
+    }
+    else{
+        $('#profile-form').get(0).submit();
+    }
 });
 
 function stripeResponseHandler(status, response) {
@@ -46,7 +57,8 @@ function stripeResponseHandler(status, response) {
     if (response.error) { // Problem!
 
         // Show the errors on the form:
-        $form.find('.payment-errors').text(response.error.message);
+        $form.find('.cc-label').text(response.error.message);
+        $form.find('.cc-label').addClass('has-error');
         $form.find('.submit').prop('disabled', false); // Re-enable submission
 
         } else { // Token was created!

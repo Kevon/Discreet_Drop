@@ -38,7 +38,13 @@ class Controller extends BaseController
     }
     
     public function updateProfile(Request $request){
-        $this->validate($request, ['phone' => 'required']);
+        $this->validate($request, [
+            'first_name' => 'required',
+            'last_name' => 'required',
+            'city' => 'required',
+            'state' => 'required',
+            'zip_code' => 'required|regex:/^\d{5}(-\d{4})?$/'
+        ]);
         
         $user = Auth::user();
         

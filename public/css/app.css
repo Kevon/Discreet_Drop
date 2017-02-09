@@ -563,6 +563,10 @@ input[type="radio"]{
     color: #d9534f !important;
 }
 
+.has-error h4.cc-label{
+    color: #d9534f !important;
+}
+
 .has-error-background{
     background-color: #d9534f !important;
 }

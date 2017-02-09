@@ -80,7 +80,7 @@
                                 <div class="row">
                                     <div class="col-sm-5 form-group{{ $errors->has('city') ? ' has-error' : '' }}">
                                         <label for="city">City</label>
-                                        <input id="city" type="text" class="form-control input-lg" autocomplete="address-level1" name="city" value="{{ old('city', isset($user->city) ? $user->city : '') }}" required>
+                                        <input id="city" type="text" class="form-control input-lg" autocomplete="address-level2" name="city" value="{{ old('city', isset($user->city) ? $user->city : '') }}" required>
 
                                         @if ($errors->has('city'))
                                             <span class="help-block">
@@ -91,7 +91,7 @@
 
                                     <div class="col-sm-3 form-group{{ $errors->has('state') ? ' has-error' : '' }}">
                                         <label for="state">State</label>
-                                        <select id="state" class="form-control input-lg" autocomplete="address-level2" name="state" required>
+                                        <select id="state" class="form-control input-lg" autocomplete="address-level1" name="state" required>
                                                 @include('partials.state_list')
                                         </select>
 
@@ -129,7 +129,7 @@
                                 <hr>
                                 
                                 <div class="new-card @if(!empty($user->substantiated_at)) hidden @endif")> 
-                                    <h4>Credit Card Information</h4>
+                                    <h4 class="cc-label">Credit Card Information</h4>
 
                                     <div class="form-group{{ $errors->has('name_on_card') ? ' has-error' : '' }}">
                                         <label for="name_on_card">Name on Card</label>
@@ -179,6 +179,7 @@
                                         </div>
                                         
                                     </div>
+                                    <p>Discreet Drop uses <a href="https://stripe.com/" target="_blank">Stripe</a> to securly handle all payment processing, and your credit card information never touches our servers or is stored in our database.<br><br>We use HTTPS and SSL security layers and are PCI compliant to ensure your private information remains private.</p>
                                 </div>
                                     
                                 <div class="current-card @if(empty($user->substantiated_at)) hidden @endif"> 
@@ -201,7 +202,6 @@
                                     </div>
                                 </div>
 
-
                                 <div class="row btn-toolbar">
                                     <div class="col-md-6">
                                         <button type="submit" class="btn btn-block btn-primary">Save Changes</button>
@@ -215,6 +215,11 @@
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="center">
+                <a href="https://stripe.com/" target="_blank">
+                    <img src="/images/powered_by_stripe.png" alt="Powered by Stripe">
+                </a>
             </div>
         </div>
     </div>
