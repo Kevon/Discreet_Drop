@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('subtitle', 'Tutorial')
+@section('subtitle', 'Pricing Calculator')
 @section('description', 'Hide logos, return labels, invoices, holes, and all other identifying information on any package from any seller so your item arrives as discreet as possible.')
 
 

@@ -39,7 +39,7 @@
 
                                 <div class="form-group center">
                                     <div class="col-sm-8 col-sm-offset-2 center">
-                                        <button type="submit" class="btn btn-primary btn-block">Register</button>
+                                        <div class="row btn-toolbar"><button type="submit" class="btn btn-primary btn-block">Register</button></div>
                                     </div>
                                 </div>
                             </form>
@@ -51,7 +51,7 @@
                     <div class="row">
                         <div class="col-sm-8 col-sm-offset-2 center">
                             <h5 class="center">Already have an account?</h5>
-                            <button class="btn btn-default btn-block" onclick="location.href='/login'">Log In</button>
+                            <div class="row btn-toolbar"><button class="btn btn-default btn-block" onclick="location.href='/login'">Log In</button></div>
                         </div>
                     </div>
                 </div>

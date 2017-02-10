@@ -42,7 +42,7 @@
                         </div>
                     </div>
                 </div>
-            
+            <h4 class="center"><i class="fa fa-arrow-up" aria-hidden="true"></i></h4>
             <h5>Ship your packages to that address, and we'll take care of hiding all identifying information and logos.</h5>
             <p>Once we receive your package, we'll automatically box, charge, and ship your item out to you completely discreet via USPS at the lowest possible rate.</p>
             @endif

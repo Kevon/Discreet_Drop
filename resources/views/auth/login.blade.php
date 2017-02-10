@@ -41,7 +41,7 @@
 
                                 <div class="form-group">
                                     <div class="col-sm-8 col-sm-offset-2 center">
-                                        <button type="submit" class="btn btn-block btn-primary">Login</button>
+                                        <div class="row btn-toolbar"><button type="submit" class="btn btn-block btn-primary">Login</button></div>
                                         <a href="{{ url('/password/reset') }}">Forgot Your Password?</a>
                                     </div>
                                 </div>
@@ -55,7 +55,7 @@
                     <div class="row">
                         <div class="col-sm-8 col-sm-offset-2 center">
                             <h5 class="center">Don't have an account yet?</h5>
-                            <button class="btn btn-default btn-block" onclick="location.href='/register'">Sign Up For Free</button>
+                            <div class="btn-toolbar"><button class="btn btn-default btn-block" onclick="location.href='/register'">Sign Up For Free</button></div>
                         </div>
                     </div>
                 </div>

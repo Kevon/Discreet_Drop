@@ -61,9 +61,9 @@
 
                 <!-- Right Side Of Navbar -->
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#">How It Works</a></li>
-                    <li><a href="#">FAQ</a></li>
-                    <li><a href="#">Pricing Calculator</a></li>
+                    <li><a href="/how-it-works">How It Works</a></li>
+                    <li><a href="/faq">FAQ</a></li>
+                    <li><a href="/pricing-calculator">Pricing Calculator</a></li>
                     <li class="disabled" disabled><a href="#">+</a></li>
                     <!-- Authentication Links -->
                     @if (Auth::guest())
@@ -122,10 +122,10 @@
                     <div class="col-xs-6">
                         <h4>Discover</h4>
                         <a href="/" class="dark-link">Home</a> <br>
-                        <a href="" class="dark-link">How It Works</a> <br>
+                        <a href="/how-it-works" class="dark-link">How It Works</a> <br>
                         @if (Auth::guest())
-                            <a href="" class="dark-link">Sign Up</a> <br>
-                            <a href="" class="dark-link">Log In</a> <br>
+                            <a href="/register" class="dark-link">Sign Up</a> <br>
+                            <a href="/login" class="dark-link">Log In</a> <br>
                         @else
                             <a href="/dashboard" class="dark-link">Dashboard</a> <br>
                             <a href="/login_info" class="dark-link">Edit Login Info</a> <br>
@@ -133,8 +133,8 @@
                             <a href="/tutorial" class="dark-link">How-To Tutorial</a> <br>
                             <a href="{{ url('/logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" class="dark-link">Logout</a><form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">{{ csrf_field() }}</form> <br>
                         @endif
-                        <a href="" class="dark-link">Pricing Calculator</a> <br>
-                        <a href="" class="dark-link">FAQ</a>
+                        <a href="/pricing-calculator" class="dark-link">Pricing Calculator</a> <br>
+                        <a href="/faq" class="dark-link">FAQ</a>
                     </div>
                     <div class="col-xs-6">
                         <h4>Company</h4>

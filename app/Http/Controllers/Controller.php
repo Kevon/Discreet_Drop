@@ -26,16 +26,25 @@ class Controller extends BaseController
         $user = Auth::user();
         $dd_info = DD_Info::where('active', 'YES')->first();
         $orders = $user->Orders;
-        if(empty($user->substantiated_at) or count($orders)==0){
-            $placeholder = new Order;
-            $placeholder->id = 0;
-            $orders = collect([$placeholder]);
-        }
+        $orders->load('Incoming_Package');
+        $orders->load('Shipment.Charge, Shipment.Outgoing_Package');
         return view('dashboard', compact('user', 'orders', 'dd_info'));
     }
     
     public function tutorial(){
     	return view('tutorial');
+    }
+    
+    public function howItWorks(){
+    	return view('how_it_works');
+    }
+    
+    public function faq(){
+    	return view('faq');
+    }
+    
+    public function pricingCalculator(){
+    	return view('pricing_calculator');
     }
     
     public function profile_info(){

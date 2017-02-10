@@ -18,7 +18,9 @@ Route::get('/home', 'HomeController@index');
 Route::get('/', 'Controller@index');
 
 Route::get('/dashboard', 'Controller@dashboard');
-
+Route::get('/how-it-works', 'Controller@howItworks');
+Route::get('/faq', 'Controller@faq');
+Route::get('/pricing-calculator', 'Controller@pricingCalculator');
 Route::get('/tutorial', 'Controller@tutorial');
 
 Route::get('/profile_info', 'Controller@profile_info');
