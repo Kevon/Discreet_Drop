@@ -275,7 +275,7 @@ i.fa{
     transition-duration: 0.5s;
     text-decoration: none !important;
     white-space:normal !important;
-    word-wrap:break-word; 
+    word-wrap:normal; 
 }
 .btn:hover {
     box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.10), inset 0 0 100px 100px rgba(255, 255, 255, 0.1) !important;
@@ -302,6 +302,12 @@ i.fa{
 }
 .btn.btn-default:active {
     box-shadow: inset 0 0 100px 100px rgba(0, 0, 0, 0.1) !important;
+    background-color: #3fa9f5 !important;
+	color: white;
+    transition-duration: 0.2s;
+}
+
+.btn.btn-default.active {
     background-color: #3fa9f5 !important;
 	color: white;
     transition-duration: 0.2s;
@@ -469,6 +475,16 @@ input:-webkit-autofill:focus, select:-webkit-autofill:focus {
     overflow: visible;
     display: inline-block;
 }
+
+.btn-group .btn{
+    white-space:normal !important;
+    word-wrap:normal; 
+}
+
+.btn-group-vertical{
+    width: 100%;
+}
+
 
 .faded{
     color: lightgrey !important;

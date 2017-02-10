@@ -28,6 +28,14 @@ return [
     'sparkpost' => [
         'secret' => env('SPARKPOST_SECRET'),
     ],
+    
+    'easypost' => [
+        'key' => env('EASYPOST_API_KEY'),
+    ],
+    
+    'shippo' => [
+        'key' => env('SHIPPO_API_KEY'),
+    ],
 
     'stripe' => [
         'model' => App\User::class,

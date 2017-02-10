@@ -47,6 +47,50 @@ class Controller extends BaseController
     	return view('pricing_calculator');
     }
     
+    public function getRate(Request $request){
+        $this->validate($request, [
+            'size' => 'required|digits_between:2,3',
+            'weight' => 'required|digits_between:2,3',
+            'zip_code' => 'required|regex:/^\d{5}(-\d{4})?$/'
+        ]);
+        
+        $dd_info = DD_Info::where('active', 'YES')->first();
+        
+        \EasyPost\EasyPost::setApiKey(config('services.easypost.key'));
+        
+        $to_address_params = array("name"    => "John Doe",
+                                   "street1" => "123 Main Street",
+                                   "zip"     => $request->zip_code);
+        
+        $to_address = \EasyPost\Address::create($to_address_params);
+        
+        $from_address_params = array("name"    => $dd_info->dd_name,
+                                   "street1" => $dd_info->address_1,
+                                   "street2" => $dd_info->address_2,
+                                   "city"    => $dd_info->city,
+                                   "state"   => $dd_info->state,
+                                   "zip"     => $dd_info->zip_code);
+        
+        $from_address = \EasyPost\Address::create($from_address_params);
+        
+        $parcel_params = array("length"             => $request->size,
+                               "width"              => 24,
+                               "height"             => 12,
+                               "weight"             => $request->weight
+        );
+        $parcel = \EasyPost\Parcel::create($parcel_params);
+        
+        $shipment_params = array("from_address" => $from_address,
+                                 "to_address"   => $to_address,
+                                 "parcel"       => $parcel
+        );
+        $shipment = \EasyPost\Shipment::create($shipment_params);
+        
+        $rate = \EasyPost\Rate::retrieve($shipment->lowest_rate());
+        
+    	return view('partials.rate', compact('dd_info', 'rate'));
+    }
+    
     public function profile_info(){
         $user = Auth::user();
     	return view('profile_info', compact('user'));

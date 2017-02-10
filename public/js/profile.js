@@ -29,6 +29,7 @@ $('form#profile-form').submit(function(e) {
         if(!/^\d{5}(-\d{4})?$/.test($('.billing-zip-code').val())){
             $('.billing-zip-code').parent('.form-group').addClass('has-error');
             $('.billing-zip-code').parent('.form-group').children('span.help-block').html('<strong>Please correct this information and try again.</strong>');
+            return false;
         }
 
         var $form = $('#profile-form');

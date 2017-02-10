@@ -23,23 +23,34 @@ function toggle(){
 
 $("div.content").css("margin-bottom",$(".footer").outerHeight()+100);
 
+if($(window).width() < 410){
+        $('div.btn-group').removeClass('btn-group-justified');
+    } 
+
 $(window).resize(function() {
     $("div.content").css("margin-bottom",$(".footer").outerHeight()+100);
+    
+    if($(window).width() < 410){
+        $('div.btn-group').removeClass('btn-group-justified');
+    } 
+    else{
+        $('div.btn-group').addClass('btn-group-justified');
+    }
 });
 
 $("input, select").blur();
 
 $("input, select").focusout(function() {
-    $(this).parents("form").find("label").each(function(){
+    $(this).parents("form").find("label").not(".btn").each(function(){
          $(this).removeClass("faded");
      });
 });
 
 $("input, select").focusin(function() {
-    if(!$(this).is(':checkbox')){
-    $(this).parents("form").find("label").not($(this).parent("div").find("label")).each(function(){
-         $(this).addClass("faded");
-     });
+    if(!$(this).is(':checkbox, :radio')){
+        $(this).parents("form").find("label").not(".btn").not($(this).parent("div").find("label")).each(function(){
+             $(this).addClass("faded");
+        });
     }
 });
 

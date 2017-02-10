@@ -23,6 +23,8 @@ Route::get('/faq', 'Controller@faq');
 Route::get('/pricing-calculator', 'Controller@pricingCalculator');
 Route::get('/tutorial', 'Controller@tutorial');
 
+Route::post('/pricing-calculator/submit', 'Controller@getRate');
+
 Route::get('/profile_info', 'Controller@profile_info');
 Route::patch('/profile_info/update', 'Controller@updateProfile');
 
