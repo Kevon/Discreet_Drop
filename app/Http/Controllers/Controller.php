@@ -151,7 +151,6 @@ class Controller extends BaseController
             }
         }
         $rate = $rates[$minId];
-        dd($rate);
         return view('partials.rate', compact('dd_info', 'rate'));
     }
     

@@ -20,6 +20,7 @@ $.fn.toggleInputError = function(erred) {
 
 $('form#profile-form').submit(function(e) {
     e.preventDefault();
+    $("button#submit_btn").button('loading');
     if($.trim($('input.cc-number').val()).length){
         var cardType = $.payment.cardType($('.cc-number').val());
         $('.cc-number').toggleInputError(!$.payment.validateCardNumber($('.cc-number').val()));
@@ -29,6 +30,7 @@ $('form#profile-form').submit(function(e) {
         if(!/^\d{5}(-\d{4})?$/.test($('.billing-zip-code').val())){
             $('.billing-zip-code').parent('.form-group').addClass('has-error');
             $('.billing-zip-code').parent('.form-group').children('span.help-block').html('<strong>Please correct this information and try again.</strong>');
+            $("button#submit_btn").button('reset');
             return false;
         }
 
@@ -44,6 +46,7 @@ $('form#profile-form').submit(function(e) {
             }, stripeResponseHandler);
 
         // Prevent the form from being submitted:
+        $("button#submit_btn").button('reset');
         return false;
     }
     else{
@@ -69,7 +72,7 @@ function stripeResponseHandler(status, response) {
 
         // Insert the token ID into the form so it gets submitted to the server:
         $form.append($('<input type="hidden" name="stripeToken">').val(token));
-
+        
         // Submit the form:
         $form.get(0).submit();
     }
