@@ -47,7 +47,7 @@ class Controller extends BaseController
     	return view('pricing_calculator');
     }
     
-    public function getRate(Request $request){
+    /*public function getRate(Request $request){
         $this->validate($request, [
             'size' => 'required|digits_between:2,3',
             'weight' => 'required|digits_between:2,3',
@@ -89,6 +89,67 @@ class Controller extends BaseController
         $rate = \EasyPost\Rate::retrieve($shipment->lowest_rate());
         
     	return view('partials.rate', compact('dd_info', 'rate'));
+    }*/
+    
+    
+    
+    public function getRate(Request $request){
+        $this->validate($request, [
+            'size' => 'required|digits_between:2,3',
+            'weight' => 'required|digits_between:2,3',
+            'zip_code' => 'required|regex:/^\d{5}(-\d{4})?$/'
+        ]);
+        $dd_info = DD_Info::where('active', 'YES')->first();
+        Shippo::setApiKey(config('services.shippo.key'));
+        
+        $from_address = array(
+            'object_purpose' => 'PURCHASE',
+            'name' => 'Mr Hippo',
+            'company' => 'Shippo',
+            'street1' => '215 Clayton St.',
+            'city' => 'San Francisco',
+            'state' => 'CA',
+            'zip' => '94117',
+            'country' => 'US',
+            'phone' => '+1 555 341 9393',
+            'email' => 'mr-hippo@goshipppo.com',
+        );
+        dd($from_address);
+        
+        $to_address = array(
+            'object_purpose' => 'PURCHASE',
+            'name' => 'Ms Hippo',
+            'company' => 'San Diego Zoo',
+            'street1' => '2920 Zoo Drive',
+            'city' => 'San Diego',
+            'state' => 'CA',
+            'zip' => '92101',
+            'country' => 'US',
+            'phone' => '+1 555 341 9393',
+            'email' => 'ms-hippo@goshipppo.com',
+        );
+        
+        $parcel = array(
+            'length'=> '5',
+            'width'=> '5',
+            'height'=> '5',
+            'distance_unit'=> 'in',
+            'weight'=> '2',
+            'mass_unit'=> 'lb',
+        );
+        
+        $shipment = Shippo_Shipment::create(
+        array(
+            'object_purpose'=> 'PURCHASE',
+            'address_from'=> $from_address,
+            'address_to'=> $to_address,
+            'parcel'=> $parcel,
+            'async'=> false,
+        ));
+        
+        $rates = $shipment['rates_list'];
+        dd($rates);
+        return view('partials.rate', compact('dd_info', 'rate'));
     }
     
     public function profile_info(){
