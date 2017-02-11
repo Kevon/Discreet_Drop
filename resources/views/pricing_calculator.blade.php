@@ -66,7 +66,7 @@
                                     
                                     <div class="form-group">
                                         <div class="col-sm-10 col-sm-offset-1 center">
-                                            <div class="row btn-toolbar"><button type="submit" class="btn btn-block btn-primary" id="submit" data-loading-text="<i class='fa fa-circle-o-notch fa-spin  fa-fw'></i> Calculating Latest Shipping Rates">Estimate Shipping Rate</button></div>
+                                            <div class="row btn-toolbar"><button type="submit" class="btn btn-block btn-primary" id="submit" data-loading-text="<i class='fa fa-circle-o-notch fa-spin fa-fw'></i> Calculating Latest Shipping Rates">Estimate Shipping Rate</button></div>
                                         </div>
                                     </div>
                                 </form>

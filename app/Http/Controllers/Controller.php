@@ -100,47 +100,40 @@ class Controller extends BaseController
             'zip_code' => 'required|regex:/^\d{5}(-\d{4})?$/'
         ]);
         $dd_info = DD_Info::where('active', 'YES')->first();
-        Shippo::setApiKey(config('services.shippo.key'));
+        
+        \Shippo::setApiKey(config('services.shippo.key'));
         
         $from_address = array(
-            'object_purpose' => 'PURCHASE',
-            'name' => 'Mr Hippo',
-            'company' => 'Shippo',
-            'street1' => '215 Clayton St.',
-            'city' => 'San Francisco',
-            'state' => 'CA',
-            'zip' => '94117',
-            'country' => 'US',
-            'phone' => '+1 555 341 9393',
-            'email' => 'mr-hippo@goshipppo.com',
+            'object_purpose' => 'QUOTE',
+            'name' => $dd_info->dd_name,
+            'street1' => $dd_info->address_1,
+            'street2' => $dd_info->address_1,
+            'city' => $dd_info->city,
+            'state' => $dd_info->state,
+            'zip' => $dd_info->zip_code,
+            'country' => 'US'
         );
-        dd($from_address);
         
         $to_address = array(
-            'object_purpose' => 'PURCHASE',
-            'name' => 'Ms Hippo',
-            'company' => 'San Diego Zoo',
-            'street1' => '2920 Zoo Drive',
-            'city' => 'San Diego',
-            'state' => 'CA',
-            'zip' => '92101',
-            'country' => 'US',
-            'phone' => '+1 555 341 9393',
-            'email' => 'ms-hippo@goshipppo.com',
+            'object_purpose' => 'QUOTE',
+            'name' => 'John Doe',
+            'street1' => '123 Main Street',
+            'zip' => $request->zip_code,
+            'country' => 'US'
         );
         
         $parcel = array(
-            'length'=> '5',
-            'width'=> '5',
-            'height'=> '5',
+            'length'=> $request->size,
+            'width'=> '12',
+            'height'=> '12',
             'distance_unit'=> 'in',
-            'weight'=> '2',
-            'mass_unit'=> 'lb',
+            'weight'=> $request->weight,
+            'mass_unit'=> 'oz',
         );
         
-        $shipment = Shippo_Shipment::create(
+        $shipment = \Shippo_Shipment::create(
         array(
-            'object_purpose'=> 'PURCHASE',
+            'object_purpose'=> 'QUOTE',
             'address_from'=> $from_address,
             'address_to'=> $to_address,
             'parcel'=> $parcel,
@@ -148,7 +141,17 @@ class Controller extends BaseController
         ));
         
         $rates = $shipment['rates_list'];
-        dd($rates);
+        
+        $minID = NULL;
+        $minRate = PHP_INT_MAX;
+        foreach($rates as $key=>$rate){
+            if($rate['amount'] < $minRate){
+                $minRate = $rate['amount'];
+                $minId = $key;
+            }
+        }
+        $rate = $rates[$minId];
+        dd($rate);
         return view('partials.rate', compact('dd_info', 'rate'));
     }
     
