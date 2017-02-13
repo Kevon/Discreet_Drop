@@ -103,13 +103,11 @@
                 <div class="col-sm-12"><h4 class="text-center">Connect with us!</h4></div>
             </div>
             <div class = "row">
-                <div class="col-sm-3 col-sm-offset-3">
-                    <div class="btn-toolbar">
+                <div class="btn-toolbar">
+                    <div class="col-sm-3 col-sm-offset-3">
                         <button class="btn btn-primary btn-block btn-lg btn-twitter" onclick="window.open('https://twitter.com/discreetdrop');"><i class="fa fa-fw fa-twitter" aria-hidden="true"></i>Twitter</button>
                     </div>
-                </div>
-                <div class="col-sm-3">
-                    <div class="btn-toolbar">
+                    <div class="col-sm-3">
                         <button class="btn btn-primary btn-block btn-lg btn-facebook" onclick="window.open('https://www.facebook.com/DiscreetDrop/');"><i class="fa fa-fw fa-facebook" aria-hidden="true"></i>Facebook</button>
                     </div>
                 </div>

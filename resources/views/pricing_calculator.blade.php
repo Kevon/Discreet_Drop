@@ -26,7 +26,7 @@
                                     
                                     <div class="form-group">
                                         <label for="size">Approximate Size of Package</label>
-                                        <div class="btn-group btn-group-justified btn-group-vertical" data-toggle="buttons">
+                                        <div class="btn-group btn-group-justified" data-toggle="buttons">
                                             <label class="btn btn-default active">
                                                 <input type="radio" name="size" id="size-small" value="12" autocomplete="off" checked>Small (12")
                                             </label>
@@ -44,7 +44,7 @@
                                     
                                     <div class="form-group">
                                         <label for="size">Approximate Weight of Package</label>
-                                        <div class="btn-group btn-group-justified btn-group-vertical" data-toggle="buttons">
+                                        <div class="btn-group btn-group-justified" data-toggle="buttons">
                                             <label class="btn btn-default active">
                                                 <input type="radio" name="weight" id="weight-light" value="50" autocomplete="off" checked>Light (&#60;5lbs.)
                                             </label>

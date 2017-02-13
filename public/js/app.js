@@ -21,20 +21,22 @@ function toggle(){
     $(".icon-bar").toggleClass("focus");
 };
 
-$("div.content").css("margin-bottom",$(".footer").outerHeight()+100);
+$("div.content").css("margin-bottom",$(".footer").outerHeight()+200);
 
 if($(window).width() < 410){
-        $('div.btn-group').removeClass('btn-group-justified');
-    } 
+    $('div.btn-group').removeClass('btn-group-justified');
+    $('div.btn-group').addClass('btn-group-vertical');
+} 
 
 $(window).resize(function() {
     $("div.content").css("margin-bottom",$(".footer").outerHeight()+100);
-    
     if($(window).width() < 410){
         $('div.btn-group').removeClass('btn-group-justified');
+        $('div.btn-group').addClass('btn-group-vertical');
     } 
     else{
         $('div.btn-group').addClass('btn-group-justified');
+        $('div.btn-group').removeClass('btn-group-vertical');
     }
 });
 

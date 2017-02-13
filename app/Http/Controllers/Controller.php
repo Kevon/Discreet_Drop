@@ -74,8 +74,8 @@ class Controller extends BaseController
         $from_address = \EasyPost\Address::create($from_address_params);
         
         $parcel_params = array("length"             => $request->size,
-                               "width"              => 24,
-                               "height"             => 12,
+                               "width"              => 12,
+                               "height"             => 8,
                                "weight"             => $request->weight
         );
         $parcel = \EasyPost\Parcel::create($parcel_params);
@@ -125,7 +125,7 @@ class Controller extends BaseController
         $parcel = array(
             'length'=> $request->size,
             'width'=> '12',
-            'height'=> '12',
+            'height'=> '8',
             'distance_unit'=> 'in',
             'weight'=> $request->weight,
             'mass_unit'=> 'oz',
@@ -181,10 +181,18 @@ class Controller extends BaseController
         
         if(!empty($request->stripeToken)){
             \Stripe\Stripe::setApiKey(config('services.stripe.secret'));
-            $customer = \Stripe\Customer::create(array(
+            $customer= NULL;
+            if(!empty($user->stripe_id)){
+                $customer = \Stripe\Customer::retrieve($user->stripe_id);
+                $customer->source = $request->stripeToken;
+                $customer = $customer->save();
+            }
+            else{
+                $customer = \Stripe\Customer::create(array(
                 "email" => $user->email,
                 "source" => $request->stripeToken,
-            ));
+                ));
+            }
             
             $customer = collect($customer);
             $source = collect($customer["sources"]);
@@ -225,6 +233,11 @@ class Controller extends BaseController
         if(!empty($request->password)){
             $this->validate($request, ['password' => 'required|min:6|confirmed']);
             $user->password = bcrypt($request->password);
+        }
+        if(!empty($user->stripe_id)){
+            $customer = \Stripe\Customer::retrieve($user->stripe_id);
+            $customer->email = $request->email;
+            $customer->save();
         }
         
         $user->save();
