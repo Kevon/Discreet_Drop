@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('subtitle', 'Frequently Asked Questions')
-@section('description', 'Hide logos, return labels, invoices, holes, and all other identifying information on any package from any seller so your item arrives as discreet as possible.')
+@section('description', 'Frequently Asked Questions about Discreet Drop and how it works.')
 
 
 @section('header')

@@ -121,6 +121,15 @@ h1,h2,h3,h4,h5,h6{
     margin-bottom: 5px;
 }
 
+.row.vertical-align{
+    align-items: center;
+    display: flex;
+}
+
+.row.equal-height{
+    display: flex;
+}
+
 .btn{
     letter-spacing: 1px;
 	text-transform: uppercase;
@@ -245,6 +254,15 @@ i.fa{
 .warning{
     background-color: #d9534f !important;
     color: #1a1a1a;
+}
+
+@media (max-width: 767px) {
+    .row.vertical-align{
+        display: block;
+    }
+    .row.equal-height{
+        display: block;
+    }
 }
 
 
@@ -512,6 +530,7 @@ input[type="radio"]{
 .panel{
     border: none;
     box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.10), inset 0 0 100px 100px rgba(255, 255, 255, 0.1) !important;
+    height: 100%;
 }
 .panel-heading{
     border: none !important;

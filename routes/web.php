@@ -17,7 +17,7 @@ Route::get('/home', 'HomeController@index');
 
 Route::get('/', 'Controller@index');
 
-Route::get('/dashboard', 'Controller@dashboard');
+Route::get('/dashboard', 'Controller@dashboard')->middleware('auth');
 Route::get('/how-it-works', 'Controller@howItworks');
 Route::get('/faq', 'Controller@faq');
 Route::get('/pricing-calculator', 'Controller@pricingCalculator');

@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('subtitle', 'Edit Login Info')
-@section('description', 'Hide logos, return labels, invoices, holes, and all other identifying information on any package from any seller so your item arrives as discreet as possible.')
+@section('description', 'Login to your Discreet Drop account!')
 
 
 @section('header')
