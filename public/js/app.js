@@ -21,7 +21,7 @@ function toggle(){
     $(".icon-bar").toggleClass("focus");
 };
 
-$("div.content").css("margin-bottom",$(".footer").outerHeight()+200);
+$("div.content").css("margin-bottom",$(".footer").outerHeight()+150);
 
 if($(window).width() < 410){
     $('div.btn-group').removeClass('btn-group-justified');

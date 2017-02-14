@@ -47,7 +47,7 @@ class Controller extends BaseController
     	return view('pricing_calculator');
     }
     
-    /*public function getRate(Request $request){
+    public function getRate(Request $request){
         $this->validate($request, [
             'size' => 'required|digits_between:2,3',
             'weight' => 'required|digits_between:2,3',
@@ -64,7 +64,7 @@ class Controller extends BaseController
         
         $to_address = \EasyPost\Address::create($to_address_params);
         
-        $from_address_params = array("name"    => $dd_info->dd_name,
+        $from_address_params = array("name"  => $dd_info->dd_name,
                                    "street1" => $dd_info->address_1,
                                    "street2" => $dd_info->address_2,
                                    "city"    => $dd_info->city,
@@ -73,10 +73,10 @@ class Controller extends BaseController
         
         $from_address = \EasyPost\Address::create($from_address_params);
         
-        $parcel_params = array("length"             => $request->size,
-                               "width"              => 12,
-                               "height"             => 8,
-                               "weight"             => $request->weight
+        $parcel_params = array("length"      => $request->size,
+                               "width"       => 24,
+                               "height"      => 24,
+                               "weight"      => $request->weight
         );
         $parcel = \EasyPost\Parcel::create($parcel_params);
         
@@ -89,7 +89,9 @@ class Controller extends BaseController
         $rate = \EasyPost\Rate::retrieve($shipment->lowest_rate());
         
     	return view('partials.rate', compact('dd_info', 'rate'));
-    }*/
+    }
+    
+    /*
     
     
     
@@ -153,6 +155,8 @@ class Controller extends BaseController
         $rate = $rates[$minId];
         return view('partials.rate', compact('dd_info', 'rate'));
     }
+    
+    */
     
     public function profile_info(){
         $user = Auth::user();

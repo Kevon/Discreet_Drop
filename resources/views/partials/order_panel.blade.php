@@ -16,10 +16,10 @@
                 <div class="col-md-8 col-md-push-4">
         
                     @if($demo)
-                        <h2>Order Status: Demo Order</h2>
+                        <h2 class="flush">Order Status: Demo Order</h2>
                         <h4>Order Number: Demo-8675309</h4>
                     @else
-                        <h2>Order Status: {{$order->status or "Pending - Awaiting for Arrival"}} @if($order->status == 'Received' or $order->status == 'Received')- Preparing for Shipment @endif</h2>
+                        <h2 class="flush">Order Status: {{$order->status or "Pending - Awaiting for Arrival"}} @if($order->status == 'Received' or $order->status == 'Received')- Preparing for Shipment @endif</h2>
                         <h4>Order Number: {{$user->dd_code}}-{{$order->id}}</h4>
                     @endif
                     

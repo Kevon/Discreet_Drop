@@ -179,7 +179,7 @@
                                         </div>
                                         
                                     </div>
-                                    <p>Discreet Drop uses <a href="https://stripe.com/" target="_blank">Stripe</a> to securly handle all payment processing, and your credit card information never touches our servers or is stored in our database.<br><br>We use HTTPS and SSL security layers and are PCI compliant to ensure your private information remains private.</p>
+                                    <p>Discreet Drop uses <a href="https://stripe.com/" target="_blank">Stripe</a> to securly handle all payment processing, and your credit card information never touches our servers or is stored in our database.<br><br>We use HTTPS and SSL security layers and are PCI compliant to ensure your private information remains private.<br><br>Your card will only be charged once we receive a package to send out to you, and having a profile set up first makes sure your packages get to you as fast as possible.</p>
                                 </div>
                                     
                                 <div class="current-card @if(empty($user->substantiated_at)) hidden @endif"> 

@@ -92,6 +92,10 @@ body {
     text-align: center;
 }
 
+.section{
+    margin-top:100px;
+}
+
 html {
     position: relative;
     min-height: 100%;
@@ -101,6 +105,9 @@ h1,h2,h3,h4,h5,h6{
     letter-spacing: 1px;
 	text-transform: uppercase;
     font-weight: bold;
+}
+
+.flush{
     margin-top: 0;
     padding-top: 0;
 }
@@ -112,11 +119,6 @@ h1,h2,h3,h4,h5,h6{
 .row{
     margin-top: 5px;
     margin-bottom: 5px;
-}
-
-div.page div.row{
-    margin-top: 200px;
-    margin-bottom: 0px;
 }
 
 .btn{
