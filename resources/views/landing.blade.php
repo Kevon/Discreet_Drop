@@ -3,8 +3,7 @@
 @section('description', 'Hide logos, return labels, invoices, holes, and all other identifying information on any package from any seller so your item arrives as discreet as possible.')
 
 @section('header')
-<style>.section{visibility: hidden;}</style>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+
 @endsection
 
 @section('content')
@@ -15,19 +14,18 @@
         <p>Discreet Drop hides all identifying information, logos, return addresses, and packing slips that reveal the contents of your package, so no one can figure out what's in your private shipments.</p>
         <div class="btn-toolbar">
             <div class="col-sm-3 col-sm-offset-3">
-                <button class="btn btn-primary btn-block btn-lg" onclick="location.href='/register';">Sign Up for Free</button>
+                <button class="btn btn-primary btn-block btn-lg" href="/register">Sign Up for Free</button>
             </div>
             <div class="col-sm-3">
-                <button class="btn btn-default btn-block btn-lg" onclick="location.href='/how-it-works';">Learn More</button>
+                <button class="btn btn-default btn-block btn-lg" href="/how-it-works">Learn More</button>
             </div>
         </div>
-        <i class="fa fa-angle-double-down floating" aria-hidden="true"></i>
     </div>
 </div>
 
 <div class="container content">
     <div class="section">
-        <h2 class="col-sm-12 center">Discreet Drop in Just 60 Seconds</h2>
+        <h2 class="col-sm-12 center">Discreet Drop in 60 Seconds</h2>
         <div class="row">
             <div class="col-sm-6 col-sm-offset-3 center">
                 <div class="embed-responsive embed-responsive-16by9">
@@ -134,13 +132,13 @@
         <div class="row">
             <h2 class="col-sm-12 center">Keep Your Shipments a Secret</h2>
             <div class="btn-toolbar">
-            <div class="col-sm-3 col-sm-offset-3">
-                <button class="btn btn-primary btn-block btn-lg" onclick="location.href='/register';">Sign Up for Free</button>
+                <div class="col-sm-3 col-sm-offset-3">
+                    <button class="btn btn-primary btn-block btn-lg" href="/register">Sign Up for Free</button>
+                </div>
+                <div class="col-sm-3">
+                    <button class="btn btn-default btn-block btn-lg" href="/how-it-works">Learn More</button>
+                </div>
             </div>
-            <div class="col-sm-3">
-                <button class="btn btn-default btn-block btn-lg" onclick="location.href='/how-it-works';">Learn More</button>
-            </div>
-        </div>
         </div>
     </div>
 
@@ -165,6 +163,5 @@
 
 
 @section('footer')
-<script src="https://unpkg.com/scrollreveal@3.3.2/dist/scrollreveal.min.js"></script>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 @endsection

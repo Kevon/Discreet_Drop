@@ -43,15 +43,6 @@ class Controller extends BaseController
     	return view('faq');
     }
     
-    public function about(){
-    	return view('about');
-    }
-    
-    public function contact(){
-        $dd_info = DD_Info::where('active', 'YES')->first();
-    	return view('contact', compact('dd_info'));
-    }
-    
     public function pricingCalculator(){
     	return view('pricing_calculator');
     }

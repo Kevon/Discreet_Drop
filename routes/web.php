@@ -17,8 +17,6 @@ Route::get('/home', 'HomeController@index');
 Route::get('/', 'Controller@index');
 Route::get('/how-it-works', 'Controller@howItworks');
 Route::get('/faq', 'Controller@faq');
-Route::get('/about', 'Controller@about');
-Route::get('/contact', 'Controller@contact');
 Route::get('/pricing-calculator', 'Controller@pricingCalculator');
 Route::get('/tutorial', 'Controller@tutorial');
 Route::post('/pricing-calculator/submit', 'Controller@getRate');
