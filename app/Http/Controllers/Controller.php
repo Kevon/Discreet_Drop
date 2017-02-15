@@ -103,7 +103,6 @@ class Controller extends BaseController
     /*
     
     
-    
     public function getRate(Request $request){
         $this->validate($request, [
             'size' => 'required|digits_between:2,3',

@@ -42,13 +42,13 @@ $(window).resize(function() {
 
 $("input, select").blur();
 
-$("input, select").focusout(function() {
+$("input, select").focusout(function(){
     $(this).parents("form").find("label").not(".btn").each(function(){
          $(this).removeClass("faded");
      });
 });
 
-$("input, select").focusin(function() {
+$("input, select").focusin(function(){
     if(!$(this).is(':checkbox, :radio')){
         $(this).parents("form").find("label").not(".btn").not($(this).parent("div").find("label")).each(function(){
              $(this).addClass("faded");
@@ -61,7 +61,7 @@ sr.reveal('div.section *');
 
 $(".alerts").animate({bottom:'150px'},500);
 
-window.setTimeout(function() {
+window.setTimeout(function(){
     $(".alert").fadeTo(1000, 0).slideUp(1000, function(){
         $(this).remove(); 
     });
