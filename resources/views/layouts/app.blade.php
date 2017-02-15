@@ -136,8 +136,8 @@
                     </div>
                     <div class="col-xs-6">
                         <h4>Company</h4>
-                        <a href="" class="dark-link">About</a> <br>
-                        <a href="" class="dark-link">Contact Us</a> <br>
+                        <a href="/about" class="dark-link">About</a> <br>
+                        <a href="/contact" class="dark-link">Contact Us</a> <br>
                         <a href="" class="dark-link">Trust &amp; Safety</a> <br>
                         <a href="" class="dark-link">Press &amp; Style Guide</a> 
                     </div>
