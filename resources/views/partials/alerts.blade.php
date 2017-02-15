@@ -8,7 +8,7 @@
 @endif
 
 
-@if (count($errors))
+@if(!empty($errors))
     @foreach ($errors->all() as $error)
         <div class="alert alert-danger alert-dismissable alerts">
           <strong>ERROR:</strong> {{ $error }}
