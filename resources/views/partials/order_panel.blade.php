@@ -36,6 +36,12 @@
                     <h4>Credit Card Charge Details</h4>
                     <P><strong>Charge Status: </strong>@if($demo)Succeeded @else{{$order->Shipment->charge_status or "Pending"}}@endif</P>
                     <P><strong>Charged On: </strong>@if($demo){{$user->created_at}} @else{{$order->Shipment->Charge->created_at or "Pending"}}@endif</P>
+                    @if(!$demo)
+                        @if($order->order_status == 'Charge Error')
+                            <P class="error"><strong>Charge Error: </strong>{{$order->Shipment->Charge->stripe_failure_code}}</P>
+                            <P class="error"><strong>Charge Message: </strong>{{$order->Shipment->Charge->stripe_failure_message}}</P>
+                        @endif
+                    @endif
                     <P><strong>Shipping Amount Charged: </strong>@if($demo)$17.38 @else{{$order->total_cost or "Pending"}}@endif</P>
                     <P><strong>Last 4: </strong>**** **** **** @if($demo)4242 @else{{$order->Shipment->Charge->stripe_source_last4 or "Pending"}}@endif</P>
 

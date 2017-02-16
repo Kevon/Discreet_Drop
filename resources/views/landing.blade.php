@@ -38,7 +38,8 @@
     </div>
 
     <div class="section">
-        <h2 class="center">Why You Need Plain-Box Discreet Shipping</h2>
+        <h2 class="center">Anyone Can Figure Out What's in Your Package</h2>
+        <h4 class="center">Why You Need Plain-Box Discreet Shipping</h4>
         <div class="row equal-height">
             <div class="col-sm-4">
                 <div class="panel panel-default center">

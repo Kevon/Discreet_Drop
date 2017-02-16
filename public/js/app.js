@@ -56,9 +56,6 @@ $("input, select").focusin(function(){
     }
 });
 
-window.sr = ScrollReveal();
-sr.reveal('div.section *');
-
 $(".alerts").animate({bottom:'150px'},500);
 
 window.setTimeout(function(){
@@ -66,3 +63,6 @@ window.setTimeout(function(){
         $(this).remove(); 
     });
 }, 5000);
+
+window.sr = ScrollReveal();
+sr.reveal('div.section *');

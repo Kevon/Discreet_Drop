@@ -692,6 +692,10 @@ ul.order-progress li div.error{
     background: #d9534f;
 }
 
+p.error{
+    color: #d9534f;
+}
+
 ul.order-progress{
     margin-left: 10px;
     padding-left: 0px;
