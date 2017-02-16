@@ -82,9 +82,31 @@ class Controller extends BaseController
         
         $from_address = \EasyPost\Address::create($from_address_params);
         
-        $parcel_params = array("length"      => $request->size,
-                               "width"       => 24,
-                               "height"      => 24,
+        $length = $request->size;
+        $width = 24;
+        $height = 24;
+        $predefined_package = null;
+        if($length < $width){
+            $temp = $length;
+            $length = $width;
+            $width = $temp;
+        }
+        if($length < $height){
+            $temp = $length;
+            $length = $height;
+            $height = $temp;
+        }
+        if($length+($width*2)+($height*2)<=108){
+            $predefined_package = "Parcel";
+        }
+        else if($length+($width*2)+($height*2)<=130){
+            $predefined_package = "LargeParcel";
+        }
+            
+        $parcel_params = array("length"      => $length,
+                               "width"       => $width,
+                               "height"      => $height,
+                               "predefined_package" => $predefined_package,
                                "weight"      => $request->weight
         );
         $parcel = \EasyPost\Parcel::create($parcel_params);
