@@ -55,7 +55,7 @@ class Controller extends BaseController
     public function pricingCalculator(){
     	return view('pricing_calculator');
     }
-    
+    /*
     public function getRate(Request $request){
         $this->validate($request, [
             'size' => 'required|digits_between:2,3',
@@ -103,10 +103,7 @@ class Controller extends BaseController
             $predefined_package = "LargeParcel";
         }
             
-        $parcel_params = array("length"      => $length,
-                               "width"       => $width,
-                               "height"      => $height,
-                               "predefined_package" => $predefined_package,
+        $parcel_params = array("predefined_package" => $predefined_package,
                                "weight"      => $request->weight
         );
         $parcel = \EasyPost\Parcel::create($parcel_params);
@@ -123,7 +120,7 @@ class Controller extends BaseController
     }
     
     /*
-    
+    */
     
     public function getRate(Request $request){
         $this->validate($request, [
@@ -134,7 +131,7 @@ class Controller extends BaseController
         $dd_info = DD_Info::where('active', 'YES')->first();
         
         \Shippo::setApiKey(config('services.shippo.key'));
-        
+
         $from_address = array(
             'object_purpose' => 'QUOTE',
             'name' => $dd_info->dd_name,
@@ -145,6 +142,21 @@ class Controller extends BaseController
             'zip' => $dd_info->zip_code,
             'country' => 'US'
         );
+        
+        $fromAddress = \Shippo_Address::create( array(
+            "object_purpose" => "PURCHASE",
+            "name" => "Shawn Ippotle",
+            "company" => "Shippo",
+            "street1" => "215 Clayton St.",
+            "city" => "San Francisco",
+            "state" => "CA",
+            "zip" => "94117",
+            "country" => "US",
+            "email" => "shippotle@goshippo.com",
+            "validate" => true
+        ));
+        
+        dd($fromAddress);
         
         $to_address = array(
             'object_purpose' => 'QUOTE',
@@ -160,17 +172,17 @@ class Controller extends BaseController
             'height'=> '8',
             'distance_unit'=> 'in',
             'weight'=> $request->weight,
-            'mass_unit'=> 'oz',
+            'mass_unit'=> 'oz'
         );
         
-        $shipment = \Shippo_Shipment::create(
-        array(
+        $shipment = \Shippo_Shipment::create(array(
             'object_purpose'=> 'QUOTE',
             'address_from'=> $from_address,
             'address_to'=> $to_address,
             'parcel'=> $parcel,
-            'async'=> false,
+            'async'=> false
         ));
+        dd($shipment);
         
         $rates = $shipment['rates_list'];
         
@@ -186,7 +198,7 @@ class Controller extends BaseController
         return view('partials.rate', compact('dd_info', 'rate'));
     }
     
-    */
+    
     
     public function profile_info(){
         $user = Auth::user();
