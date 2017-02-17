@@ -14,7 +14,7 @@
     <div class="row">
         <div class="col-sm-8 col-sm-offset-2 center"> 
             <h1>I'm like "Hey, what's up? Hello!"</h1>
-            <p>Questions? Comments? Bored? Feel free to contact us anytime! We'll respond as soon as possible.<br>We promise.</p>
+            <p>Questions? Comments? Bored?<br>Feel free to contact us anytime! We'll respond as soon as possible.<br>We promise.</p>
         </div>
     </div>
     <div class="section">
