@@ -66,8 +66,8 @@
             </div>
             <div class="col-sm-6">
                 <h2 class="center">Step 1</h2>
-                <h3 class="center">Hide Return Labels to Keep Personal Items a Secret</h3>
-                A quick google search of the name or address on your package's return label will bring up the sender's website, revealing the type of contents you ordered to whoever gets your package before you do. Discreet Drop provides the only way to hide these labels with another box, so once your package arrives to you, the return label can't be linked back to the sender.
+                <h3 class="center">Generate Your Unique Discreet Drop Address</h3>
+                Once you create a shipping profile with your address (so we quickly know where to ship your packages to once they arrive) and credit card info (we use <a href="https://stripe.com/" target="_blank">Stripe</a> to keep your information secure, and only charge once we have a package to send out to you), you'll see a unique Discreeet Drop address for you to send your shipments to.
             </div>
                
         </div>
@@ -77,8 +77,8 @@
             </div>
             <div class="col-sm-6 col-sm-pull-6">
                 <h2 class="center">Step 2</h2>
-                <h3 class="center">Hide Logos Revealing Gifts for Other Members of Your Home</h3>
-                Logos and images on the outside of packages can easily spoil a suprise gift for someone's birthday or the holidays if they see the box before you get a chance to hide it. Discreet Drop makes sure all your packages come to your home in a plain box with all the logos hidden, so if someone sees your package, the suprise gift stays a secret.
+                <h3 class="center">Use That Address as Your Shipping Address When Buying Online</h3>
+                When checking out online, use the unique discreet Drop address from Step 1 as your shipping address instead of your usual home address so your items will be sent to our package processing center with the qunique code in the address to let us know that your packages belong to you.
             </div>
         </div>
         <div class="row vertical-align">
@@ -87,8 +87,8 @@
             </div>
             <div class="col-sm-6">
                 <h2 class="center">Step 3</h2>
-                <h3 class="center">Cover Holes and Damaged Packaging</h3>
-                The shipping process is notoriously hard on packages; ripping holes and even tearing tape open before your package gets to your front door. Some sellers even use boxes with cut-out handels and even tapeless folded containers to ship books and other small items that can be opened and closed without any tamper evidence. Discreet Drop puts your package in another box to cover up any possible holes and the double-box prevents any new ones from showing up.
+                <h3 class="center">We'll Receive Your Package and Hide All Logos and Return Labels</h3>
+                This is where we take care of everything for you! Since you completed a shipping profile, we'll enter your package into our system and then double-box it to cover up any logos, return label addresses or names, packing slips, or even holes in the original box. Then we'll determine the lowest-cost shipping rate via USPS using our Commercial Plus Pricing account, charge your payment information stored on <a href="https://stripe.com/" target="_blank">Stripe</a>, and ship it out to the address we have for you on file, all without you having to do a thing. Like we said, we take care of everything!
             </div>
         </div>
         <div class="row vertical-align">
@@ -97,8 +97,8 @@
             </div>
             <div class="col-sm-6 col-sm-pull-6">
                 <h2 class="center">Step 4</h2>
-                <h3 class="center">Deter Theives From Seeing Desirable Labels</h3>
-                Package thft from apparmtent common areas and front porches of homes has become an increasing problem, and packages shipped with flashy and desierasble labels indicating valuable electronics and goods are an easy target for thieves. Discreet Drop puts your shipments in a plain box with no labels or logos, so your valuable package looks like any other.
+                <h3 class="center">We Ship Your Now Plain-Box Package Automaticaly to You</h3>
+                That's it! You can sit back, relax, and have the confidence knowing that your package will arrive to your home in a 100% discreet plain box, with no logos or return labels to reveal what's inside. 
             </div>
         </div>
     </div>

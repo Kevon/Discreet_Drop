@@ -117,7 +117,7 @@
             </div>
             <div class="col-sm-6 col-sm-pull-6">
                 <h3 class="center">Deter Theives From Seeing Desirable Labels</h3>
-                Package thft from apparmtent common areas and front porches of homes has become an increasing problem, and packages shipped with flashy and desierasble labels indicating valuable electronics and goods are an easy target for thieves. Discreet Drop puts your shipments in a plain box with no labels or logos, so your valuable package looks like any other.
+                Package theft from apparmtent common areas and front porches of homes has become an increasing problem, and packages shipped with flashy and desierasble labels indicating valuable electronics and goods are an easy target for thieves. Discreet Drop puts your shipments in a plain box with no labels or logos, so your valuable package looks like any other.
             </div>
         </div>
         <div class="row vertical-align">
