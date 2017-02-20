@@ -39,7 +39,7 @@
 
     <div class="section">
         <h2 class="center">Anyone Can Figure Out What's in Your Package</h2>
-        <h4 class="center">Why You Need Plain-Box Discreet Shipping</h4>
+        <h3 class="center">Why You Need Plain-Box Discreet Shipping</h3>
         <div class="row equal-height">
             <div class="col-sm-4">
                 <div class="panel panel-default center">
@@ -73,7 +73,7 @@
 
     <div class="section">
         <h2 class="center">Discreet Drop hides all logos and return addresses</h2>
-        <h4 class="center">Only you would know what's in your private shipments</h4>
+        <h3 class="center">Only you would know what's in your private shipments</h3>
         <div class="row">
             <div class="col-sm-12">
                 <img src="http://placeholder.pics/svg/600x400" class="img-responsive center-block svg" alt="Responsive image">
@@ -127,6 +127,24 @@
             <div class="col-sm-6">
                 <h3 class="center">Send All Your Packages to a P.O. Box From Any Courier</h3>
                 Shipping companies like UPS and FedEx can't ship to P.O. Boxes, so most companies simply don't allow you to enter your P.O. Box in as a shipping option. Since Discreet Drop uses USPS, you can send all your packages to us, and we'll forward them to your P.O. Box for maximum privacy. 
+            </div>
+        </div>
+    </div>
+    
+    <div class="section">
+        <h2 class="center">We Put Your Box in a Bigger Box</h2>
+        <h3 class="center">Boxception</h3>
+    </div>
+    
+    <div class="section">
+        <div class="row">
+            <div class="col-sm-6">
+                <h2 class="center">Your Packages Can Look Like This</h2>
+                <img src="http://placeholder.pics/svg/600x400" class="img-responsive center-block svg" alt="Responsive image">
+            </div>
+            <div class="col-sm-6">
+                <h2 class="center">Make Sure They Arrive Like This</h2>
+                <img src="http://placeholder.pics/svg/600x400" class="img-responsive center-block svg" alt="Responsive image">
             </div>
         </div>
     </div>
