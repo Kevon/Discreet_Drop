@@ -55,7 +55,7 @@ class Controller extends BaseController
     public function pricingCalculator(){
     	return view('pricing_calculator');
     }
-    /*
+    
     public function getRate(Request $request){
         $this->validate($request, [
             'size' => 'required|digits_between:2,3',
@@ -83,8 +83,8 @@ class Controller extends BaseController
         $from_address = \EasyPost\Address::create($from_address_params);
         
         $length = $request->size;
-        $width = 24;
-        $height = 24;
+        $width = 12;
+        $height = 12;
         $predefined_package = null;
         if($length < $width){
             $temp = $length;
@@ -119,8 +119,8 @@ class Controller extends BaseController
     	return view('partials.rate', compact('dd_info', 'rate'));
     }
     
+    
     /*
-    */
     
     public function getRate(Request $request){
         $this->validate($request, [
@@ -143,21 +143,6 @@ class Controller extends BaseController
             'country' => 'US'
         );
         
-        $fromAddress = \Shippo_Address::create( array(
-            "object_purpose" => "PURCHASE",
-            "name" => "Shawn Ippotle",
-            "company" => "Shippo",
-            "street1" => "215 Clayton St.",
-            "city" => "San Francisco",
-            "state" => "CA",
-            "zip" => "94117",
-            "country" => "US",
-            "email" => "shippotle@goshippo.com",
-            "validate" => true
-        ));
-        
-        dd($fromAddress);
-        
         $to_address = array(
             'object_purpose' => 'QUOTE',
             'name' => 'John Doe',
@@ -168,8 +153,8 @@ class Controller extends BaseController
         
         $parcel = array(
             'length'=> $request->size,
-            'width'=> '12',
-            'height'=> '8',
+            'width'=> '24',
+            'height'=> '24',
             'distance_unit'=> 'in',
             'weight'=> $request->weight,
             'mass_unit'=> 'oz'
@@ -182,7 +167,6 @@ class Controller extends BaseController
             'parcel'=> $parcel,
             'async'=> false
         ));
-        dd($shipment);
         
         $rates = $shipment['rates_list'];
         
@@ -197,7 +181,7 @@ class Controller extends BaseController
         $rate = $rates[$minId];
         return view('partials.rate', compact('dd_info', 'rate'));
     }
-    
+    */
     
     
     public function profile_info(){

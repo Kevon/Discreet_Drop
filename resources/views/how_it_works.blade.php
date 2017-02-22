@@ -30,11 +30,11 @@
         <div class="row">
             <div class="col-sm-6">
                 <h2 class="center">We Turn This</h2>
-                <img src="http://placeholder.pics/svg/600x400" class="img-responsive center-block svg" alt="Responsive image">
+                <img src="images/box-all.svg" class="img-responsive center-block svg" alt="Responsive image">
             </div>
             <div class="col-sm-6">
                 <h2 class="center">Into This</h2>
-                <img src="http://placeholder.pics/svg/600x400" class="img-responsive center-block svg" alt="Responsive image">
+                <img src="images/box.svg" class="img-responsive center-block svg" alt="Responsive image">
             </div>
         </div>
     </div>
@@ -53,7 +53,7 @@
             <div class="col-sm-12">
                 <h2 class="center">Your Items Arrive as Discreet as Possible</h2>
                 <h3 class="center">Just Send Your Packages to Us, and We'll send Them to You 100% Discreet</h3>
-                <img src="http://placeholder.pics/svg/600x400" class="img-responsive center-block svg" alt="Responsive image">
+                <img src="images/dd-diagram.svg" class="img-responsive center-block svg" alt="Responsive image">
             </div>
         </div>
     </div>
@@ -62,7 +62,7 @@
         <h2 class="center">Plain-Box Packages in 4 Easy Steps</h2>
         <div class="row vertical-align">
             <div class="col-sm-6">
-                <img src="http://placeholder.pics/svg/600x400" class="img-responsive center-block svg" alt="Responsive image">
+                <img src="images/profile.svg" class="img-responsive center-block svg" alt="Responsive image">
             </div>
             <div class="col-sm-6">
                 <h2 class="center">Step 1</h2>
@@ -73,7 +73,7 @@
         </div>
         <div class="row vertical-align">
             <div class="col-sm-6 col-sm-push-6">
-                <img src="http://placeholder.pics/svg/600x400" class="img-responsive center-block svg" alt="Responsive image">
+                <img src="images/checkout.svg" class="img-responsive center-block svg" alt="Responsive image">
             </div>
             <div class="col-sm-6 col-sm-pull-6">
                 <h2 class="center">Step 2</h2>
@@ -83,7 +83,7 @@
         </div>
         <div class="row vertical-align">
             <div class="col-sm-6">
-                <img src="http://placeholder.pics/svg/600x400" class="img-responsive center-block svg" alt="Responsive image">
+                <img src="images/receive.svg" class="img-responsive center-block svg" alt="Responsive image">
             </div>
             <div class="col-sm-6">
                 <h2 class="center">Step 3</h2>
@@ -93,7 +93,7 @@
         </div>
         <div class="row vertical-align">
             <div class="col-sm-6 col-sm-push-6">
-                <img src="http://placeholder.pics/svg/600x400" class="img-responsive center-block svg" alt="Responsive image">
+                <img src="images/box-door.svg" class="img-responsive center-block svg" alt="Responsive image">
             </div>
             <div class="col-sm-6 col-sm-pull-6">
                 <h2 class="center">Step 4</h2>
@@ -112,7 +112,7 @@
         <h3 class="center">Only you would know what's in your private shipments</h3>
         <div class="row">
             <div class="col-sm-12">
-                <img src="http://placeholder.pics/svg/600x400" class="img-responsive center-block svg" alt="Responsive image">
+                <img src="images/package-diagram.svg" class="img-responsive center-block svg" alt="Responsive image">
             </div>
         </div>
     </div>

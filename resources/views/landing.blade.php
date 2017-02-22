@@ -44,7 +44,7 @@
             <div class="col-sm-4">
                 <div class="panel panel-default center">
                     <div class="panel-body">
-                        <img src="http://placeholder.pics/svg/600x400" class="img-responsive center-block svg" alt="Responsive image">
+                        <img src="images/box-logo.svg" class="img-responsive center-block svg" alt="Responsive image">
                         <h4>Logos on Packaging</h4>
                         Companies love custom packaging since it looks professional and upscale. However, those logos don't leave much to the imagination and act as an obvious signal to the contents of your package, ruining gift suprises and attracting thieves to high-dollar labels. 
                     </div>
@@ -53,7 +53,7 @@
             <div class="col-sm-4">
                 <div class="panel panel-default center">
                     <div class="panel-body">
-                        <img src="http://placeholder.pics/svg/600x400" class="img-responsive center-block svg" alt="Responsive image">
+                        <img src="images/box-label.svg" class="img-responsive center-block svg" alt="Responsive image">
                         <h4>Return Labels</h4>
                         Even if a company offers plain-box shipping, the return addrsss on the label still has the company's name and address on it, and with a quick Google search of that name or address, can reveal the sender and the type of contents in your private package to anyone else.
                     </div>
@@ -62,7 +62,7 @@
             <div class="col-sm-4">
                 <div class="panel panel-default center">
                     <div class="panel-body">
-                        <img src="http://placeholder.pics/svg/600x400" class="img-responsive center-block svg" alt="Responsive image">
+                        <img src="images/box-slips.svg" class="img-responsive center-block svg" alt="Responsive image">
                         <h4>Packing Slips</h4>
                         Often times the packing slip and international customs labels have the exact contents of the box written on them that can pique the curiosity of someone else.
                     </div>
@@ -76,7 +76,7 @@
         <h3 class="center">Only you would know what's in your private shipments</h3>
         <div class="row">
             <div class="col-sm-12">
-                <img src="http://placeholder.pics/svg/600x400" class="img-responsive center-block svg" alt="Responsive image">
+                <img src="images/package-diagram.svg" class="img-responsive center-block svg" alt="Responsive image">
             </div>
         </div>
     </div>
@@ -85,7 +85,7 @@
         <h2 class="center">Discreet Drop Benefits and Uses</h2>
         <div class="row vertical-align">
             <div class="col-sm-6">
-                <img src="http://placeholder.pics/svg/600x400" class="img-responsive center-block svg" alt="Responsive image">
+                <img src="images/box-label-slips.svg" class="img-responsive center-block svg" alt="Responsive image">
             </div>
             <div class="col-sm-6">
                 <h3 class="center">Hide Return Labels to Keep Personal Items a Secret</h3>
@@ -95,7 +95,7 @@
         </div>
         <div class="row vertical-align">
             <div class="col-sm-6 col-sm-push-6">
-                <img src="http://placeholder.pics/svg/600x400" class="img-responsive center-block svg" alt="Responsive image">
+                <img src="images/box-logo.svg" class="img-responsive center-block svg" alt="Responsive image">
             </div>
             <div class="col-sm-6 col-sm-pull-6">
                 <h3 class="center">Hide Logos Revealing Gifts for Other Members of Your Home</h3>
@@ -104,25 +104,25 @@
         </div>
         <div class="row vertical-align">
             <div class="col-sm-6">
-                <img src="http://placeholder.pics/svg/600x400" class="img-responsive center-block svg" alt="Responsive image">
+                <img src="images/box-thief.svg" class="img-responsive center-block svg" alt="Responsive image">
             </div>
             <div class="col-sm-6">
-                <h3 class="center">Cover Holes and Damaged Packaging</h3>
-                The shipping process is notoriously hard on packages; ripping holes and even tearing tape open before your package gets to your front door. Some sellers even use boxes with cut-out handels and even tapeless folded containers to ship books and other small items that can be opened and closed without any tamper evidence. Discreet Drop puts your package in another box to cover up any possible holes and the double-box prevents any new ones from showing up.
-            </div>
-        </div>
-        <div class="row vertical-align">
-            <div class="col-sm-6 col-sm-push-6">
-                <img src="http://placeholder.pics/svg/600x400" class="img-responsive center-block svg" alt="Responsive image">
-            </div>
-            <div class="col-sm-6 col-sm-pull-6">
                 <h3 class="center">Deter Theives From Seeing Desirable Labels</h3>
                 Package theft from apparmtent common areas and front porches of homes has become an increasing problem, and packages shipped with flashy and desierasble labels indicating valuable electronics and goods are an easy target for thieves. Discreet Drop puts your shipments in a plain box with no labels or logos, so your valuable package looks like any other.
             </div>
         </div>
         <div class="row vertical-align">
+            <div class="col-sm-6 col-sm-push-6">
+                <img src="images/box-hole.svg" class="img-responsive center-block svg" alt="Responsive image">
+            </div>
+            <div class="col-sm-6 col-sm-pull-6">
+                <h3 class="center">Cover Holes and Damaged Packaging</h3>
+                The shipping process is notoriously hard on packages; ripping holes and even tearing tape open before your package gets to your front door. Some sellers even use boxes with cut-out handels and even tapeless folded containers to ship books and other small items that can be opened and closed without any tamper evidence. Discreet Drop puts your package in another box to cover up any possible holes and the double-box prevents any new ones from showing up.
+            </div>
+        </div>
+        <div class="row vertical-align">
             <div class="col-sm-6">
-                <img src="http://placeholder.pics/svg/600x400" class="img-responsive center-block svg" alt="Responsive image">
+                <img src="images/po-box-diagram.svg" class="img-responsive center-block svg" alt="Responsive image">
             </div>
             <div class="col-sm-6">
                 <h3 class="center">Send All Your Packages to a P.O. Box From Any Courier</h3>
@@ -132,7 +132,7 @@
     </div>
     
     <div class="section">
-        <h2 class="center">We Put Your Box in a Bigger Box</h2>
+        <h2 class="center">We Put Your Identifiable Box in a Plain Box</h2>
         <h3 class="center">Boxception</h3>
     </div>
     
@@ -140,11 +140,11 @@
         <div class="row">
             <div class="col-sm-6">
                 <h2 class="center">Your Packages Can Look Like This</h2>
-                <img src="http://placeholder.pics/svg/600x400" class="img-responsive center-block svg" alt="Responsive image">
+                <img src="images/box-all.svg" class="img-responsive center-block svg" alt="Responsive image">
             </div>
             <div class="col-sm-6">
                 <h2 class="center">Make Sure They Arrive Like This</h2>
-                <img src="http://placeholder.pics/svg/600x400" class="img-responsive center-block svg" alt="Responsive image">
+                <img src="images/box.svg" class="img-responsive center-block svg" alt="Responsive image">
             </div>
         </div>
     </div>
