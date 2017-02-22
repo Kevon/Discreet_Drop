@@ -15,6 +15,7 @@ class CreateShipmentsTable extends Migration
     {
         Schema::create('shipments', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('order_id')->nullable();
             $table->string('charge_status')->nullable();
             $table->string('outgoing_package_status')->nullable();
             $table->integer('created_by')->unsigned();

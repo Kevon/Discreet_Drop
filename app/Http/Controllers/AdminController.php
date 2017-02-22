@@ -19,7 +19,7 @@ class AdminController extends BaseController
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
     
     public function index(){
-        return view('dashboard');
+        return view('admin/admin_panel');
     }
     
 }

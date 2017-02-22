@@ -15,6 +15,7 @@ class CreateIncomingPackagesTable extends Migration
     {
         Schema::create('incoming_packages', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('order_id')->nullable();
             $table->string('carrier')->nullable();
             $table->string('tracking_number')->nullable();
             $table->integer('dd_code')->unsigned()->nullable();
