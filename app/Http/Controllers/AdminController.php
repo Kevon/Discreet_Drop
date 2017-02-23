@@ -22,4 +22,13 @@ class AdminController extends BaseController
         return view('admin/admin_panel');
     }
     
+    public function newIncomingPackage(){
+        return view('admin/new_incoming_package');
+    }
+    
+    public function saveIncomingPackage(){
+        Session::flash('message', 'New incoming package successfuly saved.');
+        return redirect()->to('/admin');
+    }
+    
 }

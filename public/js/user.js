@@ -6,5 +6,5 @@ function changeMethod() {
 }
 
 function back() {
-     window.location = '/dashboard';
+     window.history.go(-1);
 }

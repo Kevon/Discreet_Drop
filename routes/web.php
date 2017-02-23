@@ -39,4 +39,7 @@ Route::group(['middleware' => ['auth']], function () {
 
 Route::group(['middleware' => ['admin']], function () {
     Route::get('/admin', 'AdminController@index');
+    Route::get('/admin/incoming_package', 'AdminController@newIncomingPackage');
+    
+    Route::post('/admin/incoming_package/save', 'AdminController@saveIncomingPackage');
 });
