@@ -10,7 +10,7 @@ class Shipment extends Model
     protected $guarded = ['*'];
     
     public function Order(){
-    	return $this->hasOne(Order::class, 'order_id');
+    	return $this->belongsTo(Order::class, 'order_id');
     }
     
     public function Charges(){

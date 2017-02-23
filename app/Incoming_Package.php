@@ -14,6 +14,6 @@ class Incoming_Package extends Model
     }
     
     public function Order(){
-    	return $this->hasOne(Order::class, 'order_id');
+    	return $this->belongsTo(Order::class, 'order_id');
     }
 }

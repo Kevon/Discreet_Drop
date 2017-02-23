@@ -49,13 +49,8 @@
     </div>
     
     <div class="section">
-        <div class="row">
-            <div class="col-sm-12">
-                <h2 class="center">Your Items Arrive as Discreet as Possible</h2>
-                <h3 class="center">Just Send Your Packages to Us, and We'll send Them to You 100% Discreet</h3>
-                <img src="images/dd-diagram.svg" class="img-responsive center-block svg" alt="Responsive image">
-            </div>
-        </div>
+        <h2 class="center">We Put Your Identifiable Box in a Plain Box</h2>
+        <h3 class="center">Boxception</h3>
     </div>
 
     <div class="section">
@@ -78,12 +73,12 @@
             <div class="col-sm-6 col-sm-pull-6">
                 <h2 class="center">Step 2</h2>
                 <h3 class="center">Use That Address as Your Shipping Address When Buying Online</h3>
-                When checking out online, use the unique discreet Drop address from Step 1 as your shipping address instead of your usual home address so your items will be sent to our package processing center with the qunique code in the address to let us know that your packages belong to you.
+                When checking out anywhere online, use the unique discreet Drop address from Step 1 as your shipping address instead of your usual home address so your items will be sent to our package processing center with the qunique code in the address to let us know that your packages belong to you.
             </div>
         </div>
         <div class="row vertical-align">
             <div class="col-sm-6">
-                <img src="images/receive.svg" class="img-responsive center-block svg" alt="Responsive image">
+                <img src="images/dd-diagram.svg" class="img-responsive center-block svg" alt="Responsive image">
             </div>
             <div class="col-sm-6">
                 <h2 class="center">Step 3</h2>
