@@ -6,7 +6,7 @@
         @if($demo)
             current 
         @else
-            @if($order->order_status == 'Delivered' or $order->order_status == 'Shipped' or $order->order_status == 'Charge Error')
+            @if($order->order_status == 'Delivered' or $order->order_status == 'Shipped' or $order->order_status == 'Charged' or $order->order_status == 'Received' or $order->order_status == 'Charge Error')
                 current 
             @endif 
         @endif 

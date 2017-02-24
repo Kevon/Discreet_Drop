@@ -66,4 +66,9 @@ class RegisterController extends Controller
             'password' => bcrypt($data['password']),
         ]);
     }
+    
+    protected function registered( \Illuminate\Http\Request $request, \App\User $user ){
+        Session()->flash('message', 'Registration successful! Welcome to Discreet Drop!');
+        return redirect()->intended($this->redirectPath());
+    }
 }

@@ -27,7 +27,8 @@ class Controller extends BaseController
         $dd_info = DD_Info::where('active', 'YES')->first();
         $orders = $user->Orders;
         $orders->load('Incoming_Package');
-        $orders->load('Shipment.Charge, Shipment.Outgoing_Package');
+        $orders->load('Shipment.Charges');
+        $orders->load('Shipment.Outgoing_Packages');
         return view('dashboard', compact('user', 'orders', 'dd_info'));
     }
     
@@ -286,6 +287,7 @@ class Controller extends BaseController
         $user = Auth::user();
         $order = new Order;
         $order->user_id = $user->id;
+        $order->order_status = 'Pending';
         $order->created_by = $user->id;
         $order->save();
         Session::flash('message', 'Order successfully created!');

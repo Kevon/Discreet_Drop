@@ -34,7 +34,7 @@ Route::group(['middleware' => ['auth']], function () {
     Route::delete('/login_info/update', 'Controller@deleteUser');
 
     Route::post('/dashboard/addOrder', 'Controller@addOrder');
-    Route::delete('/dashboard/deleteOrder/{Order}', 'Controller@deleteOrder');
+    Route::delete('/dashboard/deleteOrder/{order}', 'Controller@deleteOrder');
 });
 
 Route::group(['middleware' => ['admin']], function () {
@@ -43,5 +43,5 @@ Route::group(['middleware' => ['admin']], function () {
     
     Route::post('/admin/incoming_package/save', 'AdminController@saveIncomingPackage');
     
-    Route::get('/admin/outgoing_package/{Order}', 'AdminController@outgoingPackagePanel');
+    Route::get('/admin/outgoing_package/{order}', 'AdminController@outgoingPackagePanel');
 });
