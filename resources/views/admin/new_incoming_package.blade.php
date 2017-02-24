@@ -12,114 +12,115 @@
 <div class="container content">
     <div class="row">
         <h1 class="center">Enter New Incoming Package</h1>
-        <div class="col-sm-6 col-sm-offset-3">
-            <form role="form" method="POST" action="{{ url('/admin/incoming_package/save') }}" autocomplete="on">
-                {{ csrf_field() }}
+        <div class="col-md-6 col-md-offset-3">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <form role="form" method="POST" action="{{ url('/admin/incoming_package/save') }}" autocomplete="on">
+                        {{ csrf_field() }}
 
-                <div class="row">
-                    <div class="col-sm-6 form-group{{ $errors->has('first_name') ? ' has-error' : '' }}">
-                        <label for="first_name">First Name</label>
-                        <input id="first_name" type="text" class="form-control input-lg" autocomplete="given-name" name="first_name" value="{{ old('first_name', isset($user->first_name) ? $user->first_name : '') }}" required>
 
-                        @if ($errors->has('first_name'))
-                            <span class="help-block">
-                                <strong>{{ $errors->first('first_name') }}</strong>
-                            </span>
-                        @endif
-                    </div>
+                        <div class="form-group{{ $errors->has('carrier') ? ' has-error' : '' }}">
+                            <label for="carrier">Carrier</label>
+                            <input id="carrier" type="text" class="form-control input-lg" name="carrier" value="{{ old('carrier', isset($user->carrier) ? $user->carrier : '') }}" required>
 
-                    <div class="col-sm-6 form-group{{ $errors->has('last_name') ? ' has-error' : '' }}">
-                        <label for="last_name">Last Name</label>
-                        <input id="last_name" type="text" class="form-control input-lg" autocomplete="family-name" name="last_name" value="{{ old('last_name', isset($user->last_name) ? $user->last_name : '') }}"required>
+                            @if ($errors->has('carrier'))
+                                <span class="help-block">
+                                    <strong>{{ $errors->first('carrier') }}</strong>
+                                </span>
+                            @endif
+                        </div>
 
-                        @if ($errors->has('last_name'))
-                            <span class="help-block">
-                                <strong>{{ $errors->first('last_name') }}</strong>
-                            </span>
-                        @endif
-                    </div>
+                        <div class="form-group{{ $errors->has('tracking_number') ? ' has-error' : '' }}">
+                            <label for="tracking_number">Tracking Number</label>
+                            <input id="tracking_number" type="text" class="form-control input-lg" name="tracking_number" value="{{ old('tracking_number', isset($user->tracking_number) ? $user->tracking_number : '') }}"required>
+
+                            @if ($errors->has('tracking_number'))
+                                <span class="help-block">
+                                    <strong>{{ $errors->first('tracking_number') }}</strong>
+                                </span>
+                            @endif
+                        </div>
+
+                        <div class="form-group{{ $errors->has('dd_code') ? ' has-error' : '' }}">
+                            <label for="dd_code">Discreet Drop Code</label>
+                            <input id="dd_code" type="tel" class="form-control input-lg" name="dd_code" maxlength="6" value="{{ old('dd_code', isset($user->dd_code) ? $user->dd_code : '') }}" required>
+
+                            @if ($errors->has('dd_code'))
+                                <span class="help-block">
+                                    <strong>{{ $errors->first('dd_code') }}</strong>
+                                </span>
+                            @endif
+                        </div>
+
+                        <div class="form-group{{ $errors->has('sender') ? ' has-error' : '' }}">
+                            <label for="sender">Sender</label>
+                            <input id="sender" type="text" class="form-control input-lg" name="sender" value="{{ old('sender', isset($user->sender) ? $user->sender : '') }}" required>
+
+                            @if ($errors->has('sender'))
+                                <span class="help-block">
+                                    <strong>{{ $errors->first('sender') }}</strong>
+                                </span>
+                            @endif
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-3 form-group{{ $errors->has('length') ? ' has-error' : '' }}">
+                                <label for="length">Length (in)</label>
+                                <input id="length" type="tel" class="form-control input-lg" name="length" maxlength="2" value="{{ old('length', isset($user->length) ? $user->length : '') }}" required>
+
+                                @if ($errors->has('length'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('length') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+
+                            <div class="col-sm-3 form-group{{ $errors->has('width') ? ' has-error' : '' }}">
+                                <label for="width">Width (in)</label>
+                                <input id="width" type="tel" class="form-control input-lg" name="width" maxlength="2" value="{{ old('width', isset($user->width) ? $user->width : '') }}" required>
+
+                                @if ($errors->has('width'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('width') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+
+                            <div class="col-sm-3 form-group{{ $errors->has('height') ? ' has-error' : '' }}">
+                                <label for="height">Height (in)</label>
+                                <input id="height" type="tel" class="form-control input-lg" name="height" maxlength="2" value="{{ old('height', isset($user->height) ? $user->height : '') }}" required>
+
+                                @if ($errors->has('height'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('height') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+
+                            <div class="col-sm-3 form-group{{ $errors->has('weight_in_oz') ? ' has-error' : '' }}">
+                                <label for="weight_in_oz">Weight (oz)</label>
+                                <input id="weight_in_oz" type="tel" class="form-control input-lg" name="weight_in_oz" maxlength="4" value="{{ old('weight_in_oz', isset($user->weight_in_oz) ? $user->weight_in_oz : '') }}" required>
+
+                                @if ($errors->has('weight_in_oz'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('weight_in_oz') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
+                        <div class="row btn-toolbar">
+                            <div class="col-md-6">
+                                <button type="submit" class="btn btn-block btn-primary" id="submit_btn" data-loading-text="<i class='fa fa-circle-o-notch fa-spin fa-fw'></i> Saving Changes">Save Package</button>
+                            </div>
+                            <div class="col-md-6">
+                                <button class="btn btn-default btn-block" type="button" onclick="back()">Cancel</button>
+                            </div>
+                        </div>
+
+                    </form>
                 </div>
-
-                <div class="form-group{{ $errors->has('address_1') ? ' has-error' : '' }}">
-                    <label for="address_1">Address Line 1</label>
-                    <input id="address_1" type="text" class="form-control input-lg" autocomplete="address-line1" name="address_1" value="{{ old('address_1', isset($user->address_1) ? $user->address_1 : '') }}" required>
-
-                    @if ($errors->has('address_1'))
-                        <span class="help-block">
-                            <strong>{{ $errors->first('address_1') }}</strong>
-                        </span>
-                    @endif
-                </div>
-
-                <div class="form-group{{ $errors->has('address_2') ? ' has-error' : '' }}">
-                    <label for="address_2">Address Line 2 - Optional</label>
-                    <input id="address_2" type="text" class="form-control input-lg" autocomplete="address-line2" name="address_2" value="{{ old('address_2', isset($user->address_2) ? $user->address_2 : '') }}">
-
-                    @if ($errors->has('address_2'))
-                        <span class="help-block">
-                            <strong>{{ $errors->first('address_2') }}</strong>
-                        </span>
-                    @endif
-                </div>
-
-                <div class="row">
-                    <div class="col-sm-5 form-group{{ $errors->has('city') ? ' has-error' : '' }}">
-                        <label for="city">City</label>
-                        <input id="city" type="text" class="form-control input-lg" autocomplete="address-level2" name="city" value="{{ old('city', isset($user->city) ? $user->city : '') }}" required>
-
-                        @if ($errors->has('city'))
-                            <span class="help-block">
-                                <strong>{{ $errors->first('city') }}</strong>
-                            </span>
-                        @endif
-                    </div>
-
-                    <div class="col-sm-3 form-group{{ $errors->has('state') ? ' has-error' : '' }}">
-                        <label for="state">State</label>
-                        <select id="state" class="form-control input-lg" autocomplete="address-level1" name="state" required>
-                                @include('partials.state_list')
-                        </select>
-
-                        @if ($errors->has('state'))
-                            <span class="help-block">
-                                <strong>{{ $errors->first('state') }}</strong>
-                            </span>
-                        @endif
-                    </div>
-
-                    <div class="col-sm-4 form-group{{ $errors->has('zip_code') ? ' has-error' : '' }}">
-                        <label for="zip_code">Zip Code</label>
-                        <input id="zip_code" type="tel" class="form-control input-lg" autocomplete="postal-code" name="zip_code" maxlength="10" value="{{ old('zip_code', isset($user->zip_code) ? $user->zip_code : '') }}" required>
-
-                        @if ($errors->has('zip_code'))
-                            <span class="help-block">
-                                <strong>{{ $errors->first('zip_code') }}</strong>
-                            </span>
-                        @endif
-                    </div>
-                </div>
-
-                <div class="form-group{{ $errors->has('phone') ? ' has-error' : '' }}">
-                    <label for="phone">Phone Number - Optional</label>
-                    <input id="phone" type="tel" class="form-control input-lg" autocomplete="zip" name="phone" value="{{ old('phone', isset($user->phone) ? $user->phone : '') }}">
-
-                    @if ($errors->has('phone'))
-                        <span class="help-block">
-                            <strong>{{ $errors->first('phone') }}</strong>
-                        </span>
-                    @endif
-                </div>
-
-                <div class="row btn-toolbar">
-                    <div class="col-md-6">
-                        <button type="submit" class="btn btn-block btn-primary" id="submit_btn" data-loading-text="<i class='fa fa-circle-o-notch fa-spin fa-fw'></i> Saving Changes">Save Incoming Package</button>
-                    </div>
-                    <div class="col-md-6">
-                        <button class="btn btn-default btn-block" type="button" onclick="back()">Cancel</button>
-                    </div>
-                </div>
-
-            </form>
+            </div>
         </div>
     </div>
 </div>
@@ -127,5 +128,7 @@
 
 
 @section('footer')
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.payment/3.0.0/jquery.payment.min.js" integrity="sha256-bEuhxmK0QLOu/l5RR+ot9y+A5RDkl5xlSFp7D/+JTjc=" crossorigin="anonymous"></script>
 <script src="/js/user.js"></script>
+<script src="/js/admin.js"></script>
 @endsection
