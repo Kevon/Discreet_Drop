@@ -1,6 +1,6 @@
 @extends('layouts.app')
-@section('subtitle', 'New Incoming Package')
-@section('description', 'Enter a new incoming package.')
+@section('subtitle', 'Edit Incoming Package')
+@section('description', 'Edit an existing incoming package.')
 
 
 @section('header')
@@ -11,14 +11,15 @@
 @section('content')
 <div class="container content">
     <div class="row">
-        <h1 class="center">Enter New Incoming Package</h1>
+        <h1 class="center">Edit Incoming Package</h1>
     </div>
     <div class="row">
         <div class="col-md-6 col-md-offset-3">
             <div class="panel panel-default">
                 <div class="panel-body">
-                    <form role="form" method="POST" action="{{ url('/admin/incoming_package/save') }}" autocomplete="on">
+                    <form role="form" method="POST" action="/admin/incoming_package/{{$incoming_package->id}}/save" autocomplete="on">
                         {{ csrf_field() }}
+                        {{ method_field('PATCH') }}
 
                         @include('admin/adminPartials/incoming_package_form')
 

@@ -1,6 +1,6 @@
 @extends('layouts.app')
-@section('subtitle', 'Admin')
-@section('description', 'Discreet Drop admin page.')
+@section('subtitle', 'Admin Panel')
+@section('description', 'Discreet Drop admin panel.')
 
 
 @section('header')

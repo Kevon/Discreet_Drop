@@ -104,7 +104,10 @@ class Controller extends BaseController
             $predefined_package = "LargeParcel";
         }
             
-        $parcel_params = array("predefined_package" => $predefined_package,
+        $parcel_params = array("length"     => $length,
+                               "width"      => $width,
+                               "height"     => $height,
+                               "predefined_package" => $predefined_package,
                                "weight"      => $request->weight
         );
         $parcel = \EasyPost\Parcel::create($parcel_params);
@@ -248,6 +251,7 @@ class Controller extends BaseController
             $user->dd_code = $dd_code;
         }
         $user->save();
+        Session::flash('message', 'Shipping profile successfully updated!');
         return redirect()->to('/dashboard');
     }
     

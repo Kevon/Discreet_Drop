@@ -31,6 +31,10 @@ class AdminController extends BaseController
         return view('admin/new_incoming_package');
     }
     
+    public function editIncomingPackage(Incoming_Package $incoming_package){
+        return view('admin/edit_incoming_package', compact('incoming_package'));
+    }
+    
     public function saveIncomingPackage(Request $request){
         $this->validate($request, [
             'carrier' => 'required',
@@ -59,7 +63,7 @@ class AdminController extends BaseController
             $order->save();
         }
         else{
-            $order = $pendingOrders->latest()->first();
+            $order = $pendingOrders->last();
         }
         
         $length = $request->length;
@@ -101,20 +105,79 @@ class AdminController extends BaseController
         $shipment->save();
         
         Session::flash('message', 'New incoming package successfuly saved.');
-        return redirect()->to('/admin/outgoing_package/'.$order->id);
+        return redirect()->to('/admin/orders/'.$order->id);
     }
     
-    public function outgoingPackagePanel(Order $order){
-        $order = Order::find($order->id);
-        $shipment = $order->Shipment()->first();
+    public function modifyIncomingPackage(Incoming_Package $incoming_package, Request $request){
+        $this->validate($request, [
+            'carrier' => 'required',
+            'tracking_number' => 'required|unique:incoming_packages,tracking_number,3',
+            'dd_code' => 'required|digits:6',
+            'sender' => 'required',
+            'length' => 'required|digits_between:1,2',
+            'width' => 'required|digits_between:1,2',
+            'height' => 'required|digits_between:1,2',
+            'weight_in_oz' => 'required|digits_between:1,4'
+        ]);
+        $adminUser = Auth::user();
+        $user = User::where('dd_code', $request->dd_code)->first();
+        if(empty($user)){
+            Session::flash('error', 'DD Code not linked to any user.');
+            return back();
+        }
         
+        $length = $request->length;
+        $width = $request->width;
+        $height = $request->height;
+        if($length < $width){
+            $temp = $length;
+            $length = $width;
+            $width = $temp;
+        }
+        if($length < $height){
+            $temp = $length;
+            $length = $height;
+            $height = $temp;
+        }
+        
+        $incoming_package->carrier = $request->carrier;
+        $incoming_package->tracking_number = $request->tracking_number;
+        $incoming_package->dd_code = $request->dd_code;
+        $incoming_package->sender = $request->sender;
+        $incoming_package->length = $length;
+        $incoming_package->width = $width;
+        $incoming_package->height = $height;
+        $incoming_package->weight_in_oz = $request->weight_in_oz;
+        $incoming_package->created_by = $adminUser->id;
+        $incoming_package->save();
+        
+        Session::flash('message', 'Incoming package successfuly modifyed.');
+        return redirect()->to('/admin/orders/'.$incoming_package->order_id);
+    }
+    
+    public function usersList(){
+        return view('admin/admin_order_panel', compact('order'));
+    }
+    
+    public function userPanel(){
+        return view('admin/admin_order_panel', compact('order'));
+    }
+    
+    public function ordersList(){
+        return view('admin/admin_order_panel', compact('order'));
+    }
+    
+    public function orderPanel(Order $order){
+        $shipment = $order->Shipment()->first();
+        $user = $order->User()->first();
+        $incoming_package = $order->Incoming_Package()->first();
         if($shipment->charge_status == "Pending"){
             
         }
         else{
             
         }
-        return view('admin/outgoing_package_panel');
+        return view('admin/admin_order_panel', compact('order', 'user', 'incoming_package'));
     }
     
 }

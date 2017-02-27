@@ -40,8 +40,13 @@ Route::group(['middleware' => ['auth']], function () {
 Route::group(['middleware' => ['admin']], function () {
     Route::get('/admin', 'AdminController@index');
     Route::get('/admin/incoming_package', 'AdminController@newIncomingPackage');
+    Route::get('/admin/incoming_package/{incoming_package}', 'AdminController@editIncomingPackage');
     
     Route::post('/admin/incoming_package/save', 'AdminController@saveIncomingPackage');
+    Route::patch('/admin/incoming_package/{incoming_package}/save', 'AdminController@modifyIncomingPackage');
     
-    Route::get('/admin/outgoing_package/{order}', 'AdminController@outgoingPackagePanel');
+     Route::get('/admin/users', 'AdminController@usersList');
+    Route::get('/admin/users/{user}', 'AdminController@userPanel');
+    Route::get('/admin/orders', 'AdminController@ordersList');
+    Route::get('/admin/orders/{order}', 'AdminController@orderPanel');
 });
