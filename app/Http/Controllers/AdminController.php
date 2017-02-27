@@ -139,6 +139,11 @@ class AdminController extends BaseController
             $length = $height;
             $height = $temp;
         }
+        if($width < $height){
+            $temp = $width;
+            $width = $height;
+            $height = $temp;
+        }
         
         $incoming_package->carrier = $request->carrier;
         $incoming_package->tracking_number = $request->tracking_number;
@@ -171,13 +176,115 @@ class AdminController extends BaseController
         $shipment = $order->Shipment()->first();
         $user = $order->User()->first();
         $incoming_package = $order->Incoming_Package()->first();
-        if($shipment->charge_status == "Pending"){
+        $charges = $shipment->Charges()->get();
+        $outgoing_packages = $shipment->Charges()->get();
+        if($shipment->charge_status != "Charged"){
+            $boxes = Box::where('status', 'ACTIVE')->get();  
+
+            $incomingPackageLength = $incoming_package->length;
+            $incomingPackageWidth = $incoming_package->width;
+            $incomingPackageHeight = $incoming_package->height;
+            if($incomingPackageLength < $incomingPackageWidth){
+                $temp = $incomingPackageLength;
+                $incomingPackageLength = $incomingPackageWidth;
+                $incomingPackageWidth = $temp;
+            }
+            if($incomingPackageLength < $incomingPackageHeight){
+                $temp = $incomingPackageLength;
+                $incomingPackageLength = $incomingPackageHeight;
+                $incomingPackageHeight = $temp;
+            }
+            if($incomingPackageWidth < $incomingPackageHeight){
+                $temp = $incomingPackageWidth;
+                $incomingPackageWidth = $incomingPackageHeight;
+                $incomingPackageHeight = $temp;
+            }
             
-        }
-        else{
+            $incomingPackageVolume = $incomingPackageLength * $incomingPackageWidth * $incomingPackageHeight;
             
+            $box = null;
+            $boxVolume = PHP_INT_MAX;
+            foreach($boxes as $b){
+                $bVolume = $b->length * $b->width * $b->height;
+                if($bVolume > $incomingPackageVolume and ($b->length > $incomingPackageLength and $b->width > $incomingPackageWidth and $b->height > $incomingPackageHeight) and $bVolume < $boxVolume){
+                    $box = $b;
+                    $boxVolume = $bVolume;
+                }
+            }
+            
+            $boxLength = $box->length;
+            $boxWidth = $box->width;
+            $boxHeight = $box->height;
+            if($boxLength < $boxWidth){
+                $temp = $boxLength;
+                $boxLength = $boxWidth;
+                $boxWidth = $temp;
+            }
+            if($boxLength < $boxHeight){
+                $temp = $boxLength;
+                $boxLength = $boxHeight;
+                $boxHeight = $temp;
+            }
+            if($boxWidth < $boxHeight){
+                $temp = $boxWidth;
+                $boxWidth = $boxHeight;
+                $boxHeight = $temp;
+            }
+            
+            $dd_info = DD_Info::where('active', 'YES')->first();
+
+            \EasyPost\EasyPost::setApiKey(config('services.easypost.key'));
+
+            $to_address_params = array("name"    => $user->first_name." ".$user->last_name,
+                                       "street1" => $user->address_1,
+                                       "street2" => $user->address_2,
+                                       "city"    => $user->city,
+                                       "state"   => $user->state,
+                                       "zip"     => $user->zip_code,
+                                       "phone"   => $user->phone);
+
+            $to_address = \EasyPost\Address::create($to_address_params);
+
+            $from_address_params = array("name"  => $dd_info->dd_name,
+                                       "street1" => $dd_info->address_1,
+                                       "street2" => $dd_info->address_2,
+                                       "city"    => $dd_info->city,
+                                       "state"   => $dd_info->state,
+                                       "zip"     => $dd_info->zip_code);
+
+            $from_address = \EasyPost\Address::create($from_address_params);
+
+            $predefined_package = null;
+
+            if($boxLength+($boxWidth*2)+($boxHeight*2)<=108){
+                $predefined_package = "Parcel";
+            }
+            else if($boxLength+($boxWidth*2)+($boxHeight*2)<=130){
+                $predefined_package = "LargeParcel";
+            }
+
+            $parcel_params = array("length"     => $boxLength,
+                                   "width"      => $boxWidth,
+                                   "height"     => $boxHeight,
+                                   "predefined_package" => $predefined_package,
+                                   "weight"      => $incoming_package->weight_in_oz + 16
+            );
+            $parcel = \EasyPost\Parcel::create($parcel_params);
+
+            $shipment_params = array("from_address" => $from_address,
+                                     "to_address"   => $to_address,
+                                     "parcel"       => $parcel
+            );
+            $quoteShipment = \EasyPost\Shipment::create($shipment_params);
+
+            $quoteRate = \EasyPost\Rate::retrieve($quoteShipment->lowest_rate());
         }
-        return view('admin/admin_order_panel', compact('order', 'user', 'incoming_package'));
+
+        return view('admin/admin_order_panel', compact('order', 'user', 'incoming_package', 'shipment', 'charges', 'outgoing_packages', 'quoteShipment', 'quoteRate', 'box'));
+    }
+    
+    public function processOrder(Order $order, Request $request){
+        return view('admin/admin_order_panel', compact('order'));
     }
     
 }

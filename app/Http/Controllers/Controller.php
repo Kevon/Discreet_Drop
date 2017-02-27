@@ -97,6 +97,11 @@ class Controller extends BaseController
             $length = $height;
             $height = $temp;
         }
+        if($width < $height){
+            $temp = $width;
+            $width = $height;
+            $height = $temp;
+        }
         if($length+($width*2)+($height*2)<=108){
             $predefined_package = "Parcel";
         }

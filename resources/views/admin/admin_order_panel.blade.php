@@ -33,32 +33,41 @@
                 </div>
             </div>
             
-            @if(empty($order->Charge) or empty($order->Outgoing_Package))
+            
             <div class="panel panel-default">
                 <div class="panel-body">
                     <h4>Process Shipment</h4>
-                    <button class="btn btn-primary btn-block" onclick="location.href='/admin/incoming_package/{{$order->Incoming_Package->id}}'">Charge Customer and Generate Shipment</button>
-                </div>
-            </div>
-            @endif
-            
-            @if(!empty($order->Charge))
-            <div class="panel panel-default">
-                <div class="panel-body">
-                    <h4>Charge Details</h4>
+                    <P><strong>Shipment API ID:</strong> {{$quoteShipment->id or "Pending"}}</P>
+                    <P><strong>Box Name:</strong> {{$box->box_name or "Pending"}}</P>
+                    
+                    <form role="form" method="POST" action="/dashboard/orders/{{$order->id}}/processOrder">
+                        {{ csrf_field() }}
+                        <input type="hidden" name="shipment_id" value="{{$quoteShipment->id}}">
+                        <div class="row btn-toolbar">
+                            <button class="btn btn-primary btn-block" onclick="location.href='/admin/incoming_package/{{$order->Incoming_Package->id}}'">Process Shipment</button>
+                        </div>
+                    </form>
                     
                 </div>
             </div>
-            @endif
             
-            @if(!empty($order->Outgoing_Package))
-            <div class="panel panel-default">
-                <div class="panel-body">
-                    <h4>Outgoing Package Details</h4>
-                    
+            @foreach($charges as $charge)
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <h4>Charge Details</h4>
+
+                    </div>
                 </div>
-            </div>
-            @endif
+            @endforeach
+            
+            @foreach($outgoing_packages as $outgoing_package)
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <h4>Outgoing Package Details</h4>
+
+                    </div>
+                </div>
+            @endforeach
             
         </div>
     </div>
