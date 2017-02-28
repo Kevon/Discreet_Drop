@@ -32,10 +32,18 @@ class User extends Authenticatable
     ];
     
     public function Orders(){
-    	return $this->hasMany(Order::class, 'user_id');
+    	return $this->hasMany(Order::class, 'user_id')->latest();
+    }
+    
+    public function Latest_Order(){
+    	return $this->hasOne(Order::class, 'user_id')->latest();
     }
     
     public function Incoming_Packages(){
-    	return $this->hasMany(Incoming_Package::class, 'dd_code', 'dd_code');
+    	return $this->hasMany(Incoming_Package::class, 'dd_code', 'dd_code')->latest();
+    }
+    
+    public function Latest_Incoming_Package(){
+    	return $this->hasOne(Incoming_Package::class, 'dd_code', 'dd_code')->latest();
     }
 }

@@ -33,7 +33,7 @@
                 </div>
             </div>
             
-            @if(count($successfulOutgoingPackages) == 0)
+            @if(empty($successfulOutgoingPackage))
                 <div class="panel panel-default">
                     <div class="panel-body">
                         <h4>Process Shipment</h4>
@@ -46,6 +46,7 @@
                         <form role="form" method="POST" action="/admin/orders/{{$order->id}}/process_order">
                             {{ csrf_field() }}
                             <input type="hidden" name="shipment_id" value="{{$quoteShipment->id}}">
+                            <input type="hidden" name="box_id" value="{{$box->id}}">
                             <div class="row btn-toolbar">
                                 <button type="submit" class="btn btn-block btn-primary" id="submit_btn" data-loading-text="<i class='fa fa-circle-o-notch fa-spin fa-fw'></i> Saving Changes">Process Shipment</button>
                             </div>

@@ -63,7 +63,7 @@ class AdminController extends BaseController
             $order->save();
         }
         else{
-            $order = $pendingOrders->last();
+            $order = $pendingOrders->first();
         }
         
         $length = $request->length;
@@ -175,12 +175,13 @@ class AdminController extends BaseController
     public function orderPanel(Order $order){
         $shipment = $order->Shipment()->first();
         $user = $order->User()->first();
+        $adminUser = Auth::user();
         $incoming_package = $order->Incoming_Package()->first();
         $charges = $shipment->Charges()->get();
         $outgoing_packages = $shipment->Outgoing_Packages()->get();
-        $successfulOutgoingPackages = $shipment->Outgoing_Packages()->where('shipment_object_status','succeeded')->get();
+        $successfulOutgoingPackage = $shipment->Latest_Outgoing_Package()->whereNotNull('tracking_number')->first();
 
-        if(count($successfulOutgoingPackages) == 0){
+        if(empty($successfulOutgoingPackage)){
             $boxes = Box::where('status', 'ACTIVE')->get();  
 
             $incomingPackageLength = $incoming_package->length;
@@ -232,6 +233,13 @@ class AdminController extends BaseController
                 }
             }
             
+            if(empty($box)){
+                $box = Box::updateOrCreate(
+                    ['box_name' => 'Box for Order #'.$order->id],
+                    ['length' => $incomingPackageLength, 'width' => $incomingPackageWidth, 'height' => $incomingPackageHeight, 'status' => 'CUSTOM', 'created_by' => $adminUser->id]
+                );
+            }
+            
             $boxLength = $box->length;
             $boxWidth = $box->width;
             $boxHeight = $box->height;
@@ -255,7 +263,8 @@ class AdminController extends BaseController
                                        "street2" => $dd_info->address_2,
                                        "city"    => $dd_info->city,
                                        "state"   => $dd_info->state,
-                                       "zip"     => $dd_info->zip_code);
+                                       "zip"     => $dd_info->zip_code,
+                                       "phone"   => $dd_info->phone);
 
             $from_address = \EasyPost\Address::create($from_address_params);
 
@@ -296,10 +305,16 @@ class AdminController extends BaseController
         $shipment = $order->Shipment()->first();
         $adminUser = Auth::user();
         $dd_info = DD_Info::where('active', 'YES')->first();
-        $successfulCharges = $shipment->Charges()->where('stripe_status','succeeded')->get();
+        $successfulCharge = $shipment->Latest_Charge()->where('stripe_status','succeeded')->first();
         
-        if(count($successfulCharges) == 0){
-            \Stripe\Stripe::setApiKey(config('services.stripe.secret'));
+        \EasyPost\EasyPost::setApiKey(config('services.easypost.key'));
+        \Stripe\Stripe::setApiKey(config('services.stripe.secret'));
+        
+        if(!empty($request->shipment_id)){
+            $quoteShipment = \EasyPost\Shipment::retrieve(array('id' => $request->shipment_id));
+        }
+        
+        if(empty($successfulCharge)){
             $StripeCharge = \Stripe\Charge::create(array(
                 "amount" => ($quoteShipment->lowest_rate()->rate*100)+($dd_info->dd_rate),
                 "currency" => "usd",
@@ -329,33 +344,82 @@ class AdminController extends BaseController
             if($charge->stripe_status == 'succeeded'){         
                 $order->order_status = 'Charged';
                 $shipment->charge_status = 'Charged';
+                
+                $order->save();
+                $shipment->save();
             }
             else{
                 $order->order_status = 'Charge Error';
                 $shipment->charge_status = 'Charge Error';
+                
+                $order->save();
+                $shipment->save();
+                
+                Session::flash('error', 'Charge error - '.$charge->stripe_failure_message);
+                return back();
             }
-            
-            $order->save();
-            $shipment->save();
-            
-            dd($charge);
         }
         
-        $successfulCharges = $shipment->Charges()->where('stripe_status','succeeded')->get();
-        $successfulOutgoingPackages = $shipment->Outgoing_Packages()->where('shipment_object_status','succeeded')->get();
+        $successfulCharge = $shipment->Latest_Charge()->where('stripe_status','succeeded')->first();
+        $successfulOutgoingPackage = $shipment->Latest_Outgoing_Package()->whereNotNull('tracking_number')->first();
 
-        if(count($successfulCharges) != 0 and count($successfulOutgoingPackages) == 0){
-            \EasyPost\EasyPost::setApiKey(config('services.easypost.key'));
-            
-            if(!empty($request->shipment_id)){
-                $quoteShipment = \EasyPost\Shipment::retrieve(array('id' => $request->shipment_id));
-            }
-            
+        if(!empty($successfulCharge) and empty($successfulOutgoingPackage)){
             $quoteShipment = $quoteShipment->buy(array(
                 'rate'      => $quoteShipment->lowest_rate(),
                 'insurance' => 100
             ));
+            
+            $outgoing_package = new Outgoing_Package;
+            
+            $outgoing_package->shipment_id = $shipment->id;
+            $outgoing_package->dd_info_id = $dd_info->id;
+            $outgoing_package->api_used = "EasyPost";
+            $outgoing_package->to_name = $quoteShipment->to_address->name;
+            $outgoing_package->to_street1 = $quoteShipment->to_address->street1;
+            $outgoing_package->to_street2 = $quoteShipment->to_address->street2;
+            $outgoing_package->to_city = $quoteShipment->to_address->city;
+            $outgoing_package->to_state = $quoteShipment->to_address->state;
+            $outgoing_package->to_zip_code = $quoteShipment->to_address->zip;
+            $outgoing_package->to_phone = $quoteShipment->to_address->phone;
+            $outgoing_package->to_email = $quoteShipment->to_address->email;
+            $outgoing_package->box_id = $request->box_id;
+            $outgoing_package->api_id = $quoteShipment->id;
+            $outgoing_package->predefined_package = $quoteShipment->parcel->id;
+            $outgoing_package->weight_in_oz = $quoteShipment->parcel->weight;
+            $outgoing_package->label_url = $quoteShipment->postage_label->label_url;
+            $outgoing_package->rate_id = $quoteShipment->selected_rate->id;
+            $outgoing_package->rate = $quoteShipment->selected_rate->rate;
+            $outgoing_package->carrier = $quoteShipment->selected_rate->carrier;
+            $outgoing_package->service = $quoteShipment->selected_rate->service;
+            $outgoing_package->delivery_days = $quoteShipment->selected_rate->delivery_days;
+            $outgoing_package->delivery_date = $quoteShipment->selected_rate->delivery_date;
+            $outgoing_package->status = $quoteShipment->status;
+            $outgoing_package->tracker_id = $quoteShipment->tracker->id;
+            $outgoing_package->tracking_number = $quoteShipment->tracking_code;
+            $outgoing_package->tracking_url = $quoteShipment->tracker->public_url;
+            $outgoing_package->created_by = $adminUser->id;
+            
+            $outgoing_package->save();
+            
+            if(!empty($outgoing_package->tracking_number)){         
+                $order->order_status = 'Shipped';
+                $shipment->charge_status = 'Shipped';
+                
+                $order->save();
+                $shipment->save();
+            }
+            else{
+                $order->order_status = 'Shipment Error';
+                $shipment->charge_status = 'Shipment Error';
+                
+                Session::flash('error', 'Shipment error.');
+                return back();
+            }
+            
+            
         }
+        Session::flash('message', 'Package Successfully Processed!');
+        return redirect()->away($outgoing_package->tracking_url);
     }
     
 }

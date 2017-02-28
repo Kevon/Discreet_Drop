@@ -14,7 +14,7 @@ class Shipment extends Model
     }
     
     public function Charges(){
-    	return $this->hasMany(Charge::class, 'shipment_id');
+    	return $this->hasMany(Charge::class, 'shipment_id')->latest();
     }
     
     public function Latest_Charge(){
@@ -22,7 +22,7 @@ class Shipment extends Model
     }
     
     public function Outgoing_Packages(){
-    	return $this->hasMany(Outgoing_Package::class, 'shipment_id');
+    	return $this->hasMany(Outgoing_Package::class, 'shipment_id')->latest();
     }
     
     public function Latest_Outgoing_Package(){
