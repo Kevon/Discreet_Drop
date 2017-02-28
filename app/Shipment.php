@@ -17,7 +17,15 @@ class Shipment extends Model
     	return $this->hasMany(Charge::class, 'shipment_id');
     }
     
+    public function Latest_Charge(){
+    	return $this->hasOne(Charge::class, 'shipment_id')->latest();
+    }
+    
     public function Outgoing_Packages(){
     	return $this->hasMany(Outgoing_Package::class, 'shipment_id');
+    }
+    
+    public function Latest_Outgoing_Package(){
+    	return $this->hasOne(Outgoing_Package::class, 'shipment_id')->latest();
     }
 }

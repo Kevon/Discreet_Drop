@@ -27,8 +27,8 @@ class Controller extends BaseController
         $dd_info = DD_Info::where('active', 'YES')->first();
         $orders = $user->Orders;
         $orders->load('Incoming_Package');
-        $orders->load('Shipment.Charges');
-        $orders->load('Shipment.Outgoing_Packages');
+        $orders->load('Shipment.Latest_Charge');
+        $orders->load('Shipment.Latest_Outgoing_Package');
         return view('dashboard', compact('user', 'orders', 'dd_info'));
     }
     
@@ -107,6 +107,9 @@ class Controller extends BaseController
         }
         else if($length+($width*2)+($height*2)<=130){
             $predefined_package = "LargeParcel";
+            $length = null;
+            $width = null;
+            $height = null;
         }
             
         $parcel_params = array("length"     => $length,
@@ -275,6 +278,7 @@ class Controller extends BaseController
             $user->password = bcrypt($request->password);
         }
         if(!empty($user->stripe_id)){
+            \Stripe\Stripe::setApiKey(config('services.stripe.secret'));
             $customer = \Stripe\Customer::retrieve($user->stripe_id);
             $customer->email = $request->email;
             $customer->save();

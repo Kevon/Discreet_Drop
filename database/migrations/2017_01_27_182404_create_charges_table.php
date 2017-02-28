@@ -23,8 +23,8 @@ class CreateChargesTable extends Migration
             $table->string('stripe_customer')->nullable();
             $table->string('stripe_failure_code')->nullable();
             $table->string('stripe_failure_message')->nullable();
-            $table->string('stripe_recepit_email')->nullable();
-            $table->string('stripe_recepit_number')->nullable();
+            $table->string('stripe_receipt_email')->nullable();
+            $table->string('stripe_receipt_number')->nullable();
             $table->string('stripe_source_id')->nullable();
             $table->string('stripe_source_brand')->nullable();
             $table->string('stripe_source_last4')->nullable();

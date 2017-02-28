@@ -33,32 +33,47 @@
                 </div>
             </div>
             
-            
-            <div class="panel panel-default">
-                <div class="panel-body">
-                    <h4>Process Shipment</h4>
-                    <P><strong>Shipment API ID:</strong> {{$quoteShipment->id or "Pending"}}</P>
-                    <P><strong>Box Name:</strong> {{$box->box_name or "Pending"}}</P>
-                    
-                    <form role="form" method="POST" action="/dashboard/orders/{{$order->id}}/processOrder">
-                        {{ csrf_field() }}
-                        <input type="hidden" name="shipment_id" value="{{$quoteShipment->id}}">
-                        <div class="row btn-toolbar">
-                            <button class="btn btn-primary btn-block" onclick="location.href='/admin/incoming_package/{{$order->Incoming_Package->id}}'">Process Shipment</button>
-                        </div>
-                    </form>
-                    
+            @if(count($successfulOutgoingPackages) == 0)
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <h4>Process Shipment</h4>
+                        <P><strong>Shipment API ID:</strong> {{$quoteShipment->id or "Pending"}}</P>
+                        <P><strong>Shipment API Rate:</strong> ${{$quoteRate->rate or "Pending"}}</P>
+                        <P><strong>Discreet Drop Rate:</strong> ${{number_format(($dd_info->dd_rate /100), 2, '.', ' ')}}</P>
+                        <P><strong>Total Rate:</strong> ${{number_format($quoteRate->rate + number_format(($dd_info->dd_rate /100), 2, '.', ' '), 2, '.', ' ')}}</P>
+                        <P><strong>Box Name:</strong> {{$box->box_name or "Pending"}}</P>
+
+                        <form role="form" method="POST" action="/admin/orders/{{$order->id}}/process_order">
+                            {{ csrf_field() }}
+                            <input type="hidden" name="shipment_id" value="{{$quoteShipment->id}}">
+                            <div class="row btn-toolbar">
+                                <button type="submit" class="btn btn-block btn-primary" id="submit_btn" data-loading-text="<i class='fa fa-circle-o-notch fa-spin fa-fw'></i> Saving Changes">Process Shipment</button>
+                            </div>
+                        </form>
+
+                    </div>
                 </div>
-            </div>
+            @endif
+            
+            <h3 class="center">Charges:</h3>
             
             @foreach($charges as $charge)
                 <div class="panel panel-default">
                     <div class="panel-body">
                         <h4>Charge Details</h4>
-
+                        <P><strong>Charge Status: </strong>{{$charge->stripe_status or "Pending"}}</P>
+                        <P><strong>Charged On: </strong>{{$charge->created_at or "Pending"}}</P>
+                        @if($charge->stripe_status == 'Charge Error')
+                            <P class="error"><strong>Charge Error: </strong>{{$charge->stripe_failure_code}}</P>
+                            <P class="error"><strong>Charge Message: </strong>{{$charge->stripe_failure_message}}</P>
+                        @endif
+                        <P><strong>Amount Charged: </strong>{{$charge->stripe_amount or "Pending"}}</P>
+                        <P><strong>Last 4: </strong>{{$charge->stripe_source_last4 or "Pending"}}</P>
                     </div>
                 </div>
             @endforeach
+            
+            <h3 class="center">Outgoing Packages:</h3>
             
             @foreach($outgoing_packages as $outgoing_package)
                 <div class="panel panel-default">

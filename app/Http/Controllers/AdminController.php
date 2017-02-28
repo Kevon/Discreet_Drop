@@ -177,8 +177,10 @@ class AdminController extends BaseController
         $user = $order->User()->first();
         $incoming_package = $order->Incoming_Package()->first();
         $charges = $shipment->Charges()->get();
-        $outgoing_packages = $shipment->Charges()->get();
-        if($shipment->charge_status != "Charged"){
+        $outgoing_packages = $shipment->Outgoing_Packages()->get();
+        $successfulOutgoingPackages = $shipment->Outgoing_Packages()->where('shipment_object_status','succeeded')->get();
+
+        if(count($successfulOutgoingPackages) == 0){
             $boxes = Box::where('status', 'ACTIVE')->get();  
 
             $incomingPackageLength = $incoming_package->length;
@@ -205,8 +207,26 @@ class AdminController extends BaseController
             $box = null;
             $boxVolume = PHP_INT_MAX;
             foreach($boxes as $b){
-                $bVolume = $b->length * $b->width * $b->height;
-                if($bVolume > $incomingPackageVolume and ($b->length > $incomingPackageLength and $b->width > $incomingPackageWidth and $b->height > $incomingPackageHeight) and $bVolume < $boxVolume){
+                $bLength = $b->length;
+                $bWidth = $b->width;
+                $bHeight = $b->height;
+                if($bLength < $bWidth){
+                    $temp = $bLength;
+                    $bLength = $bWidth;
+                    $bWidth = $temp;
+                }
+                if($bLength < $bHeight){
+                    $temp = $bLength;
+                    $bLength = $bHeight;
+                    $bHeight = $temp;
+                }
+                if($bWidth < $bHeight){
+                    $temp = $bWidth;
+                    $bWidth = $bHeight;
+                    $bHeight = $temp;
+                }
+                $bVolume = $bLength * $bWidth * $bHeight;
+                if($bVolume >= $incomingPackageVolume and ($bLength >= $incomingPackageLength and $bWidth >= $incomingPackageWidth and $bHeight >= $incomingPackageHeight) and $bVolume < $boxVolume){
                     $box = $b;
                     $boxVolume = $bVolume;
                 }
@@ -215,21 +235,6 @@ class AdminController extends BaseController
             $boxLength = $box->length;
             $boxWidth = $box->width;
             $boxHeight = $box->height;
-            if($boxLength < $boxWidth){
-                $temp = $boxLength;
-                $boxLength = $boxWidth;
-                $boxWidth = $temp;
-            }
-            if($boxLength < $boxHeight){
-                $temp = $boxLength;
-                $boxLength = $boxHeight;
-                $boxHeight = $temp;
-            }
-            if($boxWidth < $boxHeight){
-                $temp = $boxWidth;
-                $boxWidth = $boxHeight;
-                $boxHeight = $temp;
-            }
             
             $dd_info = DD_Info::where('active', 'YES')->first();
 
@@ -261,6 +266,9 @@ class AdminController extends BaseController
             }
             else if($boxLength+($boxWidth*2)+($boxHeight*2)<=130){
                 $predefined_package = "LargeParcel";
+                $boxLength = null;
+                $boxWidth = null;
+                $boxHeight = null;
             }
 
             $parcel_params = array("length"     => $boxLength,
@@ -280,11 +288,74 @@ class AdminController extends BaseController
             $quoteRate = \EasyPost\Rate::retrieve($quoteShipment->lowest_rate());
         }
 
-        return view('admin/admin_order_panel', compact('order', 'user', 'incoming_package', 'shipment', 'charges', 'outgoing_packages', 'quoteShipment', 'quoteRate', 'box'));
+        return view('admin/admin_order_panel', compact('order', 'user', 'incoming_package', 'shipment', 'charges', 'outgoing_packages', 'quoteShipment', 'quoteRate', 'box', 'dd_info', 'successfulOutgoingPackages'));
     }
     
     public function processOrder(Order $order, Request $request){
-        return view('admin/admin_order_panel', compact('order'));
+        $user = $order->User()->first();
+        $shipment = $order->Shipment()->first();
+        $adminUser = Auth::user();
+        $dd_info = DD_Info::where('active', 'YES')->first();
+        $successfulCharges = $shipment->Charges()->where('stripe_status','succeeded')->get();
+        
+        if(count($successfulCharges) == 0){
+            \Stripe\Stripe::setApiKey(config('services.stripe.secret'));
+            $StripeCharge = \Stripe\Charge::create(array(
+                "amount" => ($quoteShipment->lowest_rate()->rate*100)+($dd_info->dd_rate),
+                "currency" => "usd",
+                "customer" => $user->stripe_id
+            ));
+
+            $charge = new Charge;
+
+            $charge->shipment_id = $shipment->id;
+            $charge->stripe_charge_id = $StripeCharge->charge_id;
+            $charge->stripe_amount = $StripeCharge->amount;
+            $charge->stripe_currency = $StripeCharge->currency;
+            $charge->stripe_balance_transaction = $StripeCharge->balance_transaction;
+            $charge->stripe_customer = $StripeCharge->customer;
+            $charge->stripe_failure_code = $StripeCharge->failure_code;
+            $charge->stripe_failure_message = $StripeCharge->failure_message;
+            $charge->stripe_receipt_email = $StripeCharge->receipt_email;
+            $charge->stripe_receipt_number = $StripeCharge->receipt_number;
+            $charge->stripe_source_id = $StripeCharge->source->source_id;
+            $charge->stripe_source_brand = $StripeCharge->source->source_brand;
+            $charge->stripe_source_last4 = $StripeCharge->source->last4;
+            $charge->stripe_status = $StripeCharge->status;
+            $charge->created_by = $adminUser->id;
+
+            $charge->save();
+            
+            if($charge->stripe_status == 'succeeded'){         
+                $order->order_status = 'Charged';
+                $shipment->charge_status = 'Charged';
+            }
+            else{
+                $order->order_status = 'Charge Error';
+                $shipment->charge_status = 'Charge Error';
+            }
+            
+            $order->save();
+            $shipment->save();
+            
+            dd($charge);
+        }
+        
+        $successfulCharges = $shipment->Charges()->where('stripe_status','succeeded')->get();
+        $successfulOutgoingPackages = $shipment->Outgoing_Packages()->where('shipment_object_status','succeeded')->get();
+
+        if(count($successfulCharges) != 0 and count($successfulOutgoingPackages) == 0){
+            \EasyPost\EasyPost::setApiKey(config('services.easypost.key'));
+            
+            if(!empty($request->shipment_id)){
+                $quoteShipment = \EasyPost\Shipment::retrieve(array('id' => $request->shipment_id));
+            }
+            
+            $quoteShipment = $quoteShipment->buy(array(
+                'rate'      => $quoteShipment->lowest_rate(),
+                'insurance' => 100
+            ));
+        }
     }
     
 }

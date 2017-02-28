@@ -49,5 +49,5 @@ Route::group(['middleware' => ['admin']], function () {
     Route::get('/admin/users/{user}', 'AdminController@userPanel');
     Route::get('/admin/orders', 'AdminController@ordersList');
     Route::get('/admin/orders/{order}', 'AdminController@orderPanel');
-    Route::post('/admin/orders/{order}/process', 'AdminController@processOrder');
+    Route::post('/admin/orders/{order}/process_order', 'AdminController@processOrder');
 });

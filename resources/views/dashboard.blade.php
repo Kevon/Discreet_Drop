@@ -36,7 +36,7 @@
                         <div class="row">
                             <div class="col-sm-12">
                                 <h4 class="center">Your Discreet Drop address is:</h4>
-                                <p>{{$dd_info->name}} <br>
+                                <p>{{$dd_info->dd_name}} <br>
                                 {{$dd_info->address_1}} <br>
                                 @if(empty($dd_info->address_2))
                                     Code - {{$user->dd_code}} <br>
