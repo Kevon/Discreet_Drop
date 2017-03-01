@@ -49,7 +49,7 @@ class AdminController extends BaseController
         $adminUser = Auth::user();
         $user = User::where('dd_code', $request->dd_code)->first();
         if(empty($user)){
-            Session::flash('error', 'DD Code not linked to any user.');
+            Session::flash('alert', 'DD Code not linked to any user.');
             return back();
         }
         $allOrders = $user->Orders()->get();
@@ -122,7 +122,7 @@ class AdminController extends BaseController
         $adminUser = Auth::user();
         $user = User::where('dd_code', $request->dd_code)->first();
         if(empty($user)){
-            Session::flash('error', 'DD Code not linked to any user.');
+            Session::flash('alert', 'DD Code not linked to any user.');
             return back();
         }
         
@@ -161,15 +161,25 @@ class AdminController extends BaseController
     }
     
     public function usersList(){
-        return view('admin/admin_order_panel', compact('order'));
+        $users = User::whereNotNull('dd_code')->get();
+        return view('admin/users_list', compact('users'));
     }
     
-    public function userPanel(){
-        return view('admin/admin_order_panel', compact('order'));
+    public function userPanel(User $user){
+        return view('admin/user_panel', compact('user'));
     }
     
     public function ordersList(){
-        return view('admin/admin_order_panel', compact('order'));
+        $allOrders = Order::has('Incoming_Package')->latest()->get();
+        $allOrders->load('Incoming_Package', 'Shipment');
+        $allOrders = $allOrders->groupBy(function($item){
+            return $item->Incoming_Package->created_at->format('m/d/Y');
+        });
+        $chargeErrorOrders = Shipment::where('charge_status', 'Charge Error')->latest()->get();
+        $chargeErrorOrders->load('Order.Incoming_Package');
+        $shipmentErrorOrders = Shipment::where('outgoing_package_status', 'Shipment Error')->latest()->get();
+        $shipmentErrorOrders->load('Order.Incoming_Package');
+        return view('admin/orders_list', compact('allOrders', 'chargeErrorOrders', 'shipmentErrorOrders'));
     }
     
     public function orderPanel(Order $order){
@@ -179,7 +189,8 @@ class AdminController extends BaseController
         $incoming_package = $order->Incoming_Package()->first();
         $charges = $shipment->Charges()->get();
         $outgoing_packages = $shipment->Outgoing_Packages()->get();
-        $successfulOutgoingPackage = $shipment->Latest_Outgoing_Package()->whereNotNull('tracking_number')->first();
+        $outgoing_packages->load('Box');
+        $successfulOutgoingPackage = $shipment->Latest_Outgoing_Package()->whereNotNull('tracking_number')->with('Box')->first();
 
         if(empty($successfulOutgoingPackage)){
             $boxes = Box::where('status', 'ACTIVE')->get();  
@@ -234,10 +245,19 @@ class AdminController extends BaseController
             }
             
             if(empty($box)){
-                $box = Box::updateOrCreate(
-                    ['box_name' => 'Box for Order #'.$order->id],
-                    ['length' => $incomingPackageLength, 'width' => $incomingPackageWidth, 'height' => $incomingPackageHeight, 'status' => 'CUSTOM', 'created_by' => $adminUser->id]
-                );
+                $box_name = 'Custom Box for Order #'.$order->id;
+                $box = Box::where('box_name', $box_name)->first();
+                if(empty($box)){
+                    $box = New Box;
+                    $box->box_name = $box_name;
+                }
+                $box->length = $incomingPackageLength;
+                $box->width = $incomingPackageWidth;
+                $box->height = $incomingPackageHeight;
+                $box->status = 'CUSTOM';
+                $box->created_by = $adminUser->id;
+                
+                $box->save();
             }
             
             $boxLength = $box->length;
@@ -297,7 +317,7 @@ class AdminController extends BaseController
             $quoteRate = \EasyPost\Rate::retrieve($quoteShipment->lowest_rate());
         }
 
-        return view('admin/admin_order_panel', compact('order', 'user', 'incoming_package', 'shipment', 'charges', 'outgoing_packages', 'quoteShipment', 'quoteRate', 'box', 'dd_info', 'successfulOutgoingPackages'));
+        return view('admin/admin_order_panel', compact('order', 'user', 'incoming_package', 'shipment', 'charges', 'outgoing_packages', 'quoteShipment', 'quoteRate', 'box', 'dd_info', 'successfulOutgoingPackage'));
     }
     
     public function processOrder(Order $order, Request $request){
@@ -324,7 +344,7 @@ class AdminController extends BaseController
             $charge = new Charge;
 
             $charge->shipment_id = $shipment->id;
-            $charge->stripe_charge_id = $StripeCharge->charge_id;
+            $charge->stripe_charge_id = $StripeCharge->id;
             $charge->stripe_amount = $StripeCharge->amount;
             $charge->stripe_currency = $StripeCharge->currency;
             $charge->stripe_balance_transaction = $StripeCharge->balance_transaction;
@@ -333,9 +353,11 @@ class AdminController extends BaseController
             $charge->stripe_failure_message = $StripeCharge->failure_message;
             $charge->stripe_receipt_email = $StripeCharge->receipt_email;
             $charge->stripe_receipt_number = $StripeCharge->receipt_number;
-            $charge->stripe_source_id = $StripeCharge->source->source_id;
-            $charge->stripe_source_brand = $StripeCharge->source->source_brand;
+            $charge->stripe_source_id = $StripeCharge->source->id;
+            $charge->stripe_source_brand = $StripeCharge->source->brand;
             $charge->stripe_source_last4 = $StripeCharge->source->last4;
+            $charge->stripe_source_exp_month = $StripeCharge->source->exp_month;
+            $charge->stripe_source_exp_year = $StripeCharge->source->exp_year;
             $charge->stripe_status = $StripeCharge->status;
             $charge->created_by = $adminUser->id;
 
@@ -343,6 +365,7 @@ class AdminController extends BaseController
             
             if($charge->stripe_status == 'succeeded'){         
                 $order->order_status = 'Charged';
+                $order->total_cost = $charge->stripe_amount;
                 $shipment->charge_status = 'Charged';
                 
                 $order->save();
@@ -355,7 +378,7 @@ class AdminController extends BaseController
                 $order->save();
                 $shipment->save();
                 
-                Session::flash('error', 'Charge error - '.$charge->stripe_failure_message);
+                Session::flash('alert', 'Charge error - '.$charge->stripe_failure_message);
                 return back();
             }
         }
@@ -365,8 +388,7 @@ class AdminController extends BaseController
 
         if(!empty($successfulCharge) and empty($successfulOutgoingPackage)){
             $quoteShipment = $quoteShipment->buy(array(
-                'rate'      => $quoteShipment->lowest_rate(),
-                'insurance' => 100
+                'rate' => $quoteShipment->lowest_rate()
             ));
             
             $outgoing_package = new Outgoing_Package;
@@ -392,7 +414,7 @@ class AdminController extends BaseController
             $outgoing_package->carrier = $quoteShipment->selected_rate->carrier;
             $outgoing_package->service = $quoteShipment->selected_rate->service;
             $outgoing_package->delivery_days = $quoteShipment->selected_rate->delivery_days;
-            $outgoing_package->delivery_date = $quoteShipment->selected_rate->delivery_date;
+            $outgoing_package->delivery_date = $quoteShipment->selected_rate->est_delivery_date;
             $outgoing_package->status = $quoteShipment->status;
             $outgoing_package->tracker_id = $quoteShipment->tracker->id;
             $outgoing_package->tracking_number = $quoteShipment->tracking_code;
@@ -403,23 +425,22 @@ class AdminController extends BaseController
             
             if(!empty($outgoing_package->tracking_number)){         
                 $order->order_status = 'Shipped';
-                $shipment->charge_status = 'Shipped';
+                $shipment->outgoing_package_status = 'Shipped';
                 
                 $order->save();
                 $shipment->save();
             }
             else{
-                $order->order_status = 'Shipment Error';
-                $shipment->charge_status = 'Shipment Error';
+                $shipment->outgoing_package_status = 'Shipment Error';
                 
-                Session::flash('error', 'Shipment error.');
+                Session::flash('alert', 'Shipment error.');
                 return back();
             }
             
             
         }
         Session::flash('message', 'Package Successfully Processed!');
-        return redirect()->away($outgoing_package->tracking_url);
+        return redirect()->to('/admin/orders/'.$order->id);
     }
     
 }

@@ -105,7 +105,7 @@
         </div>
         <div class="row vertical-align">
             <div class="col-sm-6 col-sm-push-6">
-                <img src="images/box-logo.svg" class="img-responsive center-block svg" alt="Responsive image">
+                <img src="images/box-gift.svg" class="img-responsive center-block svg" alt="Responsive image">
             </div>
             <div class="col-sm-6 col-sm-pull-6">
                 <h3 class="center">Hide Logos Revealing Gifts for Other Members of Your Home</h3>

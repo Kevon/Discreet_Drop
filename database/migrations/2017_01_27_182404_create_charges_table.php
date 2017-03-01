@@ -28,6 +28,8 @@ class CreateChargesTable extends Migration
             $table->string('stripe_source_id')->nullable();
             $table->string('stripe_source_brand')->nullable();
             $table->string('stripe_source_last4')->nullable();
+            $table->string('stripe_source_exp_month')->nullable();
+            $table->string('stripe_source_exp_year')->nullable();
             $table->string('stripe_status')->nullable();
             $table->integer('created_by')->unsigned();
             $table->timestamps();

@@ -19,7 +19,7 @@
                         <h2 class="flush">Order Status: Demo Order</h2>
                         <h4>Order Number: Demo-8675309</h4>
                     @else
-                        <h2 class="flush">Order Status: {{$order->status or "Pending - Awaiting for Arrival"}} @if($order->status == 'Received' or $order->status == 'Received')- Preparing for Shipment @endif</h2>
+                        <h2 class="flush">Order Status: {{$order->order_status or "Pending - Awaiting for Arrival"}} @if($order->order_status == 'Received' or $order->order_status == 'Charged')- Preparing for Shipment @endif</h2>
                         <h4>Order Number: {{$user->dd_code}}-{{$order->id}}</h4>
                     @endif
                     
@@ -35,23 +35,24 @@
 
                     <h4>Credit Card Charge Details</h4>
                     <P><strong>Charge Status: </strong>@if($demo)Succeeded @else{{$order->Shipment->charge_status or "Pending"}}@endif</P>
-                    <P><strong>Charged On: </strong>@if($demo){{$user->created_at}} @else{{$order->Shipment->Charge->created_at or "Pending"}}@endif</P>
+                    <P><strong>Charged On: </strong>@if($demo){{$user->created_at}} @else{{$order->Shipment->Latest_Charge->created_at or "Pending"}}@endif</P>
                     @if(!$demo)
                         @if($order->order_status == 'Charge Error')
-                            <P class="error"><strong>Charge Error: </strong>{{$order->Shipment->Charge->stripe_failure_code}}</P>
-                            <P class="error"><strong>Charge Message: </strong>{{$order->Shipment->Charge->stripe_failure_message}}</P>
+                            <P class="error"><strong>Charge Error: </strong>{{$order->Shipment->Latest_Charge->stripe_failure_code}}</P>
+                            <P class="error"><strong>Charge Message: </strong>{{$order->Shipment->Latest_Charge->stripe_failure_message}}</P>
                         @endif
                     @endif
-                    <P><strong>Shipping Amount Charged: </strong>@if($demo)$17.38 @else{{$order->total_cost or "Pending"}}@endif</P>
-                    <P><strong>Last 4: </strong>**** **** **** @if($demo)4242 @else{{$order->Shipment->Charge->stripe_source_last4 or "Pending"}}@endif</P>
+                    <P><strong>Shipping Amount Charged: </strong>@if($demo)$17.38 @else${{number_format(($order->total_cost /100), 2, '.', ' ')}}@endif</P>
+                    <P><strong>Last 4: </strong>**** **** **** @if($demo)4242 @else{{$order->Shipment->Latest_Charge->stripe_source_last4 or "Pending"}}@endif</P>
 
                     <hr>
 
                     <h4>Outgoing Shipment Details</h4>
-                    <P><strong>Shipped On: </strong>{{$order->Shipment->Outgoing_Package->created_at or "Pending"}}</P>
-                    <P><strong>Carrier: </strong>{{$order->Shipment->Outgoing_Package->provider or "Pending"}}</P>
-                    <P><strong>Tracking Number: </strong>{{$order->Shipment->Outgoing_Package->tracking_url_provider or "Pending"}}</P>
-                    <P><strong>Estimated Shipping Time: </strong>{{$order->Shipment->Outgoing_Package->days or "Pending"}}</P>
+                    <P><strong>Shipment Status: </strong>{{$order->Shipment->outgoing_package_status or "Pending"}}</P>
+                    <P><strong>Shipped On: </strong>{{$order->Shipment->Latest_Outgoing_Package->created_at or "Pending"}}</P>
+                    <P><strong>Carrier: </strong>{{$order->Shipment->Latest_Outgoing_Package->carrier or "Pending"}}</P>
+                    <P><strong>Tracking Number: </strong>{{$order->Shipment->Latest_Outgoing_Package->tracking_number or "Pending"}}</P>
+                    <P><strong>Estimated Shipping Time: </strong>{{$order->Shipment->Latest_Outgoing_Package->delivery_days or "Pending"}}</P>
                 </div>
                 
                 <div class="col-md-4 col-md-pull-8">
