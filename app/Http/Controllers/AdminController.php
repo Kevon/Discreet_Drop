@@ -166,6 +166,7 @@ class AdminController extends BaseController
     }
     
     public function userPanel(User $user){
+        $user->load('Incoming_Packages.Order');
         return view('admin/user_panel', compact('user'));
     }
     
