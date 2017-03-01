@@ -11,8 +11,13 @@
 @section('content')
 <div class="container content">
     <div class="row btn-toolbar">
-        <div class="col-sm-4 col-sm-offset-2">
+        <div class="col-sm-8 col-sm-offset-2">
             <button class="btn btn-primary btn-block btn-lg" onclick="location.href='/admin/incoming_package';">New Incoming Package</button>
+        </div>
+    </div>
+    <div class="row btn-toolbar">
+        <div class="col-sm-4 col-sm-offset-2">
+            <button class="btn btn-default btn-block btn-lg" onclick="location.href='/admin/users';">Users List</button>
         </div>
         <div class="col-sm-4">
             <button class="btn btn-default btn-block btn-lg" onclick="location.href='/admin/orders';">Existing Orders</button>

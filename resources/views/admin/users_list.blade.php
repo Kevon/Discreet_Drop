@@ -9,10 +9,10 @@
 @section('content')
 <div class="container content">
     <div class="row">
-        <div class="col-sm-4 col-sm-offset-4">
+        <div class="col-sm-6 col-sm-offset-3">
             <h2 class="center">All Users:</h2>
             @foreach($users as $user)
-                <a href="/admin/users/{{$user->id}}">{{$user->id}} - {{$user->first_name}} {{$user->last_name}} - {{$user->dd_code}}</a>
+                <a href="/admin/users/{{$user->id}}">{{$user->id}} - {{$user->first_name}} {{$user->last_name}} - {{$user->dd_code}} - # of Orders: {{count($user->Incoming_Packages)}}</a>
             @endforeach
         </div>
     </div>

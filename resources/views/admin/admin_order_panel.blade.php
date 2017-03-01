@@ -11,7 +11,9 @@
 @section('content')
 <div class="container content">
     <div class="row">
-        <h1 class="center">Order #{{$order->id}} For User #{{$user->id}}</h1>
+        <h1 class="center">Order #{{$order->id}} For User #{{$user->id}} - {{$order->order_status}}</h1>
+        <h2 class="center">Charge Status: {{$shipment->charge_status}}</h2>
+        <h2 class="center">Outgoing Package Status: {{$shipment->outgoing_package_status}}</h2>
     </div>
     <div class="row">
         <div class="col-md-6 col-md-offset-3">
@@ -124,7 +126,7 @@
                         <P><strong>Box Height: </strong>{{$outgoing_package->Box->height or "Pending"}}"</P>
                         <P><strong>Weight: </strong>{{$outgoing_package->weight_in_oz or "Pending"}} oz.</P>
                         <P><strong>Predefined Parcel: </strong>{{$outgoing_package->predefined_package or "Pending"}}</P>
-                        <P><strong>Label URL: </strong><a href="{{$outgoing_package->label_url or '#'}}">Click Here</a></P>
+                        <P><strong>Label URL: </strong><a href="{{$outgoing_package->label_url or '#'}}" target="_blank">Click Here</a></P>
                         <P><strong>Rate ID: </strong>{{$outgoing_package->rate_id or "Pending"}}</P>
                         <P><strong>Rate: </strong>{{$outgoing_package->rate or "Pending"}}</P>
                         <P><strong>Carrier: </strong>{{$outgoing_package->carrier or "Pending"}}</P>
@@ -134,7 +136,7 @@
                         <P><strong>Package Status: </strong>{{$outgoing_package->status or "Pending"}}</P>
                         <P><strong>Tracker ID: </strong>{{$outgoing_package->tracker_id or "Pending"}}</P>
                         <P><strong>Tracking Number: </strong>{{$outgoing_package->tracking_number or "Pending"}}</P>
-                        <P><strong>Tracking URL: </strong><a href="{{$outgoing_package->tracking_url or '#'}}">Click Here</a></P>
+                        <P><strong>Tracking URL: </strong><a href="{{$outgoing_package->tracking_url or '#'}}" target="_blank">Click Here</a></P>
                     </div>
                 </div>
             @endforeach
