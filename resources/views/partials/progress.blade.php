@@ -6,7 +6,7 @@
         @if($demo)
             current 
         @else
-            @if($order->order_status == 'Delivered' or $order->order_status == 'Shipped' or $order->order_status == 'Charged' or $order->order_status == 'Received' or $order->order_status == 'Charge Error')
+            @if($order->order_status == 'Delivered' or $order->order_status == 'Shipped' or $order->order_status == 'Charged' or $order->order_status == 'Received' or $order->order_status == 'Charge Error' or $order->order_status == 'Shipping Error')
                 current 
             @endif 
         @endif 
@@ -16,7 +16,7 @@
         @if($demo)
             current 
         @else
-            @if($order->order_status == 'Delivered' or $order->order_status == 'Shipped' or $order->order_status == 'Charged' or $order->order_status == 'Received' or $order->order_status == 'Charge Error')
+            @if($order->order_status == 'Delivered' or $order->order_status == 'Shipped' or $order->order_status == 'Charged' or $order->order_status == 'Received' or $order->order_status == 'Charge Error' or $order->order_status == 'Shipping Error')
                 current 
             @endif
         @endif
@@ -26,7 +26,7 @@
         @if($demo)
             current 
         @else 
-            @if($order->order_status == 'Delivered' or $order->order_status == 'Shipped' or $order->order_status == 'Charge Error')
+            @if($order->order_status == 'Delivered' or $order->order_status == 'Shipped' or $order->order_status == 'Charge Error' or $order->order_status == 'Shipping Error')
                 current 
             @endif 
             @if($order->order_status == 'Received')
@@ -39,7 +39,7 @@
         @if($demo)
             current 
         @else
-            @if($order->order_status == 'Delivered' or $order->order_status == 'Shipped' or $order->order_status == 'Charged')
+            @if($order->order_status == 'Delivered' or $order->order_status == 'Shipped' or $order->order_status == 'Charged' or $order->order_status == 'Shipping Error')
                 current 
             @endif 
             @if($order->order_status == 'Charge Error')
@@ -52,7 +52,7 @@
         @if($demo)
             in-progress 
         @else
-            @if($order->order_status == 'Delivered' or $order->order_status == 'Shipped')
+            @if($order->order_status == 'Delivered' or $order->order_status == 'Shipped' or $order->order_status == 'Shipping Error')
                 current 
             @endif 
             @if($order->order_status == 'Charged')
@@ -65,7 +65,10 @@
         @if(!$demo) 
             @if($order->order_status == 'Delivered' or $order->order_status == 'Shipped')
                 current 
-            @endif 
+            @endif
+            @if($order->order_status == 'Shipping Error')
+                error 
+            @endif
         @endif
         "></div><p>Package double-boxed and shipped via USPS.</p></li>
     <li><div class="
