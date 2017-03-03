@@ -301,6 +301,8 @@ class Controller extends BaseController
         $order = new Order;
         $order->user_id = $user->id;
         $order->order_status = 'Pending';
+        $order->shipment_status = 'Pending';
+        $order->incoming_package_status = 'Pending';
         $order->created_by = $user->id;
         $order->save();
         Session::flash('message', 'Order successfully created!');

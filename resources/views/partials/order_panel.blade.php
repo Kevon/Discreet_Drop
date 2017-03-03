@@ -51,13 +51,17 @@
                     <P><strong>Shipment Status: </strong>{{$order->Shipment->outgoing_package_status or "Pending"}}</P>
                     <P><strong>Shipped On: </strong>{{$order->Shipment->Latest_Outgoing_Package->created_at or "Pending"}}</P>
                     <P><strong>Carrier: </strong>{{$order->Shipment->Latest_Outgoing_Package->carrier or "Pending"}}</P>
-                    <P><strong>Tracking Number: </strong>{{$order->Shipment->Latest_Outgoing_Package->tracking_number or "Pending"}}</P>
+                    <P><strong>Tracking Number: </strong><a href="{{$order->Shipment->Latest_Outgoing_Package->tracking_url or 'https://www.youtube.com/watch?v=ZZ5LpwO-An4'}}" target="_blank">{{$order->Shipment->Latest_Outgoing_Package->tracking_number or "Pending"}}</a></P>
                     <P><strong>Estimated Shipping Time: </strong>{{$order->Shipment->Latest_Outgoing_Package->delivery_days or "Pending"}}</P>
                 </div>
                 
                 <div class="col-md-4 col-md-pull-8">
                     @include('partials.progress')
                     
+                    <div class="btn-toolbar">
+                    @if(!empty($order->Shipment->Latest_Outgoing_Package->tracking_url))
+                        <button class="btn btn-primary btn-block" onclick="location.href='{{$order->Shipment->Latest_Outgoing_Package->tracking_url or '#'}}';">Track Package</button>
+                    @endif
                     @if(!$demo)
                         <form role="form" method="POST" action="/dashboard/deleteOrder/{{$order->id}}" id="delete-order">
                             {{ csrf_field() }}
@@ -67,6 +71,7 @@
                             </div>
                         </form>
                     @endif
+                    </div>
                 </div>
             </div>
         </div>

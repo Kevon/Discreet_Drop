@@ -59,6 +59,8 @@ class AdminController extends BaseController
             $order = new Order;
             $order->user_id = $user->id;
             $order->order_status = 'Received';
+            $order->shipment_status = 'Received';
+            $order->incoming_package_status = 'Received';
             $order->created_by = $adminUser->id;
             $order->save();
         }
@@ -95,6 +97,8 @@ class AdminController extends BaseController
         $incomingPackage->save();
         
         $order->order_status = "Received";
+        $order->shipment_status = "Received";
+        $order->incoming_package_status = "Received";
         $order->save();
         
         $shipment = new Shipment;
@@ -366,6 +370,7 @@ class AdminController extends BaseController
             
             if($charge->stripe_status == 'succeeded'){         
                 $order->order_status = 'Charged';
+                $order->shipment_status = 'Charged';
                 $order->total_cost = $charge->stripe_amount;
                 $shipment->charge_status = 'Charged';
                 
@@ -374,6 +379,7 @@ class AdminController extends BaseController
             }
             else{
                 $order->order_status = 'Charge Error';
+                $order->shipment_status = 'Charge Error';
                 $shipment->charge_status = 'Charge Error';
                 
                 $order->save();
@@ -426,6 +432,7 @@ class AdminController extends BaseController
             
             if(!empty($outgoing_package->tracking_number)){         
                 $order->order_status = 'Shipped';
+                $order->shipment_status = 'Shipped';
                 $shipment->outgoing_package_status = 'Shipped';
                 
                 $order->save();
@@ -433,6 +440,10 @@ class AdminController extends BaseController
             }
             else{
                 $shipment->outgoing_package_status = 'Shipment Error';
+                $order->shipment_status = 'Shipment Error';
+                
+                $order->save();
+                $shipment->save();
                 
                 Session::flash('alert', 'Shipment error.');
                 return back();

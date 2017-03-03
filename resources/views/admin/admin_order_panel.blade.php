@@ -47,7 +47,7 @@
                         
                         <P><strong>Box Name:</strong> {{$successfulOutgoingPackage->Box->box_name or "Pending"}}</P>
                         <P><strong>Box Dimensions:</strong> {{$successfulOutgoingPackage->Box->length or "Pending"}}" x {{$successfulOutgoingPackage->Box->width or "Pending"}}" x {{$successfulOutgoingPackage->Box->height or "Pending"}}"</P>
-                        <P><strong>Tracking Number: </strong><a href="{{$successfulOutgoingPackage->tracking_url or '#'}}">{{$successfulOutgoingPackage->tracking_number or "Pending"}}</a></P>
+                        <P><strong>Tracking Number: </strong><a href="{{$successfulOutgoingPackage->tracking_url or '#'}}" target="_blank">{{$successfulOutgoingPackage->tracking_number or "Pending"}}</a></P>
                         
                         <div class="row btn-toolbar">
                             <button class="btn btn-primary btn-block" onclick="window.open('{{$successfulOutgoingPackage->label_url}}');">Print Label</button>
