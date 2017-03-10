@@ -31,7 +31,6 @@ class Kernel extends ConsoleKernel
         $schedule->call(function () {
             \EasyPost\EasyPost::setApiKey(config('services.easypost.key'));
             $shipments = Shipment::where('outgoing_package_status', 'Shipped')->get();
-            $outgoing_package
             foreach($shipments as $shipment){
                 $outgoing_package = Shipment::where('shipment_id', $shipment->id);
                 $order = Order::where('shipment_id', $shipment->id);

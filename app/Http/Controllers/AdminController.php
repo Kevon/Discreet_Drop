@@ -81,6 +81,11 @@ class AdminController extends BaseController
             $length = $height;
             $height = $temp;
         }
+        if($width < $height){
+            $temp = $width;
+            $width = $height;
+            $height = $temp;
+        }
         
         $incomingPackage = new Incoming_Package;
         
@@ -115,7 +120,7 @@ class AdminController extends BaseController
     public function modifyIncomingPackage(Incoming_Package $incoming_package, Request $request){
         $this->validate($request, [
             'carrier' => 'required',
-            'tracking_number' => 'required|unique:incoming_packages,tracking_number,3',
+            'tracking_number' => 'required|unique:incoming_packages,tracking_number,'.$incoming_package->id,
             'dd_code' => 'required|digits:6',
             'sender' => 'required',
             'length' => 'required|digits_between:1,2',
@@ -160,7 +165,7 @@ class AdminController extends BaseController
         $incoming_package->created_by = $adminUser->id;
         $incoming_package->save();
         
-        Session::flash('message', 'Incoming package successfuly modifyed.');
+        Session::flash('message', 'Incoming package successfuly modified.');
         return redirect()->to('/admin/orders/'.$incoming_package->order_id);
     }
     
