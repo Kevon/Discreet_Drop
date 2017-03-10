@@ -32,14 +32,18 @@ class Kernel extends ConsoleKernel
             \EasyPost\EasyPost::setApiKey(config('services.easypost.key'));
             $shipments = Shipment::where('outgoing_package_status', 'Shipped')->get();
             foreach($shipments as $shipment){
-                $outgoing_package = Shipment::where('shipment_id', $shipment->id);
-                $order = Order::where('shipment_id', $shipment->id);
+                $outgoing_package = Outgoing_Package::where('shipment_id', $shipment->id)->latest()->first();
+                $order = Order::find($shipment->order_id)->first();
                 $tracker = \EasyPost\Tracker::retrieve($outgoing_package->tracker_id);
                 if($tracker->status == 'delivered'){
                     $shipment->outgoing_package_status = "Delivered";
                     $outgoing_package->status = $tracker->status;
                     $order->shipment_status = "Delivered";
                     $order->order_status = "Delivered";
+                    
+                    $order->save();
+                    $shipment->save();
+                    $outgoing_package->save();
                 }
             }
         })->dailyAt('3:00');
