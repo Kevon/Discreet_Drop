@@ -33,7 +33,7 @@ class Kernel extends ConsoleKernel
             $shipments = Shipment::where('outgoing_package_status', 'Shipped')->get();
             foreach($shipments as $shipment){
                 $outgoing_package = Outgoing_Package::where('shipment_id', $shipment->id)->latest()->first();
-                $order = Order::find($shipment->order_id)->first();
+                $order = Order::find($shipment->order_id);
                 $tracker = \EasyPost\Tracker::retrieve($outgoing_package->tracker_id);
                 if($tracker->status == 'delivered'){
                     $shipment->outgoing_package_status = "Delivered";
