@@ -19,6 +19,9 @@ use App\Box;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
 
+use App\Mail\OrderShipped;
+use Illuminate\Support\Facades\Mail;
+
 class AdminController extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
@@ -442,6 +445,8 @@ class AdminController extends BaseController
                 
                 $order->save();
                 $shipment->save();
+                
+                Mail::to($user->email)->send(new OrderShipped($user, $order));
             }
             else{
                 $shipment->outgoing_package_status = 'Shipment Error';

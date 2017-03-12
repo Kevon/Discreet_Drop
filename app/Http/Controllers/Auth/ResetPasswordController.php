@@ -36,4 +36,12 @@ class ResetPasswordController extends Controller
     {
         $this->middleware('guest');
     }
+    
+    
+    
+    protected function sendResetResponse($response)
+    {
+        return redirect($this->redirectPath())
+                            ->with('message', trans($response));
+    }
 }

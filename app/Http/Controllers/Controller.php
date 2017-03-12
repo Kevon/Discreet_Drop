@@ -14,6 +14,9 @@ use App\Order;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
 
+use App\Mail\AccountSubstantiated;
+use Illuminate\Support\Facades\Mail;
+
 class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
@@ -259,6 +262,7 @@ class Controller extends BaseController
             $user->dd_code = $dd_code;
         }
         $user->save();
+        Mail::to($user->email)->send(new AccountSubstantiated($user));
         Session::flash('message', 'Shipping profile successfully updated!');
         return redirect()->to('/dashboard');
     }

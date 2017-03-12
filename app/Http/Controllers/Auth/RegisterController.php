@@ -7,6 +7,9 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
 
+use App\Mail\AccountRegistered;
+use Illuminate\Support\Facades\Mail;
+
 class RegisterController extends Controller
 {
     /*
@@ -68,6 +71,7 @@ class RegisterController extends Controller
     }
     
     protected function registered( \Illuminate\Http\Request $request, \App\User $user ){
+        Mail::to($user->email)->send(new AccountRegistered());
         Session()->flash('message', 'Registration successful! Welcome to Discreet Drop!');
         return redirect()->intended($this->redirectPath());
     }

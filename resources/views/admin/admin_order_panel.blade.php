@@ -34,7 +34,7 @@
                             <input type="hidden" name="shipment_id" value="{{$quoteShipment->id}}">
                             <input type="hidden" name="box_id" value="{{$box->id}}">
                             <div class="row btn-toolbar">
-                                <button type="submit" class="btn btn-block btn-primary" id="submit_btn" data-loading-text="<i class='fa fa-circle-o-notch fa-spin fa-fw'></i> Saving Changes">Process Shipment</button>
+                                <button type="submit" class="btn btn-block btn-primary" id="submit_btn" data-loading-text="<i class='fa fa-circle-o-notch fa-spin fa-fw'></i> Processing Shipment">Process Shipment</button>
                             </div>
                         </form>
 
@@ -51,6 +51,7 @@
                         
                         <div class="row btn-toolbar">
                             <button class="btn btn-primary btn-block" onclick="window.open('{{$successfulOutgoingPackage->label_url}}');">Print Label</button>
+                            <button class="btn btn-default btn-block" onclick="location.href='/admin/incoming_package';">Enter New Incoming Package</button>
                         </div>
                     </div>
                 </div>
@@ -148,5 +149,5 @@
 
 
 @section('footer')
-
+<script src="/js/loading.js"></script>
 @endsection

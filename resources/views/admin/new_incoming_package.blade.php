@@ -34,5 +34,6 @@
 @section('footer')
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.payment/3.0.0/jquery.payment.min.js" integrity="sha256-bEuhxmK0QLOu/l5RR+ot9y+A5RDkl5xlSFp7D/+JTjc=" crossorigin="anonymous"></script>
 <script src="/js/user.js"></script>
-<script src="/js/admin.js"></script>
+<script src="/js/incomingPackage.js"></script>
+<script src="/js/loading.js"></script>
 @endsection

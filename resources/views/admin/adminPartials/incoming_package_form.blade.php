@@ -90,7 +90,7 @@
 
 <div class="row btn-toolbar">
     <div class="col-md-6">
-        <button type="submit" class="btn btn-block btn-primary" id="submit_btn" data-loading-text="<i class='fa fa-circle-o-notch fa-spin fa-fw'></i> Saving Changes">Save Package</button>
+        <button type="submit" class="btn btn-block btn-primary" id="submit_btn" data-loading-text="<i class='fa fa-circle-o-notch fa-spin fa-fw'></i> Saving Package">Save Package</button>
     </div>
     <div class="col-md-6">
         <button class="btn btn-default btn-block" type="button" onclick="back()">Cancel</button>
