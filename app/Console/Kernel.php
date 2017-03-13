@@ -46,7 +46,7 @@ class Kernel extends ConsoleKernel
                     $outgoing_package->save();
                 }
             }
-        })->dailyAt('3:00');
+        })->daily();
     }
 
     /**

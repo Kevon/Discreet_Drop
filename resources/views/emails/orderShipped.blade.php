@@ -1,6 +1,6 @@
 @component('mail::message')
 
-![Discreet Drop Logo]({{asset('/images/DiscreetDropLogo.svg')}} "Discreet Drop Logo")
+![Discreet Drop Logo]({{asset('/images/DiscreetDropLogo.png')}} "Discreet Drop Logo")
 
 # We've Received a Package For You, and We've Shipped it to You 100% Discreet
 

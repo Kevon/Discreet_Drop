@@ -14,6 +14,10 @@
     <h1 class="center">Dashboard</h1>
     <div class="row">
         <div class="col-sm-3">
+            @if($user->role == "ADMIN")
+                <button class="btn btn-primary btn-block" onclick="location.href='/admin'">Admin Panel</button>
+                <hr>
+            @endif
             @if(empty($user->substantiated_at))
                 <button class="btn btn-primary btn-block" onclick="location.href='/profile_info'">Update Shipping Profile</button>
             @else

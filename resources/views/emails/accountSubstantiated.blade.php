@@ -1,6 +1,6 @@
 @component('mail::message')
 
-![Discreet Drop Logo]({{asset('/images/DiscreetDropLogo.svg')}} "Discreet Drop Logo")
+![Discreet Drop Logo]({{asset('/images/DiscreetDropLogo.png')}} "Discreet Drop Logo")
 
 # You're Ready to Ship Your Packages 100% Discreet
 
@@ -8,7 +8,7 @@ Awesome! You have been given a unique Discreet Drop address, and are now ready t
 
 You can now now view your unique Discreet Drop address and start using Discreet Drop from your dashboard below.
 
-@component('mail::button', ['url' => 'url' => 'discreetdrop.com/dashboard'])
+@component('mail::button', ['url' => 'discreetdrop.com/dashboard'])
 View Your Unique Discreet Drop Address and Start Using Discreet Drop
 @endcomponent
 

@@ -1,6 +1,6 @@
 @component('mail::message')
 
-![Discreet Drop Logo]({{asset('/images/DiscreetDropLogo.svg')}} "Discreet Drop Logo")
+![Discreet Drop Logo]({{asset('/images/DiscreetDropLogo.png')}} "Discreet Drop Logo")
 
 # Welcome to Discreet Drop!
 
@@ -8,7 +8,7 @@ Your account has been registered, but before you can see your unique Discreet Dr
 
 You can manage your account and view all your orders you've created (or we've received and automaticlly creted for you) from your Discreet Drop dashboard by clicking the button below.
 
-@component('mail::button', ['url' => 'url' => 'discreetdrop.com/dashboard'])
+@component('mail::button', ['url' => 'discreetdrop.com/dashboard'])
 Go to Your Discreet Drop Dashboard
 @endcomponent
 
