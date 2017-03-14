@@ -20,6 +20,7 @@ use Illuminate\Http\Request;
 use Carbon\Carbon;
 
 use App\Mail\OrderShipped;
+use App\Mail\ChargeFailed;
 use Illuminate\Support\Facades\Mail;
 
 class AdminController extends BaseController
@@ -392,6 +393,8 @@ class AdminController extends BaseController
                 
                 $order->save();
                 $shipment->save();
+                
+                Mail::to($user->email)->send(new ChargeFailed($user, $charge));
                 
                 Session::flash('alert', 'Charge error - '.$charge->stripe_failure_message);
                 return back();

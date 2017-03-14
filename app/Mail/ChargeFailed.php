@@ -2,18 +2,18 @@
 
 namespace App\Mail;
 
-use App\Order;
+use App\Charge;
 use App\User;
 use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Contracts\Queue\ShouldQueue;
 
-class OrderShipped extends Mailable
+class ChargeFailed extends Mailable
 {
     use Queueable, SerializesModels;
     
-    public $order;
+    public $charge;
     public $user;
 
     /**
@@ -21,13 +21,10 @@ class OrderShipped extends Mailable
      *
      * @return void
      */
-    public function __construct(User $user, Order $order)
+    public function __construct(User $user, Charge $charge)
     {
-        $this->order = $order;
+        $this->charge = $charge;
         $this->user = $user;
-        $order->load('Incoming_Package');
-        $order->load('Shipment.Latest_Charge');
-        $order->load('Shipment.Latest_Outgoing_Package');
     }
 
     /**
@@ -37,6 +34,6 @@ class OrderShipped extends Mailable
      */
     public function build()
     {
-        return $this->markdown('emails.orderShipped');
+        return $this->view('emails.chargeFailed');
     }
 }
