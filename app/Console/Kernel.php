@@ -46,7 +46,7 @@ class Kernel extends ConsoleKernel
                     $outgoing_package->save();
                 }
             }
-        })->daily();
+        })->hourly();
     }
 
     /**

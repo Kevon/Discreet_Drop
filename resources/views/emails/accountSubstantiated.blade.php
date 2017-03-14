@@ -9,7 +9,7 @@ You have been given a unique Discreet Drop address, and are now ready to start s
 
 You can now now view your unique Discreet Drop address and start using Discreet Drop from your dashboard below.
 
-@component('mail::button', ['url' => '{{url('/dashboard')}}'])
+@component('mail::button', ['url' => url('/dashboard')])
 View Your Unique Discreet Drop Address and Start Using Discreet Drop
 @endcomponent
 

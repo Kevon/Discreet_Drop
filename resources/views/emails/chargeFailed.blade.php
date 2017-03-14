@@ -11,11 +11,11 @@ The card we have on file for you ends in {{$user->stripe_last4}} and has an expi
 
 Please update your card on file in your shipping profile dashboard below, and we'll send out your package to you once we're able to successfully charge the shipping cost.
 
-@component('mail::button', ['url' => '{{url('/profile_info')}}'])
+@component('mail::button', ['url' => url('/profile_info')])
 Go to your Discreet Drop Dashboard to Update Payment Info
 @endcomponent
 
-And as always, you can view all the information about the package we've received for you [by clicking here]({{url('/dashboard')}}).
+And as always, you can view all the information about the package we've received for you by [clicking here]({{url('/dashboard')}}).
 
 Thanks,<br>
 {{ config('app.name') }}

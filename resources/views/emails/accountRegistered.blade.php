@@ -6,7 +6,7 @@ Your account has been registered, but before you can see your unique Discreet Dr
 
 You can manage your account and view all your orders you've created (or we've received and automaticlly creted for you) from your Discreet Drop dashboard by clicking the button below.
 
-@component('mail::button', ['url' => '{{url('/dashboard')}}'])
+@component('mail::button', ['url' => url('/dashboard')])
 Go to Your Discreet Drop Dashboard
 @endcomponent
 

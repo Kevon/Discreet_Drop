@@ -5,7 +5,7 @@
                 @if($demo)
                     Demo Order
                 @else
-                    Order {{$user->dd_code}}-{{$order->id}} --- Created on {{$order->created_at}}
+                    Order {{$user->dd_code}}-{{$order->id}} --- Created on {{$order->created_at->format('M j, Y')}}
                 @endif
             </a>
         </h4>
