@@ -18,6 +18,7 @@ use App\Outgoing_Package;
 use App\Box;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
+use Exception;
 
 use App\Mail\OrderShipped;
 use App\Mail\ChargeFailed;
@@ -349,15 +350,22 @@ class AdminController extends BaseController
         }
         
         if(empty($successfulCharge)){
-            $StripeCharge = \Stripe\Charge::create(array(
-                "amount" => ($quoteShipment->lowest_rate()->rate*100)+($dd_info->dd_rate),
-                "currency" => "usd",
-                "customer" => $user->stripe_id
-            ));
-
             $charge = new Charge;
-
             $charge->shipment_id = $shipment->id;
+            $charge->created_by = $adminUser->id;
+            $StripeCharge = null;
+            
+            try{
+                $StripeCharge = \Stripe\Charge::create(array(
+                    "amount" => ($quoteShipment->lowest_rate()->rate*100)+($dd_info->dd_rate),
+                    "currency" => "usd",
+                    "customer" => $user->stripe_id
+                ));
+            }
+            catch (Exception $e){
+                $StripeCharge = \Stripe\Charge::retrieve($e->jsonBody['error']['charge']);
+            }
+            
             $charge->stripe_charge_id = $StripeCharge->id;
             $charge->stripe_amount = $StripeCharge->amount;
             $charge->stripe_currency = $StripeCharge->currency;
@@ -373,7 +381,7 @@ class AdminController extends BaseController
             $charge->stripe_source_exp_month = $StripeCharge->source->exp_month;
             $charge->stripe_source_exp_year = $StripeCharge->source->exp_year;
             $charge->stripe_status = $StripeCharge->status;
-            $charge->created_by = $adminUser->id;
+            
 
             $charge->save();
             

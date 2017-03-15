@@ -34,6 +34,6 @@ class ChargeFailed extends Mailable
      */
     public function build()
     {
-        return $this->view('emails.chargeFailed');
+        return $this->markdown('emails.chargeFailed');
     }
 }

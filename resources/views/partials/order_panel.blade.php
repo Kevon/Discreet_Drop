@@ -26,7 +26,7 @@
                     <hr>
 
                     <h4>Incoming Package Details</h4>
-                    <P><strong>Received On: </strong>@if($demo){{$user->created_at}} @else{{$order->Incoming_Package->created_at or "Pending"}}@endif</P>
+                    <P><strong>Received On: </strong>@if($demo){{$user->created_at->format('M j, Y')}} @else{{$order->Incoming_Package->created_at or "Pending"}}@endif</P>
                     <P><strong>Sender: </strong>@if($demo)Amazon @else{{$order->Incoming_Package->sender or "Pending"}}@endif</P>
                     <P><strong>Carrier: </strong>@if($demo)UPS @else{{$order->Incoming_Package->carrier or "Pending"}}@endif</P>
                     <P><strong>Tracking Number: </strong>@if($demo)FZ000000DEMO00000069 @else{{$order->Incoming_Package->tracking_number or "Pending"}}@endif</P>

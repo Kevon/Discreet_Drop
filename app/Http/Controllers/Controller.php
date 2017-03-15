@@ -13,6 +13,7 @@ use App\DD_Info;
 use App\Order;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
+use Exception;
 
 use App\Mail\AccountSubstantiated;
 use Illuminate\Support\Facades\Mail;
@@ -227,18 +228,24 @@ class Controller extends BaseController
         if(!empty($request->stripeToken)){
             \Stripe\Stripe::setApiKey(config('services.stripe.secret'));
             $customer= NULL;
-            if(!empty($user->stripe_id)){
-                $customer = \Stripe\Customer::retrieve($user->stripe_id);
-                $customer->source = $request->stripeToken;
-                $customer = $customer->save();
+            try{
+                if(!empty($user->stripe_id)){
+                    $customer = \Stripe\Customer::retrieve($user->stripe_id);
+                    $customer->source = $request->stripeToken;
+                    $customer = $customer->save();
+                }
+                else{
+                    $customer = \Stripe\Customer::create(array(
+                    "email" => $user->email,
+                    "source" => $request->stripeToken,
+                    ));
+                }
             }
-            else{
-                $customer = \Stripe\Customer::create(array(
-                "email" => $user->email,
-                "source" => $request->stripeToken,
-                ));
+            catch (Exception $e){
+                Session::flash('alert', $e->getMessage());
+                return back();
             }
-            
+                
             $customer = collect($customer);
             $source = collect($customer["sources"]);
             $data = collect($source["data"])[0];
