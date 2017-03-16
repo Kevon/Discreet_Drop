@@ -31,6 +31,6 @@ class AccountSubstantiated extends Mailable
      */
     public function build()
     {
-        return $this->markdown('emails.accountSubstantiated');
+        return $this->markdown('emails.accountSubstantiated')->subject("You're All Set to Start Using Discreet Drop!");
     }
 }

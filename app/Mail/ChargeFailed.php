@@ -34,6 +34,6 @@ class ChargeFailed extends Mailable
      */
     public function build()
     {
-        return $this->markdown('emails.chargeFailed');
+        return $this->markdown('emails.chargeFailed')->subject("Uh-Oh, Discreet Drop Received Your Package, but We Need Updated Payment Info to Send Out Your Discreet Package!");
     }
 }

@@ -28,6 +28,6 @@ class AccountRegistered extends Mailable
      */
     public function build()
     {
-        return $this->markdown('emails.accountRegistered');
+        return $this->markdown('emails.accountRegistered')->subject("Welcome to Discreet Drop!");
     }
 }

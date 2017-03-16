@@ -37,6 +37,6 @@ class OrderShipped extends Mailable
      */
     public function build()
     {
-        return $this->markdown('emails.orderShipped');
+        return $this->markdown('emails.orderShipped')->subject("Your Discreet Drop Plain-Box Package Is On Its Way!");
     }
 }
