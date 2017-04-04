@@ -73,8 +73,8 @@
                 <div class="panel panel-default center">
                     <div class="panel-body">
                         <img src="images/box-slips.svg" class="img-responsive center-block svg" alt="Responsive image">
-                        <h4>Packing Slips</h4>
-                        Often times the packing slip and international customs labels have the exact contents of the box written on them that can pique the curiosity of someone else.
+                        <h4>Packing Slips and Customs Labels</h4>
+                        Often times the packing slip and customs labels for internationally shipped packages have the exact contents of the box written on them that can pique the curiosity of others.
                     </div>
                 </div>
             </div>

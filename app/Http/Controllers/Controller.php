@@ -32,7 +32,7 @@ class Controller extends BaseController
         $orders = $user->Orders;
         $orders->load('Incoming_Package');
         $orders->load('Shipment.Latest_Charge');
-        $orders->load('Shipment.Latest_Outgoing_Package');
+        $orders->load('Shipment.Latest_Outgoing_Package.Box');
         return view('dashboard', compact('user', 'orders', 'dd_info'));
     }
     
