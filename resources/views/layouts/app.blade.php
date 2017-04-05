@@ -126,8 +126,8 @@
                             <a href="/login" class="dark-link">Log In</a> <br>
                         @else
                             <a href="/dashboard" class="dark-link">Dashboard</a> <br>
-                            <a href="/login_info" class="dark-link">Edit Login Info</a> <br>
-                            <a href="/profile_info" class="dark-link">Update Shipping Profile</a> <br>
+                            <a href="/login-info" class="dark-link">Edit Login Info</a> <br>
+                            <a href="/profile-info" class="dark-link">Update Shipping Profile</a> <br>
                             <a href="/tutorial" class="dark-link">How-To Tutorial</a> <br>
                             <a href="{{ url('/logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" class="dark-link">Logout</a><form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">{{ csrf_field() }}</form> <br>
                         @endif
@@ -138,16 +138,15 @@
                         <h4>Company</h4>
                         <a href="/about" class="dark-link">About</a> <br>
                         <a href="/contact" class="dark-link">Contact Us</a> <br>
-                        <a href="" class="dark-link">Trust &amp; Safety</a> <br>
-                        <a href="" class="dark-link">Press &amp; Style Guide</a> 
+                        <a href="/trust-and-safety" class="dark-link">Trust &amp; Safety</a> <br>
+                        <a href="/press-and-style-guide" class="dark-link">Press &amp; Style Guide</a> 
                     </div>
                 </div>
                 <div class="clearfix visible-xs"></div>
                 <div class="col-sm-6">
                     <div class="col-xs-6">
                         <h4>Resources</h4>
-                        <a href="" class="dark-link">Privacy Policy</a> <br>
-                        <a href="" class="dark-link">Legal</a> <br>
+                        <a href="/privacy-policy" class="dark-link">Privacy Policy</a> <br>
                         <a href="https://www.usps.com/" class="dark-link" target="_blank">USPS Website</a> <br>
                         <a href="https://stripe.com/" class="dark-link" target="_blank">Stripe Website</a>
                     </div>

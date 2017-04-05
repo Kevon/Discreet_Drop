@@ -94,14 +94,22 @@
     <div class="section">
         <h2 class="center">Discreet Drop Benefits and Uses</h2>
         <div class="row vertical-align">
-            <div class="col-sm-6">
-                <img src="images/box-label-slips.svg" class="img-responsive center-block svg" alt="Responsive image">
+            <div class="col-sm-6 col-sm-push-6">
+                <img src="images/box-label.svg" class="img-responsive center-block svg" alt="Responsive image">
             </div>
-            <div class="col-sm-6">
+            <div class="col-sm-6 col-sm-pull-6">
                 <h3 class="center">Hide Return Labels to Keep Personal Items a Secret</h3>
                 A quick google search of the name or address on your package's return label will bring up the sender's website, revealing the type of contents you ordered to whoever gets your package before you do. Discreet Drop provides the only way to hide these labels with another box, so once your package arrives to you, the return label can't be linked back to the sender.
             </div>
-               
+        </div>
+        <div class="row vertical-align">
+            <div class="col-sm-6">
+                <img src="images/box-slips.svg" class="img-responsive center-block svg" alt="Responsive image">
+            </div>
+            <div class="col-sm-6">
+                <h3 class="center">Cover Up International Customs Forms and Packing Lists</h3>
+                When purchasing items from another country, packages going through customs require an attached form listing the specific contents of the package in order to enter the country, leaving a detailed explanation of what is in the box once it is cleared by customs and delivered to you. Even domestic shipments often include packing lists in an envelope stuck to the outside of the box, which can be looked at by anyone to see what items are in the package.
+            </div>
         </div>
         <div class="row vertical-align">
             <div class="col-sm-6 col-sm-push-6">

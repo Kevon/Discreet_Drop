@@ -17,7 +17,7 @@
                 <div class="panel-body">
                     <div class="row">
                         <div class="col-sm-12">
-                            <form role="form" method="POST" action="{{ url('/login_info/update') }}">
+                            <form role="form" method="POST" action="{{ url('/login-info/update') }}">
                                 {{ csrf_field() }}
                                 {{ method_field('PATCH') }}
                                 

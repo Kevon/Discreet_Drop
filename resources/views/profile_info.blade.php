@@ -25,7 +25,7 @@
                 <div class="panel-body">
                     <div class="row">
                         <div class="col-sm-12">
-                            <form role="form" method="POST" action="{{ url('/profile_info/update') }}" autocomplete="on" id="profile-form">
+                            <form role="form" method="POST" action="{{ url('/profile-info/update') }}" autocomplete="on" id="profile-form">
                                 {{ csrf_field() }}
                                 {{ method_field('PATCH') }}
                                 

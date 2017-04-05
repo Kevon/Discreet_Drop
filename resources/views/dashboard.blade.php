@@ -25,9 +25,9 @@
                     {{ csrf_field() }}
                     <button class="btn btn-primary btn-block" type="submit">Create a New Order</button>
                 </form>
-                <button class="btn btn-default btn-block" onclick="location.href='/profile_info'">Update Shipping Profile</button>
+                <button class="btn btn-default btn-block" onclick="location.href='/profile-info'">Update Shipping Profile</button>
             @endif
-            <button class="btn btn-default btn-block" onclick="location.href='/login_info'">Edit Login Info</button>
+            <button class="btn btn-default btn-block" onclick="location.href='/login-info'">Edit Login Info</button>
             <button class="btn btn-default btn-block" onclick="location.href='/tutorial'">How-To Tutorial</button>
             
             <br>
