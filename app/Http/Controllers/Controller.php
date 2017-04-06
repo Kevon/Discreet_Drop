@@ -52,6 +52,18 @@ class Controller extends BaseController
     	return view('about');
     }
     
+    public function privacyPolicy(){
+    	return view('privacy_policy');
+    }
+    
+    public function trustAndSafety(){
+    	return view('trust_and_safety');
+    }
+    
+    public function pressAndStyleGuide(){
+    	return view('press_and_style_guide');
+    }
+    
     public function contact(){
         $dd_info = DD_Info::where('active', 'YES')->first();
     	return view('contact', compact('dd_info'));

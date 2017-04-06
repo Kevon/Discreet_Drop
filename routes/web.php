@@ -22,9 +22,9 @@ Route::get('/contact', 'Controller@contact');
 Route::get('/pricing-calculator', 'Controller@pricingCalculator');
 Route::get('/tutorial', 'Controller@tutorial');
 Route::post('/pricing-calculator/submit', 'Controller@getRate');
-Route::get('/privacy-policy', 'Controller@tutorial');
-Route::get('/trust-and-safety', 'Controller@tutorial');
-Route::get('/tutorial', 'Controller@tutorial');
+Route::get('/privacy-policy', 'Controller@privacyPolicy');
+Route::get('/trust-and-safety', 'Controller@trustAndSafety');
+Route::get('/press-and-style-guide', 'Controller@pressAndStyleGuide');
 
 Route::group(['middleware' => ['auth']], function () {
     Route::get('/dashboard', 'Controller@dashboard');
