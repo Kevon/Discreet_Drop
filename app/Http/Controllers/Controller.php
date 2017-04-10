@@ -56,6 +56,10 @@ class Controller extends BaseController
     	return view('privacy_policy');
     }
     
+    public function termsOfService(){
+    	return view('terms_of_service');
+    }
+    
     public function trustAndSafety(){
     	return view('trust_and_safety');
     }

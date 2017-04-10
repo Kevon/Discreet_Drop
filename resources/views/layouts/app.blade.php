@@ -147,6 +147,7 @@
                     <div class="col-xs-6">
                         <h4>Resources</h4>
                         <a href="/privacy-policy" class="dark-link">Privacy Policy</a> <br>
+                        <a href="/terms-of-service" class="dark-link">Terms of Service</a> <br>
                         <a href="https://www.usps.com/" class="dark-link" target="_blank">USPS Website</a> <br>
                         <a href="https://stripe.com/" class="dark-link" target="_blank">Stripe Website</a>
                     </div>

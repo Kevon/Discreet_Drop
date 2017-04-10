@@ -23,6 +23,7 @@ Route::get('/pricing-calculator', 'Controller@pricingCalculator');
 Route::get('/tutorial', 'Controller@tutorial');
 Route::post('/pricing-calculator/submit', 'Controller@getRate');
 Route::get('/privacy-policy', 'Controller@privacyPolicy');
+Route::get('/terms-of-service', 'Controller@termsOfService');
 Route::get('/trust-and-safety', 'Controller@trustAndSafety');
 Route::get('/press-and-style-guide', 'Controller@pressAndStyleGuide');
 
