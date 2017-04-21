@@ -1,6 +1,6 @@
 @extends('layouts.app')
-@section('subtitle', 'Frequently Asked Questions')
-@section('description', 'Frequently Asked Questions about Discreet Drop and how it works.')
+@section('subtitle', 'Press and Style Guide')
+@section('description', 'Discreet Drop press information, logos, colors, videos, and style guide.')
 
 
 @section('header')
@@ -10,71 +10,17 @@
 
 @section('content')
 
-<div class="container content">
-    <h1 class="center">Frequently Asked Questions</h1>
-    <div class="panel-group col-sm-8 col-sm-offset-2" id="accordion">
-        
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h4 class="panel-title">
-                    <a data-toggle="collapse" class="accordion-toggle collapsed" data-parent="#accordion" href="#collapse1">
-                        Test
-                    </a>
-                </h4>
-            </div>
-            <div id="collapse1" class="panel-collapse collapse">
-                <div class="panel-body">
-                    <div class="row">
-                        <div class="col-sm-12">
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h4 class="panel-title">
-                    <a data-toggle="collapse" class="accordion-toggle collapsed" data-parent="#accordion" href="#collapse2">
-                        Test
-                    </a>
-                </h4>
-            </div>
-            <div id="collapse2" class="panel-collapse collapse">
-                <div class="panel-body">
-                    <div class="row">
-                        <div class="col-sm-12">
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h4 class="panel-title">
-                    <a data-toggle="collapse" class="accordion-toggle collapsed" data-parent="#accordion" href="#collapse3">
-                        Test
-                    </a>
-                </h4>
-            </div>
-            <div id="collapse3" class="panel-collapse collapse">
-                <div class="panel-body">
-                    <div class="row">
-                        <div class="col-sm-12">
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        
-        
-        
+<div class="jumbotron top">
+    <div class="container">
+        <h1 class="center">Press and Style Guide</h1>
+        <h2 class="center">Logos, Videos, Colors, Info...</h2>
     </div>
+</div>
+
+<div class="container content">
+    
+
+    
 </div>
 
 @endsection
