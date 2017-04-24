@@ -14,7 +14,7 @@
     <h1 class="center">Discreet Drop Privacy Policy</h1>
     
     <div class="row">
-        <div class="col-sm-12">
+        <div class="col-sm-10 col-sm-offset-1">
             <div class="panel panel-default">
                 <div class="panel-body">
                     <div class="row">
