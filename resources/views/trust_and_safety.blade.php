@@ -28,10 +28,13 @@
                 <p>Since we never handle or store your payment information, we are fully PCI compliant so your credit card information will always be safe and secure.</p>
                 <p>For more information about Stripe's security policies and procedures, please <a href="https://stripe.com/docs/security/stripe" target="_blank">click here</a>.</p>
             </div>
-            <div class="center">
-                <a href="https://stripe.com/" target="_blank">
-                    <img src="/images/powered_by_stripe.png" alt="Powered by Stripe">
-                </a>
+        </div>
+    </div>
+    
+    <div class="section">
+        <div class="row">
+            <div class="col-sm-4 col-sm-offset-4">
+                <a href="https://stripe.com/" target="_blank"><img src="images/Stripe_Logo.svg" class="img-responsive center-block svg" alt="Responsive image"></a>
             </div>
         </div>
     </div>
@@ -40,7 +43,10 @@
         <div class="row">
             <div class="col-sm-10 col-sm-offset-1">
                 <h2>You're Only Charged When We Ship to You</h2>
-                <p>With this in mind, we created Discreet Drop as a solution to cover up those privacy issues, literally. We serve as a shipment processor, where people can ship their packages to us via a unique address, we double-box the package to cover up any external logos, return labels, packing slips, holes; anything that can act as identifying information and can be used to signal what's in the box. Then we ship the plain box out to the customer so it will arrive completely discreet, and nobody but the customer would be able to figure out what's in the package. Easy. </p>
+                <p>In order to make the Discreet Drop process as easy and streamlined as possible, we require your shipping address and payment info to be completed before your unique Discreet Drop address and code are generated so you can use our service. This guarantees that your items are processed in our facility as fast as possible, so you will get your packages shipped to you completely discreet as fast as possible.</p>
+                <p>This also means that you can keep using your Discreet Drop address saved to any seller, and we'll be able to automatically handle any number of packages we receive for you to process at any time, without you needint to intervene. We'll handle everything for you automatically and send you email updates along the way!</p>
+                <p>If you decide to only use our service once, or not at all after completing your shipping profile, don't worry! Discreet Drop will only charge your account for packages we process to ship out to you. If we never receive a package to process for you, you'll never be charged anything. Simple. When we do receive a package for you, we charge you the lowest cost possible using our USPS Commercial Plus Pricing account to save you as much money as possible.</p>
+                <p>For more information about our pricing structure and to get shipping estimates, feel free to use our convenient <a href="/pricing-calculator">Pricing Calculator</a> to estimate how much our shipping costs to you will be and to see a detailed explanation on our low pricing.</p>
             </div>
         </div>
     </div>
@@ -49,7 +55,15 @@
         <div class="row">
             <div class="col-sm-10 col-sm-offset-1">
                 <h2>Package Protection is our Priority</h2>
-                <p>With this in mind, we created Discreet Drop as a solution to cover up those privacy issues, literally. We serve as a shipment processor, where people can ship their packages to us via a unique address, we double-box the package to cover up any external logos, return labels, packing slips, holes; anything that can act as identifying information and can be used to signal what's in the box. Then we ship the plain box out to the customer so it will arrive completely discreet, and nobody but the customer would be able to figure out what's in the package. Easy. </p>
+                <p>Insert policy here.</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="section">
+        <div class="row">
+            <div class="col-sm-4 col-sm-offset-4">
+                <img src="images/box-lock.svg" class="img-responsive center-block svg" alt="Responsive image">
             </div>
         </div>
     </div>
