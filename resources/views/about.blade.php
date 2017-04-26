@@ -18,6 +18,7 @@
 </div>
 
 <div class="container content">
+    
     <div class="section">
         <div class="row">
             <div class="col-sm-10 col-sm-offset-1">
@@ -26,6 +27,15 @@
             </div>
         </div>
     </div>
+    
+    <div class="section">
+        <div class="row">
+            <div class="col-sm-6 col-sm-offset-3">
+                <img src="images/DiscreetDropLogo.svg" class="img-responsive center-block svg" alt="Responsive image">
+            </div>
+        </div>
+    </div>
+    
     <div class="section">
         <div class="row">
             <div class="col-sm-10 col-sm-offset-1">

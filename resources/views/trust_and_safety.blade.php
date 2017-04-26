@@ -53,9 +53,17 @@
     
     <div class="section">
         <div class="row">
+            <div class="col-sm-4 col-sm-offset-4">
+                <img src="images/box-star.svg" class="img-responsive center-block svg" alt="Responsive image">
+            </div>
+        </div>
+    </div>
+    
+    <div class="section">
+        <div class="row">
             <div class="col-sm-10 col-sm-offset-1">
                 <h2>Package Protection is our Priority</h2>
-                <p>Insert policy here.</p>
+                <p>here at Discreet Drop, we take </p>
             </div>
         </div>
     </div>
@@ -72,7 +80,7 @@
         <div class="row">
             <div class="col-sm-10 col-sm-offset-1">
                 <h2>Your Personal Info is Always Safe</h2>
-                <p>At discreet Drop, all your personal information is protected and encrypted so your personal information and account info never falls into the wrong hands. Likewise, your credit card and payment information is securely handled via <a href="https://stripe.com/" target="_blank">Stripe</a> and never touches or is stored on our servers, so we are fully PCI compliant.</p>
+                <p>At discreet Drop, all your personal information is protected and encrypted so your personal information and account info never falls into the wrong hands. Likewise, your credit card and payment information is securely handled via <a href="https://stripe.com/" target="_blank">Stripe</a> and never touches or is stored on our servers, so we are fully PCI compliant. Privacy is kind of our thing around here...</p>
                 <P>Please check out our <a href="/privacy-policy">Privacy Policy</a> for more info.</P>
             </div>
         </div>
