@@ -63,7 +63,10 @@
         <div class="row">
             <div class="col-sm-10 col-sm-offset-1">
                 <h2>Package Protection is our Priority</h2>
-                <p>here at Discreet Drop, we take </p>
+                <p>Here at Discreet Drop, we take package security very seriously. When your packages arrive to our facility, we keep them secure and track them at every stage for protection until we hand them off directly to the USPS for delivery. Your packages won't get lost or stolen under our watch. We will also update you on every stage in the process, so you can check your Discreet Drop dashboard for updates and tracking numbers for all your packages we receive, and will email you all important updates so you don't need to keep a close eye on the status of your package if you don't want to.</p>
+                <p>Likewise, the contents of your packages must also be safe for us to handle and ship. By using Discreet Drop, you must be assured that all items you send through us are legal to shup via the USPS and must not contain any weapons or ammunition, drugs or drug paraphernalia, alchohol or tobacco, flamable materials, live animals, or illegal pornographic material in any capacity. If we discover any attempt to use our service to ship these and other illegal items, discreet Drop will cooperate with all law enforcement agencies on the package details. So please, for everyone's safety, don't use our service in an innappropriate matter. Items shipped to us need to be legal to ship to you, even if we don't open your packages and directly handle the contents.</p>
+                <p>For more information about what is legal to ship via the USPS, please check out their <a href="https://www.usps.com/ship/shipping-restrictions.htm" target="_blank">domestic shipping restrictions</a> page.</p>
+                <P>Please check out our <a href="/terms-of-service">Terms of Service</a> for more info.</P>
             </div>
         </div>
     </div>
@@ -80,7 +83,7 @@
         <div class="row">
             <div class="col-sm-10 col-sm-offset-1">
                 <h2>Your Personal Info is Always Safe</h2>
-                <p>At discreet Drop, all your personal information is protected and encrypted so your personal information and account info never falls into the wrong hands. Likewise, your credit card and payment information is securely handled via <a href="https://stripe.com/" target="_blank">Stripe</a> and never touches or is stored on our servers, so we are fully PCI compliant. Privacy is kind of our thing around here...</p>
+                <p>At discreet Drop, all your personal information is protected and encrypted so your personal information and account info never falls into the wrong hands. Likewise, your credit card and payment information is securely handled via <a href="https://stripe.com/" target="_blank">Stripe</a> and never touches or is stored on our servers, so we are fully PCI compliant. Your information will never be sold or transfered to a third-party. Privacy is kind of our thing around here...</p>
                 <P>Please check out our <a href="/privacy-policy">Privacy Policy</a> for more info.</P>
             </div>
         </div>
