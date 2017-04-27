@@ -131,6 +131,10 @@ h1,h2,h3,h4,h5,h6{
     display: flex;
 }
 
+.row.always-equal{
+    display: flex;
+}
+
 .btn{
     letter-spacing: 1px;
 	text-transform: uppercase;
@@ -562,6 +566,14 @@ input[type="radio"]{
 
 .panel.panel-warning{
     background-color: #f0ad4e !important;
+}
+
+.panel.panel-blue{
+    background-color: #3fa9f5 !important;
+}
+
+.panel.panel-black{
+    background-color: #1a1a1a !important;
 }
 
 .center{
