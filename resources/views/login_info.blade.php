@@ -10,10 +10,11 @@
 
 @section('content')
 <div class="container content">
+    <h1 class="center">Edit Login Info</h1>
+    <br>
     <div class="row">
         <div class="col-sm-6 col-sm-offset-3">
             <div class="panel panel-default">
-                <div class="panel-heading center">Edit Login Info</div>
                 <div class="panel-body">
                     <div class="row">
                         <div class="col-sm-12">

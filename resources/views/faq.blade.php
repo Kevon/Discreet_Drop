@@ -12,6 +12,7 @@
 
 <div class="container content">
     <h1 class="center">Frequently Asked Questions</h1>
+    <br>
     <div class="panel-group col-sm-8 col-sm-offset-2" id="accordion">
         
         <div class="panel panel-default">

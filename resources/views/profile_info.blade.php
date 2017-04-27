@@ -10,6 +10,10 @@
 
 @section('content')
 <div class="container content">
+    
+    <h1 class="center">Update Shipping Profile</h1>
+    <br>
+    
     @if(empty($user->substantiated_at))
         <div class="row">
             <div class="col-sm-6 col-sm-offset-3">
@@ -21,7 +25,6 @@
     <div class="row">
         <div class="col-sm-6 col-sm-offset-3">
             <div class="panel panel-default">
-                <div class="panel-heading center">Update Shipping Profile</div>
                 <div class="panel-body">
                     <div class="row">
                         <div class="col-sm-12">
@@ -179,7 +182,8 @@
                                         </div>
                                         
                                     </div>
-                                    <p>Discreet Drop uses <a href="https://stripe.com/" target="_blank">Stripe</a> to securly handle all payment processing, and your credit card information never touches our servers or is stored in our database.<br><br>We use HTTPS and SSL security layers and are PCI compliant to ensure your private information remains private.<br><br>Your card will only be charged once we receive a package to send out to you, and having a profile set up first makes sure your packages get to you as fast as possible.</p>
+                                    <p>Discreet Drop uses <a href="https://stripe.com/" target="_blank">Stripe</a> to securly handle all payment processing, and your credit card information and payment information never touches our servers or is stored in our database.<br><br>We use encryption, HTTPS, and SSL security layers to ensure your private information remains private, and are fully PCI compliant so your payment details are safe and secure.<br><br>Your card will only be charged once we receive a package to send out to you, and having a profile set up first makes sure your packages get to you as fast as possible. Feel free to visit our <a href="/trust-and-safety">Trust and Safety Page</a> and <a href="/privacy-policy">Privacy Policy</a> for more information and details on our secure policies and procedures. Don't worry, your personal information will always remain private and secure.</p>
+                                    <p>By using our service, you agree to our <a href="/terms-of-service">Terms of Service</a> and respect our prohibited and illegal items policy.</p>
                                 </div>
                                     
                                 <div class="current-card @if(empty($user->substantiated_at)) hidden @endif"> 

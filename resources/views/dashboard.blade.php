@@ -29,6 +29,7 @@
             @endif
             <button class="btn btn-default btn-block" onclick="location.href='/login-info'">Edit Login Info</button>
             <button class="btn btn-default btn-block" onclick="location.href='/tutorial'">How-To Tutorial</button>
+            <button class="btn btn-default btn-block" onclick="location.href='/trust-and-safety'">Trust and Safety Info</button>
             
             <br>
             

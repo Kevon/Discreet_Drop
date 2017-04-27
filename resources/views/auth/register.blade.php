@@ -8,10 +8,11 @@
 @endsection
 @section('content')
 <div class="container content">
+    <h1 class="center">Register For a New Account</h1>
+    <br>
     <div class="row">
         <div class="col-sm-4 col-sm-offset-4">
             <div class="panel panel-default">
-                <div class="panel-heading center">Register For a New Account</div>
                 <div class="panel-body">
                     <div class="row">
                         <div class="col-sm-12">

@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('subtitle', 'Press and Style Guide')
-@section('description', 'Get logos, icons, colors, videos, and press information for Discreet Drop.')
+@section('description', 'Get logos, icons, colors, videos, brand assets, and press information for Discreet Drop.')
 
 
 @section('header')
