@@ -29,7 +29,7 @@
                         <P><strong>Box Name:</strong> {{$box->box_name}}</P>
                         <P><strong>Box Dimensions:</strong> {{$box->length}}" x {{$box->width}}" x {{$box->height}}"</P>
 
-                        <form role="form" method="POST" action="/admin/orders/{{$order->id}}/process_order">
+                        <form role="form" method="POST" action="/admin/orders/{{$order->id}}/process-order">
                             {{ csrf_field() }}
                             <input type="hidden" name="shipment_id" value="{{$quoteShipment->id}}">
                             <input type="hidden" name="box_id" value="{{$box->id}}">
@@ -51,7 +51,7 @@
                         
                         <div class="row btn-toolbar">
                             <button class="btn btn-primary btn-block" onclick="window.open('{{$successfulOutgoingPackage->label_url}}');">Print Label</button>
-                            <button class="btn btn-default btn-block" onclick="location.href='/admin/incoming_package';">Enter New Incoming Package</button>
+                            <button class="btn btn-default btn-block" onclick="location.href='/admin/incoming-package';">Enter New Incoming Package</button>
                         </div>
                     </div>
                 </div>
@@ -71,7 +71,7 @@
                     <P><strong>Height:</strong> {{$incoming_package->height}}"</P>
                     <P><strong>Weight:</strong> {{$incoming_package->weight_in_oz}} oz.</P>
                     @if(empty($successfulOutgoingPackage))
-                        <button class="btn btn-default btn-block" onclick="location.href='/admin/incoming_package/{{$order->Incoming_Package->id}}'">Edit Package Info</button>
+                        <button class="btn btn-default btn-block" onclick="location.href='/admin/incoming-package/{{$order->Incoming_Package->id}}'">Edit Package Info</button>
                     @endif
                 </div>
             </div>

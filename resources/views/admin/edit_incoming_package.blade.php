@@ -17,7 +17,7 @@
         <div class="col-md-6 col-md-offset-3">
             <div class="panel panel-default">
                 <div class="panel-body">
-                    <form role="form" method="POST" action="/admin/incoming_package/{{$incoming_package->id}}/save" autocomplete="on">
+                    <form role="form" method="POST" action="/admin/incoming-package/{{$incoming_package->id}}/save" autocomplete="on">
                         {{ csrf_field() }}
                         {{ method_field('PATCH') }}
 

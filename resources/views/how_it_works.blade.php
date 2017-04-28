@@ -12,6 +12,7 @@
 @section('content')
 
 <div class="jumbotron top">
+    <div class="hero header-2"></div>
     <div class="container">
         <h1>100% Discreet Shipping as Easy as Possible</h1>
         <p>With our streamlined dashboard and automatic shipment processing system, we give you a unique address to ship your packages to, and Discreet Drop will take care of the rest.</p>

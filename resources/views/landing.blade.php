@@ -10,6 +10,7 @@
 @section('content')
 
 <div class="jumbotron top">
+    <div class="hero header-1"></div>
     <div class="container">
         <h1>Guarantee discreet shipping on any package.<br>From any seller.</h1>
         <p>Discreet Drop hides all identifying information, logos, return addresses, and packing slips that reveal the contents of your package, so no one can figure out what's in your private shipments.</p>

@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('subtitle', 'Press and Style Guide')
-@section('description', 'Get logos, icons, colors, videos, brand assets, and press information for Discreet Drop.')
+@section('description', 'Get free-to-use high-quality logos, icons, colors, videos, brand assets, and press information for Discreet Drop.')
 
 
 @section('header')
@@ -10,14 +10,15 @@
 
 @section('content')
 
-<div class="jumbotron top">
-    <div class="container">
-        <h1 class="center">Press and Style Guide</h1>
-        <h2 class="center">Logos, Videos, Colors, Info...</h2>
-    </div>
-</div>
-
 <div class="container content">
+    
+    <div class="row">
+        <div class="col-sm-12 center"> 
+            <h1>Discreet Drop Press and Style Guide</h1>
+            <p>Free-to-use high-quality brand assets.</p>
+            <p>Logos, videos, colors, and press information for Discreet Drop.</p>
+        </div>
+    </div>
     
     <div class="section">
         <h2 class="center">Discreet Drop Logo</h2>

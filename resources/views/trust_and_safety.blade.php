@@ -11,6 +11,7 @@
 @section('content')
 
 <div class="jumbotron top">
+    <div class="hero header-3"></div>
     <div class="container">
         <h1 class="center">Trust and Safety</h1>
         <h2 class="center">Your Packages and Info are in Good, Secure Hands</h2>

@@ -17,7 +17,7 @@
         <div class="col-md-6 col-md-offset-3">
             <div class="panel panel-default">
                 <div class="panel-body">
-                    <form role="form" method="POST" action="{{ url('/admin/incoming_package/save') }}" autocomplete="on">
+                    <form role="form" method="POST" action="{{ url('/admin/incoming-package/save') }}" autocomplete="on">
                         {{ csrf_field() }}
 
                         @include('admin/adminPartials/incoming_package_form')

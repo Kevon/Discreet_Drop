@@ -11,9 +11,11 @@
         </div>
     </div>
     
-    <div class="row">
-        <div class="col-sm-4 col-sm-offset-4">
-            <a href="/"><img src="images/box-404.svg" class="img-responsive center-block svg" alt="404 Box"></a>
+    <div class="section">
+        <div class="row">
+            <div class="col-sm-4 col-sm-offset-4">
+                <a href="/"><img src="images/box-404.svg" class="img-responsive center-block svg" alt="404 Box"></a>
+            </div>
         </div>
     </div>
     

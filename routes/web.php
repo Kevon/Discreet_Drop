@@ -43,15 +43,15 @@ Route::group(['middleware' => ['auth']], function () {
 
 Route::group(['middleware' => ['admin']], function () {
     Route::get('/admin', 'AdminController@index');
-    Route::get('/admin/incoming_package', 'AdminController@newIncomingPackage');
-    Route::get('/admin/incoming_package/{incoming_package}', 'AdminController@editIncomingPackage');
+    Route::get('/admin/incoming-package', 'AdminController@newIncomingPackage');
+    Route::get('/admin/incoming-package/{incoming_package}', 'AdminController@editIncomingPackage');
     
-    Route::post('/admin/incoming_package/save', 'AdminController@saveIncomingPackage');
-    Route::patch('/admin/incoming_package/{incoming_package}/save', 'AdminController@modifyIncomingPackage');
+    Route::post('/admin/incoming-package/save', 'AdminController@saveIncomingPackage');
+    Route::patch('/admin/incoming-package/{incoming_package}/save', 'AdminController@modifyIncomingPackage');
     
     Route::get('/admin/users', 'AdminController@usersList');
     Route::get('/admin/users/{user}', 'AdminController@userPanel');
     Route::get('/admin/orders', 'AdminController@ordersList');
     Route::get('/admin/orders/{order}', 'AdminController@orderPanel');
-    Route::post('/admin/orders/{order}/process_order', 'AdminController@processOrder');
+    Route::post('/admin/orders/{order}/process-order', 'AdminController@processOrder');
 });

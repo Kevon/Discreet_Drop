@@ -32,6 +32,7 @@
                                 <li>We will protect personal information by using reasonable security safeguards against loss or theft, as well as unauthorized access, disclosure, copying, use or modification.</li>
                                 <li>We will make readily available to customers information about our policies and practices relating to the management of personal information.</li>
                                 <li>We will only retain personal information for as long as necessary for the fulfilment of those purposes.</li>
+                                <li>We will never sell or otherwise transfer your personal information to any third parties without your consent.</li>
                             </ul>
 
                             <p>We are committed to conducting our business in accordance with these principles in order to ensure that the confidentiality of personal information is protected and maintained. Discreet Drop may change this privacy policy from time to time at Discreet Drop's sole discretion.</p>

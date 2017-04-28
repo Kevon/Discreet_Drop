@@ -83,14 +83,44 @@ body {
     z-index: 0;
 }
 
+
 .jumbotron.top {
-    background-image: url('/images/cardboard.jpg');
-    background-position: center center;
-    background-repeat: repeat;
+    position: relative;
     width: 100%;
     padding-top: 150px;
     margin-bottom: -200px;
     text-align: center;
+    background-color: white;
+}
+
+.jumbotron.top > div.hero{
+    position:absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+    z-index: 0;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: grayscale(50%) opacity(40%);
+}
+
+.jumbotron.top > div.header-1{
+    background-image: url("/images/header-1.jpg");
+}
+
+.jumbotron.top > div.header-2{
+    background-image: url("/images/header-2.jpg");
+}
+
+.jumbotron.top > div.header-3{
+    background-image: url("/images/header-3.jpg");
+}
+
+.jumbotron.top > div.container{
+    position:relative;
+    z-index:1;
 }
 
 .section{
