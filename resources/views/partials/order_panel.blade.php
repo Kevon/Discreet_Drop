@@ -5,7 +5,7 @@
                 @if($demo)
                     Demo Order
                 @else
-                    Order {{$user->dd_code}}-{{$order->id}} --- Created on {{$order->created_at->format('M j, Y')}}
+                    Order {{$user->dd_code}}-{{$order->id}} &mdash; Created on {{$order->created_at->format('M j, Y')}}
                 @endif
             </a>
         </h4>
@@ -132,21 +132,17 @@
                 
                 <div class="col-md-4 col-md-pull-8">
                     @include('partials.progress')
-                    
-                    <div class="btn-toolbar">
+                    <br>
                     @if(!empty($order->Shipment->Latest_Outgoing_Package->tracking_url))
                         <button class="btn btn-primary btn-block" onclick="location.href='{{$order->Shipment->Latest_Outgoing_Package->tracking_url or '#'}}';">Track Package</button>
                     @endif
                     @if(!$demo)
-                        <form role="form" method="POST" action="/dashboard/deleteOrder/{{$order->id}}" id="delete-order">
+                        <form role="form" method="POST" action="/dashboard/deleteOrder/{{$order->id}}" id="delete-order" class="btn-form-top">
                             {{ csrf_field() }}
                             {{ method_field('PATCH') }}
-                            <div class="row btn-toolbar">
-                                <button class="btn btn-danger btn-block delete" type="button" onclick="changeMethod()">Delete Order</button>
-                            </div>
+                            <button class="btn btn-danger btn-block delete" type="button" onclick="changeMethod()">Delete Order</button>
                         </form>
                     @endif
-                    </div>
                 </div>
             </div>
         </div>

@@ -75,8 +75,8 @@
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-user" aria-hidden="true"></i>{{ Auth::user()->email }}</a>
                             <ul class="dropdown-menu arrow" role="menu">
-                                <li><a href="{{ url('/login_info') }}"><i class="fa fa-lock" aria-hidden="true"></i>Edit Login Info</a></li>
-                                <li><a href="{{ url('/profile_info') }}"><i class="fa fa-address-book-o" aria-hidden="true"></i>Update Shipping Profile</a></li>
+                                <li><a href="{{ url('/login-info') }}"><i class="fa fa-lock" aria-hidden="true"></i>Edit Login Info</a></li>
+                                <li><a href="{{ url('/profile-info') }}"><i class="fa fa-address-book-o" aria-hidden="true"></i>Update Shipping Profile</a></li>
                                 <li><a href="{{ url('/tutorial') }}"><i class="fa fa-question" aria-hidden="true"></i>How-To Tutorial</a></li>
                                 <li>
                                     <a href="{{ url('/logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i class="fa fa-sign-out" aria-hidden="true"></i>Logout</a>
@@ -119,42 +119,42 @@
                 <div class="col-sm-6">
                     <div class="col-xs-6">
                         <h4>Discover</h4>
-                        <a href="/" class="dark-link">Home</a> <br>
-                        <a href="/how-it-works" class="dark-link">How It Works</a> <br>
+                        <a href="/">Home</a> <br>
+                        <a href="/how-it-works">How It Works</a> <br>
                         @if (Auth::guest())
-                            <a href="/register" class="dark-link">Sign Up</a> <br>
-                            <a href="/login" class="dark-link">Log In</a> <br>
+                            <a href="/register">Sign Up</a> <br>
+                            <a href="/login">Log In</a> <br>
                         @else
-                            <a href="/dashboard" class="dark-link">Dashboard</a> <br>
-                            <a href="/login-info" class="dark-link">Edit Login Info</a> <br>
-                            <a href="/profile-info" class="dark-link">Update Shipping Profile</a> <br>
-                            <a href="/tutorial" class="dark-link">How-To Tutorial</a> <br>
-                            <a href="{{ url('/logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" class="dark-link">Logout</a><form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">{{ csrf_field() }}</form> <br>
+                            <a href="/dashboard">Dashboard</a> <br>
+                            <a href="/login-info">Edit Login Info</a> <br>
+                            <a href="/profile-info">Update Shipping Profile</a> <br>
+                            <a href="/tutorial">How-To Tutorial</a> <br>
+                            <a href="{{ url('/logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a><form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">{{ csrf_field() }}</form> <br>
                         @endif
-                        <a href="/pricing-calculator" class="dark-link">Pricing Calculator</a> <br>
-                        <a href="/faq" class="dark-link">FAQ</a>
+                        <a href="/pricing-calculator">Pricing Calculator</a> <br>
+                        <a href="/faq">FAQ</a>
                     </div>
                     <div class="col-xs-6">
                         <h4>Company</h4>
-                        <a href="/about" class="dark-link">About</a> <br>
-                        <a href="/contact" class="dark-link">Contact Us</a> <br>
-                        <a href="/trust-and-safety" class="dark-link">Trust &amp; Safety</a> <br>
-                        <a href="/press-and-style-guide" class="dark-link">Press &amp; Style Guide</a> 
+                        <a href="/about">About</a> <br>
+                        <a href="/contact">Contact Us</a> <br>
+                        <a href="/trust-and-safety">Trust &amp; Safety</a> <br>
+                        <a href="/press-and-style-guide">Press &amp; Style Guide</a> 
                     </div>
                 </div>
                 <div class="clearfix visible-xs"></div>
                 <div class="col-sm-6">
                     <div class="col-xs-6">
                         <h4>Resources</h4>
-                        <a href="/privacy-policy" class="dark-link">Privacy Policy</a> <br>
-                        <a href="/terms-of-service" class="dark-link">Terms of Service</a> <br>
-                        <a href="https://www.usps.com/" class="dark-link" target="_blank">USPS Website</a> <br>
-                        <a href="https://stripe.com/" class="dark-link" target="_blank">Stripe Website</a>
+                        <a href="/privacy-policy">Privacy Policy</a> <br>
+                        <a href="/terms-of-service">Terms of Service</a> <br>
+                        <a href="https://www.usps.com/" target="_blank">USPS Website</a> <br>
+                        <a href="https://stripe.com/" target="_blank">Stripe Website</a>
                     </div>
                     <div class="col-xs-6">
                         <h4>Social</h4>
-                        <a href="https://twitter.com/discreetdrop" class="dark-link" target="_blank">Twitter</a> <br>
-                        <a href="https://www.facebook.com/DiscreetDrop/" class="dark-link" target="_blank">Facebook</a>
+                        <a href="https://twitter.com/discreetdrop" target="_blank">Twitter</a> <br>
+                        <a href="https://www.facebook.com/DiscreetDrop/" target="_blank">Facebook</a>
                     </div>
                 </div>
             </div>

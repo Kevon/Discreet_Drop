@@ -21,7 +21,7 @@
             @if(empty($user->substantiated_at))
                 <button class="btn btn-primary btn-block" onclick="location.href='/profile_info'">Update Shipping Profile</button>
             @else
-                <form role="form" method="POST" action="/dashboard/addOrder" id="add-order" class="btn-form">
+                <form role="form" method="POST" action="/dashboard/addOrder" id="add-order" class="btn-form-bottom">
                     {{ csrf_field() }}
                     <button class="btn btn-primary btn-block" type="submit">Create a New Order</button>
                 </form>

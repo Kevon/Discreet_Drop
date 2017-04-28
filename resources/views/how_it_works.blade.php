@@ -125,12 +125,10 @@
     </div>
 
     <div class="section">
-        <div class="row">
-            <h2 class="col-sm-12 center">Keep Your Shipments a Secret</h2>
-            <div class="btn-toolbar">
-                <div class="col-sm-6 col-sm-offset-3">
-                    <button class="btn btn-primary btn-block btn-lg" onclick="location.href='/register';">Sign Up for Free</button>
-                </div>
+        <h2 class="center">Keep Your Shipments a Secret</h2>
+        <div class="btn-toolbar">
+            <div class="col-sm-6 col-sm-offset-3">
+                <button class="btn btn-primary btn-block btn-lg" onclick="location.href='/register';">Sign Up for Free</button>
             </div>
         </div>
     </div>

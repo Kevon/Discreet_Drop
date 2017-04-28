@@ -15,10 +15,10 @@
         <h1>Guarantee discreet shipping on any package.<br>From any seller.</h1>
         <p>Discreet Drop hides all identifying information, logos, return addresses, and packing slips that reveal the contents of your package, so no one can figure out what's in your private shipments.</p>
         <div class="btn-toolbar">
-            <div class="col-sm-3 col-sm-offset-3">
+            <div class="col-sm-3 col-sm-offset-3 col-md-4 col-md-offset-2">
                 <button class="btn btn-primary btn-block btn-lg" onclick="location.href='/register';">Sign Up for Free</button>
             </div>
-            <div class="col-sm-3">
+            <div class="col-sm-3 col-md-4">
                 <button class="btn btn-default btn-block btn-lg" onclick="location.href='/how-it-works';">Learn More</button>
             </div>
         </div>
@@ -164,16 +164,14 @@
     </div>
 
     <div class="section">
-        <div class="row">
-            <h2 class="col-sm-12 center">Keep Your Shipments a Secret</h2>
-            <div class="btn-toolbar">
-            <div class="col-sm-3 col-sm-offset-3">
+        <h2 class="center">Keep Your Shipments a Secret</h2>
+        <div class="btn-toolbar">
+            <div class="col-sm-3 col-sm-offset-3 col-md-4 col-md-offset-2">
                 <button class="btn btn-primary btn-block btn-lg" onclick="location.href='/register';">Sign Up for Free</button>
             </div>
-            <div class="col-sm-3">
+            <div class="col-sm-3 col-md-4">
                 <button class="btn btn-default btn-block btn-lg" onclick="location.href='/how-it-works';">Learn More</button>
             </div>
-        </div>
         </div>
     </div>
 
