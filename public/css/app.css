@@ -695,6 +695,12 @@ input[type="radio"]{
     .btn-toolbar {
         display: block;
     }
+    .panel-heading .accordion-toggle:after {
+        content: " ";
+    }
+    .panel-heading .accordion-toggle.collapsed:after {
+        content: " ";
+    }
 }
 
 
