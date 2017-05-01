@@ -84,7 +84,7 @@
         <div class="row">
             <div class="col-sm-10 col-sm-offset-1">
                 <h2>Your Personal Info is Always Safe</h2>
-                <p>At discreet Drop, all your personal information is protected and encrypted so your personal information and account info never falls into the wrong hands. Likewise, your credit card and payment information is securely handled via <a href="https://stripe.com/" target="_blank">Stripe</a> and never touches or is stored on our servers, so we are fully PCI compliant. Your information will never be sold or transfered to a third-party. Privacy is kind of our thing around here...</p>
+                <p>At Discreet Drop, all your personal information is protected and encrypted so your personal information and account info never falls into the wrong hands. Likewise, your credit card and payment information is securely handled via <a href="https://stripe.com/" target="_blank">Stripe</a> and never touches or is stored on our servers, so we are fully PCI compliant. Your information will never be sold or transfered to a third-party. Privacy is kind of our thing around here...</p>
                 <P>Please check out our <a href="/privacy-policy">Privacy Policy</a> for more info.</P>
             </div>
         </div>

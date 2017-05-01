@@ -158,11 +158,11 @@
                     </div>
                 </div>
             </div>
-
-            <div class = "row">
+            <br>
+            <div class="row">
                 <div class="col-sm-4 col-sm-offset-4"><p class="text-center">Made with &#x2764; in Buffalo, NY.</p></div>
             </div>
-            <div class = "row">
+            <div class="row">
                 <div class="col-sm-4 col-sm-offset-4"><p class="text-center">&copy; Discreet Drop <?php echo date("Y"); ?></p></div>
             </div>
             

@@ -1,6 +1,6 @@
 @extends('layouts.app')
-@section('subtitle', 'Tutorial')
-@section('description', 'Hide logos, return labels, invoices, holes, and all other identifying information on any package from any seller so your item arrives as discreet as possible.')
+@section('subtitle', 'Discreet Drop Tutorial')
+@section('description', 'How to use Discreet Drop.')
 
 
 @section('header')
@@ -11,7 +11,34 @@
 @section('content')
 
 <div class="container content">
-
+    
+    <div class="row">
+        <div class="col-sm-12 center"> 
+            <h1>How to Use Discreet Drop</h1>
+            <h4>A step-by-step guide.</h4>
+        </div>
+    </div>
+    
+    <div class="section">
+        <h2 class="center">Step 1</h2>
+        <div class="row">
+            
+        </div>
+    </div>
+    
+    <div class="section">
+        <h2 class="center">Step 2</h2>
+        <div class="row">
+            
+        </div>
+    </div>
+    
+    <div class="section">
+        <h2 class="center">Step 3</h2>
+        <div class="row">
+            
+        </div>
+    </div>
 
 </div>
 

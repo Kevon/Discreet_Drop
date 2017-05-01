@@ -62,7 +62,7 @@
     
     <h3>9. Service Usage</h3>
 
-    <p>Buy using Discreet Drop, you are agreeing to not use our service in a manner to launder, transfer, or conceal any items that are illegal to ship domestically in the United states via the Unites states Postal Service. All items shipped to Discreet Drop for processing must be legal to ship and posess in the United States regardless of user age or location. Discreet Drop may not be used to ship or handle illegal items including but not limited to:</p>
+    <p>By using Discreet Drop, you are agreeing to not use our service in a manner to launder, transfer, or conceal any items that are illegal to ship domestically in the United states via the Unites states Postal Service. All items shipped to Discreet Drop for processing must be legal to ship and posess in the United States regardless of user age or location. Discreet Drop may not be used to ship or handle illegal items including but not limited to:</p>
         <ul type="i">
             <li>Drugs</li>
             <li>Drug Paraphernalia</li>

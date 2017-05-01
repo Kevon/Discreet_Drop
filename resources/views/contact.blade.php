@@ -14,9 +14,9 @@
     <div class="row">
         <div class="col-sm-12 center"> 
             <h1>I'm like "Hey, what's up? Hello!"</h1>
-            <p>Questions? Comments? Bored?</p>
-            <p>Feel free to contact us anytime! We'll respond as soon as possible.</p>
-            <p>We promise.</p>
+            <h4>Questions? Comments? Bored?</h4>
+            <h4>Feel free to contact us anytime! We'll respond as soon as possible.</h4>
+            <h4>We promise.</h4>
         </div>
     </div>
     <div class="section">

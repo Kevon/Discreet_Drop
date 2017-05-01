@@ -212,20 +212,43 @@ i.fa{
 	text-transform: uppercase;
 }
 
-.nav > li > a{
-    color: #1a1a1a !important;
-    font-weight: bold;
-}
-.nav > li > a:hover{
-    color: #3fa9f5 !important;
+.navbar-header > a{
+    border: none !important;
 }
 
-.nav > li.disabled > a{
+.nav li a{
+    color: #1a1a1a !important;
+    border: none !important;
+    font-weight: bold;
+}
+
+.nav .dropdown-menu a{
+    font-weight: normal;
+}
+
+.nav li a:hover{
+    color: #3fa9f5 !important;
+    border: none !important;
+}
+
+.nav li.disabled a{
     color: #3fa9f5 !important;
     pointer-events: none;
     cursor: default;
 }
 
+a{
+    color: #3fa9f5;
+    transition: all .5s ease-in-out;
+    border-bottom: 1px solid transparent;
+}
+
+a:hover{
+    text-decoration: none;
+    color: #1a1a1a;
+    transition: none;
+    border-bottom: 1px solid;
+}
 
 .shrink-nav {
 	padding-top: 0px !important;
@@ -596,9 +619,14 @@ input[type="radio"]{
     content: "\e080";
 }
 
-.panel-heading a.accordion-toggle {
+.panel-heading a {
     color: #1a1a1a;
     text-decoration: none;
+    border: none;
+}
+
+.panel-heading a:hover {
+    color: #3fa9f5 !important;
 }
 
 .panel.panel-warning{

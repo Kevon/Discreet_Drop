@@ -15,8 +15,8 @@
     <div class="row">
         <div class="col-sm-12 center"> 
             <h1>Discreet Drop Press and Style Guide</h1>
-            <p>Free-to-use high-quality brand assets.</p>
-            <p>Logos, videos, colors, and press information for Discreet Drop.</p>
+            <h4>Free-to-use high-quality brand assets.</h4>
+            <h4>Logos, videos, colors, and press information for Discreet Drop.</h4>
         </div>
     </div>
     

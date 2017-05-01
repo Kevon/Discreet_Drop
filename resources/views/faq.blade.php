@@ -122,7 +122,7 @@
                 <div class="panel-body">
                     <div class="row">
                         <div class="col-sm-12">
-                            
+                            Of course! All you need is an email address and a password. It's free to sign up an maintian an account with Discreet Drop.
                         </div>
                     </div>
                 </div>
@@ -141,7 +141,7 @@
                 <div class="panel-body">
                     <div class="row">
                         <div class="col-sm-12">
-                            
+                            Honestly, it depends! Shipping costs vary greatly depending on the size and weight of the package you've ordered. We've built a simple <a href="pricing-calculator">pricing calculator page</a> that you can use to estimate the latest shipping costs, depending on your best guess as to the package size and weight of the item you've ordered. Shipping will also cost more depending on how far away you are from our processing facility, so the <a href="pricing-calculator">pricing calculator page</a> can help you see how much shipping to your zip code will be. The <a href="pricing-calculator">pricing calculator page</a> also provides a breakdown on the shipping cost and our small fee we need to charge to cover processing, handling, and shipping materials for your package. Discreet Drop uses the lowest-cost Commercial Plus Pricing through the USPS to provide the cheapest possible shipping rates for you.
                         </div>
                     </div>
                 </div>
@@ -179,7 +179,7 @@
                 <div class="panel-body">
                     <div class="row">
                         <div class="col-sm-12">
-                            
+                            Here at Discreet Drop, we take package security very seriously. When your packages arrive to our facility, we keep them secure and track them at every stage for protection until we hand them off directly to the USPS for delivery. Your packages won't get lost or stolen under our watch. We will also update you on every stage in the process, so you can check your Discreet Drop dashboard for updates and tracking numbers for all your packages we receive, and will email you all important updates so you don't need to keep a close eye on the status of your package if you don't want to. Please visit our <a href="/trust-and-safety">trust and safety page</a> for more info.
                         </div>
                     </div>
                 </div>
@@ -198,7 +198,7 @@
                 <div class="panel-body">
                     <div class="row">
                         <div class="col-sm-12">
-                            
+                            Privacy is kind of our thing around here. At Discreet Drop, all your personal information is protected and encrypted so your personal information and account info never falls into the wrong hands. Likewise, your credit card and payment information is securely handled via <a href="https://stripe.com/" target="_blank">Stripe</a> and never touches or is stored on our servers, so we are fully PCI compliant. Your information will never be sold or transfered to a third-party. Please visit our <a href="/trust-and-safety">trust and safety page</a> for more info.
                         </div>
                     </div>
                 </div>
@@ -217,7 +217,7 @@
                 <div class="panel-body">
                     <div class="row">
                         <div class="col-sm-12">
-                            
+                            You can find our <a href="/provacy-policy">privacy policy page here</a>. In short, we will never sell or otherwise transfer your personal information to a third-party, and do everything we can to keep your private information secure.
                         </div>
                     </div>
                 </div>
@@ -236,7 +236,7 @@
                 <div class="panel-body">
                     <div class="row">
                         <div class="col-sm-12">
-                            
+                            You can read our terms and rules by visiting our <a href="/terms-of-service">terms of service page here</a>.
                         </div>
                     </div>
                 </div>
@@ -255,7 +255,7 @@
                 <div class="panel-body">
                     <div class="row">
                         <div class="col-sm-12">
-                            
+                            In order to create an account, all you need is an email and a password! That's it! In order to generate your unique Discreet Drop address and start using our service, you need to complete your shipping profile with your address and payment information.
                         </div>
                     </div>
                 </div>
@@ -274,7 +274,20 @@
                 <div class="panel-body">
                     <div class="row">
                         <div class="col-sm-12">
-                            
+                            By using Discreet Drop, you are agreeing to not use our service in a manner to launder, transfer, or conceal any items that are illegal to ship domestically in the United states via the Unites states Postal Service. All items shipped to Discreet Drop for processing must be legal to ship and posess in the United States regardless of user age or location. Discreet Drop may not be used to ship or handle illegal items including but not limited to:</p>
+                            <ul type="i">
+                                <li>Drugs</li>
+                                <li>Drug Paraphernalia</li>
+                                <li>Guns</li>
+                                <li>Weapons</li>
+                                <li>Ammunition</li>
+                                <li>Tobacco</li>
+                                <li>Alchohol</li>
+                                <li>Live Animals</li>
+                                <li>Flamable Liquids and Explosives</li>
+                                <li>Illegal Pornography</li>
+                            </ul>
+                        For more information about our shipping rules and policies, please read and understand our <a href="/terms-of-service">terms of service</a>.
                         </div>
                     </div>
                 </div>
@@ -293,7 +306,7 @@
                 <div class="panel-body">
                     <div class="row">
                         <div class="col-sm-12">
-                            
+                            Nothing! It's free to sign up and there are no fees for maintaining an account. If you do complete your shipping profile but never end up using Discreet Drop, don't worry, we will only ever charge your card if we receive a package to process and send out to you.
                         </div>
                     </div>
                 </div>
@@ -312,7 +325,7 @@
                 <div class="panel-body">
                     <div class="row">
                         <div class="col-sm-12">
-                            
+                            Feel free to visit our <a href="/contact">our contact page here</a> and send us an email any time, and we'll be happy to help answer any questions, or just chat. We're friendly!
                         </div>
                     </div>
                 </div>
@@ -331,7 +344,7 @@
                 <div class="panel-body">
                     <div class="row">
                         <div class="col-sm-12">
-                            
+                            Like many other trusted startups, Discreet Drop relies on <a href="https://stripe.com/" target="_blank">Stripe</a> to handle the storage and processing of all our payments and credit card info. This way, your payment information is always 100% secure and is never stored or even touches our servers. We use the latest SSL certifications and HTTPS security layers to further keep your information secure when interacting with Stripe. Since we never handle or store your payment information, we are fully PCI compliant so your credit card information will always be safe and secure. For more information about Stripe's security policies and procedures, please <a href="https://stripe.com/docs/security/stripe" target="_blank">click here</a>.
                         </div>
                     </div>
                 </div>
@@ -350,7 +363,7 @@
                 <div class="panel-body">
                     <div class="row">
                         <div class="col-sm-12">
-                            In or
+                            In order to streamline the process from when we receive a package for you to shipping it out for final delivery, we require your shipping profile to be completed with your address and payment information saved and ready to use. This allows us to be have all the information we need on hand to quickly and properly process your shipment so you get your package as soon as possible. It will also allow you to keep your Discreet Drop address saved with your sellers so you cna use it any time without having to visit your Discreet Drop dashboard to generate a new code, so if and when we ever get a package for you, we'll know just what to do with it without having to contact you and get payment information every time in order to send your package to you, saving time and effort. If you end up signing up but never using Discreet Drop, don't worry, we will only ever charge your card if we receive a package to process and send out to you. 
                         </div>
                     </div>
                 </div>
