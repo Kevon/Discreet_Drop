@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('subtitle', 'Frequently Asked Questions')
-@section('description', 'Frequently Asked Questions about Discreet Drop and how it works.')
+@section('description', 'Frequently Asked Questions (FAQ) about Discreet Drop and how it works.')
 
 
 @section('header')
@@ -46,7 +46,7 @@
                 <div class="panel-body">
                     <div class="row">
                         <div class="col-sm-12">
-                            
+                            Discreet Drop is the only way to guarantee 100% discreet shipping on any package, from any seller. Discreet Drop offers a way to cover up any and all logos, return labels, packing slips, customs forms, and holes in the packaging so nobody but you will be able to figure out what's in your private packages. Even websites that advertise discreet shipping will still have a return label which has a name and return address, both of which can be easily Googled that'll indicate what kind of item is in your package. Privacy is important, and with Discreet Drop, your personal packages remain private, so only you will know what's in the box. 
                         </div>
                     </div>
                 </div>
@@ -65,8 +65,8 @@
                 <div class="panel-body">
                     <div class="row">
                         <div class="col-sm-12">
-                            
-                        </div>
+                            Lots of reasons! If you live in a home with multiple people, appartment complex with a common area, dorm housing for college, or just live by yourself but arent always home to receive your packages, discreet packages will help prevent anyone else from figuring out what you've ordered online. This is helpful for hiding your personal items that you want to keep secret from everyone else, concealing gifts you've ordered for other memebrs of your home to prevent them from finding out what it is, or just hiding desirable brand logos from attracting any unwanted and potentially costly attention from others. Discreet Drop uses plain-box packaging to hide all identifying information, so nobody else will be able to figure out what's in your package. 
+                         </div>
                     </div>
                 </div>
             </div>
@@ -76,7 +76,7 @@
             <div class="panel-heading">
                 <h4 class="panel-title">
                     <a data-toggle="collapse" class="accordion-toggle collapsed" data-parent="#accordion" href="#collapse4">
-                        How does the process work?
+                        What if a company already offers discreet shipping on their orders?
                     </a>
                 </h4>
             </div>
@@ -84,7 +84,7 @@
                 <div class="panel-body">
                     <div class="row">
                         <div class="col-sm-12">
-                            
+                            That just means that the box they ship in doesn't have any obvious logos or branding on the side. The package will still have a return address on the label, and with a quick Google search of that return address or name on the label, will instantly show the website of the seller who sent the package. Anyone can do this to figure out what's inside your package. International orders must also have an attached customs form to enter the country with a detailed list of the items in the box. So while they may offer discreet shipping, it's not really discreet and there are several easy ways to figure out what's in any box. The package can also be easily ripped or opened in transit, and our system double-boxes your packages to prevent any holes from appearing that'll show what's inside your shipment. Discreet Drop prevents anyone but you from knowing what's inside your package by covering up these return labels, packing slips, customs forms, and holes, in addition to any logos on the box is a seller does not offer discreet shipping in the first place.
                         </div>
                     </div>
                 </div>
@@ -95,7 +95,7 @@
             <div class="panel-heading">
                 <h4 class="panel-title">
                     <a data-toggle="collapse" class="accordion-toggle collapsed" data-parent="#accordion" href="#collapse5">
-                        What if a company already offers discreet shipping on their orders?
+                        Can a return label really reveal the contents of my packages?
                     </a>
                 </h4>
             </div>
@@ -103,7 +103,7 @@
                 <div class="panel-body">
                     <div class="row">
                         <div class="col-sm-12">
-                            
+                            Yes! We live in the information age and all that information is just a quick Google search away. Even if your packages don't contain any obvious logos, the return label will ALWAYS be visible and either the name or return address on that label can be easily Googled, with the top results showing the company that sent your order. It doesn't take much from there to figure out what kind of items are in the box, and anyone can figure out what is in your package. With discreet Drop, we remove that possibility from happening to keep your secret items truly a secret. 
                         </div>
                     </div>
                 </div>
@@ -122,7 +122,7 @@
                 <div class="panel-body">
                     <div class="row">
                         <div class="col-sm-12">
-                            Of course! All you need is an email address and a password. It's free to sign up an maintian an account with Discreet Drop.
+                            Of course! All you need is an email address and a password. It's free to sign up an maintain an account with Discreet Drop.
                         </div>
                     </div>
                 </div>
@@ -160,7 +160,7 @@
                 <div class="panel-body">
                     <div class="row">
                         <div class="col-sm-12">
-                            
+                            Once you sign up and complete your shipping profile, your dashboard page will contain a unique generated Discreet Drop address. Use this address instead of your normal home address when checking-out online, so your packages will be sent to our facilities instead. From there, we receive your package and place the entire box into a slightly larger box to cover up any and all logos, return labels, holes, packing slips, and customs forms. Then we send the completely discreet plain-box package containing your original package to you in a double-box for additional item protection. since your Discreet Drop address is unique, we know exactly who each package we receive belongs to, and we automaticaly handle the payment details and shipping destination according to your shipping profile, without you having to do anything. You use this same Discreet Drop address for any number of packages as you'd like, and we'll handle them all without a problem. We make this as easy as possible.
                         </div>
                     </div>
                 </div>
@@ -274,7 +274,7 @@
                 <div class="panel-body">
                     <div class="row">
                         <div class="col-sm-12">
-                            By using Discreet Drop, you are agreeing to not use our service in a manner to launder, transfer, or conceal any items that are illegal to ship domestically in the United states via the Unites states Postal Service. All items shipped to Discreet Drop for processing must be legal to ship and posess in the United States regardless of user age or location. Discreet Drop may not be used to ship or handle illegal items including but not limited to:</p>
+                            By using Discreet Drop, you are agreeing to not use our service in a manner to launder, transfer, or conceal any items that are illegal to ship domestically in the United states via the Unites states Postal Service. All items shipped to Discreet Drop for processing must be legal to ship and posess in the United States regardless of user age or location. Discreet Drop may not be used to ship or handle illegal items including but not limited to:
                             <ul type="i">
                                 <li>Drugs</li>
                                 <li>Drug Paraphernalia</li>
@@ -287,7 +287,7 @@
                                 <li>Flamable Liquids and Explosives</li>
                                 <li>Illegal Pornography</li>
                             </ul>
-                        For more information about our shipping rules and policies, please read and understand our <a href="/terms-of-service">terms of service</a>.
+                            For more information about our shipping rules and policies, please read and understand our <a href="/terms-of-service">terms of service</a>.
                         </div>
                     </div>
                 </div>
@@ -439,7 +439,7 @@
                 <div class="panel-body">
                     <div class="row">
                         <div class="col-sm-12">
-                            In a completely plain cardboard box with no logos. The only label will have our return address, and that won't have any hints or clues as to what package is inside the box.
+                            In a completely discreet 100% plain cardboard box with no logos. The only label will have our return address, and that won't have any hints or clues as to what package is inside the box. Inside our box will be your package, with it's original box containing logos and forms and return label still attached, so it'll be up to you to figure out what to do with that original non-discreet packaging. 
                         </div>
                     </div>
                 </div>
@@ -635,9 +635,48 @@
                 </div>
             </div>
         </div>
+    
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" class="accordion-toggle collapsed" data-parent="#accordion" href="#collapse33">
+                        Do you ever open the packages you receive?
+                    </a>
+                </h4>
+            </div>
+            <div id="collapse33" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            Nope! We strictly take your package that we received and simply place the entire box in a slightly larger box to cover up any and all logos, return labels, holes, packing slips, and customs forms. We never open your packages or see what's inside.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" class="accordion-toggle collapsed" data-parent="#accordion" href="#collapse34">
+                        Where can I find Discreet Drop logos, press, and style information?
+                    </a>
+                </h4>
+            </div>
+            <div id="collapse34" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            You can find helpful press details, high-quality logos, style information, and free-to-use assets by visiting our <a href="/press-and-style-guide">press and style guide page</a>.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         
     </div>
 </div>
+
 
 @endsection
 

@@ -240,13 +240,14 @@ i.fa{
 a{
     color: #3fa9f5;
     transition: all .5s ease-in-out;
+    white-space: nowrap;
     border-bottom: 1px solid transparent;
 }
 
 a:hover{
     text-decoration: none;
     color: #1a1a1a;
-    transition: none;
+    transition: none !important;
     border-bottom: 1px solid;
 }
 
@@ -623,6 +624,7 @@ input[type="radio"]{
     color: #1a1a1a;
     text-decoration: none;
     border: none;
+    white-space: normal;
 }
 
 .panel-heading a:hover {
@@ -728,6 +730,9 @@ input[type="radio"]{
     }
     .panel-heading .accordion-toggle.collapsed:after {
         content: " ";
+    }
+    a{
+    white-space: normal;
     }
 }
 

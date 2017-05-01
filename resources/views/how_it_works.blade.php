@@ -43,8 +43,16 @@
     <div class="section">
         <h2 class="center">The Discreet Drop Process</h2>
         <div class="row">
-            <div class="col-sm-12">
-                <p>Privacy has become a pseudo-luxury in today's digital age, with any information being available just a simple search way. We've identifed this gap in privacy protection with all the information and identifiable logos a shipped box provides to anyone who may see it. Even merchants who advertise discreet plain-box shipping, still provide a return label with a name and address where one quick Google search would reveal what's in any package. We've realized that if you're not handling your package at all times, your privacy is vulnerable on any shipment. With this in mind, we created Discreet Drop as a solution to cover up those privacy issues, literally. We serve as a shipment processor, where people can ship their packages to us via a unique address, we double-box the package to cover up any external logos, return labels, packing slips, holes; anything that can act as identifying information and can be used to signal what's in the box. Then we ship the plain box out to the customer so it will arrive completely discreet, and nobody but the customer would be able to figure out what's in the package. Easy.</p>
+            <div class="col-sm-10 col-sm-offset-1">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <p>Privacy has become a pseudo-luxury in today's digital age, with any information being available just a simple search way. We've identifed this gap in privacy protection with all the information and identifiable logos a shipped box provides to anyone who may see it. Even merchants who advertise discreet plain-box shipping, still provide a return label with a name and address where one quick Google search would reveal what's in any package. We've realized that if you're not handling your package at all times, your privacy is vulnerable on any shipment. With this in mind, we created Discreet Drop as a solution to cover up those privacy issues, literally. We serve as a shipment processor, where people can ship their packages to us via a unique address, we double-box the package to cover up any external logos, return labels, packing slips, holes; anything that can act as identifying information and can be used to signal what's in the box. Then we ship the plain box out to the customer so it will arrive completely discreet, and nobody but the customer would be able to figure out what's in the package. Easy.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
