@@ -12,6 +12,7 @@
 
 <div class="container content">
     <h1 class="center">Dashboard</h1>
+    <br>
     <div class="row">
         <div class="col-sm-3">
             @if($user->role == "ADMIN")

@@ -157,8 +157,8 @@ h1,h2,h3,h4,h5,h6{
 }
 
 .row{
-    margin-top: 5px;
-    margin-bottom: 5px;
+    margin-top: 25px;
+    margin-bottom: 25px;
 }
 
 .row.vertical-align{
@@ -647,6 +647,11 @@ input[type="radio"]{
     text-align: center;
 }
 
+.inner {
+    width: 200px;
+    margin: 0 auto;
+}
+
 .hidden { 
     display:none;
 }
@@ -732,7 +737,10 @@ input[type="radio"]{
         content: " ";
     }
     a{
-    white-space: normal;
+        white-space: normal;
+    }
+    [class*="col-"]{
+        margin-bottom: 25px;
     }
 }
 

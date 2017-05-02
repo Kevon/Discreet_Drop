@@ -99,7 +99,7 @@
                 <img src="images/box-label.svg" class="img-responsive center-block svg" alt="Responsive image">
             </div>
             <div class="col-sm-6 col-sm-pull-6">
-                <h3 class="center">Hide Return Labels to Keep Personal Items a Secret</h3>
+                <h3 class="center flush">Hide Return Labels to Keep Personal Items a Secret</h3>
                 A quick google search of the name or address on your package's return label will bring up the sender's website, revealing the type of contents you ordered to whoever gets your package before you do. Discreet Drop provides the only way to hide these labels with another box, so once your package arrives to you, the return label can't be linked back to the sender.
             </div>
         </div>
@@ -108,7 +108,7 @@
                 <img src="images/box-slips.svg" class="img-responsive center-block svg" alt="Responsive image">
             </div>
             <div class="col-sm-6">
-                <h3 class="center">Cover Up International Customs Forms and Packing Lists</h3>
+                <h3 class="center flush">Cover Up International Customs Forms and Packing Lists</h3>
                 When purchasing items from another country, packages going through customs require an attached form listing the specific contents of the package in order to enter the country, leaving a detailed explanation of what is in the box once it is cleared by customs and delivered to you. Even domestic shipments often include packing lists in an envelope stuck to the outside of the box, which can be looked at by anyone to see what items are in the package.
             </div>
         </div>
@@ -117,7 +117,7 @@
                 <img src="images/box-gift.svg" class="img-responsive center-block svg" alt="Responsive image">
             </div>
             <div class="col-sm-6 col-sm-pull-6">
-                <h3 class="center">Hide Logos Revealing Gifts for Other Members of Your Home</h3>
+                <h3 class="center flush">Hide Logos Revealing Gifts for Other Members of Your Home</h3>
                 Logos and images on the outside of packages can easily spoil a suprise gift for someone's birthday or the holidays if they see the box before you get a chance to hide it. Discreet Drop makes sure all your packages come to your home in a plain box with all the logos hidden, so if someone sees your package, the suprise gift stays a secret.
             </div>
         </div>
@@ -126,7 +126,7 @@
                 <img src="images/box-thief.svg" class="img-responsive center-block svg" alt="Responsive image">
             </div>
             <div class="col-sm-6">
-                <h3 class="center">Deter Theives From Seeing Desirable Labels</h3>
+                <h3 class="center flush">Deter Theives From Seeing Desirable Labels</h3>
                 Package theft from apparmtent common areas and front porches of homes has become an increasing problem, and packages shipped with flashy and desierasble labels indicating valuable electronics and goods are an easy target for thieves. Discreet Drop puts your shipments in a plain box with no labels or logos, so your valuable package looks like any other.
             </div>
         </div>
@@ -135,7 +135,7 @@
                 <img src="images/box-hole.svg" class="img-responsive center-block svg" alt="Responsive image">
             </div>
             <div class="col-sm-6 col-sm-pull-6">
-                <h3 class="center">Cover Holes and Damaged Packaging</h3>
+                <h3 class="center flush">Cover Holes and Damaged Packaging</h3>
                 The shipping process is notoriously hard on packages; ripping holes and even tearing tape open before your package gets to your front door. Some sellers even use boxes with cut-out handels and even tapeless folded containers to ship books and other small items that can be opened and closed without any tamper evidence. Discreet Drop puts your package in another box to cover up any possible holes and the double-box prevents any new ones from showing up.
             </div>
         </div>
