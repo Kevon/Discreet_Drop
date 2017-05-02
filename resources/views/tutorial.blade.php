@@ -15,8 +15,8 @@
     <div class="row vertical-align">
         <div class="col-sm-6">
             <h2 class="center">Step 1</h2>
-            <h3 class="center">Generate Your Unique Discreet Drop Address</h3>
-            dsds
+            <h3 class="center">Sign Up to Discreet Drop</h3>
+            It's easy, it's free, there's not much to say! All you need is an email address and a password and you're all set!
         </div>
         <div class="col-sm-6">
             <img src="images/profile.svg" class="img-responsive center-block svg" alt="Responsive image">

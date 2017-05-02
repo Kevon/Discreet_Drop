@@ -2,10 +2,11 @@
 
 @section('content')
 <div class="container content">
+    <h1 class="center">Reset Password</h1>
+    <br>
     <div class="row">
         <div class="col-sm-6 col-sm-offset-3">
             <div class="panel panel-default">
-                <div class="panel-heading center">Reset Password</div>
                 <div class="panel-body">
                     <div class="row">
                         <div class="col-sm-12">
