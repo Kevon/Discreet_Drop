@@ -33,6 +33,20 @@
             </div>
         </div>
     </div>
+    
+    <div class="section">
+        <h2 class="center">Discreet Drop Monochrome Logo</h2>
+        <div class="row">
+            <div class="col-sm-6">
+                <h3 class="center">SVG</h3>
+                <img src="images/DiscreetDropLogo-Mono.svg" class="img-responsive center-block svg" alt="Discreet Drop Monochrome Logo SVG">
+            </div>
+            <div class="col-sm-6">
+                <h3 class="center">PNG</h3>
+                <img src="images/DiscreetDropLogo-Mono.png" class="img-responsive center-block svg" alt="Discreet Drop Monochrome Logo PNG">
+            </div>
+        </div>
+    </div>
 
     <div class="section">
         <h2 class="center">Discreet Drop Icon</h2>
@@ -44,6 +58,20 @@
             <div class="col-xs-3 col-xs-offset-2">
                 <h3 class="center">PNG</h3>
                 <img src="images/DiscreetDropIcon.png" class="img-responsive center-block svg" alt="Discreet Drop Icon PNG">
+            </div>
+        </div>
+    </div>
+    
+    <div class="section">
+        <h2 class="center">Discreet Drop Monochrome Icon</h2>
+        <div class="row">
+            <div class="col-xs-3 col-xs-offset-2">
+                <h3 class="center">SVG</h3>
+                <img src="images/DiscreetDropIcon-Mono.svg" class="img-responsive center-block svg" alt="Discreet Drop Monochrome Icon SVG">
+            </div>
+            <div class="col-xs-3 col-xs-offset-2">
+                <h3 class="center">PNG</h3>
+                <img src="images/DiscreetDropIcon-Mono.png" class="img-responsive center-block svg" alt="Discreet Drop Monochrome Icon PNG">
             </div>
         </div>
     </div>
