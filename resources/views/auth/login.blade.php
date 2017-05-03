@@ -60,9 +60,11 @@
                     <hr>
                     
                     <div class="row">
-                        <div class="col-sm-8 col-sm-offset-2 center">
-                            <h5 class="center">Don't have an account yet?</h5>
-                            <div class="btn-toolbar"><button class="btn btn-default btn-block" onclick="location.href='/register'">Sign Up For Free</button></div>
+                        <div class="col-sm-12">
+                            <div class="col-sm-8 col-sm-offset-2 center">
+                                <h5 class="center">Don't have an account yet?</h5>
+                                <div class="btn-toolbar"><button class="btn btn-default btn-block" onclick="location.href='/register'">Sign Up For Free</button></div>
+                            </div>
                         </div>
                     </div>
                 </div>

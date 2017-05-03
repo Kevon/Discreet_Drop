@@ -56,9 +56,11 @@
                     <hr>
                     
                     <div class="row">
-                        <div class="col-sm-8 col-sm-offset-2 center">
-                            <h5 class="center">Already have an account?</h5>
-                            <div class="row btn-toolbar"><button class="btn btn-default btn-block" onclick="location.href='/login'">Log In</button></div>
+                        <div class="col-sm-12">
+                            <div class="col-sm-8 col-sm-offset-2 center">
+                                <h5 class="center">Already have an account?</h5>
+                                <div class="row btn-toolbar"><button class="btn btn-default btn-block" onclick="location.href='/login'">Log In</button></div>
+                            </div>
                         </div>
                     </div>
                 </div>
