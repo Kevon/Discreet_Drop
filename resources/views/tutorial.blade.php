@@ -67,7 +67,7 @@
             <div class="col-sm-6 col-sm-push-6">
                 <h2 class="center flush">Step 5</h2>
                 <h3 class="center">Monitor and Track Your Package on Your Discreet Drop Dashboard</h3>
-                You can return to your <a href="/dashboard">dashboard page</a> to see a detailed order tracking system for each package we process for you. Here you'll be able to view how large each incoming package was, who it was from, check which step in the process we're on in processing the package, see the payment details, and get a detailed summary of the outgoing package details including the estimated shipping time and tracking number, so you can track your packages from when they leave our facility on their way to you!
+                Once your package arrives to our facility, we will simply place it in a larger box with additional packing peanuts for protection, so all the original logos, labels, packing slips, customs forms, and holes will be covered up and completely discreet! You can return to your <a href="/dashboard">dashboard page</a> to see a detailed order tracking system for each package we process for you. Here you'll be able to view how large each incoming package was, who it was from, check which step in the process we're on in processing the package, see the payment details, and get a detailed summary of the outgoing package details including the estimated shipping time and tracking number, so you can track your packages from when they leave our facility on their way to you!
             </div>
             <div class="col-sm-6 col-sm-pull-6">
                 <div class="inner">

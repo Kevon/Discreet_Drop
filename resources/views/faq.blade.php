@@ -648,7 +648,7 @@
                 <div class="panel-body">
                     <div class="row">
                         <div class="col-sm-12">
-                            Nope! We strictly take your package that we received and simply place the entire box in a slightly larger box to cover up any and all logos, return labels, holes, packing slips, and customs forms. We never open your packages or see what's inside.
+                            Nope! We strictly take your package that we received and simply place the entire box in a slightly larger box with packing peanuts to cover up any and all logos, return labels, holes, packing slips, and customs forms. We never open your packages or see what's inside.
                         </div>
                     </div>
                 </div>

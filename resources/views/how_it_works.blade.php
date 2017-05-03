@@ -2,12 +2,9 @@
 @section('subtitle', 'How it Works')
 @section('description', "Learn more about how Discreet Drop works, and how easy we make it to hide logos and labels on all your orders, so you'll always receive a plain-box package.")
 
-
 @section('header')
 <style>.section{visibility: hidden;}</style>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
 @endsection
-
 
 @section('content')
 
