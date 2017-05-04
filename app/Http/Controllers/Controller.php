@@ -23,7 +23,18 @@ class Controller extends BaseController
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
     
     public function index(){
-        return view('landing');
+        $quotes = ["Got a suprise gift coming in thanks to Discreet Drop. #DadSurpriseParty", 
+                   "Discreet Dropped myself a new toy. This is gonna be fun, I'll take pics once it arrives! ;)",
+                   "Ordered some new gear and toys for myself, still need to use Discreet Drop but hopefully next year I'll be on my own.",
+                   "Discreet Drop has made living with my parents a bit more bearable now. I'm an adult! Leave my stuff alone!",
+                   "I bought him an awesome gift this year from his favorite store, and he can't figure out what it is until next week! @DiscreetDrop",
+                   "Not taking any chances with this new phone coming in and my neighbors. Just signed up for Discreet Drop.",
+                   "Holy crap Discreet Drop is a lifesaver. Thanks @DiscreetDrop!"];
+        shuffle($quotes);
+        $quote1 = $quotes[0];
+        $quote2 = $quotes[1];
+        $quote3 = $quotes[2];
+        return view('landing', compact('quote1', 'quote2', 'quote3'));
     }
     
     public function dashboard(){

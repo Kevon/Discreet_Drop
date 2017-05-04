@@ -30,8 +30,11 @@
         <h2 class="col-sm-12 center">Discreet Drop in Just 60 Seconds</h2>
         <div class="row">
             <div class="col-sm-6 col-sm-offset-3 center">
+
                 <div class="embed-responsive embed-responsive-16by9">
-                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/gDi286SFsBE"></iframe>
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="" data-src="https://www.youtube.com/embed/gDi286SFsBE?showinfo=0&rel=0" allowfullscreen></iframe>
+                    </div>
                 </div>
             </div>
         </div>
@@ -177,14 +180,35 @@
     <div class="section">
         <h2 class="center">What People are Saying About Discreet Drop</h2>
         <div class="row">
-            <div class="col-sm-4 center">
-                <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Me and <a href="https://twitter.com/ro_raffe">@ro_raffe</a> don&#39;t see eye-to-eye often...<br><br>Mostly because he&#39;s like a foot shorter than me.<br><br>It&#39;s fucking hilarious.</p>&mdash; Kevon (@fuckKevon) <a href="https://twitter.com/fuckKevon/status/825533840802377728">January 29, 2017</a></blockquote>
+            <div class="col-sm-4">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <blockquote>
+                            <p>{{$quote1}}</p>
+                            <footer>Anonymous from Twitter</footer>
+                        </blockquote>
+                    </div>
+                </div>
             </div>
-            <div class="col-sm-4 center">
-                <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">I hate being an adult because now I have to bring my own crayons to restaurants...</p>&mdash; Kevon (@fuckKevon) <a href="https://twitter.com/fuckKevon/status/825009202632523776">January 27, 2017</a></blockquote>
+            <div class="col-sm-4">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <blockquote>
+                            <p>{{$quote2}}</p>
+                            <footer>Anonymous from Twitter</footer>
+                        </blockquote>
+                    </div>
+                </div>
             </div>
-            <div class="col-sm-4 center">
-                <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">&quot;IM SICK OF PRETENDING TO BE SONEONE I&#39;M NOT&quot; said the teenager who clearly didn&#39;t understand the point of the Witness Protection Program...</p>&mdash; Kevon (@fuckKevon) <a href="https://twitter.com/fuckKevon/status/822475173135785984">January 20, 2017</a></blockquote>
+            <div class="col-sm-4">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <blockquote>
+                            <p>{{$quote3}}</p>
+                            <footer>Anonymous from Twitter</footer>
+                        </blockquote>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

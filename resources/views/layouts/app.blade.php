@@ -121,10 +121,10 @@
                             <a href="/dashboard">Dashboard</a> <br>
                             <a href="/login-info">Edit Login Info</a> <br>
                             <a href="/profile-info">Update Shipping Profile</a> <br>
-                            <a href="/tutorial">How-To Tutorial</a> <br>
                             <a href="{{ url('/logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a><form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">{{ csrf_field() }}</form> <br>
                         @endif
                         <a href="/pricing-calculator">Pricing Calculator</a> <br>
+                        <a href="/tutorial">How-To Tutorial</a> <br>
                         <a href="/faq">FAQ</a>
                     </div>
                     <div class="col-xs-6">

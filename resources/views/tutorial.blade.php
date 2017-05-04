@@ -19,6 +19,14 @@
     </div>
     
     <div class="section">
+        <div class="row">
+            <div class="col-sm-12">
+                <img src="images/package-diagram.svg" class="img-responsive center-block svg" alt="Responsive image">
+            </div>
+        </div>
+    </div>
+    
+    <div class="section">
         <div class="row vertical-align">
             <div class="col-sm-6 col-sm-push-6">
                 <h2 class="center flush">Step 1</h2>
