@@ -98,7 +98,7 @@
                 <div class="col-sm-12"><h4 class="text-center">Connect with us!</h4></div>
             </div>
             <div class = "row">
-                <div class="btn-toolbar">
+                <div class="btn-toolbar btn-form-bottom">
                     <div class="col-sm-3 col-sm-offset-3">
                         <button class="btn btn-primary btn-block btn-lg btn-twitter" onclick="window.open('https://twitter.com/discreetdrop');"><i class="fa fa-fw fa-twitter" aria-hidden="true"></i>Twitter</button>
                     </div>
@@ -107,6 +107,7 @@
                     </div>
                 </div>
             </div>
+            <br>
             <hr>
             <div class = "row">
                 <div class="col-sm-6">

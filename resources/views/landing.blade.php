@@ -21,6 +21,7 @@
                 <button class="btn btn-default btn-block btn-lg" onclick="location.href='/how-it-works';">Learn More</button>
             </div>
         </div>
+        <br>
         <i class="fa fa-angle-double-down floating" aria-hidden="true"></i>
     </div>
 </div>

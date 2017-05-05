@@ -18,6 +18,7 @@
                 <button class="btn btn-primary btn-block btn-lg" onclick="location.href='/register';">Sign Up for Free</button>
             </div>
         </div>
+        <br>
         <i class="fa fa-angle-double-down floating" aria-hidden="true"></i>
     </div>
 </div>
