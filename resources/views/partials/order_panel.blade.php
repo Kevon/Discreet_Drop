@@ -112,7 +112,7 @@
                             <P><strong>Carrier: </strong>Pending</P>
                             <P><strong>Carrier Service: </strong>Pending</P>
                             <P><strong>Estimated Shipping Time: </strong>Pending</P>
-                            <P><strong>Tracking Number: <a href="https://www.youtube.com/watch?v=ZZ5LpwO-An4" target="_blank">Pending</a></strong></P>
+                            <P><strong>Tracking Number: </strong>Pending</P>
                             <P><strong>Package Dimensions: </strong>Pending</P>
                             <P><strong>Package Weight: </strong>Pending</P>
                         @endif
@@ -123,7 +123,7 @@
                         <P><strong>Carrier: </strong>Pending</P>
                         <P><strong>Carrier Service: </strong>Pending</P>
                         <P><strong>Estimated Shipping Time: </strong>Pending</P>
-                        <P><strong>Tracking Number: Pending</strong></P>
+                        <P><strong>Tracking Number: </strong>Pending</P>
                         <P><strong>Package Dimensions: </strong>Pending</P>
                         <P><strong>Package Weight: </strong>Pending</P>
                     @endif
