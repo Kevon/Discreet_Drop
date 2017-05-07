@@ -46,7 +46,13 @@
                     <div class="panel-body">
                         <div class="row">
                             <div class="col-sm-12">
-                                <p>Privacy has become a pseudo-luxury in today's digital age, with any information being available just a simple search way. We've identifed this gap in privacy protection with all the information and identifiable logos a shipped box provides to anyone who may see it. Even merchants who advertise discreet plain-box shipping, still provide a return label with a name and address where one quick Google search would reveal what's in any package. We've realized that if you're not handling your package at all times, your privacy is vulnerable on any shipment. With this in mind, we created Discreet Drop as a solution to cover up those privacy issues, literally. We serve as a shipment processor, where people can ship their packages to us via a unique address, we double-box the package to cover up any external logos, return labels, packing slips, holes; anything that can act as identifying information and can be used to signal what's in the box. Then we ship the plain box out to the customer so it will arrive completely discreet, and nobody but the customer would be able to figure out what's in the package. Easy.</p>
+                                <p>Discreet Drop is the only way to guarantee 100% discreet shipping on any package, from any seller. Discreet Drop offers a way to cover up any and all logos, return labels, packing slips, customs forms, and holes in the packaging so nobody but you will be able to figure out what's in your private packages. Even websites that advertise discreet shipping will still have a return label with a company name and return address, a packing slip, or a customs form; all of which can be easily Googled that'll indicate what kind of item is in your package.</p>
+                                <br>
+                                <p>With this in mind, we've created Discreet Drop as the only solution to cover up those privacy issues, literally. Discreet Drop offers a easy process to double-box your packages to cover up any obvious logos or branding, return labels, packing slips, holes; anything that can act as identifying information and can be used to signal what's in the box is hidden.</p>
+                                <br>
+                                <p>With Discreet Drop, all your packages from any online seller will arive in a 100% discreet plain box with no logos or labels to hide the source of your personal shipments or gifts from anyone else but you.</p>
+                                <br>
+                                <p>Privacy is important, and with Discreet Drop, your personal packages remain private, so only you will know what's in your packages. As discreet as posible, as easy as possible. See our <a href="/faq">frequently asked questions</a> or our <a href="/trust-and-safety">trust and safety guidelines</a> for more information on the Discreet Drop process.</p>
                             </div>
                         </div>
                     </div>
@@ -80,7 +86,7 @@
             <div class="col-sm-6 col-sm-pull-6">
                 <h2 class="center flush">Step 2</h2>
                 <h3 class="center">Use That Address as Your Shipping Address When Buying Online</h3>
-                When checking out anywhere online, use the unique discreet Drop address from Step 1 as your shipping address instead of your usual home address so your items will be sent to our package processing center with the qunique code in the address to let us know that your packages belong to you.
+                When checking out anywhere online, use the unique Discreet Drop address from Step 1 as your shipping address instead of your usual home address so your items will be sent to our package processing center with the qunique code in the address to let us know that your packages belong to you.
             </div>
         </div>
         <div class="row vertical-align">
@@ -100,7 +106,7 @@
             <div class="col-sm-6 col-sm-pull-6">
                 <h2 class="center flush">Step 4</h2>
                 <h3 class="center">We Ship Your Now Plain-Box Package Automaticaly to You</h3>
-                That's it! You can sit back, relax, and have the confidence knowing that your package will arrive to your home in a 100% discreet plain box, with no logos or return labels to reveal what's inside. 
+                That's it! You can sit back, relax, and have the confidence knowing that your package will arrive to your home in a 100% discreet plain box, with no logos or return labels to reveal what's inside. See our <a href="/faq">frequently asked questions</a> or our <a href="/trust-and-safety">trust and safety guidelines</a> for more information on the Discreet Drop process.
             </div>
         </div>
     </div>
