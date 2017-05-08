@@ -26,7 +26,7 @@ $("div.content").css("margin-bottom",$(".footer").outerHeight()+150);
 if($(window).width() < 410){
     $('div.btn-group').removeClass('btn-group-justified');
     $('div.btn-group').addClass('btn-group-vertical');
-} 
+}; 
 
 $(window).resize(function() {
     $("div.content").css("margin-bottom",$(".footer").outerHeight()+100);
@@ -65,7 +65,8 @@ window.setTimeout(function(){
 }, 5000);
 
 window.sr = ScrollReveal();
-sr.reveal('div.section *');
+sr.reveal('div.section');
+
 
 function init(){
     var vidDefer = document.getElementsByTagName('iframe');

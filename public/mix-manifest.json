@@ -1,9 +1,10 @@
 {
-  "/js/user.js": "/js/user.js",
-  "/js/profile.js": "/js/profile.js",
-  "/js/pricing.js": "/js/pricing.js",
-  "/js/loading.js": "/js/loading.js",
-  "/js/incomingPackage.js": "/js/incomingPackage.js",
+  "/mix.js": "/mix.js",
   "/js/app.js": "/js/app.js",
+  "/js/incomingPackage.js": "/js/incomingPackage.js",
+  "/js/loading.js": "/js/loading.js",
+  "/js/pricing.js": "/js/pricing.js",
+  "/js/profile.js": "/js/profile.js",
+  "/js/user.js": "/js/user.js",
   "/css/app.css": "/css/app.css"
 }
