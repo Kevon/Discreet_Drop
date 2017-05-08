@@ -3,7 +3,7 @@
 @section('description', 'Hide logos, return labels, invoices, holes, and all other identifying information on any package from any seller so your item arrives as discreet as possible.')
 
 @section('header')
-<style>.section{visibility: hidden;}</style>
+<style>.section{visibility:hidden;}</style>
 @endsection
 
 @section('content')
@@ -218,8 +218,6 @@
 
 @endsection
 
-
 @section('footer')
-<script src="https://unpkg.com/scrollreveal@3.3.2/dist/scrollreveal.min.js"></script>
-<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
 @endsection

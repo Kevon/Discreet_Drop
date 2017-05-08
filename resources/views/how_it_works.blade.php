@@ -3,7 +3,7 @@
 @section('description', "Learn more about how Discreet Drop works, and how easy we make it to hide logos and labels on all your orders, so you'll always receive a plain-box package.")
 
 @section('header')
-<style>.section{visibility: hidden;}</style>
+<style>.section{visibility:hidden;}</style>
 @endsection
 
 @section('content')
@@ -146,10 +146,8 @@
     </div>
 </div>
 
-
 @endsection
 
-
 @section('footer')
-<script src="https://unpkg.com/scrollreveal@3.3.2/dist/scrollreveal.min.js"></script>
+<script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
 @endsection
