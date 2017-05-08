@@ -64,9 +64,6 @@ window.setTimeout(function(){
     });
 }, 5000);
 
-window.sr = ScrollReveal();
-sr.reveal('div.section');
-
 
 function init(){
     var vidDefer = document.getElementsByTagName('iframe');
@@ -77,3 +74,6 @@ function init(){
     }
 }
 window.onload = init;
+
+window.sr = ScrollReveal();
+sr.reveal('div.section');

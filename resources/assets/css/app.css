@@ -448,7 +448,7 @@ img.svg{
 }
 
 .btn.btn-twitter{
-    background-color: #53a5e4 !important;
+    background-color: #1da1f2 !important;
 }
 
 .btn.btn-facebook{
@@ -653,6 +653,10 @@ blockquote{
     text-align: center;
 }
 
+.left-center{
+    text-align: center;
+}
+
 .inner {
     width: 200px;
     margin: 0 auto;
@@ -743,6 +747,9 @@ blockquote{
     }
     a{
         white-space: normal;
+    }
+    .left-center{
+        text-align: left;
     }
     [class*="col-"]{
         margin-bottom: 25px;
