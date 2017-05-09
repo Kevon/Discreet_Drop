@@ -654,7 +654,7 @@ blockquote{
 }
 
 .left-center{
-    text-align: center;
+    text-align: left;
 }
 
 .inner {
@@ -745,11 +745,8 @@ blockquote{
     .panel-heading .accordion-toggle.collapsed:after {
         content: " ";
     }
-    a{
-        white-space: normal;
-    }
     .left-center{
-        text-align: left;
+        text-align: center;
     }
     [class*="col-"]{
         margin-bottom: 50px;
