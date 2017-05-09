@@ -39,7 +39,7 @@
                                 <a href="https://github.com/Kevon" target="_blank">See Kevin's other projects on GitHub.</a>
                             </div>
                             <div class="col-xs-6 col-sm-3 col-xs-offset-3 col-sm-offset-0">
-                                <img src="images/kevin-skompinski.jpg" class="img-responsive center-block svg img-circle" alt="Kevin Skompinski">
+                                <img src="images/kevin-skompinski.jpg" class="img-responsive center-block svg img-circle" alt="Kevin Skompinski headshot">
                                 <br>
                             </div>
                         </div>

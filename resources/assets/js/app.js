@@ -76,4 +76,4 @@ function init(){
 window.onload = init;
 
 window.sr = ScrollReveal();
-sr.reveal('div.section');
+sr.reveal('div.section *');

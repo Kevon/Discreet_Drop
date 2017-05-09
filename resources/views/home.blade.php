@@ -14,7 +14,7 @@
     <div class="section">
         <div class="row">
             <div class="col-sm-4 col-sm-offset-4">
-                <a href="/dashboard"><img src="images/box-star.svg" class="img-responsive center-block svg" alt="Box Star"></a>
+                <a href="/dashboard"><img src="images/box-star.svg" class="img-responsive center-block svg" alt="Cardboard Box Star"></a>
             </div>
         </div>
     </div>

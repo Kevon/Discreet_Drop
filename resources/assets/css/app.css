@@ -752,7 +752,7 @@ blockquote{
         text-align: left;
     }
     [class*="col-"]{
-        margin-bottom: 25px;
+        margin-bottom: 50px;
     }
 }
 

@@ -21,7 +21,7 @@
     <div class="section">
         <div class="row">
             <div class="col-sm-12">
-                <img src="images/package-diagram.svg" class="img-responsive center-block svg" alt="Responsive image">
+                <img src="images/package-diagram.svg" class="img-responsive center-block svg" alt="Discreet Drop Diagram">
             </div>
         </div>
     </div>
@@ -45,7 +45,7 @@
                 Go to your <a href="/dashboard">dashboard page</a> and click on <a href="/profile-info">Update Shipping Profile</a> to complete your shipping profile. In order to streamline the process from when we receive a package for you to shipping it out for final delivery, we require your shipping profile to be completed with your address and payment information saved and ready to use. This allows us to be have all the information we need on hand to quickly and properly process your shipment so you get your package as soon as possible. Your unique Discreet Drop address will not be created unless your shipping profile is filled out.
             </div>
             <div class="col-sm-6">
-                <img src="images/box-star.svg" class="img-responsive center-block svg" alt="Responsive image">
+                <img src="images/box-star.svg" class="img-responsive center-block svg" alt="Cardboard Box Star">
             </div>
         </div>
 
@@ -56,7 +56,7 @@
                 After you've filled out your shipping profile, your <a href="/dashboard">dashboard page</a> will have a panel listing your unique Discret Drop address. It's the address to our facilities containing a unique code that will identify your packages to you so we can keep track of all your orders. Your dashboard will also contain a timeline of all your orders we've processed. You can manually add new orders if that would help you personally keep track of your packages, but this is not required as we will automatically create a new order for every package we receive for you.
             </div>
             <div class="col-sm-6 col-sm-pull-6">
-                <img src="images/profile.svg" class="img-responsive center-block svg" alt="Responsive image">
+                <img src="images/profile.svg" class="img-responsive center-block svg" alt="Find Your Unique Discreet Drop Address">
             </div>
         </div>
 
@@ -67,7 +67,7 @@
                 Copy and paste your unique Discreet Drop address as the shipping address when checking out online, instead of using your usual shipping address. Any online retailer will be able to accept this, just be sure to use our name as well as both address lines for the street address so your packages will arrive at our facilities with your tracking code so we will know exactly which packages are yours. 
             </div>
             <div class="col-sm-6">
-                <img src="images/checkout.svg" class="img-responsive center-block svg" alt="Responsive image">
+                <img src="images/checkout.svg" class="img-responsive center-block svg" alt="Use Discreet Drop Address When Checkout Online">
             </div>
         </div>
 
@@ -91,7 +91,7 @@
                 Your packages will arrive to the address you've specified in your <a href="/profile-info">shipping profile</a> in a 100% discreet plain-box, with all logos, return labels, packing slips, customs forms, and holes covered up, so nobody but you will be able to figure out what's in your private packages. 
             </div>
             <div class="col-sm-6">
-                <img src="images/box-door.svg" class="img-responsive center-block svg" alt="Responsive image">
+                <img src="images/box-door.svg" class="img-responsive center-block svg" alt="Discreet Box at Door">
             </div>
         </div>
     </div>
