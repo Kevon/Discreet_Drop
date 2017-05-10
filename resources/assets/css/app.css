@@ -931,4 +931,9 @@ ul.order-progress{
     .row.always-equal .panel{
         height: 200px;
     }
+    
+    .navbar-right .navbar-btn{
+        float: none;
+        margin-top: 0px;
+    }
 }
