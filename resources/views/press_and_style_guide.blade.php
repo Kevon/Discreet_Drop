@@ -85,6 +85,8 @@
             </div>
             <div class="col-xs-6 col-sm-4">
                 <div class="panel panel-blue">
+                    <div class="panel-body">
+                    </div>
                 </div>
             </div>
         </div>
@@ -95,6 +97,8 @@
             </div>
             <div class="col-xs-6 col-sm-4">
                 <div class="panel panel-black">
+                    <div class="panel-body">
+                    </div>
                 </div>
             </div>
         </div>

@@ -195,21 +195,28 @@ h1,h2,h3,h4,h5,h6{
 
 .row.vertical-align{
     align-items: center;
+    display: -webkit-flex;
     display: flex;
 }
 
 .row.equal-height{
+    display: -webkit-flex;
     display: flex;
+    align-items: stretch;
+    height: 100%;
 }
 
 .row.always-equal{
+    display: -webkit-flex;
     display: flex;
+    align-items: stretch;
+    height: 100%;
 }
 
-.btn{
-    letter-spacing: 1px;
-	text-transform: uppercase;
-    font-weight: bold;
+.row.always-equal .panel{
+    padding: 50px 0;
+    width: 100%;
+    height: 100%;
 }
 
 .dark-link{
@@ -388,12 +395,20 @@ img.svg{
     width: 75%;
 }
 
+.navbar-right .navbar-btn{
+    float: left;
+    margin-top: -5px;
+}
+
 .btn{
     border: none;
     transition-duration: 0.5s;
     text-decoration: none !important;
     white-space:normal !important;
     word-wrap:normal; 
+    letter-spacing: 1px;
+	text-transform: uppercase;
+    font-weight: bold;
 }
 .btn:hover {
     box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.10), inset 0 0 100px 100px rgba(255, 255, 255, 0.1) !important;
@@ -499,10 +514,12 @@ img.svg{
     margin-right: 0; 
     padding-left: 0; 
     padding-right: 0; 
+    display: -webkit-flex;
     display: flex;
 }
 
 .btn-toolbar > div {
+    display: -webkit-flex;
     display: flex;
 }
 
@@ -868,12 +885,15 @@ ul.order-progress{
 
 @media (max-width: 767px) {
     .row.vertical-align{
+        display: -webkit-block;
         display: block;
     }
     .row.equal-height{
+        display: -webkit-block;
         display: block;
     }
     .btn-toolbar {
+        display: -webkit-block;
         display: block;
     }
     .panel-heading .accordion-toggle:after {

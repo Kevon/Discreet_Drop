@@ -61,10 +61,8 @@
                     <!-- Authentication Links -->
                     @if (Auth::guest())
                         <li><a href="{{ url('/login') }}"><i class="fa fa-sign-in" aria-hidden="true"></i>Login</a></li>
-                        <a href="{{ url('/register') }}"><button class="btn btn-primary navbar-btn" href="{{ url('/register') }}">Sign Up For Free</button></a>
+                        <li><a href="{{ url('/register') }}"><button class="btn btn-primary navbar-btn" href="{{ url('/register') }}">Sign Up For Free</button></a></li>
                     @else
-                        <a href="{{ url('/dashboard') }}"><button class="btn btn-primary navbar-btn" href="{{ url('/dashboard') }}"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>Dashboard</button></a>
-                      
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-user" aria-hidden="true"></i>{{ Auth::user()->email }}</a>
                             <ul class="dropdown-menu arrow" role="menu">
@@ -77,6 +75,7 @@
                                 </li>
                             </ul>
                         </li>
+                        <li><a href="{{ url('/dashboard') }}"><button class="btn btn-primary navbar-btn" href="{{ url('/dashboard') }}"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>Dashboard</button></a></li>
                     @endif
                 </ul>
             </div>
