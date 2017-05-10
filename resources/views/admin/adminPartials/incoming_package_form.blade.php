@@ -1,45 +1,53 @@
-<div class="form-group{{ $errors->has('carrier') ? ' has-error' : '' }}">
-    <label for="carrier">Carrier</label>
-    <input id="carrier" type="text" class="form-control input-lg" name="carrier" value="{{ old('carrier', isset($incoming_package->carrier) ? $incoming_package->carrier : '') }}" required>
+<div class="row">
+    <div class="col-sm-12 form-group{{ $errors->has('carrier') ? ' has-error' : '' }}">
+        <label for="carrier">Carrier</label>
+        <input id="carrier" type="text" class="form-control input-lg" name="carrier" value="{{ old('carrier', isset($incoming_package->carrier) ? $incoming_package->carrier : '') }}" required>
 
-    @if ($errors->has('carrier'))
-        <span class="help-block">
-            <strong>{{ $errors->first('carrier') }}</strong>
-        </span>
-    @endif
+        @if ($errors->has('carrier'))
+            <span class="help-block">
+                <strong>{{ $errors->first('carrier') }}</strong>
+            </span>
+        @endif
+    </div>
 </div>
 
-<div class="form-group{{ $errors->has('tracking_number') ? ' has-error' : '' }}">
-    <label for="tracking_number">Tracking Number</label>
-    <input id="tracking_number" type="text" class="form-control input-lg" name="tracking_number" value="{{ old('tracking_number', isset($incoming_package->tracking_number) ? $incoming_package->tracking_number : '') }}"required>
+<div class="row">
+    <div class="col-sm-12 form-group{{ $errors->has('tracking_number') ? ' has-error' : '' }}">
+        <label for="tracking_number">Tracking Number</label>
+        <input id="tracking_number" type="text" class="form-control input-lg" name="tracking_number" value="{{ old('tracking_number', isset($incoming_package->tracking_number) ? $incoming_package->tracking_number : '') }}"required>
 
-    @if ($errors->has('tracking_number'))
-        <span class="help-block">
-            <strong>{{ $errors->first('tracking_number') }}</strong>
-        </span>
-    @endif
+        @if ($errors->has('tracking_number'))
+            <span class="help-block">
+                <strong>{{ $errors->first('tracking_number') }}</strong>
+            </span>
+        @endif
+    </div>
 </div>
 
-<div class="form-group{{ $errors->has('dd_code') ? ' has-error' : '' }}">
-    <label for="dd_code">Discreet Drop Code</label>
-    <input id="dd_code" type="tel" class="form-control input-lg" name="dd_code" maxlength="6" value="{{ old('dd_code', isset($incoming_package->dd_code) ? $incoming_package->dd_code : '') }}" required>
+<div class="row">
+    <div class="col-sm-12 form-group{{ $errors->has('dd_code') ? ' has-error' : '' }}">
+        <label for="dd_code">Discreet Drop Code</label>
+        <input id="dd_code" type="tel" class="form-control input-lg" name="dd_code" maxlength="6" value="{{ old('dd_code', isset($incoming_package->dd_code) ? $incoming_package->dd_code : '') }}" required>
 
-    @if ($errors->has('dd_code'))
-        <span class="help-block">
-            <strong>{{ $errors->first('dd_code') }}</strong>
-        </span>
-    @endif
+        @if ($errors->has('dd_code'))
+            <span class="help-block">
+                <strong>{{ $errors->first('dd_code') }}</strong>
+            </span>
+        @endif
+    </div>
 </div>
 
-<div class="form-group{{ $errors->has('sender') ? ' has-error' : '' }}">
-    <label for="sender">Sender</label>
-    <input id="sender" type="text" class="form-control input-lg" name="sender" value="{{ old('sender', isset($incoming_package->sender) ? $incoming_package->sender : '') }}" required>
+<div class="row">
+    <div class="col-sm-12 form-group{{ $errors->has('sender') ? ' has-error' : '' }}">
+        <label for="sender">Sender</label>
+        <input id="sender" type="text" class="form-control input-lg" name="sender" value="{{ old('sender', isset($incoming_package->sender) ? $incoming_package->sender : '') }}" required>
 
-    @if ($errors->has('sender'))
-        <span class="help-block">
-            <strong>{{ $errors->first('sender') }}</strong>
-        </span>
-    @endif
+        @if ($errors->has('sender'))
+            <span class="help-block">
+                <strong>{{ $errors->first('sender') }}</strong>
+            </span>
+        @endif
+    </div>
 </div>
 
 <div class="row">

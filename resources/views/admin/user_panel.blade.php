@@ -10,7 +10,8 @@
 <div class="container content">
     <div class="row">
         <div class="col-sm-6 col-sm-offset-3">
-            <h2 class="center">User #{{$user->id}}</h2>
+            <h1 class="center">User #{{$user->id}}</h1>
+            <br>
             <div class="panel panel-default">
                 <div class="panel-body">
                     <P><strong>Email:</strong> {{$user->email}}</P>

@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('subtitle', 'Discreet Drop Tutorial')
-@section('description', 'How to use Discreet Drop.')
+@section('description', 'How to use Discreet Drop, navigate the dashboard page, and what to expect from the Discreet Drop process.')
 
 
 @section('header')

@@ -10,9 +10,8 @@
 
 @section('content')
 <div class="container content">
-    <div class="row">
-        <h1 class="center">Enter New Incoming Package</h1>
-    </div>
+    <h1 class="center">Enter New Incoming Package</h1>
+    <br>
     <div class="row">
         <div class="col-md-6 col-md-offset-3">
             <div class="panel panel-default">

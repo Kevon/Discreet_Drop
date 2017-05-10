@@ -47,12 +47,24 @@
 
 @font-face {
     font-family: "Gotham Rounded";
-    src: url("/fonts/Gotham-Rounded-Book_21018.ttf");
+    src: url('/fonts/GothamRounded-Book.eot');
+	src: url('/fonts/GothamRounded-Book.eot?#iefix') format('embedded-opentype'),
+		url('/fonts/GothamRounded-Book.woff2') format('woff2'),
+		url('/fonts/GothamRounded-Book.woff') format('woff'),
+		url('/fonts/GothamRounded-Book.ttf') format('truetype'),
+		url('/fonts/GothamRounded-Book.otf') format('opentype'),
+		url('/fonts/GothamRounded-Book.svg#GothamRounded-Book') format('svg');
 }
 
 @font-face {
     font-family: "Gotham Rounded";
-    src: url("/fonts/Gotham-Rounded-Bold_21016.ttf");
+    src: url('/fonts/GothamRounded-Bold.eot');
+	src: url('/fonts/GothamRounded-Bold.eot?#iefix') format('embedded-opentype'),
+		url('/fonts/GothamRounded-Bold.woff2') format('woff2'),
+		url('/fonts/GothamRounded-Bold.woff') format('woff'),
+		url('/fonts/GothamRounded-Bold.ttf') format('truetype'),
+		url('/fonts/GothamRounded-Bold.otf') format('opentype'),
+		url('/fonts/GothamRounded-Bold.svg#GothamRounded-Bold') format('svg');
     font-weight: bold;
 }
 
@@ -90,6 +102,7 @@ body .footer{
 body .footer a{
     color: #f5f5f5;
     font-weight: bold;
+    white-space: normal;
 }
 
 
@@ -112,6 +125,7 @@ body .footer a{
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
+    -webkit-filter: grayscale(50%) opacity(40%);
     filter: grayscale(50%) opacity(40%);
 }
 
@@ -156,9 +170,27 @@ h1,h2,h3,h4,h5,h6{
     margin-top: 150px;
 }
 
+
 .row{
-    margin-top: 25px;
-    margin-bottom: 25px;
+    margin: 0px !important;
+    padding: 0px !important;
+}
+
+.content [class*="col-"]{
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+    margin-top: 50px !important;
+    margin-bottom: 50px !important;
+}
+
+.panel-body [class*="col-"]{
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+}
+
+.btn-toolbar > [class*="col-"]{
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
 }
 
 .row.vertical-align{
@@ -648,6 +680,9 @@ blockquote{
 .panel.panel-black{
     background-color: #1a1a1a !important;
 }
+.panel-body{
+    margin-bottom: 25px;
+}
 
 .center{
     text-align: center;
@@ -729,31 +764,6 @@ blockquote{
 }
 
 
-@media (max-width: 767px) {
-    .row.vertical-align{
-        display: block;
-    }
-    .row.equal-height{
-        display: block;
-    }
-    .btn-toolbar {
-        display: block;
-    }
-    .panel-heading .accordion-toggle:after {
-        content: " ";
-    }
-    .panel-heading .accordion-toggle.collapsed:after {
-        content: " ";
-    }
-    .left-center{
-        text-align: center;
-    }
-    [class*="col-"]{
-        margin-bottom: 50px;
-    }
-}
-
-
 ul.order-progress li div.node {
     margin:0; padding:0;
     height: 20px;
@@ -812,9 +822,9 @@ p.error{
 }
 
 ul.order-progress{
-    margin-left: 10px;
+    margin-left: 0px;
     padding-left: 0px;
-    margin-right: -30px;
+    margin-right: -20px;
     padding-right: 0px;
 }
 
@@ -854,4 +864,47 @@ ul.order-progress{
 	100% {
 		transform: rotate(-4deg);	
 	}						
+}
+
+@media (max-width: 767px) {
+    .row.vertical-align{
+        display: block;
+    }
+    .row.equal-height{
+        display: block;
+    }
+    .btn-toolbar {
+        display: block;
+    }
+    .panel-heading .accordion-toggle:after {
+        content: " ";
+    }
+    .panel-heading .accordion-toggle.collapsed:after {
+        content: " ";
+    }
+    .left-center{
+        text-align: center;
+    }
+    .content [class*="col-"]{
+        padding-top: 25px !important;
+        padding-bottom: 25px !important;
+        margin-top: 0px !important;
+        margin-bottom: 0px !important;
+    }
+    .btn-toolbar > [class*="col-"]{
+        padding-top: 0px !important;
+        padding-bottom: 0px !important;
+        margin-top: 0px !important;
+        margin-bottom: 0px !important;
+    }
+    
+    .panel-body [class*="col-"]{
+        margin-top: 10px !important;
+        margin-bottom: 10px !important;
+        padding: 0px !important;
+    }
+    
+    ul.order-progress{
+        margin-right: 0px !important;
+    }
 }

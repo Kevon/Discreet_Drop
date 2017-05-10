@@ -28,7 +28,7 @@
 
 <div class="container content">
     <div class="section">
-        <h2 class="col-sm-12 center">Discreet Drop in Just 60 Seconds</h2>
+        <h2 class="center">Discreet Drop in Just 60 Seconds</h2>
         <div class="row">
             <div class="col-sm-6 col-sm-offset-3 center">
                 <div class="embed-responsive embed-responsive-16by9">
@@ -55,27 +55,33 @@
             <div class="col-sm-4">
                 <div class="panel panel-default center">
                     <div class="panel-body">
-                        <img src="images/box-logo.svg" class="img-responsive center-block svg" alt="Cardboard Box With Logo">
-                        <h4>Logos on Packaging</h4>
-                        Companies love custom packaging since it looks professional and upscale. However, those logos don't leave much to the imagination and act as an obvious signal to the contents of your package, ruining gift suprises and attracting thieves to high-dollar labels. 
+                        <div class="col-xs-12">
+                            <img src="images/box-logo.svg" class="img-responsive center-block svg" alt="Cardboard Box With Logo">
+                            <h4>Logos on Packaging</h4>
+                            Companies love custom packaging since it looks professional and upscale. However, those logos don't leave much to the imagination and act as an obvious signal to the contents of your package, ruining gift suprises and attracting thieves to high-dollar labels. 
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="col-sm-4">
                 <div class="panel panel-default center">
                     <div class="panel-body">
-                        <img src="images/box-label.svg" class="img-responsive center-block svg" alt="Cardboard Box With Labels">
-                        <h4>Return Labels</h4>
-                        Even if a company offers plain-box shipping, the return addrsss on the label still has the company's name and address on it, and with a quick Google search of that name or address, can reveal the sender and the type of contents in your private package to anyone else.
+                        <div class="col-xs-12">
+                            <img src="images/box-label.svg" class="img-responsive center-block svg" alt="Cardboard Box With Labels">
+                            <h4>Return Labels</h4>
+                            Even if a company offers plain-box shipping, the return addrsss on the label still has the company's name and address on it, and with a quick Google search of that name or address, can reveal the sender and the type of contents in your private package to anyone else.
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="col-sm-4">
                 <div class="panel panel-default center">
                     <div class="panel-body">
-                        <img src="images/box-slips.svg" class="img-responsive center-block svg" alt="Cardboard Box With Packing Slips">
-                        <h4>Packing Slips and Customs Labels</h4>
-                        Often times the packing slip and customs labels for internationally shipped packages have the exact contents of the box written on them that can pique the curiosity of others.
+                        <div class="col-xs-12">
+                            <img src="images/box-slips.svg" class="img-responsive center-block svg" alt="Cardboard Box With Packing Slips">
+                            <h4>Packing Slips and Customs Labels</h4>
+                            Often times the packing slip and customs labels for internationally shipped packages have the exact contents of the box written on them that can pique the curiosity of others.
+                        </div>
                     </div>
                 </div>
             </div>
@@ -97,7 +103,7 @@
         <div class="row vertical-align">
             <div class="col-sm-6">
                 <h3 class="center flush">Hide Return Labels to Keep Personal Items a Secret</h3>
-                A quick google search of the name or address on your package's return label will bring up the sender's website, revealing the type of contents you ordered to whoever gets your package before you do. Discreet Drop provides the only way to hide these labels with another box, so once your package arrives to you, the return label can't be linked back to the sender.
+                A quick Google search of the name or address on your package's return label will bring up the sender's website, revealing the type of contents you ordered to whoever gets your package before you do. Discreet Drop provides the only way to hide these labels with another box, so once your package arrives to you, the return label can't be linked back to the sender.
             </div>
             <div class="col-sm-6">
                 <img src="images/box-label.svg" class="img-responsive center-block svg" alt="Cardboard Box With Label">

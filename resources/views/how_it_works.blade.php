@@ -125,7 +125,7 @@
     </div>
     
     <div class="section">
-        <h2 class="col-sm-12 center">Still Not convinced? Here's a 60 Second Explainer Video!</h2>
+        <h2 class="center">Still Not convinced? Here's a 60 Second Explainer Video!</h2>
         <div class="row">
             <div class="col-sm-6 col-sm-offset-3 center">
                 <div class="embed-responsive embed-responsive-16by9">

@@ -10,7 +10,8 @@
 <div class="container content">
     <div class="row">
         <div class="col-sm-6 col-sm-offset-3">
-            <h2 class="center">All Users:</h2>
+            <h1 class="center">All Users:</h1>
+            <br>
             @foreach($users as $user)
                 <a href="/admin/users/{{$user->id}}">{{$user->id}} - {{$user->first_name}} {{$user->last_name}} - {{$user->dd_code}} - # of Orders: {{count($user->Incoming_Packages)}}</a>
             @endforeach

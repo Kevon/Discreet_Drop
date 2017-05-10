@@ -10,11 +10,10 @@
 
 @section('content')
 <div class="container content">
-    <div class="row">
-        <h1 class="center">Order #{{$order->id}} For User #{{$user->id}} - {{$order->order_status}}</h1>
-        <h2 class="center">Charge Status: {{$shipment->charge_status}}</h2>
-        <h2 class="center">Outgoing Package Status: {{$shipment->outgoing_package_status}}</h2>
-    </div>
+    <h1 class="center">Order #{{$order->id}} For User #{{$user->id}} - {{$order->order_status}}</h1>
+    <h2 class="center">Charge Status: {{$shipment->charge_status}}</h2>
+    <h2 class="center">Outgoing Package Status: {{$shipment->outgoing_package_status}}</h2>
+    <br>
     <div class="row">
         <div class="col-md-6 col-md-offset-3">
             
@@ -34,7 +33,9 @@
                             <input type="hidden" name="shipment_id" value="{{$quoteShipment->id}}">
                             <input type="hidden" name="box_id" value="{{$box->id}}">
                             <div class="row btn-toolbar">
-                                <button type="submit" class="btn btn-block btn-primary" id="submit_btn" data-loading-text="<i class='fa fa-circle-o-notch fa-spin fa-fw'></i> Processing Shipment">Process Shipment</button>
+                                <div class="col-sm-8 col-sm-offset-2">
+                                    <button type="submit" class="btn btn-block btn-primary" id="submit_btn" data-loading-text="<i class='fa fa-circle-o-notch fa-spin fa-fw'></i> Processing Shipment">Process Shipment</button>
+                                </div>
                             </div>
                         </form>
 
@@ -50,8 +51,12 @@
                         <P><strong>Tracking Number: </strong><a href="{{$successfulOutgoingPackage->tracking_url or '#'}}" target="_blank">{{$successfulOutgoingPackage->tracking_number}}</a></P>
                         
                         <div class="row btn-toolbar">
-                            <button class="btn btn-primary btn-block" onclick="window.open('{{$successfulOutgoingPackage->label_url}}');">Print Label</button>
-                            <button class="btn btn-default btn-block" onclick="location.href='/admin/incoming-package';">Enter New Incoming Package</button>
+                            <div class="col-sm-6">
+                                <button class="btn btn-primary btn-block" onclick="window.open('{{$successfulOutgoingPackage->label_url}}');">Print Label</button>
+                            </div>
+                            <div class="col-sm-6">
+                                <button class="btn btn-default btn-block" onclick="location.href='/admin/incoming-package';">Enter New Incoming Package</button>
+                            </div>
                         </div>
                     </div>
                 </div>
