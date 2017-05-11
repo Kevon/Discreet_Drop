@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('subtitle', 'Sign Up')
+@section('subtitle', 'Sign Up to Discreet Drop and Get Discreet Shipping on All Packages')
 @section('description', 'Hide logos, return labels, invoices, holes, and all other identifying information on any package from any seller so your item arrives as discreet as possible.')
 
 

@@ -31,4 +31,5 @@ mix.scripts(['resources/assets/js/loading.js'], 'public/js/loading.js');
 mix.scripts(['resources/assets/js/pricing.js'], 'public/js/pricing.js');
 mix.scripts(['resources/assets/js/profile.js'], 'public/js/profile.js');
 mix.scripts(['resources/assets/js/user.js'], 'public/js/user.js');
+mix.scripts(['resources/assets/js/ie.js'], 'public/js/ie.js');
 mix.styles(['resources/assets/css/app.css'], 'public/css/app.css');

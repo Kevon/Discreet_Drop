@@ -15,6 +15,23 @@
     <!-- Info -->
     <title>Discreet Drop - @yield('subtitle', 'Guarantee Discreet Shipping on Any Package')</title>
     <meta name="description" content="@yield('description', 'Hide logos, return labels, invoices, holes, and all other identifying information on any package from any seller so your item arrives as discreet as possible.')">
+    <meta itemprop="name" content="Discreet Drop - @yield('subtitle', 'Guarantee Discreet Shipping on Any Package')">
+    <meta itemprop="description" content="@yield('description', 'Hide logos, return labels, invoices, holes, and all other identifying information on any package from any seller so your item arrives as discreet as possible.')">
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Discreet Drop - @yield('subtitle', 'Guarantee Discreet Shipping on Any Package')">
+    <meta name="twitter:description" content="@yield('description', 'Hide logos, return labels, invoices, holes, and all other identifying information on any package from any seller so your item arrives as discreet as possible.')">
+    <meta name="twitter:site" content="@DiscreetDrop">
+    <meta name="twitter:image:src" content="{{asset('images/twitter-image.jpg')}}">
+    <!-- Open Graph general (Facebook, Pinterest & Google+) -->
+    <meta name="og:title" content="Discreet Drop - @yield('subtitle', 'Guarantee Discreet Shipping on Any Package')">
+    <meta name="og:description" content="@yield('description', 'Hide logos, return labels, invoices, holes, and all other identifying information on any package from any seller so your item arrives as discreet as possible.')">
+    <meta name="og:image" content="{{asset('images/og-image.jpg')}}">
+    <meta name="og:url" content="https://discreetdrop.com">
+    <meta name="og:site_name" content="Discreet Drop">
+    <meta name="og:locale" content="en_US">
+    <meta name="fb:admins" content="862026843868391">
+    <meta name="og:type" content="website">
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="https://opensource.keycdn.com/fontawesome/4.7.0/font-awesome.min.css" integrity="sha384-dNpIIXE8U05kAbPhy3G1cz+yZmTzA6CY8Vg/u2L9xRnHjJiAK76m2BIEaSEV+/aU" crossorigin="anonymous">

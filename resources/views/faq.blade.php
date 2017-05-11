@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('subtitle', 'Frequently Asked Questions')
+@section('subtitle', 'Frequently Asked Questions About the Discreet Shipping Process')
 @section('description', 'Frequently Asked Questions (FAQ) about Discreet Drop and how it works.')
 
 

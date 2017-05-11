@@ -147,7 +147,7 @@
         </div>
         <div class="row vertical-align">
             <div class="col-sm-6 col-sm-push-6">
-                <h3 class="center">Send All Your Packages to a P.O. Box From Any Courier</h3>
+                <h3 class="center">Ship All Your Packages to a P.O. Box From Any Courier</h3>
                 Shipping companies like UPS and FedEx can't ship to P.O. Boxes, so most companies simply don't allow you to enter your P.O. Box in as a shipping option. Since Discreet Drop uses USPS, you can send all your packages to us, and we'll forward them to your P.O. Box for maximum privacy. 
             </div>
             <div class="col-sm-6 col-sm-pull-6">
@@ -223,4 +223,5 @@
 
 @section('footer')
 <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+<script src="/js/ie.js"></script>
 @endsection

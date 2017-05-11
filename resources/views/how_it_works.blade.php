@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('subtitle', 'How it Works')
+@section('subtitle', 'How Discreet Drop Works to Guarantee 100% Discreet Shipping')
 @section('description', "Learn more about how Discreet Drop works, and how easy we make it to hide logos and labels on all your orders, so you'll always receive a plain-box package.")
 
 @section('header')

@@ -665,24 +665,24 @@ blockquote{
     border: none;
 }
 
-.panel-heading .accordion-toggle:after {
+.panel-heading .accordion-toggle:after{
     font-family: 'Glyphicons Halflings'; 
     content: "\e114";
     float: right;
     color: #1a1a1a;
 }
-.panel-heading .accordion-toggle.collapsed:after {
+.panel-heading .accordion-toggle.collapsed:after{
     content: "\e080";
 }
 
-.panel-heading a {
+.panel-heading a{
     color: #1a1a1a;
     text-decoration: none;
     border: none;
     white-space: normal;
 }
 
-.panel-heading a:hover {
+.panel-heading a:hover{
     color: #3fa9f5 !important;
 }
 
@@ -935,5 +935,14 @@ ul.order-progress{
     .navbar-right .navbar-btn{
         float: none;
         margin-top: 0px;
+    }
+    a{
+        white-space: normal !important;
+        border-bottom: none !important;
+        transition: none !important;
+        opacity: 1 !important;
+    }
+    a:hover{
+        border-bottom: none !important;
     }
 }
