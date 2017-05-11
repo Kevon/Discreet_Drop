@@ -18,11 +18,11 @@
     <meta itemprop="name" content="Discreet Drop - @yield('subtitle', 'Guarantee Discreet Shipping on Any Package')">
     <meta itemprop="description" content="@yield('description', 'Hide logos, return labels, invoices, holes, and all other identifying information on any package from any seller so your item arrives as discreet as possible.')">
     <!-- Twitter -->
-    <meta name="twitter:card" content="summary">
+    <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Discreet Drop - @yield('subtitle', 'Guarantee Discreet Shipping on Any Package')">
     <meta name="twitter:description" content="@yield('description', 'Hide logos, return labels, invoices, holes, and all other identifying information on any package from any seller so your item arrives as discreet as possible.')">
     <meta name="twitter:site" content="@DiscreetDrop">
-    <meta name="twitter:image:src" content="{{asset('images/twitter-image.jpg')}}">
+    <meta name="twitter:image" content="{{asset('images/twitter-image.jpg')}}">
     <!-- Open Graph general (Facebook, Pinterest & Google+) -->
     <meta name="og:title" content="Discreet Drop - @yield('subtitle', 'Guarantee Discreet Shipping on Any Package')">
     <meta name="og:description" content="@yield('description', 'Hide logos, return labels, invoices, holes, and all other identifying information on any package from any seller so your item arrives as discreet as possible.')">
