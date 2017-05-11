@@ -116,7 +116,7 @@ body .footer a{
 }
 
 .jumbotron.top > div.hero{
-    position:absolute;
+    position: absolute;
 	left: 0;
 	right: 0;
 	top: 0;
@@ -882,6 +882,12 @@ ul.order-progress{
 		transform: rotate(-4deg);	
 	}						
 }
+@media (max-width: 1200px) {
+    .navbar-right .navbar-btn{
+        float: none;
+        margin-top: 0px;
+    }
+}
 
 @media (max-width: 767px) {
     .row.vertical-align{
@@ -917,24 +923,17 @@ ul.order-progress{
         margin-top: 0px !important;
         margin-bottom: 0px !important;
     }
-    
     .panel-body [class*="col-"]{
         margin-top: 10px !important;
         margin-bottom: 10px !important;
         padding: 0px !important;
     }
-    
     ul.order-progress{
         margin-right: 0px !important;
     }
     
     .row.always-equal .panel{
         height: 200px;
-    }
-    
-    .navbar-right .navbar-btn{
-        float: none;
-        margin-top: 0px;
     }
     a{
         white-space: normal !important;
