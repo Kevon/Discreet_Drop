@@ -887,6 +887,12 @@ ul.order-progress{
         float: none;
         margin-top: 0px;
     }
+    .panel-heading .accordion-toggle:after {
+        content: " ";
+    }
+    .panel-heading .accordion-toggle.collapsed:after {
+        content: " ";
+    }
 }
 
 @media (max-width: 767px) {
@@ -901,12 +907,6 @@ ul.order-progress{
     .btn-toolbar {
         display: -webkit-block;
         display: block;
-    }
-    .panel-heading .accordion-toggle:after {
-        content: " ";
-    }
-    .panel-heading .accordion-toggle.collapsed:after {
-        content: " ";
     }
     .left-center{
         text-align: center;
