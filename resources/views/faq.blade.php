@@ -317,7 +317,7 @@
             <div class="panel-heading">
                 <h4 class="panel-title">
                     <a data-toggle="collapse" class="accordion-toggle collapsed" data-parent="#accordion" href="#collapse16">
-                        Where do I go if I want to contact Discreet Drop with any questions or general help?
+                        How do I contact Discreet Drop with any questions or need general help?
                     </a>
                 </h4>
             </div>
@@ -355,7 +355,7 @@
             <div class="panel-heading">
                 <h4 class="panel-title">
                     <a data-toggle="collapse" class="accordion-toggle collapsed" data-parent="#accordion" href="#collapse18">
-                        Why do you need my address and payment information before I can use Discreet Drop?
+                        Why do you need my address and payment info before I can use Discreet Drop?
                     </a>
                 </h4>
             </div>
@@ -602,7 +602,7 @@
             <div class="panel-heading">
                 <h4 class="panel-title">
                     <a data-toggle="collapse" class="accordion-toggle collapsed" data-parent="#accordion" href="#collapse31">
-                        Where can I find more information about Discreet Drop and who built and runs this service?
+                        Where can I find more information about Discreet Drop and the developer?
                     </a>
                 </h4>
             </div>
@@ -668,6 +668,25 @@
                     <div class="row">
                         <div class="col-sm-12">
                             You can find helpful press details, high-quality logos, style information, and free-to-use assets by visiting our <a href="/press-and-style-guide">press and style guide page</a>.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" class="accordion-toggle collapsed" data-parent="#accordion" href="#collapse35">
+                        Do you accept Bitcoin?
+                    </a>
+                </h4>
+            </div>
+            <div id="collapse35" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            Nobody in the world accepts Bitcoin.
                         </div>
                     </div>
                 </div>
