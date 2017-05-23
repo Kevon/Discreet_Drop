@@ -22,6 +22,7 @@
     .navbar-nav {
         float: none!important;
         margin-top: 7.5px;
+        border: 0px;
     }
     .navbar-nav>li {
         float: none;
@@ -361,34 +362,6 @@ a:hover{
 .warning{
     background-color: #d9534f !important;
     color: #1a1a1a;
-}
-
-@media (max-width: 1200px) {
-    .navbar * {
-        border: 0px;
-    }
-    .navbar-nav {
-        border: 0px;
-    }
-    .navbar-right {
-        text-align: center !important;
-        background-color: white;
-    }
-    .btn{
-        padding-top: 20px;
-        padding-bottom: 20px;
-    }
-    .nav > li > a{
-        padding-top: 15px;
-        padding-bottom: 15px;
-    }
-    .navbar-fixed-top .navbar-collapse {
-        max-height: 500px !important
-    }
-    
-    .alerts {
-        width: 75%;
-    }
 }
 
 img.svg{
@@ -883,6 +856,27 @@ ul.order-progress{
 	}						
 }
 @media (max-width: 1200px) {
+    .navbar * {
+        border: 0px;
+    }
+    .navbar-right {
+        text-align: center !important;
+        background-color: white;
+    }
+    .btn{
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .nav > li > a{
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+    .navbar-fixed-top .navbar-collapse {
+        max-height: 500px !important
+    }
+    .alerts {
+        width: 75%;
+    }
     .navbar-right .navbar-btn{
         float: none;
         margin-top: 0px;
