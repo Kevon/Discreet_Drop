@@ -34,7 +34,7 @@
                         <div class="row">
                             <div class="col-sm-9 col-xs-12">
                                 <h4 class="flush">Kevin Skompinski</h4>
-                                Kevin Skompinski is an entrepenuer and software developer who graduated from the University at Buffalo in 2013, and is the founder of Discreet Drop. I've had the idea for discreet Drop for a few years now, and after learning the necessary tools to build modern web-applications, decided to finally craft my own startup from scratch with as much care and attention to detail as possible. I now serve as CEO, sole developer, and package processor.<br><br>
+                                Kevin Skompinski is an entrepenuer and software developer who graduated from the University at Buffalo in 2013, and is the founder of Discreet Drop. I've had the idea for Discreet Drop for a few years now, and after learning the necessary tools to build modern web-applications, decided to finally craft my own startup from scratch with as much care and attention to detail as possible. I now serve as CEO, sole developer, and package processor.<br><br>
                                 <a href="https://www.linkedin.com/in/kevin-skompinski-68b4231a/" target="_blank">Connect with Kevin Skompinski on LinkedIn.</a><br>
                                 <a href="https://github.com/Kevon" target="_blank">See Kevin's other projects on GitHub.</a>
                             </div>
