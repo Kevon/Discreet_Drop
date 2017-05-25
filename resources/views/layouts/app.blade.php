@@ -23,7 +23,7 @@
     <meta name="twitter:description" content="@yield('description', 'Hide logos, return labels, invoices, holes, and all other identifying information on any package from any seller so your item arrives as discreet as possible.')">
     <meta name="twitter:site" content="@DiscreetDrop">
     <meta name="twitter:image" content="{{asset('images/twitter-image.jpg')}}">
-    <!-- Open Graph general (Facebook, Pinterest & Google+) -->
+    <!-- Open Graph -->
     <meta name="og:title" content="Discreet Drop - @yield('subtitle', 'Guarantee Discreet Shipping on Any Package')">
     <meta name="og:description" content="@yield('description', 'Hide logos, return labels, invoices, holes, and all other identifying information on any package from any seller so your item arrives as discreet as possible.')">
     <meta name="og:image" content="{{asset('images/og-image.jpg')}}">
@@ -32,10 +32,9 @@
     <meta name="og:locale" content="en_US">
     <meta name="fb:admins" content="862026843868391">
     <meta name="og:type" content="website">
-    <!-- Latest compiled and minified CSS -->
+    <!-- CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="https://opensource.keycdn.com/fontawesome/4.7.0/font-awesome.min.css" integrity="sha384-dNpIIXE8U05kAbPhy3G1cz+yZmTzA6CY8Vg/u2L9xRnHjJiAK76m2BIEaSEV+/aU" crossorigin="anonymous">
-    <!-- Styles -->
     <link rel="stylesheet" href="/css/app.css">
     @yield('header')
     <!-- Scripts -->
@@ -120,47 +119,43 @@
             </div>
             <br>
             <hr>
-            <div class = "row">
-                <div class="col-sm-6">
-                    <div class="col-xs-6">
-                        <h4>Discover</h4>
-                        <a href="/">Home</a> <br>
-                        <a href="/how-it-works">How It Works</a> <br>
-                        @if (Auth::guest())
-                            <a href="/register">Sign Up</a> <br>
-                            <a href="/login">Log In</a> <br>
-                        @else
-                            <a href="/dashboard">Dashboard</a> <br>
-                            <a href="/login-info">Edit Login Info</a> <br>
-                            <a href="/profile-info">Update Shipping Profile</a> <br>
-                            <a href="{{ url('/logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a><form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">{{ csrf_field() }}</form> <br>
-                        @endif
-                        <a href="/pricing-calculator">Pricing Calculator</a> <br>
-                        <a href="/tutorial">How-To Tutorial</a> <br>
-                        <a href="/faq">FAQ</a>
-                    </div>
-                    <div class="col-xs-6">
-                        <h4>Company</h4>
-                        <a href="/about">About</a> <br>
-                        <a href="/contact">Contact Us</a> <br>
-                        <a href="/trust-and-safety">Trust &amp; Safety</a> <br>
-                        <a href="/press-and-style-guide">Press &amp; Style Guide</a> 
-                    </div>
+            <div class="row">
+                <div class="col-xs-6 col-sm-3">
+                    <h4>Discover</h4>
+                    <a href="/">Home</a> <br>
+                    <a href="/how-it-works">How It Works</a> <br>
+                    @if (Auth::guest())
+                        <a href="/register">Sign Up</a> <br>
+                        <a href="/login">Log In</a> <br>
+                    @else
+                        <a href="/dashboard">Dashboard</a> <br>
+                        <a href="/login-info">Edit Login Info</a> <br>
+                        <a href="/profile-info">Update Shipping Profile</a> <br>
+                        <a href="{{ url('/logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a><form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">{{ csrf_field() }}</form> <br>
+                    @endif
+                    <a href="/pricing-calculator">Pricing Calculator</a> <br>
+                    <a href="/tutorial">How-To Tutorial</a> <br>
+                    <a href="/faq">FAQ</a>
+                </div>
+                <div class="col-xs-6 col-sm-3">
+                    <h4>Company</h4>
+                    <a href="/about">About</a> <br>
+                    <a href="/contact">Contact Us</a> <br>
+                    <a href="/trust-and-safety">Trust &amp; Safety</a> <br>
+                    <a href="/press-and-style-guide">Press &amp; Style Guide</a> 
                 </div>
                 <div class="clearfix visible-xs"></div>
-                <div class="col-sm-6">
-                    <div class="col-xs-6">
-                        <h4>Resources</h4>
-                        <a href="/privacy-policy">Privacy Policy</a> <br>
-                        <a href="/terms-of-service">Terms of Service</a> <br>
-                        <a href="https://www.usps.com/" target="_blank">USPS Website</a> <br>
-                        <a href="https://stripe.com/" target="_blank">Stripe Website</a>
-                    </div>
-                    <div class="col-xs-6">
-                        <h4>Social</h4>
-                        <a href="https://twitter.com/discreetdrop" target="_blank">Twitter</a> <br>
-                        <a href="https://www.facebook.com/DiscreetDrop/" target="_blank">Facebook</a>
-                    </div>
+                <div class="col-xs-6 col-sm-3">
+                    <h4>Resources</h4>
+                    <a href="/privacy-policy">Privacy Policy</a> <br>
+                    <a href="/terms-of-service">Terms of Service</a> <br>
+                    <a href="https://www.usps.com/" target="_blank">USPS Website</a> <br>
+                    <a href="https://stripe.com/" target="_blank">Stripe Website</a>
+                </div>
+                <div class="col-xs-6 col-sm-3">
+                    <h4>Social</h4>
+                    <a href="https://twitter.com/discreetdrop" target="_blank">Twitter</a> <br>
+                    <a href="https://www.facebook.com/DiscreetDrop/" target="_blank">Facebook</a>
                 </div>
             </div>
             <br>
@@ -171,7 +166,7 @@
                 </div>
             </div>
         </div>
-        <!-- Latest compiled and minified JavaScript -->
+        <!-- JavaScript -->
         <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
         @yield('footer')
