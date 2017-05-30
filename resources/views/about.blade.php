@@ -19,6 +19,15 @@
 </div>
 
 <div class="container content">
+    
+    <div class="section">
+        <div class="row">
+            <div class="col-sm-6 col-sm-offset-3">
+                <img src="images/DiscreetDropLogo.svg" class="img-responsive center-block svg" alt="Discreet Drop Logo">
+            </div>
+        </div>
+    </div>
+    
     @include('partials.about_content')
 </div>
 

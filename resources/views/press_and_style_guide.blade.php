@@ -119,7 +119,7 @@
         <div class="row">
             <div class="col-sm-10 col-sm-offset-1">
                 <h2 class="left-center">Press Info</h2>
-                <p>All the contents on this page are provided free to use as you wish, with high-quality assets and information available to get you started. clean, high resolution logos and icons with transparent backgrounds have been provided on this page in both .SVG and .PNG formats depending on your needs. A linked explainer video has also been provided that may be linked-to and shared to help quickly explain what Discreet Drop does and the benefits and value we offer. For more information or general inquires about Discreet Drop, feel free to contact us by visiting <a href="/contact">our contact page here</a> and sending us an email at any time, and we'll be happy to help answer any questions, or just chat. We're friendly!</p>
+                <p>All the contents on this page are provided free to use as you wish, with high-quality assets and information available to get you started. clean, high resolution logos and icons with transparent backgrounds have been provided on this page in both .SVG and .PNG formats depending on your needs. A linked explainer video has also been provided above that may be posted and shared to help quickly explain what Discreet Drop does and the benefits and value we offer.<br><br>Feel free to contact us by visiting <a href="/contact">our contact page here</a> and sending us an email at any time, and we'll be happy to help answer any questions or general inquires, or just chat. We're friendly!</p>
             </div>
         </div>
     </div>
