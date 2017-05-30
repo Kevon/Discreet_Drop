@@ -1,4 +1,13 @@
 @component('mail::layout')
+    {{-- Preheader --}}
+    @if (isset($preheader))
+        @slot('preheader')
+            @component('mail::preheader')
+                {{ $preheader }}
+            @endcomponent
+        @endslot
+    @endif
+
     {{-- Header --}}
     @slot('header')
         @component('mail::header', ['url' => config('app.url')])

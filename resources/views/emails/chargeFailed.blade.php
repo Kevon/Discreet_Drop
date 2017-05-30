@@ -1,3 +1,7 @@
+@component('mail::preheader')
+Uh-oh, we've received a package for you, but your payment info needs updating! Please update your card on file in your shipping profile dashboard below, and we'll send out your package to you once we're able to successfully charge the shipping cost.
+@endcomponent
+
 @component('mail::message')
 
 # Uh-oh! We've Received a Package For You, but Your Payment Info Needs Updating!

@@ -1,3 +1,7 @@
+@component('mail::preheader')
+Your discreet package is coming! We've received a package for you, and we've just sent it out 100% discreet! You can see all the information about the package we've received, the shipment we've sent to you, and all payment information for all your orders by visiting your Discreet Dashboard.
+@endcomponent
+
 @component('mail::message')
 
 # We've Received a Package For You

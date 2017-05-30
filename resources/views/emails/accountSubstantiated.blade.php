@@ -1,3 +1,7 @@
+@component('mail::preheader')
+You're ready to start using Discreet Drop! Your shipping profile has been successfuly created! You have been given a unique Discreet Drop address, and are now ready to start shipping your online orders to us, so you can receive your packages in a plain box with no logos or return labels, and as discreet as possible.
+@endcomponent
+
 @component('mail::message')
 
 # You're all set {{$user->first_name}}!

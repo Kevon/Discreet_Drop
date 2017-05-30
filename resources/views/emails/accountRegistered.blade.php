@@ -1,3 +1,7 @@
+@component('mail::preheader')
+Welcome to Discreet Drop! Your account has been registered, but before you can see your unique Discreet Drop address to send your packages to us to repackage and ship to you 100% discreet, you'll need to add your shipping address and billing information to your account. This way, whenever we get a package for you, we can immediately process your shipment and get your plain-box package to you as fast as possible.
+@endcomponent
+
 @component('mail::message')
 
 # Welcome to Discreet Drop!
