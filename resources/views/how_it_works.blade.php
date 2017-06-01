@@ -125,11 +125,11 @@
     </div>
     
     <div class="section">
-        <h2 class="center">Still Not convinced? Here's a 60 Second Explainer Video!</h2>
+        <h2 class="center">Still Not convinced? Here's a 90 Second Explainer Video!</h2>
         <div class="row">
             <div class="col-sm-6 col-sm-offset-3 center">
                 <div class="embed-responsive embed-responsive-16by9">
-                    <iframe class="embed-responsive-item" src="" data-src="https://www.youtube.com/embed/gDi286SFsBE?showinfo=0&rel=0" allowfullscreen></iframe>
+                    <iframe class="embed-responsive-item" src="" data-src="https://www.youtube.com/embed/brK0WRDB_iE?showinfo=0&rel=0" allowfullscreen></iframe>
                 </div>
             </div>
         </div>
