@@ -284,6 +284,11 @@ class Controller extends BaseController
             $user->stripe_exp_month = $data["exp_month"];
             $user->stripe_exp_year = $data["exp_year"];
         }
+        else if(empty($request->stripeToken) && empty($user->substantiated_at)){
+            Session::flash('alert', 'Payment information needs to be entered before you can start using Discreet Drop.');
+            return back()->withInput($request->input());
+        }
+        
         if(empty($user->substantiated_at)){
             $user->substantiated_at = Carbon::now();
         }
@@ -356,7 +361,7 @@ class Controller extends BaseController
             return redirect()->to('/dashboard');
         }
         else{
-            Session::flash('error', 'Could not delete order. Please try again.');
+            Session::flash('alert', 'Could not delete order. Please try again.');
             return back();
         }
     }

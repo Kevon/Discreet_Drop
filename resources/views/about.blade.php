@@ -14,7 +14,7 @@
     <div class="hero header-3"></div>
     <div class="container">
         <h1 class="center">About Discreet Drop</h1>
-        <h2 class="center">The only way to guarantee discreet shipping on any package you order</h2>
+        <h2 class="center">The Only Way to Guarantee Discreet Shipping on Any Package You Order</h2>
     </div>
 </div>
 
