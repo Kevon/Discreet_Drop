@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('subtitle', 'Guarantee Discreet Shipping on Any Package')
-@section('description', 'Hide logos, return labels, invoices, holes, and all other identifying information on any package from any seller so your item arrives as discreet as possible.')
+@section('description', 'Discreet Drop hides logos, return labels, invoices, holes, and all other identifying information on any package from any seller so all your items have discreet shipping.')
 
 @section('header')
 <style>.section{visibility:hidden;}</style>
