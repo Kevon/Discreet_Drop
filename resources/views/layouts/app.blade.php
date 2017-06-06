@@ -61,7 +61,7 @@
                 </button>
 
                 <!-- Branding Image -->
-                <a class="navbar-brand logo" href="{{ url('/') }}"><img class="img-responsive" alt="Discreet Drop Logo" src="/images/DiscreetDropLogo.svg"></a>
+                <a class="navbar-brand logo" href="{{ url('/') }}"><img class="img-responsive" alt="Discreet Drop" src="/images/DiscreetDropLogo.svg"></a>
             </div>
 
             <div class="collapse navbar-collapse" id="app-navbar-collapse">
