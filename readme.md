@@ -3,7 +3,7 @@
 </p>
 
 # Discreet Drop
-## Guarantee discreet shipping on all your packages, from any seller.
+## Guarantee Discreet Shipping on All Your Packages, From Any Seller!
 
 The [Discreet Drop](https://discreetdrop.com/) website was built with [Laravel 5.4](http://laravel.com) using PHP, Bootstrap 3, JQuery and Javasctipt, HTML5 and CSS3. 
 
@@ -56,7 +56,7 @@ Our [how it works page](https://discreetdrop.com/how-it-works) has more informat
 Privacy is important, and with Discreet Drop, your personal packages remain private, so only you will know what's in your packages. As discreet as posible, as easy as possible. See our [frequently asked questions](https://discreetdrop.com/faq/) or our [trust and safety guidelines](https://discreetdrop.com/trust-and-safety/) for more information on the Discreet Drop process.
 
 ## Explainer Video
-[Discreet Drop Exdplainer Video on YouTube](https://www.youtube.com/watch?v=Zp0iOS43DyY)
+[Discreet Drop Explainer Video on YouTube](https://www.youtube.com/watch?v=Zp0iOS43DyY)
 
 ## URL
 [https://discreetdrop.com/](https://discreetdrop.com/)
