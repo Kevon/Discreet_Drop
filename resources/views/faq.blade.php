@@ -217,7 +217,7 @@
                 <div class="panel-body">
                     <div class="row">
                         <div class="col-sm-12">
-                            You can find our <a href="/provacy-policy">privacy policy page here</a>. In short, we will never sell or otherwise transfer your personal information to a third-party, and do everything we can to keep your private information secure.
+                            You can find our <a href="/privacy-policy">privacy policy page here</a>. In short, we will never sell or otherwise transfer your personal information to a third-party, and do everything we can to keep your private information secure.
                         </div>
                     </div>
                 </div>
