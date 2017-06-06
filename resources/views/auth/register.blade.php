@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('subtitle', 'Sign Up to Discreet Drop and Get Discreet Shipping on All Packages')
+@section('subtitle', 'Register for Discreet Drop and Get Discreet Shipping on All Packages')
 @section('description', 'Sign up to Discreet Drop for free and get your unique Discreet Drop address to get discreet shipping on all your packages.')
 
 
