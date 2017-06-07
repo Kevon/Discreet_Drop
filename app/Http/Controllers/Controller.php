@@ -270,7 +270,7 @@ class Controller extends BaseController
             }
             catch (Exception $e){
                 Session::flash('alert', $e->getMessage());
-                return back();
+                return back()->withInput($request->input());
             }
                 
             $customer = collect($customer);

@@ -16,14 +16,14 @@
     
     @if(empty($user->substantiated_at))
         <div class="row">
-            <div class="col-sm-6 col-sm-offset-3">
+            <div class="col-md-6 col-md-offset-3">
                 @include('partials.profile_alert')
             </div>
         </div>
     @endif 
     
     <div class="row">
-        <div class="col-sm-6 col-sm-offset-3">
+        <div class="col-md-6 col-md-offset-3">
             <div class="panel panel-default">
                 <div class="panel-body">
                     

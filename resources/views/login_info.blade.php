@@ -13,7 +13,7 @@
     <h1 class="center">Edit Login Info</h1>
     <br>
     <div class="row">
-        <div class="col-sm-6 col-sm-offset-3">
+        <div class="col-md-6 col-md-offset-3">
             <div class="panel panel-default">
                 <div class="panel-body">
                     
@@ -55,13 +55,13 @@
                         </div>
 
                         <div class="row btn-toolbar">
-                            <div class="col-md-4">
+                            <div class="col-sm-4">
                                 <button type="submit" class="btn btn-block btn-primary">Save Changes</button>
                             </div>
-                            <div class="col-md-4">
+                            <div class="col-sm-4">
                                 <button class="btn btn-default btn-block" type="button" onclick="back()">Cancel Changes</button>
                             </div>
-                            <div class="col-md-4">
+                            <div class="col-sm-4">
                                 <button class="btn btn-danger btn-block delete" type="button" onclick="changeMethod()">Delete Account</button>
                             </div>
                         </div>

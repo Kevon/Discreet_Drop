@@ -736,16 +736,16 @@ blockquote{
   left: auto;
 }
 
-.has-error input {
+.has-error input{
     border-width: 2px;
     border-color: #d9534f !important;
 }
 
-.has-error span.help-block{
+.has-error.help-block{
     color: #d9534f !important;
 }
 
-.has-error h4.cc-label{
+.has-error.cc-label{
     color: #d9534f !important;
 }
 

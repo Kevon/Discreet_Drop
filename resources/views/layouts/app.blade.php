@@ -85,6 +85,7 @@
                                 <li><a href="{{ url('/login-info') }}"><i class="fa fa-lock" aria-hidden="true"></i>Edit Login Info</a></li>
                                 <li><a href="{{ url('/profile-info') }}"><i class="fa fa-address-book-o" aria-hidden="true"></i>Update Shipping Profile</a></li>
                                 <li><a href="{{ url('/tutorial') }}"><i class="fa fa-question" aria-hidden="true"></i>How-To Tutorial</a></li>
+                                <li><a href="{{ url('/trust-and-safety') }}"><i class="fa fa-shield" aria-hidden="true"></i>Trust and Safety Info</a></li>
                                 <li>
                                     <a href="{{ url('/logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i class="fa fa-sign-out" aria-hidden="true"></i>Logout</a>
                                     <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">{{ csrf_field() }}</form>
@@ -109,10 +110,10 @@
             </div>
             <div class = "row">
                 <div class="btn-toolbar btn-form-bottom">
-                    <div class="col-sm-3 col-sm-offset-3">
+                    <div class="col-md-3 col-md-offset-3 col-sm-6">
                         <button class="btn btn-primary btn-block btn-lg btn-twitter" onclick="window.open('https://twitter.com/discreetdrop');"><i class="fa fa-fw fa-twitter" aria-hidden="true"></i>Twitter</button>
                     </div>
-                    <div class="col-sm-3">
+                    <div class="col-md-3 col-sm-6">
                         <button class="btn btn-primary btn-block btn-lg btn-facebook" onclick="window.open('https://www.facebook.com/DiscreetDrop/');"><i class="fa fa-fw fa-facebook" aria-hidden="true"></i>Facebook</button>
                     </div>
                 </div>
