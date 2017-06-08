@@ -62,7 +62,7 @@ function stripeResponseHandler(status, response) {
 
         // Show the errors on the form:
         $form.find('.cc-label').text(response.error.message);
-        $form.find('.cc-label').addClass('has-error');
+        $form.find('.new-card').addClass('has-error');
         $form.find('.submit').prop('disabled', false); // Re-enable submission
 
         } else { // Token was created!

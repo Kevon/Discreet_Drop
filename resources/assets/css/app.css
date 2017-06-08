@@ -741,11 +741,15 @@ blockquote{
     border-color: #d9534f !important;
 }
 
-.has-error.help-block{
+.has-error label{
     color: #d9534f !important;
 }
 
-.has-error.cc-label{
+.help-block{
+    color: #d9534f !important;
+}
+
+.has-error{
     color: #d9534f !important;
 }
 
