@@ -19,7 +19,7 @@
     <meta itemprop="description" content="@yield('description', 'Discreet Drop hides logos, return labels, invoices, holes, and all other identifying information on any package, from any seller, so all your items have discreet shipping.')">
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Discreet Drop - Guarantee Discreet Shipping on Any Package">
+    <meta name="twitter:title" content="Discreet Drop - Enable Discreet Shipping on Any Package">
     <meta name="twitter:description" content="Hide logos, return labels, invoices, and all other identifying information on any package, from any seller, so your items arrive as discreet as possible.">
     <meta name="twitter:site" content="@DiscreetDrop">
     <meta name="twitter:image" content="{{asset('images/twitter-image.jpg')}}">
