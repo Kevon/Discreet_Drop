@@ -65,7 +65,7 @@
                 <div class="panel-body">
                     <div class="row">
                         <div class="col-sm-12">
-                            Lots of reasons! If you live in a home with multiple people, appartment complex with a common area, dorm housing for college, or just live by yourself but arent always home to receive your packages, discreet packages will help prevent anyone else from figuring out what you've ordered online. This is helpful for hiding your personal items that you want to keep secret from everyone else, concealing gifts you've ordered for other memebrs of your home to prevent them from finding out what it is, or just hiding desirable brand logos from attracting any unwanted and potentially costly attention from others. Discreet Drop uses plain-box packaging to hide all identifying information, so nobody else will be able to figure out what's in your package. 
+                            Lots of reasons! If you live in a home with multiple people, apartment complex with a common area, dorm housing for college, or just live by yourself but aren't always home to receive your packages, discreet packages will help prevent anyone else from figuring out what you've ordered online. This is helpful for hiding your personal items that you want to keep secret from everyone else, concealing gifts you've ordered for other members of your home to prevent them from finding out what it is, or just hiding desirable brand logos from attracting any unwanted and potentially costly attention from others. Discreet Drop uses plain-box packaging to hide all identifying information, so nobody else will be able to figure out what's in your package. 
                          </div>
                     </div>
                 </div>
@@ -122,7 +122,7 @@
                 <div class="panel-body">
                     <div class="row">
                         <div class="col-sm-12">
-                            Of course! All you need is an email address and a password. It's free to sign up an maintain an account with Discreet Drop.
+                            Of course! All you need is an email address and a password. It's free to sign up and maintain an account with Discreet Drop.
                         </div>
                     </div>
                 </div>
@@ -160,7 +160,7 @@
                 <div class="panel-body">
                     <div class="row">
                         <div class="col-sm-12">
-                            Once you sign up and complete your shipping profile, your dashboard page will contain a unique generated Discreet Drop address. Use this address instead of your normal home address when checking-out online, so your packages will be sent to our facilities instead. From there, we receive your package and place the entire box into a slightly larger box to cover up any and all logos, return labels, holes, packing slips, and customs forms. Then we send the completely discreet plain-box package containing your original package to you in a double-box for additional item protection. since your Discreet Drop address is unique, we know exactly who each package we receive belongs to, and we automaticaly handle the payment details and shipping destination according to your shipping profile, without you having to do anything. You use this same Discreet Drop address for any number of packages as you'd like, and we'll handle them all without a problem. We make this as easy as possible.
+                            Once you sign up and complete your shipping profile, your dashboard page will contain a unique generated Discreet Drop address. Use this address instead of your normal home address when checking-out online, so your packages will be sent to our facilities instead. From there, we receive your package and place the entire box into a slightly larger box to cover up any and all logos, return labels, holes, packing slips, and customs forms. Then we send the completely discreet plain-box package containing your original package to you in a double-box for additional item protection. since your Discreet Drop address is unique, we know exactly who each package we receive belongs to, and we automatically handle the payment details and shipping destination according to your shipping profile, without you having to do anything. You use this same Discreet Drop address for any number of packages as you'd like, and we'll handle them all without a problem. We make this as easy as possible.
                         </div>
                     </div>
                 </div>
@@ -198,7 +198,7 @@
                 <div class="panel-body">
                     <div class="row">
                         <div class="col-sm-12">
-                            Privacy is kind of our thing around here. At Discreet Drop, all your personal information is protected and encrypted so your personal information and account info never falls into the wrong hands. Likewise, your credit card and payment information is securely handled via <a href="https://stripe.com/" target="_blank">Stripe</a> and never touches or is stored on our servers, so we are fully PCI compliant. Your information will never be sold or transfered to a third-party. Please visit our <a href="/trust-and-safety">trust and safety page</a> for more info.
+                            Privacy is kind of our thing around here. At Discreet Drop, all your personal information is protected and encrypted so your personal information and account info never falls into the wrong hands. Likewise, your credit card and payment information is securely handled via <a href="https://stripe.com/" target="_blank">Stripe</a> and never touches or is stored on our servers, so we are fully PCI compliant. Your information will never be sold or transferred to a third-party. Please visit our <a href="/trust-and-safety">trust and safety page</a> for more info.
                         </div>
                     </div>
                 </div>
@@ -274,7 +274,7 @@
                 <div class="panel-body">
                     <div class="row">
                         <div class="col-sm-12">
-                            By using Discreet Drop, you are agreeing to not use our service in a manner to launder, transfer, or conceal any items that are illegal to ship domestically in the United states via the Unites states Postal Service. All items shipped to Discreet Drop for processing must be legal to ship and posess in the United States regardless of user age or location. Discreet Drop may not be used to ship or handle illegal items including but not limited to:
+                            By using Discreet Drop, you are agreeing to not use our service in a manner to launder, transfer, or conceal any items that are illegal to ship domestically in the United States via the Unites states Postal Service. All items shipped to Discreet Drop for processing must be legal to ship and possess in the United States regardless of user age or location. Discreet Drop may not be used to ship or handle illegal items including but not limited to:
                             <ul type="i">
                                 <li>Drugs</li>
                                 <li>Drug Paraphernalia</li>
@@ -282,9 +282,9 @@
                                 <li>Weapons</li>
                                 <li>Ammunition</li>
                                 <li>Tobacco</li>
-                                <li>Alchohol</li>
+                                <li>Alcohol</li>
                                 <li>Live Animals</li>
-                                <li>Flamable Liquids and Explosives</li>
+                                <li>Flammable Liquids and Explosives</li>
                                 <li>Illegal Pornography</li>
                             </ul>
                             For more information about our shipping rules and policies, please read and understand our <a href="/terms-of-service">terms of service</a>.
@@ -363,7 +363,7 @@
                 <div class="panel-body">
                     <div class="row">
                         <div class="col-sm-12">
-                            In order to streamline the process from when we receive a package for you to shipping it out for final delivery, we require your shipping profile to be completed with your address and payment information saved and ready to use. This allows us to be have all the information we need on hand to quickly and properly process your shipment so you get your package as soon as possible. It will also allow you to keep your Discreet Drop address saved with your sellers so you cna use it any time without having to visit your Discreet Drop dashboard to generate a new code, so if and when we ever get a package for you, we'll know just what to do with it without having to contact you and get payment information every time in order to send your package to you, saving time and effort. If you end up signing up but never using Discreet Drop, don't worry, we will only ever charge your card if we receive a package to process and send out to you. 
+                            In order to streamline the process from when we receive a package for you to shipping it out for final delivery, we require your shipping profile to be completed with your address and payment information saved and ready to use. This allows us to be have all the information we need on hand to quickly and properly process your shipment so you get your package as soon as possible. It will also allow you to keep your Discreet Drop address saved with your sellers so you can use it any time without having to visit your Discreet Drop dashboard to generate a new code, so if and when we ever get a package for you, we'll know just what to do with it without having to contact you and get payment information every time in order to send your package to you, saving time and effort. If you end up signing up but never using Discreet Drop, don't worry, we will only ever charge your card if we receive a package to process and send out to you. 
                         </div>
                     </div>
                 </div>
@@ -382,7 +382,7 @@
                 <div class="panel-body">
                     <div class="row">
                         <div class="col-sm-12">
-                            You can go to your dashboard and click on the 'update shipping profile' button to go to your <a href="/profile-info">shipping profile page</a>, where you can update your address or credit card information at any time. It's important to keep this imnformation up-to-date to prevent any possible delays or problems.
+                            You can go to your dashboard and click on the 'update shipping profile' button to go to your <a href="/profile-info">shipping profile page</a>, where you can update your address or credit card information at any time. It's important to keep this information up-to-date to prevent any possible delays or problems.
                         </div>
                     </div>
                 </div>
@@ -534,7 +534,7 @@
                 <div class="panel-body">
                     <div class="row">
                         <div class="col-sm-12">
-                            USPS has a combined length plus girth limit of 130 inches. This will cover most packages ordered online. Anything larger but below 170 inches will need to be sent out fia FedEx.
+                            USPS has a combined length plus girth limit of 130 inches. This will cover most packages ordered online. Anything larger but below 170 inches will need to be sent out via FedEx.
                         </div>
                     </div>
                 </div>
@@ -553,7 +553,7 @@
                 <div class="panel-body">
                     <div class="row">
                         <div class="col-sm-12">
-                            USPS has a weight limit of 70 lbs. It will be rare for any average online order to exceede this weight limit. 
+                            USPS has a weight limit of 70 lbs. It will be rare for any average online order to exceed this weight limit. 
                         </div>
                     </div>
                 </div>
@@ -572,7 +572,7 @@
                 <div class="panel-body">
                     <div class="row">
                         <div class="col-sm-12">
-                            If your package ends up exceeding the 130 inch combined length plus girth restioction the USPS has on packages, your package will be sent out via FedEx which is the cheapest option in handling larger packages. FedEx has a combined length plus girth restriction of 170 inches. Since this option costs more than using USPS normally, we try to avoid using it unless absolutely necessary. 
+                            If your package ends up exceeding the 130-inch combined length plus girth restriction the USPS has on packages, your package will be sent out via FedEx which is the cheapest option in handling larger packages. FedEx has a combined length plus girth restriction of 170 inches. Since this option costs more than using USPS normally, we try to avoid using it unless absolutely necessary. 
                         </div>
                     </div>
                 </div>

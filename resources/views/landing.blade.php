@@ -58,7 +58,7 @@
                         <div class="col-xs-12">
                             <img src="images/box-logo.svg" class="img-responsive center-block svg" alt="Cardboard Box With Logo">
                             <h4>Logos on Packaging</h4>
-                            Companies love custom packaging since it looks professional and upscale. However, those logos don't leave much to the imagination and act as an obvious signal to the contents of your package, ruining gift suprises and attracting thieves to high-dollar labels. 
+                            Companies love custom packaging since it looks professional and upscale. However, those logos don't leave much to the imagination and act as an obvious signal to the contents of your package, ruining gift surprises and attracting thieves to high-dollar labels. 
                         </div>
                     </div>
                 </div>
@@ -69,7 +69,7 @@
                         <div class="col-xs-12">
                             <img src="images/box-label.svg" class="img-responsive center-block svg" alt="Cardboard Box With Labels">
                             <h4>Return Labels</h4>
-                            Even if a company offers plain-box shipping, the return addrsss on the label still has the company's name and address on it, and with a quick Google search of that name or address, can reveal the sender and the type of contents in your private package to anyone else.
+                            Even if a company offers plain-box shipping, the return address on the label still has the company's name and address on it, and with a quick Google search of that name or address, can reveal the sender and the type of contents in your private package to anyone else.
                         </div>
                     </div>
                 </div>
@@ -121,7 +121,7 @@
         <div class="row vertical-align">
             <div class="col-sm-6">
                 <h3 class="center flush">Hide Logos Revealing Gifts for Other Members of Your Home</h3>
-                Logos and images on the outside of packages can easily spoil a suprise gift for someone's birthday or the holidays if they see the box before you get a chance to hide it. Discreet Drop makes sure all your packages come to your home in a plain box with all the logos hidden, so if someone sees your package, the suprise gift stays a secret.
+                Logos and images on the outside of packages can easily spoil a surprise gift for someone's birthday or the holidays if they see the box before you get a chance to hide it. Discreet Drop makes sure all your packages come to your home in a plain box with all the logos hidden, so if someone sees your package, the surprise gift stays a secret.
             </div>
             <div class="col-sm-6">
                 <img src="images/box-gift.svg" class="img-responsive center-block svg" alt="Gift Box">
@@ -130,7 +130,7 @@
         <div class="row vertical-align">
             <div class="col-sm-6 col-sm-push-6">
                 <h3 class="center flush">Deter Theives From Seeing Desirable Labels</h3>
-                Package theft from apparmtent common areas and front porches of homes has become an increasing problem, and packages shipped with flashy and desierasble labels indicating valuable electronics and goods are an easy target for thieves. Discreet Drop puts your shipments in a plain box with no labels or logos, so your valuable package looks like any other.
+                Package theft from apartment common areas and front porches of homes has become an increasing problem, and packages shipped with flashy and desirable labels indicating valuable electronics and goods are an easy target for thieves. Discreet Drop puts your shipments in a plain box with no labels or logos, so your valuable package looks like any other.
             </div>
             <div class="col-sm-6 col-sm-pull-6">
                 <img src="images/box-thief.svg" class="img-responsive center-block svg" alt="Box With Logo and Thief">
@@ -139,7 +139,7 @@
         <div class="row vertical-align">
             <div class="col-sm-6">
                 <h3 class="center flush">Cover Holes and Damaged Packaging</h3>
-                The shipping process is notoriously hard on packages; ripping holes and even tearing tape open before your package gets to your front door. Some sellers even use boxes with cut-out handels and even tapeless folded containers to ship books and other small items that can be opened and closed without any tamper evidence. Discreet Drop puts your package in another box to cover up any possible holes and the double-box prevents any new ones from showing up.
+                The shipping process is notoriously hard on packages; ripping holes and even tearing tape open before your package gets to your front door. Some sellers even use boxes with cut-out handles and even tapeless folded containers to ship books and other small items that can be opened and closed without any tamper evidence. Discreet Drop puts your package in another box to cover up any possible holes and the double-box prevents any new ones from showing up.
             </div>
             <div class="col-sm-6">
                 <img src="images/box-hole.svg" class="img-responsive center-block svg" alt="Cardboard Box with Holes">

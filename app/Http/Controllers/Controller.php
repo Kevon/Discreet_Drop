@@ -23,7 +23,7 @@ class Controller extends BaseController
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
     
     public function index(){
-        $quotes = ["Got a suprise gift coming in thanks to Discreet Drop. #DadSurpriseParty", 
+        $quotes = ["Got a surprise gift coming in thanks to Discreet Drop. #DadSurpriseParty", 
                    "Discreet Dropped myself a new toy. This is gonna be fun, I'll take pics once it arrives! ;)",
                    "Ordered some new gear and toys for myself, still need to use Discreet Drop but hopefully next year I'll be on my own.",
                    "Discreet Drop has made living with my parents a bit more bearable now. I'm an adult! Leave my stuff alone!",

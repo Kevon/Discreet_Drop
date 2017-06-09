@@ -53,7 +53,7 @@
             <div class="col-sm-6 col-sm-push-6">
                 <h2 class="center flush">Step 3</h2>
                 <h3 class="center">Find Your Unique Discreet Drop Address</h3>
-                After you've filled out your shipping profile, your <a href="/dashboard">dashboard page</a> will have a panel listing your unique Discret Drop address. It's the address to our facilities containing a unique code that will identify your packages to you so we can keep track of all your orders. Your dashboard will also contain a timeline of all your orders we've processed. You can manually add new orders if that would help you personally keep track of your packages, but this is not required as we will automatically create a new order for every package we receive for you.
+                After you've filled out your shipping profile, your <a href="/dashboard">dashboard page</a> will have a panel listing your unique Discreet Drop address. It's the address to our facilities containing a unique code that will identify your packages to you so we can keep track of all your orders. Your dashboard will also contain a timeline of all your orders we've processed. You can manually add new orders if that would help you personally keep track of your packages, but this is not required as we will automatically create a new order for every package we receive for you.
             </div>
             <div class="col-sm-6 col-sm-pull-6">
                 <img src="images/profile.svg" class="img-responsive center-block svg" alt="Find Your Unique Discreet Drop Address">

@@ -64,7 +64,7 @@
     
     <h3>9. Service Usage</h3>
 
-    <p>By using Discreet Drop, you are agreeing to not use our service in a manner to launder, transfer, or conceal any items that are illegal to ship domestically in the United states via the Unites states Postal Service. All items shipped to Discreet Drop for processing must be legal to ship and posess in the United States regardless of user age or location. Discreet Drop may not be used to ship or handle illegal items including but not limited to:</p>
+    <p>By using Discreet Drop, you are agreeing to not use our service in a manner to launder, transfer, or conceal any items that are illegal to ship domestically in the United States via the Unites States Postal Service. All items shipped to Discreet Drop for processing must be legal to ship and possess in the United States regardless of user age or location. Discreet Drop may not be used to ship or handle illegal items including but not limited to:</p>
         <ul type="i">
             <li>Drugs</li>
             <li>Drug Paraphernalia</li>
@@ -72,14 +72,14 @@
             <li>Weapons</li>
             <li>Ammunition</li>
             <li>Tobacco</li>
-            <li>Alchohol</li>
+            <li>Alcohol</li>
             <li>Live Animals</li>
-            <li>Flamable Liquids and Explosives</li>
+            <li>Flammable Liquids and Explosives</li>
             <li>Illegal Pornography</li>
         </ul>
     <p>For more information about what is legal to ship via the USPS, please check out their <a href="https://www.usps.com/ship/shipping-restrictions.htm" target="_blank">domestic shipping restrictions</a> page.</p>
-    <p>Using Discreet Drop does not constitute as a bailment and Discreet Drop does not take posession of items at any point.</p>
-    <p>Any discovered attempt to use the Discreet Drop service in a manner involving any illegal items or items prohibited from being shipped domestically will result in Discreet Drop cooperating with any and all law enforcment agencies to identify the details of the source and destination of the package in question.</p>
+    <p>Using Discreet Drop does not constitute as a bailment and Discreet Drop does not take possession of items at any point.</p>
+    <p>Any discovered attempt to use the Discreet Drop service in a manner involving any illegal items or items prohibited from being shipped domestically will result in Discreet Drop cooperating with any and all law enforcement agencies to identify the details of the source and destination of the package in question.</p>
     
 </div>
 

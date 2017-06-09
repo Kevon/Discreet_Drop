@@ -6,7 +6,7 @@
                 @if (Request::path() == "/profile_info")
                     <p class="center"><strong><a href="/profile_info">Please click here to complete your shipping profile and start shipping any package you want to arrive 100% discreet.</a></strong></p>
                 @endif
-                <p class="center">Once your profile is complete, you can create orders and start shipping any package you want to arrive to you as discreet as possible, and we'll automatically re-package your item to hide all identifying information and logos, charge your card secuerly stored on <a href="https://stripe.com/" target="_blank">Stripe</a> (and never on our servers) the lowest shipping rate, and we'll be able to send your package out to you vis USPS as fast as possible.</p>
+                <p class="center">Once your profile is complete, you can create orders and start shipping any package you want to arrive to you as discreet as possible, and we'll automatically re-package your item to hide all identifying information and logos, charge your card securely stored on <a href="https://stripe.com/" target="_blank">Stripe</a> (and never on our servers) the lowest shipping rate, and we'll be able to send your package out to you via the USPS as fast as possible.</p>
             </div>
         </div>
     </div>

@@ -20,7 +20,7 @@
                         
                         <form role="form" method="POST" action="{{ url('/pricing-calculator/submit') }}">
                             {{ csrf_field() }}
-                            <p>Since you won't know the actual size or weight of your package before it arrives, you can select the closest range for the item you want to be shipped discreetely to you, and we can calculate you the best approximation to give you an idea on how much it'll cost.</p>
+                            <p>Since you won't know the actual size or weight of your package before it arrives, you can select the closest range for the item you want to be shipped discreetly to you, and we can calculate you the best approximation to give you an idea on how much it'll cost.</p>
 
                             <div class="row">
                                 <div class="form-group">

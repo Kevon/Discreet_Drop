@@ -48,11 +48,11 @@
                             <div class="col-sm-12">
                                 <p>Discreet Drop is the only way to guarantee 100% discreet shipping on any package, from any seller. Discreet Drop offers a way to cover up any and all logos, return labels, packing slips, customs forms, and holes in the packaging so nobody but you will be able to figure out what's in your private packages. Even websites that advertise discreet shipping will still have a return label with a company name and return address, a packing slip, or a customs form; all of which can be easily Googled that'll indicate what kind of item is in your package.</p>
                                 <br>
-                                <p>With this in mind, we've created Discreet Drop as the only solution to cover up those privacy issues, literally. Discreet Drop offers a easy process to double-box your packages to cover up any obvious logos or branding, return labels, packing slips, holes; anything that can act as identifying information and can be used to signal what's in the box is hidden.</p>
+                                <p>With this in mind, we've created Discreet Drop as the only solution to cover up those privacy issues, literally. Discreet Drop offers an easy process to double-box your packages to cover up any obvious logos or branding, return labels, packing slips, holes; anything that can act as identifying information and can be used to signal what's in the box is hidden. We serve as a shipment processor, where you can ship your packages to us via a unique address, from any online store. We then double-box the package to cover up any external logos, return labels, packing slips, and even holes; anything that can act as identifying information and can be used to signal what's in the box. Easy.</p>
                                 <br>
-                                <p>With Discreet Drop, all your packages from any online seller will arive in a 100% discreet plain box with no logos or labels to hide the source of your personal shipments or gifts from anyone else but you.</p>
+                                <p>With Discreet Drop, packages will arrive in a 100% discreet plain-box; with no logos or branding to attract attention from anyone, no labels to reveal the contents of the box, and won't have any identifying information that can be used to figure out is in a package. Only you will ever know what is in their packages.</p>
                                 <br>
-                                <p>Privacy is important, and with Discreet Drop, your personal packages remain private, so only you will know what's in your packages. As discreet as posible, as easy as possible. See our <a href="/faq">frequently asked questions</a> or our <a href="/trust-and-safety">trust and safety guidelines</a> for more information on the Discreet Drop process.</p>
+                                <p>Privacy is important, and with Discreet Drop, your personal packages remain private, so only you will know what's in your packages. As discreet as possible, as easy as possible. See our <a href="/faq">frequently asked questions</a> or our <a href="/trust-and-safety">trust and safety guidelines</a> for more information on the Discreet Drop process.</p>
                             </div>
                         </div>
                     </div>
@@ -72,7 +72,7 @@
             <div class="col-sm-6 col-sm-push-6">
                 <h2 class="center flush">Step 1</h2>
                 <h3 class="center">Generate Your Unique Discreet Drop Address</h3>
-                Once you create a shipping profile with your address (so we quickly know where to ship your packages to once they arrive) and credit card info (we use <a href="https://stripe.com/" target="_blank">Stripe</a> to keep your information secure, and only charge once we have a package to send out to you), you'll see a unique Discreeet Drop address for you to send your shipments to.
+                Once you create a shipping profile with your address (so we quickly know where to ship your packages to once they arrive) and credit card info (we use <a href="https://stripe.com/" target="_blank">Stripe</a> to keep your information secure, and only charge once we have a package to send out to you), you'll see a unique Discreet Drop address for you to send your shipments to.
             </div>
             <div class="col-sm-6 col-sm-pull-6">
                 <img src="images/profile.svg" class="img-responsive center-block svg" alt="Find Your Unique Discreet Drop Address">
@@ -82,7 +82,7 @@
             <div class="col-sm-6">
                 <h2 class="center flush">Step 2</h2>
                 <h3 class="center">Use That Address as Your Shipping Address When Buying Online</h3>
-                When checking out anywhere online, use the unique Discreet Drop address from Step 1 as your shipping address instead of your usual home address so your items will be sent to our package processing center with the qunique code in the address to let us know that your packages belong to you.
+                When checking out anywhere online, use the unique Discreet Drop address from Step 1 as your shipping address instead of your usual home address so your items will be sent to our package processing center with the unique code in the address to let us know that your packages belong to you.
             </div>
             <div class="col-sm-6">
                 <img src="images/checkout.svg" class="img-responsive center-block svg" alt="Use Discreet Drop Address When Checkout Online">
