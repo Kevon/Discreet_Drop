@@ -14,9 +14,9 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <!-- Info -->
     <title>Discreet Drop - @yield('subtitle', 'Guarantee Discreet Shipping on Any Package')</title>
-    <meta name="description" content="@yield('description', 'Discreet Drop hides logos, return labels, invoices, holes, and all other identifying information on any package, from any seller, so all your items have discreet shipping.')">
+    <meta name="description" content="@yield('description', 'Discreet Drop hides logos, return labels, invoices, and all other identifying information on any package, from any seller, so all your items have discreet shipping.')">
     <meta itemprop="name" content="Discreet Drop - @yield('subtitle', 'Guarantee Discreet Shipping on Any Package')">
-    <meta itemprop="description" content="@yield('description', 'Discreet Drop hides logos, return labels, invoices, holes, and all other identifying information on any package, from any seller, so all your items have discreet shipping.')">
+    <meta itemprop="description" content="@yield('description', 'Discreet Drop hides logos, return labels, invoices, and all other identifying information on any package, from any seller, so all your items have discreet shipping.')">
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Discreet Drop - Enable Discreet Shipping on Any Package">
@@ -25,7 +25,7 @@
     <meta name="twitter:image" content="{{asset('images/twitter-image.jpg')}}">
     <!-- Open Graph -->
     <meta name="og:title" content="Discreet Drop - Guarantee Discreet Shipping on Any Package, From Any Seller">
-    <meta name="og:description" content="@yield('description', 'Hide logos, return labels, invoices, holes, and all other identifying information on any package, from any seller, so your items arrive as discreet as possible.')">
+    <meta name="og:description" content="@yield('description', 'Discreet Drop hides logos, return labels, invoices, and all other identifying information on any package, from any seller, so all your items have discreet shipping.')">
     <meta name="og:image" content="{{asset('images/og-image.jpg')}}">
     <meta name="og:url" content="https://discreetdrop.com">
     <meta name="og:site_name" content="Discreet Drop">
