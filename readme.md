@@ -5,7 +5,7 @@
 # Discreet Drop
 ## Guarantee Discreet Shipping on All Your Packages, From Any Seller!
 
-The [Discreet Drop](https://discreetdrop.com/) website was built with [Laravel 5.4](http://laravel.com) using PHP, Bootstrap 3, JQuery and Javasctipt, HTML5 and CSS3. 
+The [Discreet Drop](https://discreetdrop.com/) website was built with [Laravel 5.4](http://laravel.com) using PHP, Bootstrap 3, jQuery and JavaScript, HTML5 and CSS3. 
 
 This repository consists of all the front-end information pages, the web application dashboard portion to manage orders and track packages, and an administrator backend to enter new incoming packages in and manage existing previous ones. It also includes all images, Laravel PHP files, and composer scripts to get the website up and running.
 
