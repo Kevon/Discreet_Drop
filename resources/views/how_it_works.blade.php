@@ -52,7 +52,7 @@
                                 <br>
                                 <p>With Discreet Drop, packages will arrive in a 100% discreet plain-box; with no logos or branding to attract attention from anyone, no labels to reveal the contents of the box, and won't have any identifying information that can be used to figure out is in a package. Only you will ever know what is in your packages.</p>
                                 <br>
-                                <p>Privacy is important, and with Discreet Drop, your personal packages remain private, so only you will know what's in your packages. As discreet as possible, as easy as possible. See our <a href="/faq">frequently asked questions</a> or our <a href="/trust-and-safety">trust and safety guidelines</a> for more information on the Discreet Drop process.</p>
+                                <p>Privacy is important, and with Discreet Drop, your personal packages remain private, so only you will know what's in your packages. As discreet as possible, as easy as possible. See our <a href="/faq">frequently asked questions</a> or our <a href="/trust-and-safety">trust and safety guidelines</a> for more information on the Discreet Drop process. We've also created a handy <a href="/pricing-calculator">pricing calculator</a> to help estimate the shipping costs from us to you, depending on the item's size and your location.</p>
                             </div>
                         </div>
                     </div>
@@ -92,7 +92,7 @@
             <div class="col-sm-6 col-sm-push-6">
                 <h2 class="center flush">Step 3</h2>
                 <h3 class="center">We'll Receive Your Package and Hide All Logos and Return Labels</h3>
-                This is where we take care of everything for you! Since you completed a shipping profile, we'll enter your package into our system and then double-box it to cover up any logos, return label addresses or names, packing slips, or even holes in the original box. Then we'll determine the lowest-cost shipping rate via USPS using our Commercial Plus Pricing account, charge your payment information stored on <a href="https://stripe.com/" target="_blank">Stripe</a>, and ship it out to the address we have for you on file, all without you having to do a thing. Like we said, we take care of everything!
+                This is where we take care of everything for you! Since you completed a shipping profile, we'll enter your package into our system and then double-box it to cover up any logos, return label addresses or names, packing slips, or even holes in the original box. Then we'll determine the lowest-cost shipping rate via USPS using our Commercial Plus Pricing account, charge your payment information stored on <a href="https://stripe.com/" target="_blank">Stripe</a> (you can use our convenient <a href="/pricing-calculator">pricing calculator</a> to estimate the shipping costs), and ship it out to the address we have for you on file, all without you having to do a thing! Like we said, we take care of everything!
             </div>
             <div class="col-sm-6 col-sm-pull-6">
                 <img src="images/dd-diagram.svg" class="img-responsive center-block svg" alt="Discreet Drop Diagram">
