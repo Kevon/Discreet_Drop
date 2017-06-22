@@ -55,7 +55,7 @@ class AdminController extends BaseController
         $user = User::where('dd_code', $request->dd_code)->first();
         if(empty($user)){
             Session::flash('alert', 'DD Code not linked to any user.');
-            return back();
+            return back()->withInput($request->input());
         }
         $allOrders = $user->Orders()->get();
         $pendingOrders = $user->Orders()->where('order_status', 'pending')->get();
@@ -137,7 +137,7 @@ class AdminController extends BaseController
         $user = User::where('dd_code', $request->dd_code)->first();
         if(empty($user)){
             Session::flash('alert', 'DD Code not linked to any user.');
-            return back();
+            return back()->withInput($request->input());
         }
         
         $length = $request->length;
@@ -289,7 +289,8 @@ class AdminController extends BaseController
                                        "city"    => $user->city,
                                        "state"   => $user->state,
                                        "zip"     => $user->zip_code,
-                                       "phone"   => $user->phone);
+                                       "phone"   => $user->phone,
+                                       "email"   => $user->email);
 
             $to_address = \EasyPost\Address::create($to_address_params);
 
