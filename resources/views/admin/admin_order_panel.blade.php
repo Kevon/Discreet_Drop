@@ -91,7 +91,7 @@
                         <P><strong>Stripe Charge Status: </strong>{{$charge->stripe_status}}</P>
                         <P><strong>Stripe ID: </strong>{{$charge->stripe_charge_id}}</P>
                         <P><strong>Charged On: </strong>{{$charge->created_at}}</P>
-                        @if($charge->stripe_status == 'Charge Error')
+                        @if($charge->stripe_status != 'succeeded')
                             <P class="error"><strong>Charge Error: </strong>{{$charge->stripe_failure_code}}</P>
                             <P class="error"><strong>Charge Message: </strong>{{$charge->stripe_failure_message}}</P>
                         @endif

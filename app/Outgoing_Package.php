@@ -14,10 +14,10 @@ class Outgoing_Package extends Model
     }
     
     public function DD_Info(){
-    	return $this->hasOne(DD_Info::class, 'id');
+    	return $this->hasOne(DD_Info::class, 'id', 'dd_info_id');
     }
     
     public function Box(){
-    	return $this->hasOne(Box::class, 'id');
+    	return $this->hasOne(Box::class, 'id', 'box_id');
     }
 }
