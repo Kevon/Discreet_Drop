@@ -76,7 +76,7 @@
                             <P class="error"><strong>Charge Status: </strong>{{$order->Shipment->charge_status}} - Need Updated Payment Info!</P>
                             <P class="error"><strong>Charged On: </strong>{{$order->Shipment->Latest_Charge->created_at->format('M j, Y')}}</P>
                             <P class="error"><strong>Error Message: </strong>{{$order->Shipment->Latest_Charge->stripe_failure_message}}</P>
-                            <P class="error"><strong>Shipping Amount Charged: </strong>${{number_format(($order->total_cost /100), 2, '.', ' ')}}</P>
+                            <P class="error"><strong>Shipping Amount Charged: </strong>${{number_format(($order->Shipment->Latest_Charge->stripe_amount/100), 2, '.', ' ')}}</P>
                             <P class="error"><strong>Card Brand: </strong>{{$order->Shipment->Latest_Charge->stripe_source_brand}}</P>
                             <P class="error"><strong>Last 4: </strong>**** **** **** {{$order->Shipment->Latest_Charge->stripe_source_last4}}</P>
                             <P class="error"><strong>Card Expiration Date: </strong>{{$order->Shipment->Latest_Charge->stripe_source_exp_month}}/{{$order->Shipment->Latest_Charge->stripe_source_exp_year}}</P>
